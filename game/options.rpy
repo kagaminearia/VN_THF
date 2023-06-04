@@ -13,12 +13,12 @@ init python:
 ##
 ## 带有 _() 的字符串表示其可被翻译。
 
-define config.name = _("DUST ON THORN")
+define config.name = _("荆  棘  落  尘  埃")
 
 
 ## 决定上面给出的标题是否显示在标题界面屏幕。设置为 False 来隐藏标题。
 
-define gui.show_name = False
+define gui.show_name = True
 
 
 ## 游戏版本号。

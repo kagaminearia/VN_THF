@@ -62,6 +62,8 @@ define gui.name_text_font = "fonts/江城正君体_600W.ttf"
 ## 游戏外文本使用的字体。
 define gui.interface_text_font = "fonts/江城正君体_400W.ttf"
 
+define gui.main_theme_font = "fonts/鸿雷拙书简体.ttf"
+
 ## 普通对话文本的大小。
 define gui.text_size = 33
 
@@ -84,7 +86,7 @@ define gui.title_text_size = 75
 ## 标题和游戏菜单 #####################################################################
 
 ## 标题菜单和游戏菜单使用的图像。
-define gui.main_menu_background = "gui/main_menu.png"
+define gui.main_menu_background = im.Scale("gui/main_menu.png",1920,1080)
 define gui.game_menu_background = "gui/game_menu.png"
 
 
@@ -124,7 +126,7 @@ define gui.dialogue_xpos = 550
 define gui.dialogue_ypos = 22
 
 ## 对话文本的最大宽度，以像素为单位。
-define gui.dialogue_width = 1100
+define gui.dialogue_width = 1150
 
 ## 对话文本的水平对齐方式。0.0 为左侧对齐，0.5 为居中显示，而 1.0 为右侧对齐。
 define gui.dialogue_text_xalign = 0.0

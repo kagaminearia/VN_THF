@@ -62,7 +62,7 @@ label start:
     bfem_speaking "我问你答，懂吗？"
     qian_speaking "……为什么？你们还没回答我的问题。"
     bfem_speaking "我问，你答。"
-    qian_speaking "她加重语气，令我下意识缩了缩肩膀。威压……那种令人不舒服的感觉清晰地裹在我身上。\n于是我顿了顿，还是绷紧声音说，好的。"
+    qian "她加重语气，令我下意识缩了缩肩膀。威压……那种令人不舒服的感觉清晰地裹在我身上。\n于是我顿了顿，还是绷紧声音说，好的。"
     scene bg_office_1 with fade
     show qian_calm0 at char_left
     show bfem_0r at char_right
@@ -81,10 +81,32 @@ label start:
     qian_speaking "好的……啊，什么？"
     qian "我依旧是下意识回应，说完才发现并不是在问问题，而是有东西被递过来。\n荆棘之城的统一终端机，正面屏幕，反面刻着城市印章。但……这并不是我原来的终端。"
     qian "为……不，我已经发现了，就算询问也不会有人回答。\n屏幕亮起，这个全新的终端上面正显示着我的名字，以及一条带有鲜红色标签的消息。"
-    
+    hide qian_silent0
+    hide bfem_0r
+    na "通知：\n因编号T19957及编号T20234涉及S级禁令，编号T25648作为直接血缘关系，将被剥夺一切原有城市权利。"
+    show qian_shocked1 at char_mid
+    qian "等等，什么意思……\n我机械性地点亮屏幕，打开消息，读完信息的时候才后知后觉，似乎有什么很重要的事情。"
+    qian "怎么可能？宋女士和黄女士都是单纯的工作狂，谁犯错都不可能是她们犯错。\n况且，S级禁令，那基本上意味着能够动摇整个城市的危险。"
+    qian "我不明白。\n我不明白……为什么？"
+    hide qian_shocked1
+    show bfem_0r at char_mid with dissolve
+    bfem_speaking "看完了吗？走吧。"
+    show qian_shocked1 at char_mid
+    qian_speaking "什么？不，等等，我不懂……喂！\n你，你们不能这样……给我一个解释啊！为什么？！"
+    hide qian_shocked1
+    show qian_close1 at char_mid
+    qian_speaking "……唔！好痛，痛……啊啊！"
+    scene bg_office_1
+    scene bg_office_2 with fade
+    qian "和之前一样，四个高大女人围着我，手拿武器，仿佛我罪大恶极。\n可我明明只是在家里睡觉，一无所知。只是在睡觉而已，醒来却发生这些事情。\n还有宋女士和黄女士，不知道她们怎么样了……"
+    scene bg_office_3 with Fade(0.1,0.2,0.1)
+    qian "我全身上下只有一套居家睡衣和崭新的终端，身体被控制住，被拉着往外走。\n我死死咬住嘴唇，避免让眼泪流下来，显得更加狼狈不堪。"
     
     
     return
+
+
+
 
 
 transform char_mid:

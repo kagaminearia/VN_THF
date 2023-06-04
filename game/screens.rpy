@@ -423,13 +423,14 @@ screen main_menu():
     if gui.show_name:
 
         hbox:
-            style "main_menu_vbox"
-
+            align(0.5,0.85)
             text "[config.name!t]":
-                style "main_menu_title"
+                font gui.main_theme_font
+                size 105
+                color "#8d1616"
 
-            text "[config.version]":
-                style "main_menu_version"
+            # text "[config.version]":
+            #     style "main_menu_version"
 
 
 style main_menu_frame is empty
