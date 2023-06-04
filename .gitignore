@@ -1,1 +1,6 @@
+# Ignore vscode settings
 .vscode
+
+# Ignore savings of games
+game/saves
+game/cache
