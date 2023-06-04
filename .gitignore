@@ -4,3 +4,8 @@
 # Ignore savings of games
 game/saves
 game/cache
+
+# Ignore traceback
+traceback.txt
+log.txt
+errors.txt

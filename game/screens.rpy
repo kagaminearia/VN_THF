@@ -778,7 +778,7 @@ screen preferences():
                         style_prefix "radio"
                         label _("显示")
                         textbutton _("窗口") action Preference("display", "window")
-                        textbutton _("") action Preference("display", "fullscreen")
+                        textbutton _("全屏") action Preference("display", "fullscreen")
 
                 vbox:
                     style_prefix "check"
