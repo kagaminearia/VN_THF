@@ -282,100 +282,44 @@ style quick_button_text:
 screen navigation():
     if renpy.get_screen("main_menu"):
         hbox:
-            # xpos gui.navigation_xpos
+            style_prefix "navigation"
             xalign 0.5
             yalign 0.95
             spacing 100
-            if main_menu:
-                textbutton _("开始"):
-                    text_color "#ffffff"
-                    text_hover_color "#5d5d5d"
-                    action Start()
-
-            else:
-                textbutton _("历史"):
-                    text_color "#ffffff"
-                    text_hover_color "#5d5d5d"
-                    action ShowMenu("history")
-
-                textbutton _("保存"):
-                    text_color "#ffffff"
-                    text_hover_color "#5d5d5d"
-                    action ShowMenu("save")
-
-            textbutton _("读取"):
-                text_color "#ffffff"
-                text_hover_color "#5d5d5d"
-                action ShowMenu("load")
-
-            textbutton _("设置"):
-                text_color "#ffffff"
-                text_hover_color "#5d5d5d"
-                action ShowMenu("preferences")
+            textbutton _("开始") action Start()
+            textbutton _("读取") action ShowMenu("load")
+            textbutton _("设置") action ShowMenu("preferences")
 
             if _in_replay:
-
                 textbutton _("结束回放") action EndReplay(confirm=True)
 
-            elif not main_menu:
-
-                textbutton _("标题界面"):
-                    text_color "#ffffff"
-                    text_hover_color "#5d5d5d"
-                    action MainMenu()
-
-            textbutton _("关于"):
-                text_color "#ffffff"
-                text_hover_color "#5d5d5d"
-                action ShowMenu("about")
+            textbutton _("关于") action ShowMenu("about")
 
             if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-
                 ## “帮助”对移动设备来说并非必需或相关。
-                textbutton _("帮助"):
-                    text_color "#ffffff"
-                    text_hover_color "#5d5d5d"
-                    action ShowMenu("help")
+                textbutton _("帮助") action ShowMenu("help")
 
             if renpy.variant("pc"):
-
                 ## 退出按钮在 iOS 上是被禁止使用的，在安卓和网页上也不是必要的。
-                textbutton _("退出"):
-                    text_color "#ffffff"
-                    text_hover_color "#5d5d5d"
-                    action Quit(confirm=not main_menu)
+                textbutton _("退出") action Quit(confirm=not main_menu)
     else:
         hbox:
             style_prefix "navigation"
             # xpos gui.navigation_xpos
             xalign 0.5
             yalign 0.1
-            # yoffset -100
 
             spacing 60
 
-            if main_menu:
-
-                textbutton _("开始") action Start()
-
-            else:
-
-                textbutton _("历史") action ShowMenu("history")
-
-                textbutton _("保存") action ShowMenu("save")
-
+            textbutton _("历史") action ShowMenu("history")
+            textbutton _("保存") action ShowMenu("save")
             textbutton _("读取") action ShowMenu("load")
-
             textbutton _("设置") action ShowMenu("preferences")
 
             if _in_replay:
-
                 textbutton _("结束回放") action EndReplay(confirm=True)
 
-            elif not main_menu:
-
-                textbutton _("标题界面") action MainMenu()
-
+            textbutton _("标题") action MainMenu()
             textbutton _("关于") action ShowMenu("about")
 
             if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
@@ -398,7 +342,7 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
-    xalign 1.0
+    xalign 0.5
 
 
 ## 标题菜单界面 ######################################################################
