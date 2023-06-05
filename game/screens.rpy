@@ -295,10 +295,6 @@ screen navigation():
 
             textbutton _("关于") action ShowMenu("about")
 
-            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-                ## “帮助”对移动设备来说并非必需或相关。
-                textbutton _("帮助") action ShowMenu("help")
-
             if renpy.variant("pc"):
                 ## 退出按钮在 iOS 上是被禁止使用的，在安卓和网页上也不是必要的。
                 textbutton _("退出") action Quit(confirm=not main_menu)
@@ -321,11 +317,6 @@ screen navigation():
 
             textbutton _("标题") action MainMenu()
             textbutton _("关于") action ShowMenu("about")
-
-            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-
-                ## “帮助”对移动设备来说并非必需或相关。
-                textbutton _("帮助") action ShowMenu("help")
 
             if renpy.variant("pc"):
 

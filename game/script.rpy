@@ -123,8 +123,8 @@ label start:
     qian "心里一直以来的隐约预感终于成真。\n我当然知道这个地方。\n尽管没有来过，但曾经在书本、视频和记录里，看到过它的身影……"
     hide qian_think0
     "荆棘之城的最底端\nD层"
-
-    return
+    jump ch1
+    
 
 
 
