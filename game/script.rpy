@@ -101,8 +101,29 @@ label start:
     qian "和之前一样，四个高大女人围着我，手拿武器，仿佛我罪大恶极。\n可我明明只是在家里睡觉，一无所知。只是在睡觉而已，醒来却发生这些事情。\n还有宋女士和黄女士，不知道她们怎么样了……"
     scene bg_office_3 with Fade(0.1,0.2,0.1)
     qian "我全身上下只有一套居家睡衣和崭新的终端，身体被控制住，被拉着往外走。\n我死死咬住嘴唇，避免让眼泪流下来，显得更加狼狈不堪。"
-    
-    
+    scene bg_office_4 with Fade(0.1,0.3,0.1)
+    qian "四周皆是单色墙壁，泛着淡淡的金属冷光。被一身黑的人包围的我，显得格外刺眼。\n空间里弥漫着窒息的沉默，我尽力习惯，可不安和恐慌仍然无法消除。"
+    qian "究竟发生了什么……我应该怎么办？\n信息太少，我甚至不知道所谓的禁令到底是什么，但……就算知道了也无能为力。"
+    "————"
+    qian "突然的失重感席卷全身，地面晃动，它正在下降。\n这不是普通的房间，而是——"
+    show qian_worry11 at char_mid with dissolve
+    qian "速度，时间，我回忆起相似的数据。\n城市里的“竖直电梯”连接不同的区域，而现在，自然是从A区下行。\n……我到底要被带去哪里？"
+    qian "……\n……"
+    scene bg_D02 with Fade(0.5,0.5,0.5)
+    qian "……\n……"
+    qian "头顶的光线微弱，只有时时闪烁的凌乱灯牌。"
+    scene bg_D03 with Fade(0.1,0.2,0.1)
+    qian "狭窄而崎岖的小道四通八达，毫无章法。"
+    scene bg_D01 with Fade(0.1,0.2,0.1)
+    qian "充斥淡淡难闻味道和肮脏颗粒的空气。"
+    show qian_worry01 at char_mid with dissolve
+    qian_speaking "怎么会……这是……"
+    hide qian_worry01
+    show qian_think0 at char_mid with dissolve
+    qian "心里一直以来的隐约预感终于成真。\n我当然知道这个地方。\n尽管没有来过，但曾经在书本、视频和记录里，看到过它的身影……"
+    hide qian_think0
+    "荆棘之城的最底端\nD层"
+
     return
 
 

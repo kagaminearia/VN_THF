@@ -110,8 +110,8 @@ define gui.name_ypos = -60
 define gui.name_xalign = 0.0
 
 ## 包含角色名字的方框的宽度、高度和边框尺寸，或设为 None 来自动确定其大小。
-define gui.namebox_width = None
-define gui.namebox_height = None
+define gui.namebox_width = 300
+define gui.namebox_height = 60
 
 ## 包含角色名字的方框的边界尺寸，以左、上、右、下顺序排列。
 define gui.namebox_borders = Borders(5, 5, 5, 5)
@@ -122,7 +122,7 @@ define gui.namebox_tile = False
 
 ## 对话相对于文本框的位置。可以是相对于文本框从左侧或顶部起的整数像素，或设为
 ## 0.5 来居中。
-define gui.dialogue_xpos = 550
+define gui.dialogue_xpos = 535
 define gui.dialogue_ypos = 22
 
 ## 对话文本的最大宽度，以像素为单位。
