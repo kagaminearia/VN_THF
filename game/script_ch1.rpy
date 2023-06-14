@@ -4,7 +4,7 @@ label ch1:
     scene black_bg with Fade(0.5,0.5,0.5,color="#fff")
     qian "荆棘之城是一座竖直发展的城市，自上而下分为A，B，C，D层。在这其中，D层位于城市最底部，被那些游手好闲、不学无术的人占据着，藏匿着许多肮脏与恶意。"
     qian "但……这些也只是我之前在书上了解的D层信息。我从来没有想过自己有一天会来这个地方。"
-    scene bg_road01 with Fade(0.5,0.5,0.5)
+    scene bg_road01 with Fade(0.1,0.4,0.1)
     show bfem_0r at char_right with dissolve
     show qian_worry01 at char_left with dissolve
     bfem_speaking "失去城市身份的人，之后在D层生活。\n具体信息会发到终端，个人数据会做相应调整。"
@@ -43,7 +43,7 @@ label ch1:
 
     menu:
         "【管制局】":
-            "wait for q1.1"
+            jump q1_1
         "【黑街】":
             "wait for q1.2"
         "【230居民区】":
