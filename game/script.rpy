@@ -1,7 +1,5 @@
 ﻿# 游戏在此开始。
-
 label start:
-
     # 显示一个背景。此处默认显示占位图，但您也可以在图片目录添加一个文件
     # （命名为 bg room.png 或 bg room.jpg）来显示。
     window hide
@@ -104,17 +102,19 @@ label start:
     scene bg_office_4 with Fade(0.1,0.3,0.1)
     qian "四周皆是单色墙壁，泛着淡淡的金属冷光。被一身黑的人包围的我，显得格外刺眼。\n空间里弥漫着窒息的沉默，我尽力习惯，可不安和恐慌仍然无法消除。"
     qian "究竟发生了什么……我应该怎么办？\n信息太少，我甚至不知道所谓的禁令到底是什么，但……就算知道了也无能为力。"
+    scene bg_office_4 with Fade(0.1,0.3,0.1)
+    with vpunch
     "————"
     qian "突然的失重感席卷全身，地面晃动，它正在下降。\n这不是普通的房间，而是——"
     show qian_worry11 at char_mid with dissolve
     qian "速度，时间，我回忆起相似的数据。\n城市里的“竖直电梯”连接不同的区域，而现在，自然是从A区下行。\n……我到底要被带去哪里？"
     qian "……\n……"
-    scene bg_D02 with Fade(0.5,0.5,0.5)
+    scene bg_road02 with Fade(0.5,0.5,0.5)
     qian "……\n……"
     qian "头顶的光线微弱，只有时时闪烁的凌乱灯牌。"
-    scene bg_D03 with Fade(0.1,0.2,0.1)
+    scene bg_road03 with Fade(0.1,0.2,0.1)
     qian "狭窄而崎岖的小道四通八达，毫无章法。"
-    scene bg_D01 with Fade(0.1,0.2,0.1)
+    scene bg_road01 with Fade(0.1,0.2,0.1)
     qian "充斥淡淡难闻味道和肮脏颗粒的空气。"
     show qian_worry01 at char_mid with dissolve
     qian_speaking "怎么会……这是……"
@@ -126,24 +126,3 @@ label start:
     jump ch1
     
 
-
-
-
-transform char_mid:
-    zoom 0.25
-    xalign 0.5
-    yalign 0.27
-
-transform char_left:
-    zoom 0.25
-    xalign 0.2
-    yalign 0.27
-
-transform char_right:
-    zoom 0.25
-    xalign 0.8
-    yalign 0.27
-
-transform large:
-    xalign 0.5
-    yalign 0.85

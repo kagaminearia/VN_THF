@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 38: style property zoom is not known.
-    zoom 0.2
-        ^
+File "game/characters.rpy", line 3: invalid syntax
+    Character(None,what_color"#9d2525",what_font="fonts/江城正君体_600W.ttf")
+                              ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu May 25 17:47:44 2023
+Tue Jun 13 17:58:40 2023
