@@ -23,7 +23,7 @@ init python:
 ## 界面中文本的颜色。
 
 ## 整个界面中使用的强调色，用于标记和突出显示文本。
-define gui.accent_color = '#99ccff'
+define gui.accent_color = '#721e1e'
 
 ## 当文本按钮既未被选中也未被悬停时使用的颜色。
 define gui.idle_color = '#888888'
@@ -194,7 +194,7 @@ define gui.quick_button_text_selected_color = gui.accent_color
 define gui.choice_button_width = 1000
 define gui.choice_button_height = None
 define gui.choice_button_tile = False
-define gui.choice_button_borders = Borders(150, 25, 150, 25)
+define gui.choice_button_borders = Borders(150, 50, 150, 50)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
@@ -259,18 +259,17 @@ define gui.page_spacing = 0
 define gui.slot_spacing = 15
 
 ## 标题菜单文本的位置。
-define gui.main_menu_text_xalign = 1.0
+define gui.main_menu_text_xalign = 0.5
 
 
 ## 框架 ##########################################################################
-##
 ## 这些变量控制在不存在覆盖层或窗口时可以包含用户界面组件的框架的外观。
 
 ## 通用框架。
 define gui.frame_borders = Borders(6, 6, 6, 6)
 
 ## 用作确认界面部分的框架。
-define gui.confirm_frame_borders = Borders(60, 60, 60, 60)
+define gui.confirm_frame_borders = Borders(90, 70, 90, 70)
 
 ## 用作快进界面部分的框架。
 define gui.skip_frame_borders = Borders(24, 8, 75, 8)

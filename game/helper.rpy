@@ -31,3 +31,11 @@ transform char_right:
 transform large:
     xalign 0.5
     yalign 0.85
+
+transform cg0:
+    zoom 0.5
+
+transform cg1:
+    zoom 0.8
+    xalign 0.4
+    yalign 0.53
