@@ -307,16 +307,16 @@ screen navigation():
 
             spacing 60
 
-            textbutton _("历史") action ShowMenu("history")
             textbutton _("保存") action ShowMenu("save")
             textbutton _("读取") action ShowMenu("load")
+            textbutton _("历史") action ShowMenu("history")
             textbutton _("设置") action ShowMenu("preferences")
 
             if _in_replay:
                 textbutton _("结束回放") action EndReplay(confirm=True)
 
             textbutton _("标题") action MainMenu()
-            textbutton _("关于") action ShowMenu("about")
+            # textbutton _("关于") action ShowMenu("about")
 
             if renpy.variant("pc"):
 
@@ -379,7 +379,7 @@ style main_menu_frame:
     xsize 420
     yfill True
 
-    # background "gui/overlay/main_menu.png"
+    # background "gui/overlay/game_menu.png"
 
 style main_menu_vbox:
     xalign 0.0
@@ -408,6 +408,7 @@ style main_menu_version:
 ## 面同时使用时，这些子界面将被嵌入（放置）在其中。
 
 screen game_menu(title, scroll=None, yinitial=0.0):
+    ##! title is currently not used in this function
 
     style_prefix "game_menu"
 
@@ -468,7 +469,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
         action Return()
 
-    label title
+    # label title
 
     if main_menu:
         key "game_menu" action ShowMenu("main_menu")
@@ -582,7 +583,7 @@ screen load():
 
     tag menu
 
-    use file_slots(_("读取游戏"))
+    use file_slots(_("读取"))
 
 
 screen file_slots(title):
@@ -591,73 +592,123 @@ screen file_slots(title):
 
     use game_menu(title):
 
-        fixed:
 
-            ## 此代码确保输入控件在任意按钮执行前可以获取 enter 事件。
-            order_reverse True
+        # ## 此代码确保输入控件在任意按钮执行前可以获取 enter 事件。
+        # order_reverse True
+        
+        #? Maybe add this feature in the future?
+        # ## 页面名称，可以通过单击按钮进行编辑。
+        # button:
+        #     style "page_label"
 
-            ## 页面名称，可以通过单击按钮进行编辑。
-            button:
-                style "page_label"
+        #     key_events True
+        #     xalign 0.5
+        #     action page_name_value.Toggle()
 
-                key_events True
-                xalign 0.5
-                action page_name_value.Toggle()
+        #     input:
+        #         style "page_label_text"
+        #         value page_name_value
 
-                input:
-                    style "page_label_text"
-                    value page_name_value
+        ## 存档位网格。
+        side "c":
+            area(-400, 0, 2000, 4000)
+            # area (200,160,900,480)
+            # area (100,100,1000,1000)
+            viewport id "slot":
+                # grid gui.file_slot_cols gui.file_slot_rows:
+                vbox:
+                    # style_prefix "slot"
 
-            ## 存档位网格。
-            grid gui.file_slot_cols gui.file_slot_rows:
-                style_prefix "slot"
+                    # xalign 0.5
+                    # yalign 0.5
+                    for i in range(4):
 
-                xalign 0.5
-                yalign 0.5
+                        $ slot = i + 1
 
-                spacing gui.slot_spacing
+                        grid 2 1:
+                            style_prefix "slot"
 
-                for i in range(gui.file_slot_cols * gui.file_slot_rows):
+                            xalign 0.5
+                            yalign 0.5
 
-                    $ slot = i + 1
+                            spacing 400
 
-                    button:
-                        action FileAction(slot)
+                            button:
+                                action FileAction(slot)
 
-                        has vbox
+                                hbox:
+                                    # xalign 0.0
+                                    # yalign 0.0
+                                    spacing 10
+                                    if FileTime(slot):
+                                        add FileScreenshot(slot) align(0.1, 0.1) zoom 0.5
+                                        vbox:
+                                            xalign 0.5
+                                            text "{color=#000000}%s{/color}" % FileTime(slot, format=_("{#file_time}%Y/%m/%d %H:%M")):
+                                                style "slot_time_text"
+                                    # else:
+                                    #     image "gui/button/slot_idle_background.png" 
+                                    #     vbox:
+                                    #         # xalign 0.5
+                                    #         # yalign 0.8
+                                    #         text "{color=#000000}%s{/color}" % "尚无记录"
+                            
+                            $ slot = slot + 1
 
-                        add FileScreenshot(slot) xalign 0.5
+                            button:
+                                action FileAction(slot)
 
-                        text FileTime(slot, format=_("{#file_time}%Y-%m-%d %H:%M"), empty=_("空存档位")):
-                            style "slot_time_text"
+                                hbox:
+                                    # xalign 0.0
+                                    # yalign 0.0
+                                    spacing 10
+                                    if FileTime(slot):
+                                        add FileScreenshot(slot) 
+                                        vbox:
+                                            xalign 0.5
+                                            text "{color=#000000}%s{/color}" % FileTime(slot, format=_("{#file_time}%Y/%m/%d %H:%M")):
+                                                style "slot_time_text"
+                                    # else:
+                                    #     image "gui/button/slot_idle_background.png" 
+                                    #     vbox:
+                                    #         text "{color=#000000}%s{/color}" % "尚无记录"
 
-                        text FileSaveName(slot):
-                            style "slot_name_text"
 
-                        key "save_delete" action FileDelete(slot)
+                            # has hbox
 
-            ## 用于访问其他页面的按钮。
-            hbox:
-                style_prefix "page"
+                            # add FileScreenshot(slot) xalign 0.5
 
-                xalign 0.5
-                yalign 1.0
+                            # text FileTime(slot, format=_("{#file_time}%Y-%m-%d %H:%M"), empty=_("空存档位")):
+                            #     style "slot_time_text"
 
-                spacing gui.page_spacing
+                            # text FileSaveName(slot):
+                            #     style "slot_name_text"
 
-                textbutton _("<") action FilePagePrevious()
+                                key "save_delete" action FileDelete(slot)
+                            
 
-                if config.has_autosave:
-                    textbutton _("{#auto_page}A") action FilePage("auto")
+                ## 用于访问其他页面的按钮。
+                hbox:
+                    style_prefix "page"
 
-                if config.has_quicksave:
-                    textbutton _("{#quick_page}Q") action FilePage("quick")
+                    xalign 0.5
+                    yalign 1.0
 
-                ## range(1, 10) 给出 1 到 9 之间的数字。
-                for page in range(1, 10):
-                    textbutton "[page]" action FilePage(page)
+                    spacing gui.page_spacing
 
-                textbutton _(">") action FilePageNext()
+                    textbutton _("<") action FilePagePrevious()
+
+                    if config.has_autosave:
+                        textbutton _("{#auto_page}A") action FilePage("auto")
+
+                    if config.has_quicksave:
+                        textbutton _("{#quick_page}Q") action FilePage("quick")
+
+                    ## range(1, 10) 给出 1 到 9 之间的数字。
+                    for page in range(1, 10):
+                        textbutton "[page]" action FilePage(page)
+
+                    textbutton _(">") action FilePageNext()
 
 
 style page_label is gui_label

@@ -209,22 +209,22 @@ define gui.choice_button_text_insensitive_color = "#444444"
 ## gui/button 中的图像文件，就像其他类型的按钮一样。
 
 ## 存档位按钮。
-define gui.slot_button_width = 414
-define gui.slot_button_height = 309
+define gui.slot_button_width = 500
+define gui.slot_button_height = 220
 define gui.slot_button_borders = Borders(15, 15, 15, 15)
 define gui.slot_button_text_size = 21
 define gui.slot_button_text_xalign = 0.5
-define gui.slot_button_text_idle_color = gui.idle_small_color
-define gui.slot_button_text_selected_idle_color = gui.selected_color
-define gui.slot_button_text_selected_hover_color = gui.hover_color
+# define gui.slot_button_text_idle_color = gui.idle_small_color
+# define gui.slot_button_text_selected_idle_color = gui.selected_color
+# define gui.slot_button_text_selected_hover_color = gui.hover_color
 
 ## 存档所用缩略图的宽度和高度。
 define config.thumbnail_width = 384
 define config.thumbnail_height = 216
 
 ## 存档网格中的列数和行数。
-define gui.file_slot_cols = 3
-define gui.file_slot_rows = 2
+define gui.file_slot_cols = 2
+define gui.file_slot_rows = 4
 
 
 ## 定位和间距 #######################################################################
@@ -256,7 +256,7 @@ define gui.pref_button_spacing = 0
 define gui.page_spacing = 0
 
 ## 存档按钮之间的间距。
-define gui.slot_spacing = 15
+define gui.slot_spacing = 20
 
 ## 标题菜单文本的位置。
 define gui.main_menu_text_xalign = 0.5
@@ -428,7 +428,7 @@ init python:
 
         ## 文件按钮布局。
         gui.file_slot_cols = 2
-        gui.file_slot_rows = 2
+        gui.file_slot_rows = 1
 
         ## NVL 模式。
         gui.nvl_height = 255

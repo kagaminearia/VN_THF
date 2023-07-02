@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/characters.rpy", line 3: invalid syntax
-    Character(None,what_color"#9d2525",what_font="fonts/江城正君体_600W.ttf")
-                              ^
+File "game/screens.rpy", line 626: 'spacing' is not a keyword argument or valid child of the for statement.
+    spacing 10
+           ^
 
-Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Jun 13 17:58:40 2023
+Ren'Py Version: Ren'Py 8.1.0.23051307
+Sun Jul  2 03:17:22 2023
