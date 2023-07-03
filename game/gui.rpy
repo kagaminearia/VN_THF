@@ -36,7 +36,8 @@ define gui.hover_color = '#c1e0ff'
 
 ## 当文本按钮被选中但非焦点时使用的颜色。当一个按钮为当前屏幕或设置选项值时，会
 ## 处于选中状态。
-define gui.selected_color = '#ffffff'
+#TODO (kagaminearia): modify the color here
+define gui.selected_color = '#000'
 
 ## 当文本按钮无法被选择时使用的颜色。
 define gui.insensitive_color = '#8888887f'
@@ -209,11 +210,17 @@ define gui.choice_button_text_insensitive_color = "#444444"
 ## gui/button 中的图像文件，就像其他类型的按钮一样。
 
 ## 存档位按钮。
-define gui.slot_button_width = 414
-define gui.slot_button_height = 309
+"""
+TODO (caffreyu): currently, the dimension of a button is hard coded to match 
+the 0.6 zoomed screenshot. Figure out a way to either
+- define the size of the screenshot to match these numbers
+- define these numbers to match the zoomed screenshot
+"""
+define gui.slot_button_width = 600
+define gui.slot_button_height = 197
 define gui.slot_button_borders = Borders(15, 15, 15, 15)
 define gui.slot_button_text_size = 21
-define gui.slot_button_text_xalign = 0.5
+# define gui.slot_button_text_xalign = 0.5
 define gui.slot_button_text_idle_color = gui.idle_small_color
 define gui.slot_button_text_selected_idle_color = gui.selected_color
 define gui.slot_button_text_selected_hover_color = gui.hover_color
@@ -223,8 +230,8 @@ define config.thumbnail_width = 384
 define config.thumbnail_height = 216
 
 ## 存档网格中的列数和行数。
-define gui.file_slot_cols = 3
-define gui.file_slot_rows = 2
+define gui.file_slot_cols = 1
+define gui.file_slot_rows = 4
 
 
 ## 定位和间距 #######################################################################
@@ -256,7 +263,7 @@ define gui.pref_button_spacing = 0
 define gui.page_spacing = 0
 
 ## 存档按钮之间的间距。
-define gui.slot_spacing = 15
+define gui.slot_spacing = 20
 
 ## 标题菜单文本的位置。
 define gui.main_menu_text_xalign = 0.5
@@ -428,7 +435,7 @@ init python:
 
         ## 文件按钮布局。
         gui.file_slot_cols = 2
-        gui.file_slot_rows = 2
+        gui.file_slot_rows = 1
 
         ## NVL 模式。
         gui.nvl_height = 255
