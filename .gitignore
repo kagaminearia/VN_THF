@@ -1,0 +1,7 @@
+# Ignore vscode settings
+.vscode
+
+# Ignore traceback
+traceback.txt
+log.txt
+errors.txt
