@@ -36,7 +36,8 @@ define gui.hover_color = '#c1e0ff'
 
 ## 当文本按钮被选中但非焦点时使用的颜色。当一个按钮为当前屏幕或设置选项值时，会
 ## 处于选中状态。
-define gui.selected_color = '#ffffff'
+#TODO (kagaminearia): modify the color here
+define gui.selected_color = '#000'
 
 ## 当文本按钮无法被选择时使用的颜色。
 define gui.insensitive_color = '#8888887f'
@@ -209,21 +210,27 @@ define gui.choice_button_text_insensitive_color = "#444444"
 ## gui/button 中的图像文件，就像其他类型的按钮一样。
 
 ## 存档位按钮。
-define gui.slot_button_width = 500
-define gui.slot_button_height = 220
+"""
+TODO (caffreyu): currently, the dimension of a button is hard coded to match 
+the 0.6 zoomed screenshot. Figure out a way to either
+- define the size of the screenshot to match these numbers
+- define these numbers to match the zoomed screenshot
+"""
+define gui.slot_button_width = 600
+define gui.slot_button_height = 197
 define gui.slot_button_borders = Borders(15, 15, 15, 15)
 define gui.slot_button_text_size = 21
-define gui.slot_button_text_xalign = 0.5
-# define gui.slot_button_text_idle_color = gui.idle_small_color
-# define gui.slot_button_text_selected_idle_color = gui.selected_color
-# define gui.slot_button_text_selected_hover_color = gui.hover_color
+# define gui.slot_button_text_xalign = 0.5
+define gui.slot_button_text_idle_color = gui.idle_small_color
+define gui.slot_button_text_selected_idle_color = gui.selected_color
+define gui.slot_button_text_selected_hover_color = gui.hover_color
 
 ## 存档所用缩略图的宽度和高度。
 define config.thumbnail_width = 384
 define config.thumbnail_height = 216
 
 ## 存档网格中的列数和行数。
-define gui.file_slot_cols = 2
+define gui.file_slot_cols = 1
 define gui.file_slot_rows = 4
 
 

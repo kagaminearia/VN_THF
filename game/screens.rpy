@@ -592,100 +592,92 @@ screen file_slots(title):
 
     use game_menu(title):
 
-
-        # ## 此代码确保输入控件在任意按钮执行前可以获取 enter 事件。
-        # order_reverse True
-        
-        #? Maybe add this feature in the future?
-        # ## 页面名称，可以通过单击按钮进行编辑。
-        # button:
-        #     style "page_label"
-
-        #     key_events True
-        #     xalign 0.5
-        #     action page_name_value.Toggle()
-
-        #     input:
-        #         style "page_label_text"
-        #         value page_name_value
-
-        ## 存档位网格。
         side "c":
-            area(-400, 0, 2000, 4000)
-            # area (200,160,900,480)
-            # area (100,100,1000,1000)
+            area (-200, 0, 2000, 2000)
             viewport id "slot":
-                # grid gui.file_slot_cols gui.file_slot_rows:
-                vbox:
-                    # style_prefix "slot"
-
-                    # xalign 0.5
-                    # yalign 0.5
-                    for i in range(4):
-
-                        $ slot = i + 1
-
+                grid gui.file_slot_cols gui.file_slot_rows:
+                    xalign 0.5 yalign 0.5 spacing 10
+                    for i in range(gui.file_slot_rows):
                         grid 2 1:
                             style_prefix "slot"
+                            spacing 100
 
-                            xalign 0.5
-                            yalign 0.5
+                            python:
+                                slot = i * 2 + 1
+                                name_to_save = ""
+                                strip = lambda string : string \
+                                    if len(string) <= 30 \
+                                    else string[: 30] + "……"
 
-                            spacing 400
-
+                                if len(_history_list) != 0:
+                                    if type(_history_list[-1].who) is NoneType:
+                                        name_to_save = strip(_history_list[-1].what)
+                                    else: 
+                                        name_to_save = (
+                                            "【" + _history_list[-1].who + "】 "
+                                            + strip(_history_list[-1].what)
+                                        )
+                            
                             button:
-                                action FileAction(slot)
+                                action [
+                                    SetVariable("save_name", name_to_save),
+                                    FileAction(slot)
+                                ]
 
                                 hbox:
-                                    # xalign 0.0
-                                    # yalign 0.0
                                     spacing 10
                                     if FileTime(slot):
-                                        add FileScreenshot(slot) align(0.1, 0.1) zoom 0.5
+                                        add FileScreenshot(slot) align(0.1, 0.1) zoom 0.6
                                         vbox:
-                                            xalign 0.5
+                                            xalign 0.1 yalign 0.1 spacing 10
                                             text "{color=#000000}%s{/color}" % FileTime(slot, format=_("{#file_time}%Y/%m/%d %H:%M")):
                                                 style "slot_time_text"
-                                    # else:
-                                    #     image "gui/button/slot_idle_background.png" 
-                                    #     vbox:
-                                    #         # xalign 0.5
-                                    #         # yalign 0.8
-                                    #         text "{color=#000000}%s{/color}" % "尚无记录"
+                                            text FileSaveName(slot):
+                                                style "slot_name_text"
+                                    else:
+                                        image "gui/button/slot_idle_background.png" zoom 0.5
+                                        hbox:
+                                            text "{color=#000000}%s{/color}" % "尚无记录"  
                             
-                            $ slot = slot + 1
+                            python:
+                                slot = slot + 1
+                                name_to_save = ""
+                                strip = lambda string : string \
+                                    if len(string) <= 30 \
+                                    else string[: 30] + "……"
 
+                                if len(_history_list) != 0:
+                                    if type(_history_list[-1].who) is NoneType:
+                                        name_to_save = strip(_history_list[-1].what)
+                                    else: 
+                                        name_to_save = (
+                                            "【" + _history_list[-1].who + "】 "
+                                            + strip(_history_list[-1].what)
+                                        )
+                                        
                             button:
-                                action FileAction(slot)
+                                action [
+                                    SetVariable("save_name", name_to_save),
+                                    FileAction(slot)
+                                ]
 
                                 hbox:
-                                    # xalign 0.0
-                                    # yalign 0.0
                                     spacing 10
                                     if FileTime(slot):
-                                        add FileScreenshot(slot) 
+                                        add FileScreenshot(slot) align(0.1, 0.1) zoom 0.6
                                         vbox:
-                                            xalign 0.5
+                                            xalign 0.1 yalign 0.1 spacing 10
                                             text "{color=#000000}%s{/color}" % FileTime(slot, format=_("{#file_time}%Y/%m/%d %H:%M")):
                                                 style "slot_time_text"
-                                    # else:
-                                    #     image "gui/button/slot_idle_background.png" 
-                                    #     vbox:
-                                    #         text "{color=#000000}%s{/color}" % "尚无记录"
+                                            
+                                            text FileSaveName(slot):
+                                                style "slot_name_text"
+                                    else:
+                                        image "gui/button/slot_idle_background.png" zoom 0.5
+                                        vbox:
+                                            text "{color=#000000}%s{/color}" % "尚无记录"
 
-
-                            # has hbox
-
-                            # add FileScreenshot(slot) xalign 0.5
-
-                            # text FileTime(slot, format=_("{#file_time}%Y-%m-%d %H:%M"), empty=_("空存档位")):
-                            #     style "slot_time_text"
-
-                            # text FileSaveName(slot):
-                            #     style "slot_name_text"
-
-                                key "save_delete" action FileDelete(slot)
-                            
+                                key "save_delete" action FileDelete(slot)    
 
                 ## 用于访问其他页面的按钮。
                 hbox:

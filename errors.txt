@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 626: 'spacing' is not a keyword argument or valid child of the for statement.
-    spacing 10
-           ^
+File "game/screens.rpy", line 614: viewport expects a non-empty block.
+    viewport id "slot":
+                       ^
 
 Ren'Py Version: Ren'Py 8.1.0.23051307
-Sun Jul  2 03:17:22 2023
+Sun Jul  2 23:52:12 2023
