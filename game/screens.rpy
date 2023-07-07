@@ -240,19 +240,19 @@ screen quick_menu():
         hbox:
             style_prefix "quick"
 
-            xalign 0.88
-            yalign 0.98
-            spacing 50
+            xalign 1.0
+            yalign 1.0
+            spacing 15
 
             # textbutton _("回退") action Rollback()
-            textbutton _("历史") action ShowMenu('history')
-            textbutton _("快进") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("自动") action Preference("auto-forward", "toggle")
-            textbutton _("保存") action ShowMenu('save')
-            textbutton _("读取") action ShowMenu('load')
-            textbutton _("快存") action QuickSave()
-            textbutton _("快读") action QuickLoad()
-            textbutton _("设置") action ShowMenu('preferences')
+            imagebutton auto "gui/button/history_%s.png" action ShowMenu('history')
+            imagebutton auto "gui/button/skip_%s.png" action Skip() alternate Skip(fast=True, confirm=True)
+            imagebutton auto "gui/button/auto_%s.png" action Preference("auto-forward", "toggle")
+            imagebutton auto "gui/button/save_%s.png" action ShowMenu('save')
+            imagebutton auto "gui/button/load_%s.png" action ShowMenu('load')
+            imagebutton auto "gui/button/q_save_%s.png" action QuickSave()
+            imagebutton auto "gui/button/q_load_%s.png" action QuickLoad()
+            imagebutton auto "gui/button/setting_%s.png" action ShowMenu('preferences')
 
 
 ## 此代码确保只要用户没有主动隐藏界面，就会在游戏中显示 quick_menu 界面。
