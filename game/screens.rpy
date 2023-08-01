@@ -758,7 +758,7 @@ screen preferences():
                         style_prefix "radio"
                         label _("显示")
                         textbutton _("窗口") action Preference("display", "window")
-                        textbutton _("") action Preference("display", "fullscreen")
+                        textbutton _("全屏") action Preference("display", "fullscreen")
 
                 vbox:
                     style_prefix "check"
@@ -903,7 +903,6 @@ style slider_vbox:
 screen history():
 
     tag menu
-
     ## 避免预缓存此界面，因为它可能非常大。
     predict False
 
@@ -1195,7 +1194,7 @@ style confirm_button is gui_medium_button
 style confirm_button_text is gui_medium_button_text
 
 style confirm_frame:
-    background Frame([ "gui/confirm_frame.png", "gui/frame.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
+    background Frame([ "gui/confirm_frame.png", "gui/frame.png"], gui.confirm_frame_borders, tile=False)
     padding gui.confirm_frame_borders.padding
     xalign .5
     yalign .5

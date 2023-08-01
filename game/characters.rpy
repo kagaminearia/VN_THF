@@ -13,4 +13,6 @@ define bfem_speaking = Character("黑衣女人",what_prefix="“",what_suffix="�
 define off_speaking = Character("衬衫女人",what_prefix="“",what_suffix="”")
 define thin_speaking = Character("瘦小女人",what_prefix="“",what_suffix="”")
 
-
+define boss_speaking = Character("老板",what_prefix="“",what_suffix="”")
+define jun_speaking = Character("君和",what_prefix="“",what_suffix="”")
+define stf_speaking = Character("工作人员",what_prefix="“",what_suffix="”")
