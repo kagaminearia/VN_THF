@@ -16,3 +16,5 @@ define thin_speaking = Character("瘦小女人",what_prefix="“",what_suffix="�
 define boss_speaking = Character("老板",what_prefix="“",what_suffix="”")
 define jun_speaking = Character("君和",what_prefix="“",what_suffix="”")
 define stf_speaking = Character("工作人员",what_prefix="“",what_suffix="”")
+define chi_speaking = Character("迟玉",what_prefix="“",what_suffix="”")
+

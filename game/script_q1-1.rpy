@@ -97,9 +97,9 @@ label q1_1:
 
     menu:
         "【保持专注】":
-            "wait for q1.1.1"
+            jump q1_1_1
         "【彻底放松】":
-            "wait for q1.1.2"
+            jump q1_1_2
     
 
     return
