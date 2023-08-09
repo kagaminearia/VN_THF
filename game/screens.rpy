@@ -219,8 +219,15 @@ style choice_vbox:
 
     spacing gui.choice_spacing
 
-style choice_button is default:
-    properties gui.button_properties("choice_button")
+# style choice_button is default:
+#     properties gui.button_properties("choice_button")
+
+
+style choice_button:
+    xsize 1200
+    ysize 65
+    background "gui/button/choice_idle_background.png"
+    hover_background "gui/button/choice_hover_background.png"
 
 style choice_button_text is default:
     properties gui.button_text_properties("choice_button")
@@ -303,10 +310,11 @@ screen navigation():
             style_prefix "navigation"
             # xpos gui.navigation_xpos
             xalign 0.5
-            yalign 0.1
+            yalign 0.05
 
             spacing 60
 
+            textbutton _("标题") action MainMenu()
             textbutton _("保存") action ShowMenu("save")
             textbutton _("读取") action ShowMenu("load")
             textbutton _("历史") action ShowMenu("history")
@@ -315,7 +323,6 @@ screen navigation():
             if _in_replay:
                 textbutton _("结束回放") action EndReplay(confirm=True)
 
-            textbutton _("标题") action MainMenu()
             # textbutton _("关于") action ShowMenu("about")
 
             if renpy.variant("pc"):
@@ -600,7 +607,7 @@ screen file_slots(title):
                     for i in range(gui.file_slot_rows):
                         grid 2 1:
                             style_prefix "slot"
-                            spacing 100
+                            spacing 50
 
                             python:
                                 slot = i * 2 + 1
