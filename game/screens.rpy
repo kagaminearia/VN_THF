@@ -249,6 +249,8 @@ screen quick_menu():
 
             xalign 1.0
             yalign 1.0
+            xoffset -10
+            yoffset -10
             spacing 15
 
             # textbutton _("回退") action Rollback()
@@ -289,7 +291,7 @@ style quick_button_text:
 screen navigation():
     if renpy.get_screen("main_menu"):
         hbox:
-            style_prefix "navigation"
+            style_prefix "main_navigation"
             xalign 0.5
             yalign 0.95
             spacing 100
@@ -330,6 +332,14 @@ screen navigation():
                 ## 退出按钮在 iOS 上是被禁止使用的，在安卓和网页上也不是必要的。
                 textbutton _("退出") action Quit(confirm=not main_menu)
 
+
+style main_navigation_button_text:
+    outlines [ (absolute(10), "#000", absolute(0), absolute(0)) ]
+    color "#fff"
+    xalign 0.5
+    hover_color "#868686"
+
+style main_navigation_button is gui_button
 
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
@@ -420,7 +430,8 @@ screen game_menu(title, scroll=None, yinitial=0.0):
     style_prefix "game_menu"
 
     if main_menu:
-        add gui.main_menu_background
+        # add gui.main_menu_background
+        add gui.game_menu_background
     else:
         add gui.game_menu_background
 
@@ -582,14 +593,14 @@ style about_label_text:
 screen save():
 
     tag menu
-
+    add "gui/menu_save.png"
     use file_slots(_("保存"))
 
 
 screen load():
 
     tag menu
-
+    add "gui/menu_load.png"
     use file_slots(_("读取"))
 
 
@@ -600,7 +611,7 @@ screen file_slots(title):
     use game_menu(title):
 
         side "c":
-            area (-200, 0, 2000, 2000)
+            area (-220, -40, 2000, 1000)
             viewport id "slot":
                 grid gui.file_slot_cols gui.file_slot_rows:
                     xalign 0.5 yalign 0.5 spacing 10
@@ -692,6 +703,7 @@ screen file_slots(title):
 
                     xalign 0.5
                     yalign 1.0
+                    yoffset 30
 
                     spacing gui.page_spacing
 
@@ -751,6 +763,7 @@ style slot_button_text:
 screen preferences():
 
     tag menu
+    add "gui/menu_config.png"
 
     use game_menu(_("设置"), scroll="viewport"):
 
