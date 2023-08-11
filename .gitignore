@@ -5,3 +5,6 @@
 traceback.txt
 log.txt
 errors.txt
+
+# Ignore cache
+game/cache/*

@@ -510,7 +510,7 @@ style return_button is navigation_button
 style return_button_text is navigation_button_text
 
 style game_menu_outer_frame:
-    bottom_padding 45
+    bottom_padding 10
     top_padding 180
 
     background "gui/overlay/bg_transparent.png"
@@ -617,7 +617,7 @@ screen file_slots(title):
             area (-220, -40, 2000, 1000)
             viewport id "slot":
                 grid gui.file_slot_cols gui.file_slot_rows:
-                    xalign 0.5 yalign 0.5 spacing 10
+                    xalign 0.5 yalign 0.0 spacing 40
                     for i in range(gui.file_slot_rows):
                         grid 2 1:
                             style_prefix "slot"
@@ -706,7 +706,7 @@ screen file_slots(title):
 
                     xalign 0.5
                     yalign 1.0
-                    yoffset 30
+                    # yoffset 30
 
                     spacing gui.page_spacing
 
