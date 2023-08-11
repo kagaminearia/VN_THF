@@ -47,7 +47,7 @@ label ch1:
         "【黑街】":
             "wait for q1.2"
         "【230居民区】":
-            "wait for q1.3"
+            jump q1_3
 
 
     return

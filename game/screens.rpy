@@ -229,8 +229,11 @@ style choice_button:
     background "gui/button/choice_idle_background.png"
     hover_background "gui/button/choice_hover_background.png"
 
-style choice_button_text is default:
-    properties gui.button_text_properties("choice_button")
+style choice_button_text:
+    idle_color "#000000"
+    hover_color "#a7a7a7"
+    xalign 0.5
+    # properties gui.button_text_properties("choice_button")
 
 
 ## 快捷菜单界面 ######################################################################
