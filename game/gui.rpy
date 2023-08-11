@@ -217,7 +217,7 @@ the 0.6 zoomed screenshot. Figure out a way to either
 - define these numbers to match the zoomed screenshot
 """
 define gui.slot_button_width = 600
-define gui.slot_button_height = 197
+define gui.slot_button_height = 160
 define gui.slot_button_borders = Borders(15, 15, 15, 15)
 define gui.slot_button_text_size = 21
 # define gui.slot_button_text_xalign = 0.5
