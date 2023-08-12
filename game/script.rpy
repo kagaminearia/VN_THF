@@ -13,7 +13,7 @@ label start:
     unknown "……醒醒……起来……注意——"
 
     show qian_close0 at char_mid with dissolve
-    qian "有什么东西，好吵……\n无边的黑暗似乎在震动，但……"
+    qian "有什么东西，好吵……\n无边的黑暗似乎在震动，扰得人不清净。是因为最近总觉得有人在盯着我吗？连梦里也不安生……"
     hide qian_close0
     show qian_shocked0 at char_mid
     qian "——啊！"

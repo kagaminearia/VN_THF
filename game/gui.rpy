@@ -326,17 +326,17 @@ define gui.unscrollable = "hide"
 define config.history_length = 250
 
 ## 历史屏幕条目的高度，或设置为 None 以使高度变量自适应。
-define gui.history_height = 210
+define gui.history_height = 200
 
 ## 所指定叙述角色的标签的坐标、宽度和对齐方式。
-define gui.history_name_xpos = 233
+define gui.history_name_xpos = 150
 define gui.history_name_ypos = 0
-define gui.history_name_width = 233
-define gui.history_name_xalign = 1.0
+define gui.history_name_width = 150
+define gui.history_name_xalign = 0.0
 
 ## 对话文本的坐标、宽度和对齐方式。
-define gui.history_text_xpos = 255
-define gui.history_text_ypos = 3
+define gui.history_text_xpos = 400
+define gui.history_text_ypos = 0
 define gui.history_text_width = 1110
 define gui.history_text_xalign = 0.0
 

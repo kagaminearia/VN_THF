@@ -260,6 +260,13 @@ screen quick_menu():
             imagebutton auto "gui/button/history_%s.png" action ShowMenu('history')
             imagebutton auto "gui/button/skip_%s.png" action Skip() alternate Skip(fast=True, confirm=True)
             imagebutton auto "gui/button/auto_%s.png" action Preference("auto-forward", "toggle")
+            
+            # imagebutton:
+            #     idle "gui/button/auto_idle.png"
+            #     hover "gui/button/auto_hover.png"
+            #     foreground "gui/button/auto_[prefix].png"
+            #     action Preference("auto-forward", "toggle")
+
             imagebutton auto "gui/button/save_%s.png" action ShowMenu('save')
             imagebutton auto "gui/button/load_%s.png" action ShowMenu('load')
             imagebutton auto "gui/button/q_save_%s.png" action QuickSave()
@@ -516,11 +523,11 @@ style game_menu_outer_frame:
     background "gui/overlay/bg_transparent.png"
 
 style game_menu_navigation_frame:
-    xsize 420
+    xsize 0
     yfill True
 
 style game_menu_content_frame:
-    left_margin 60
+    left_margin 0
     right_margin 30
     top_margin 15
 
@@ -534,7 +541,7 @@ style game_menu_side:
     spacing 15
 
 style game_menu_label:
-    xpos 75
+    xpos 0
     ysize 180
 
 style game_menu_label_text:
@@ -614,7 +621,7 @@ screen file_slots(title):
     use game_menu(title):
 
         side "c":
-            area (-220, -40, 2000, 1000)
+            area (15, -40, 2000, 1000)
             viewport id "slot":
                 grid gui.file_slot_cols gui.file_slot_rows:
                     xalign 0.5 yalign 0.0 spacing 40
@@ -985,10 +992,14 @@ style history_name:
     xsize gui.history_name_width
 
 style history_name_text:
+    font "fonts/江城正君体_400W.ttf"
+    color "#000000"
     min_width gui.history_name_width
     text_align gui.history_name_xalign
 
 style history_text:
+    color "#000000"
+    font "fonts/HanaMinA.ttf"
     xpos gui.history_text_xpos
     ypos gui.history_text_ypos
     xanchor gui.history_text_xalign
@@ -1001,7 +1012,7 @@ style history_label:
     xfill True
 
 style history_label_text:
-    xalign 0.5
+    xalign 0.0
 
 
 ## 帮助界面 ########################################################################
@@ -1254,6 +1265,19 @@ screen skip_indicator():
             text "▸" at delayed_blink(0.0, 1.0) style "skip_triangle"
             text "▸" at delayed_blink(0.2, 1.0) style "skip_triangle"
             text "▸" at delayed_blink(0.4, 1.0) style "skip_triangle"
+
+
+screen auto_indicator():
+
+    zorder 100
+    style_prefix "skip"
+
+    frame:
+
+        hbox:
+            spacing 9
+            text _("正在自动")
+
 
 
 ## 此变换用于一个接一个地闪烁箭头。
