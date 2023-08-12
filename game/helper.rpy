@@ -1,4 +1,5 @@
 init python:
+    config.keymap['hide_windows'] = []
     config.keymap['dismiss'].append('mousedown_5')
 
 init python:

@@ -321,6 +321,7 @@ screen navigation():
                 textbutton _("结束回放") action EndReplay(confirm=True)
 
             textbutton _("关于") action ShowMenu("about")
+            textbutton _("帮助") action ShowMenu("help")
 
             if renpy.variant("pc"):
                 ## 退出按钮在 iOS 上是被禁止使用的，在安卓和网页上也不是必要的。
@@ -536,11 +537,11 @@ style game_menu_navigation_frame:
 
 style game_menu_content_frame:
     left_margin 0
-    right_margin 30
+    right_margin 0
     top_margin 15
 
 style game_menu_viewport:
-    xsize 1380
+    xsize 1920
 
 style game_menu_vscrollbar:
     unscrollable gui.unscrollable
@@ -629,7 +630,7 @@ screen file_slots(title):
     use game_menu(title):
 
         side "c":
-            area (15, -40, 2000, 1000)
+            area (0, -40, 2000, 1000)
             viewport id "slot":
                 grid gui.file_slot_cols gui.file_slot_rows:
                     xalign 0.5 yalign 0.0 spacing 40
@@ -786,7 +787,7 @@ screen preferences():
     use game_menu(_("设置"), scroll="viewport"):
 
         vbox:
-
+            xoffset 400
             hbox:
                 box_wrap True
 
@@ -808,7 +809,7 @@ screen preferences():
                 ## 可在此处添加 radio_pref 或 check_pref 类型的额外 vbox，以添加
                 ## 额外的创建者定义的偏好设置。
 
-            null height (4 * gui.pref_spacing)
+            null height (6 * gui.pref_spacing)
 
             hbox:
                 style_prefix "slider"
@@ -972,7 +973,7 @@ screen history():
                     substitute False
 
         if not _history_list:
-            label _("尚无对话历史记录。")
+            label _("尚无对话历史记录。") style "history_text"
 
 
 ## 此代码决定了允许在历史记录界面上显示哪些标签。
