@@ -444,15 +444,21 @@ style main_menu_version:
 ## 面同时使用时，这些子界面将被嵌入（放置）在其中。
 
 screen game_menu(title, scroll=None, yinitial=0.0):
-    ##! title is currently not used in this function
 
     style_prefix "game_menu"
-
-    if main_menu:
+    # if main_menu:
         # add gui.main_menu_background
-        add gui.game_menu_background
-    else:
-        add gui.game_menu_background
+    add gui.game_menu_background
+    
+    if title == "设置":
+        add "gui/menu_config.png"
+    if title == "保存":
+        add "gui/menu_save.png"
+    if title == "读取":
+        add "gui/menu_load.png"
+    if title == "历史":
+        add "gui/menu_log.png"
+
 
     frame:
         style "game_menu_outer_frame"
@@ -501,10 +507,10 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     use navigation
 
-    textbutton _("返回"):
-        style "return_button"
+    # textbutton _("返回"):
+    #     style "return_button"
 
-        action Return()
+    #     action Return()
 
     # label title
 
