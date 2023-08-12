@@ -18,4 +18,6 @@ define boss_speaking = Character("老板",what_prefix="“",what_suffix="”")
 define jun_speaking = Character("君和",what_prefix="“",what_suffix="”")
 define stf_speaking = Character("工作人员",what_prefix="“",what_suffix="”")
 define chi_speaking = Character("迟玉",what_prefix="“",what_suffix="”")
+define ying_speaking = Character("莺莺",what_prefix="“",what_suffix="”")
+define li_speaking = Character("黎沙",what_prefix="“",what_suffix="”")
 
