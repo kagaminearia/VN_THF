@@ -258,14 +258,22 @@ screen quick_menu():
 
             # textbutton _("回退") action Rollback()
             imagebutton auto "gui/button/history_%s.png" action ShowMenu('history')
-            imagebutton auto "gui/button/skip_%s.png" action Skip() alternate Skip(fast=True, confirm=True)
-            imagebutton auto "gui/button/auto_%s.png" action Preference("auto-forward", "toggle")
+            # imagebutton auto "gui/button/skip_%s.png" action Skip() alternate Skip(fast=True, confirm=True)
             
-            # imagebutton:
-            #     idle "gui/button/auto_idle.png"
-            #     hover "gui/button/auto_hover.png"
-            #     foreground "gui/button/auto_[prefix].png"
-            #     action Preference("auto-forward", "toggle")
+            imagebutton:
+                idle "gui/button/skip_idle.png"
+                hover "gui/button/skip_hover.png"
+                selected_idle "gui/button/auto_hover.png"
+                selected_hover "gui/button/skip_idle.png"
+                action Skip() alternate Skip(fast=True, confirm=True)
+            # imagebutton auto "gui/button/auto_%s.png" action Preference("auto-forward", "toggle")
+            
+            imagebutton:
+                idle "gui/button/auto_idle.png"
+                hover "gui/button/auto_hover.png"
+                selected_idle "gui/button/auto_hover.png"
+                selected_hover "gui/button/auto_idle.png"
+                action Preference("auto-forward", "toggle")
 
             imagebutton auto "gui/button/save_%s.png" action ShowMenu('save')
             imagebutton auto "gui/button/load_%s.png" action ShowMenu('load')
@@ -1276,7 +1284,8 @@ screen auto_indicator():
 
         hbox:
             spacing 9
-            text _("正在自动")
+            if _preferences.afm_enable:
+                text _("正在自动") style "skip_text"
 
 
 
