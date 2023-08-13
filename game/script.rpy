@@ -51,7 +51,7 @@ label start:
     hide qian_silent0
     show qian_worry11 at char_left
     qian_speaking "到底发生了什么？没有说明吗？"
-    qian "我的声音发紧，从嗓子里挤出来，听着有些尖锐。她却毫无所觉，只是瞥过来一眼，而后像习以为常地转过头，无视。"
+    qian "等待的十几个小时过去，我无比疲惫，声音发紧，从嗓子里挤出来，听着有些尖锐。她却毫无所觉，只是瞥过来一眼，而后像习以为常地转过头，无视。"
     qian "我呆呆地站在原地，像个傻子。\n……感觉，糟透了。"
 
     scene bg_office_1 with fade
