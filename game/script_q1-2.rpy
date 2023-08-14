@@ -68,7 +68,9 @@ label q1_2_2:
     qian "我被她拉着跑出一段距离才停下来，困惑不已。然而不知是因为太过突然，还是别的什么，我的眼前竟然逐渐变得模糊，摇摇晃晃，身体也快要软下去。"
     qian_speaking "怎么，回事……你……"
 
+    
     qian_speaking "嗯……疼……这是哪？"
+    scene bg_yingroom0 with fade
     qian "我猛地从床上坐起来——总觉得这种动作似曾相识……为什么我总是这么倒霉？"
     unknown "醒了？"
     qian_speaking "嗯？"
