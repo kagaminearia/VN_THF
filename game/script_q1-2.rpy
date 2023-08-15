@@ -59,18 +59,20 @@ label q1_2_2:
     unknown "……"
     unknown "我们先走了。"
     qian_speaking "诶，怎么……啊诶？"
-    qian "令人不安的沉默后，面前的长发少女终于开口——却不是对我。"
-    qian "她却没多解释，只是用力攥住我的手腕往外走。\n而直到这时，我才注意到周围的人不知道什么时候都围了上来，直直地望着我们。"
+    qian "令人不安的沉默后，面前的长发少女终于开口——却不是对我。\n她却没多解释，只是用力攥住我的手腕往外走。"
+    show crowd with Dissolve(0.5)
+    qian "而直到这时，我才注意到周围的人不知道什么时候都围了上来，直直地望着我们。"
 
+    scene bg_road01 with vpunch
     qian "哈啊，哈……差不多了吧。"
     unknown "嗯。"
     qian_speaking "你，他们，你们到底怎么回事啊……嗯，诶……"
     qian "我被她拉着跑出一段距离才停下来，困惑不已。然而不知是因为太过突然，还是别的什么，我的眼前竟然逐渐变得模糊，摇摇晃晃，身体也快要软下去。"
     qian_speaking "怎么，回事……你……"
 
-    
+
     qian_speaking "嗯……疼……这是哪？"
-    scene bg_yingroom0 with fade
+    scene bg_yingroom0 with vpunch
     qian "我猛地从床上坐起来——总觉得这种动作似曾相识……为什么我总是这么倒霉？"
     unknown "醒了？"
     qian_speaking "嗯？"
