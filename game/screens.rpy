@@ -263,7 +263,7 @@ screen quick_menu():
             imagebutton:
                 idle "gui/button/skip_idle.png"
                 hover "gui/button/skip_hover.png"
-                selected_idle "gui/button/auto_hover.png"
+                selected_idle "gui/button/skip_hover.png"
                 selected_hover "gui/button/skip_idle.png"
                 action Skip() alternate Skip(fast=True, confirm=True)
             # imagebutton auto "gui/button/auto_%s.png" action Preference("auto-forward", "toggle")

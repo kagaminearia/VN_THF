@@ -4,7 +4,7 @@ label start:
     # （命名为 bg room.png 或 bg room.jpg）来显示。
     window hide
 
-    scene black_bg with fade
+    scene bg_black with fade
     na1 "“愿你我的生命如荆棘般不屈。”"
     na1 "——荆棘之城 城市印章"
     pause
@@ -124,7 +124,7 @@ label start:
     hide qian_think0
     "荆棘之城的最底端\nD层"
     
-    scene black_bg with Fade(0.5,0.5,0.5,color="#fff")
+    scene bg_black with Fade(0.5,0.5,0.5,color="#fff")
     qian "荆棘之城是一座竖直发展的城市，自上而下分为A，B，C，D层。在这其中，D层位于城市最底部，被那些游手好闲、不学无术的人占据着，藏匿着许多肮脏与恶意。"
     qian "但……这些也只是我之前在书上了解的D层信息。我从来没有想过自己有一天会来这个地方。"
     scene bg_road01 with Fade(0.1,0.4,0.1)
@@ -145,11 +145,11 @@ label start:
     qian "……\n……"
     qian "肌肉还在隐隐作痛，脚下的地板变得又硬又硌，刺得我皮肤生疼。\n我轻轻吸了一口气，毫无防备被扔到完全陌生的环境，茫然和恐慌逐渐爬上我的身体，完全覆盖住我的神经。"
     qian "滴，没设置过的终端机发出默认的响声。颤抖的手指点开终端机——原本空荡荡，只有我的个人信息——此刻收件箱却多了一个数字。我打开后，震惊地发现这是宋女士发来的消息。"
-    scene black_bg with Fade(0.1,0.1,0.1)
+    scene bg_black with Fade(0.1,0.1,0.1)
     red "【收件人：T25648"
     red "宝宝：\n很抱歉因为工作连累了你。我们还需要一段时间，等到所有事情都结束就会没事的。\n只是委屈你了，管制局可能会很忙，但必要的东西会安排好。你多注意一下，不会有问题。"
     red "我们相信你在D层也能努力过好，等我们回去。\n爱你的 母亲和妈妈】"
-    scene black_bg with Fade(0.1,0.1,0.1)
+    scene bg_black with Fade(0.1,0.1,0.1)
     show qian_worry01 at char_mid with dissolve
     qian "……\n……"
     qian "以前我绝对不会想过，这样普通又简单的话竟然会让人有想流泪的冲动。\n我甚至无法仔细阅读那些文字，只是看到寄件人的编号，就已经几乎控制不住颤抖的手指。"
