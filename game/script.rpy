@@ -5,8 +5,8 @@ label start:
     window hide
 
     scene bg_black with fade
-    na1 "“愿你我的生命如荆棘般不屈。”"
-    na1 "——荆棘之城 城市印章"
+    na "“愿你我的生命如荆棘般不屈。”"
+    na "——荆棘之城 城市印章"
     pause
 
     window show
