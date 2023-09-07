@@ -257,7 +257,8 @@ screen quick_menu():
             spacing 15
 
             # textbutton _("回退") action Rollback()
-            imagebutton auto "gui/button/history_%s.png" action ShowMenu('history')
+            # ?: should this be history or log for the hovered text?
+            imagebutton auto "gui/button/history_%s.png" action ShowMenu('history') tooltip 'history'
             # imagebutton auto "gui/button/skip_%s.png" action Skip() alternate Skip(fast=True, confirm=True)
             
             imagebutton:
@@ -266,6 +267,7 @@ screen quick_menu():
                 selected_idle "gui/button/skip_hover.png"
                 selected_hover "gui/button/skip_idle.png"
                 action Skip() alternate Skip(fast=True, confirm=True)
+                tooltip 'skip'
             # imagebutton auto "gui/button/auto_%s.png" action Preference("auto-forward", "toggle")
             
             imagebutton:
@@ -274,12 +276,25 @@ screen quick_menu():
                 selected_idle "gui/button/auto_hover.png"
                 selected_hover "gui/button/auto_idle.png"
                 action Preference("auto-forward", "toggle")
+                tooltip 'auto forward'
 
-            imagebutton auto "gui/button/save_%s.png" action ShowMenu('save')
-            imagebutton auto "gui/button/load_%s.png" action ShowMenu('load')
-            imagebutton auto "gui/button/q_save_%s.png" action QuickSave()
-            imagebutton auto "gui/button/q_load_%s.png" action QuickLoad()
-            imagebutton auto "gui/button/setting_%s.png" action ShowMenu('preferences')
+            imagebutton auto "gui/button/save_%s.png" action ShowMenu('save') tooltip 'save'
+            imagebutton auto "gui/button/load_%s.png" action ShowMenu('load') tooltip 'load'
+            imagebutton auto "gui/button/q_save_%s.png" action QuickSave() tooltip 'quick save'
+            imagebutton auto "gui/button/q_load_%s.png" action QuickLoad() tooltip 'quick load'
+            imagebutton auto "gui/button/setting_%s.png" action ShowMenu('preferences') tooltip 'settings'
+
+        $ tooltip = GetTooltip()
+
+        if tooltip:
+
+            nearrect:
+                focus "tooltip"
+                prefer_top True
+
+                frame:
+                    xalign 0.5
+                    text tooltip
 
 
 ## 此代码确保只要用户没有主动隐藏界面，就会在游戏中显示 quick_menu 界面。
@@ -507,10 +522,10 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     use navigation
 
-    # textbutton _("返回"):
-    #     style "return_button"
+    textbutton _("返回"):
+        style "return_button"
 
-    #     action Return()
+        action Return()
 
     # label title
 

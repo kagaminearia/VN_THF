@@ -11,8 +11,9 @@ label start:
 
     window show
     unknown "……醒醒……起来……注意——"
-
-    show qian_close0 at char_mid with bottomside
+    
+    # TODO: bottomside doesnt work
+    show qian_close0 at char_mid with easeinbottom
     qian "有什么东西，好吵……\n无边的黑暗似乎在震动，扰得人不清净。是因为最近总觉得有人在盯着我吗？连梦里也不安生……"
     hide qian_close0
     show qian_shocked0 at char_mid
@@ -31,13 +32,13 @@ label start:
     show qian_worry1 at char_mid
     qian_speaking "你……你们要做什么？"
     qian "我想让自己的语气显得冷静，但嘴唇却不受控地颤抖。\n不行，冷静……她们是根据规定，不会乱来的。"
-    show bfem_0r at char_right with rightside
+    show bfem_0r at char_right with easeinright
     bfem_speaking "时茜小姐，你被逮捕了。"
     qian "我刚刚才建立起的心理防线马上破碎。"
     qian_speaking "……什么？你们弄错了吧！\n别开玩笑了！"
     qian_speaking "别过来！喂，肯定是有什么误会的地方！怎么可能！等——"
     na "——！"
-    show bfem_0l at char_left with leftside
+    show bfem_0l at char_left with easeinleft
     qian "两个人靠近，我剧烈挣扎起来，却没有用，在用力的拉扯中从床上摔倒在地。\n好痛……我几乎瞬间就冒出了眼泪，在挺直的身板前显得狼狈又讽刺。"
     qian "没有人理会这点，我被拖住，床边的东西因为磕绊而掉在地上，我却没办法把它们拿起来，只能踉跄着往外走。"
     hide qian_worry1
