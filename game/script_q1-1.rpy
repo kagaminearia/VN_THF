@@ -52,17 +52,17 @@ label q1_1:
     qian "我……"
     
     scene bg_factory with Fade(0.1,0.4,0.3)
-    show boss at char_right with rightside
+    show boss at char_right with easeinright
     unknown "第一天上班就迟到，要不是管制局设置的试用期，你现在就可以直接滚蛋了。\n我知道你之前是A层的人，但这里不是A层，别想那些有的没的，没用，好好工作。"
-    show qian_worry11 at char_left with leftside
+    show qian_worry11 at char_left with easeinleft
     qian "面前的人据说是这里的老板，她说话又急又快，我根本来不及跟上节奏。\n见我迟迟没有反应，她的声音拔得更高，像尖刺一般扎进我的头皮。"
     boss_speaking "听懂了没？你是废物吗，回答都不会？"
     qian_speaking "呃啊……嗯。"
     scene bg_factory with Fade(0.2,0.4,0.3)
     qian "刚才竟然被她吓到，还差点发出哭声……我难堪又气闷，连在角落里也不自在。\n手指用力地揉了把脸，我才重新聚集起精神。"
-    show qian_silent0 at char_left with leftside
+    show qian_silent0 at char_left with easeinleft
     qian "这是个很大的房间，许多机器整齐排列，每一台前站着一个穿相同制服的员工。她们手上忙着动作，眼神却明显在我身上飘忽。\n看来刚刚动静不小……我攥紧衣角，有些不适。"
-    show jun at char_right with rightside
+    show jun at char_right with easeinright
     unknown "你还好吗？"
     qian_speaking "啊……你……我……"
     unknown "嘘，别这么大声音。会被骂的。"
@@ -74,7 +74,7 @@ label q1_1:
 
     qian "半小时的午餐时间。果冻般的压缩食品放在面前，毫无生机，从塑胶袋中被挤进嘴巴。\n浓烈又做作的香精甜味冲上脑门，让我差点直接吐出来。"
     qian "数道视线再次打在我身上——最近，我竟然无比熟悉这种感觉——我不由得掐紧了手指。\n噗嗤，半流质物体溢出塑料袋，糊在桌上。"
-    show jun at char_right with rightside
+    show jun at char_right with easeinright
     jun_speaking "别这样，食堂还得自己打扫……"
     qian_speaking "哦，嗯……"
     qian "君和坐在我旁边，和工作时的位置一样——我现在已经知道她的名字。\n她扬起手里的袋子，推了推眼镜，冲我露齿一笑。"
