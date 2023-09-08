@@ -1,4 +1,7 @@
 # README for Project: Dust on Thorn
+This is a visual novel project using Renpy
+
+
 ### Introduction
 ```
 时茜从没想过，自己只是睡了一觉，世界就发生了翻天覆地的变化。
