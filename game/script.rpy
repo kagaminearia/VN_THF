@@ -44,6 +44,12 @@ label start:
     hide qian_worry1
     show qian_shocked0 at char_mid
     qian_speaking "喂，等等……等等啊！"
+    hide bfem_0l with easeoutleft 
+    pause(0.1)
+    hide bfem_0r with easeoutright 
+    pause(0.1)
+    hide qian_shocked0 with fade 
+    pause(2.0)
 
     scene bg_office_0 with fade
     show qian_silent0 at char_left with dissolve
