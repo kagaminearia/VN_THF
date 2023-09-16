@@ -25,11 +25,11 @@ label q2_2_2:
     qian "我艰难地喘息着，搞不清楚状况，但求生的本能让我用力挣扎，试图突破她的控制。"
     qian "快……快点……用力……！！！"
     #TODO: QTE
-#TODO: QTE 【QTE失败】    qian "可，可恶……到底……为什么，会这样……"
+#TODO: 【QTE失败】    qian "可，可恶……到底……为什么，会这样……"
     qian "你不是……之前还……帮我，的吗……"
     qian "啊，啊啊……"
     "ENDING"
-#TODO: QTE 【QTE成功】    qian_speaking "哈……啊！！！！"
+#TODO: 【QTE成功】    qian_speaking "哈……啊！！！！"
     #TODO: 闪光，转场
     qian "我爆发出惊人的求生意志，一把推开了压在身上的莺莺。"
     ying_speaking "唔……"

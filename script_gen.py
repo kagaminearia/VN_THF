@@ -42,6 +42,12 @@ def get_digits(
     return "_".join([ele for ele in s if ele.isdigit()])
 
 
+def has_digits(
+    s: str,
+):
+    return any(ele.isdigit() for ele in s)
+
+
 def gen_txt(
     fname: str,
     digits: str,
@@ -91,24 +97,17 @@ def gen_txt(
                 file.write(f'    "{dialog}"\n')
             # Condition and jump
             else:
-                try:
-                    if "QTE" not in dialog:
-                        condition, chapter = dialog.split("Q")
-                        if not menu_flag:
-                            file.write("    menu:\n")
-                            menu_flag = True
+                if has_digits(dialog):
+                    condition, chapter = dialog.split("Q")
+                    if not menu_flag:
+                        file.write("    menu:\n")
+                        menu_flag = True
 
-                        file.write(f'        "{condition}":\n')
-                        file.write(f"            jump q{get_digits(chapter)}\n")
-                    else:
-                        file.write(f"#TODO: QTE {dialog}")
-                except:
-                    print(
-                        (
-                            f"[ERROR] Format of content at {fname} row {line_counter} column 2 is off.\n"
-                            + r"Expect <ACTION_NAME>Q\d+(\.\d+)*"
-                        )
-                    )
+                    file.write(f'        "{condition}":\n')
+                    file.write(f"            jump q{get_digits(chapter)}\n")
+                else:
+                    file.write(f"#TODO: {dialog}")
+
     data.clear()
 
 
