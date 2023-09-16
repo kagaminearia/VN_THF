@@ -81,24 +81,27 @@ def gen_txt(
             # Character with dialog
             elif person in CHAR_DICT:
                 menu_flag = False
-                file.write(f'\t{CHAR_DICT[person]} "{dialog}"\n')
+                file.write(f'    {CHAR_DICT[person]} "{dialog}"\n')
                 # With notes
                 if len(note) > 0:
-                    file.write(f"\t#TODO: {note}\n")
+                    file.write(f"    #TODO: {note}\n")
             # Only dialog
             elif len(dialog) > 0 and JUMP_IDENTIFIER not in dialog:
                 menu_flag = False
-                file.write(f'\t"{dialog}"\n')
+                file.write(f'    "{dialog}"\n')
             # Condition and jump
             else:
                 try:
-                    condition, chapter = dialog.split("Q")
-                    if not menu_flag:
-                        file.write("\tmenu:\n")
-                        menu_flag = True
+                    if "QTE" not in dialog:
+                        condition, chapter = dialog.split("Q")
+                        if not menu_flag:
+                            file.write("    menu:\n")
+                            menu_flag = True
 
-                    file.write(f'\t\t"{condition}":\n')
-                    file.write(f"\t\t\tjump q{digits}\n")
+                        file.write(f'        "{condition}":\n')
+                        file.write(f"            jump q{get_digits(chapter)}\n")
+                    else:
+                        file.write(f"#TODO: QTE {dialog}")
                 except:
                     print(
                         (
