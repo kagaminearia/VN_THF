@@ -26,8 +26,9 @@ label start:
     scene bg_prolo_01 with fade
     hide qian_shocked0
     show qian_worry0 at char_mid
-    qian "我混沌的脑海顿时清醒，眼睛也适应了微弱的光线。\n四个装束严实的人站在床边，我的四周，把我紧紧围住。"
-    qian "他们在说什么，被面罩遮住，我听不真切。\n相同的黑色着装，挺拔绷直的身姿，若隐若现的标识……这当然是城市管制局的人。"
+    qian "我混沌的脑海顿时清醒，眼睛也适应了微弱的光线。\n几个装束严实的人站在床边，我的四周，把我紧紧围住。"
+    qian "他们在说什么，被面罩遮住，我听不真切。\n相同的黑色着装，挺拔绷直的身姿，若隐若现的标识……"
+    qian "这是城市管制局的人，而且，还是最高级别的执行队。\n……我怎么会和她们扯上关系？"
     hide qian_worry0
     show qian_worry1 at char_mid
     qian_speaking "你……你们要做什么？"
@@ -53,7 +54,7 @@ label start:
 
     scene bg_office_0 with fade
     show qian_silent0 at char_left with dissolve
-    qian "这里是管控所。\n巨大的顶灯不知疲倦地射出明亮的白色光线，刺眼到让人眼睛生疼。我穿着睡衣站在角落的一间房间中央，有一种无所适从的局促。"
+    qian "这里是管制局。\n巨大的顶灯不知疲倦地射出明亮的白色光线，刺眼到让人眼睛生疼。我穿着睡衣站在角落的一间房间中央，有一种无所适从的局促。"
     qian "……为什么……我无声地吸了一口气，压抑着翻涌的情绪，看向离我最近的人。"
     hide qian_silent0
     show qian_worry11 at char_left
@@ -75,7 +76,7 @@ label start:
     hide qian_calm0
     show qian_calm1 at char_left
     qian_speaking "在研究所做研究，关于生物科学……其他的我也不知道，她们不能说。"
-    bfem_speaking "家里有藏东西的地方吗？"
+    bfem_speaking "除了登记的，家里还有别的房间吗？"
     qian_speaking "为什么这也要问——我没有，我的房间里没有……别的，不知道。"
     hide qian_calm1
     show qian_calm0 at char_left
@@ -84,7 +85,7 @@ label start:
     hide qian_calm0
     show qian_silent0 at char_left
     qian_speaking "好的……啊，什么？"
-    qian "我依旧是下意识回应，说完才发现并不是在问问题，而是有东西被递过来。\n荆棘之城的统一终端机，正面屏幕，反面刻着城市印章。但……这并不是我原来的终端。"
+    qian "我依旧是下意识回应，说完才发现并不是在问问题，而是有东西被递过来。\n个人终端机，荆棘之城的统一装置，正面屏幕，反面刻着城市印章。但……并不是我原来的那个。"
     qian "为……不，我已经发现了，就算询问也不会有人回答。\n屏幕亮起，这个全新的终端上面正显示着我的名字，以及一条带有鲜红色标签的消息。"
     hide qian_silent0
     hide bfem_0r
@@ -103,7 +104,8 @@ label start:
     qian_speaking "……唔！好痛，痛……啊啊！"
     scene bg_office_1
     scene bg_office_2 with fade
-    qian "和之前一样，四个高大女人围着我，手拿武器，仿佛我罪大恶极。\n可我明明只是在家里睡觉，一无所知。只是在睡觉而已，醒来却发生这些事情。\n还有宋女士和黄女士，不知道她们怎么样了……"
+    qian "好疼。我感觉身体像是快要散架了。\n头疼，肩膀疼，脚疼，被控制住住的手腕也疼。"
+    qian "和之前一样，几个高大女人围着我，手拿武器，仿佛我罪大恶极。\n可我明明只是在家里睡觉，一无所知。只是在睡觉而已，醒来却发生这些事情。\n还有宋女士和黄女士，不知道她们怎么样了……"
     scene bg_office_3 with Fade(0.1,0.2,0.1)
     qian "我全身上下只有一套居家睡衣和崭新的终端，身体被控制住，被拉着往外走。\n我死死咬住嘴唇，避免让眼泪流下来，显得更加狼狈不堪。"
     scene bg_office_4 with Fade(0.1,0.3,0.1)
@@ -133,7 +135,10 @@ label start:
     
     scene bg_black with Fade(0.5,0.5,0.5,color="#fff")
     qian "荆棘之城是一座竖直发展的城市，自上而下分为A，B，C，D层。在这其中，D层位于城市最底部，被那些游手好闲、不学无术的人占据着，藏匿着许多肮脏与恶意。"
-    qian "但……这些也只是我之前在书上了解的D层信息。我从来没有想过自己有一天会来这个地方。"
+    qian "荆棘之城是这座城市的名字，它于数百年前建成，是我们最后的城市。那时候，战争失败的人们——我们的祖先——被迫失去原来的土地，只能在有限的空间里苟且偷生。"
+    qian "防护罩切断了整个城市与外界的联系，将我们困在牢笼之中，没有丰富的资源，只有匮乏的生活。"
+    qian "而D层，又是这座城市最为匮乏的地方……"
+    qian "但……这些也只是我之前在书上了解的D层信息。我从来没有想过自己有一天会来这里。"
     scene bg_road01 with Fade(0.1,0.4,0.1)
     show bfem_0r at char_right with dissolve
     show qian_worry01 at char_left with dissolve
@@ -153,13 +158,13 @@ label start:
     qian "肌肉还在隐隐作痛，脚下的地板变得又硬又硌，刺得我皮肤生疼。\n我轻轻吸了一口气，毫无防备被扔到完全陌生的环境，茫然和恐慌逐渐爬上我的身体，完全覆盖住我的神经。"
     qian "滴，没设置过的终端机发出默认的响声。颤抖的手指点开终端机——原本空荡荡，只有我的个人信息——此刻收件箱却多了一个数字。我打开后，震惊地发现这是宋女士发来的消息。"
     scene bg_black with Fade(0.1,0.1,0.1)
-    red "【收件人：T25648"
+    red "来信人：T20234"
     red "宝宝：\n很抱歉因为工作连累了你。我们还需要一段时间，等到所有事情都结束就会没事的。\n只是委屈你了，管制局可能会很忙，但必要的东西会安排好。你多注意一下，不会有问题。"
     red "我们相信你在D层也能努力过好，等我们回去。\n爱你的 母亲和妈妈】"
     scene bg_black with Fade(0.1,0.1,0.1)
     show qian_worry01 at char_mid with dissolve
     qian "……\n……"
-    qian "以前我绝对不会想过，这样普通又简单的话竟然会让人有想流泪的冲动。\n我甚至无法仔细阅读那些文字，只是看到寄件人的编号，就已经几乎控制不住颤抖的手指。"
+    qian "以前我绝对不会想过，这样普通又简单的话竟然会让人有想流泪的冲动。\n我甚至无法仔细阅读那些文字，只是看到编号，就已经几乎控制不住颤抖的手指。"
     hide qian_worry1
     show qian_close2 at char_mid
     qian "半晌，我收回终端机，深深地吐出一口气。"
