@@ -1277,6 +1277,7 @@ style confirm_button_text:
 ## 快进指示界面 ######################################################################
 ##
 ## skip_indicator 界面用于指示快进正在进行中。
+## auto_indicator 界面用于指示自动播放正在进行中。
 ##
 ## https://www.renpy.cn/doc/screen_special.html#skip-indicator
 
@@ -1296,10 +1297,9 @@ screen skip_indicator():
             text "▸" at delayed_blink(0.2, 1.0) style "skip_triangle"
             text "▸" at delayed_blink(0.4, 1.0) style "skip_triangle"
 
-
 screen auto_indicator():
 
-    zorder 100
+    zorder 101
     style_prefix "skip"
 
     frame:
@@ -1309,6 +1309,10 @@ screen auto_indicator():
             if _preferences.afm_enable:
                 text _("正在自动") style "skip_text"
 
+init python:
+    config.skip_indicator = None
+    config.overlay_screens.append("skip_indicator")
+    config.overlay_screens.append("auto_indicator")
 
 
 ## 此变换用于一个接一个地闪烁箭头。
