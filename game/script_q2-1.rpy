@@ -471,6 +471,7 @@ label q2_1_2:
             lan_speaking "这个啊……没事，你们很快就会团聚了。"
             qian_speaking "真的吗？那太好了！谢——诶？"
         "【问迟玉】":
+            $ q2121 = false
             qian_speaking "您知道……迟玉怎么样了吗？那个，应该是她帮我联系您的吧，所以……"
             lan_speaking "……\n她很好。"
             qian_speaking "这样啊，那太好了，她一直没找我，我还有点担心呢。"
@@ -491,6 +492,6 @@ label q2_1_2:
     else:
         lan_speaking "我不是说过了吗……以后就不用你担心了。"
     
-    
+
     return
     
