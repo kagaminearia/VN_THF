@@ -4,6 +4,7 @@ define red = Character(None,what_color="#9d2525",what_font="fonts/江城正君�
 
 # main characters
 define unknown = Character("？",what_prefix="“",what_suffix="”")
+define unknown_inn = Character("？")
 define qian = Character("时茜")
 define qian_speaking = Character("时茜",what_prefix="“",what_suffix="”")
 
