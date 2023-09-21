@@ -60,8 +60,8 @@ init:
                 "images/char/qian/shout.png"
             attribute closecalm:
                 "images/char/qian/closecalm.png"
-            attribute cloasesad:
-                "images/char/qian/cloasesad.png"
+            attribute closesad:
+                "images/char/qian/closesad.png"
             attribute o:
                 "images/char/qian/o.png"
             attribute smile:
