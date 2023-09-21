@@ -4,7 +4,7 @@ label start:
     # （命名为 bg room.png 或 bg room.jpg）来显示。
     window hide
 
-    scene bg_black with fade
+
     na "“愿你我的生命如荆棘般不屈。”"
     na "——荆棘之城 城市印章"
     pause
@@ -13,15 +13,15 @@ label start:
     unknown "……醒醒……起来……注意——"
     
     # TODO: bottomside doesnt work
-    show qian_close0 at char_mid with easeinbottom
+    show qianimg closecalm at char_mid with easeinbottom
     qian "有什么东西，好吵……\n无边的黑暗似乎在震动，扰得人不清净。是因为最近总觉得有人在盯着我吗？连梦里也不安生……"
-    hide qian_close0
-    show qian_shocked0 at char_mid
+    hide qianimg closecalm
+    show qianimg shock at char_mid
     qian "——啊！"
-    hide qian_shocked0
-    show qian_shocked0 at large with dissolve
+    hide qianimg shock
+    show qianimg pajama_red shock at large with dissolve
     qian "我倏地睁开眼睛，视线还很朦胧，于是一道鲜红色的光线格外显眼，带领我走到它的终点，指着我的心脏。"
-    show qian_shocked0 at char_mid
+    show qianimg pajama_red shock at char_mid 
     qian "……\n那不是梦……。"
     scene bg_prolo_01 with fade
     hide qian_shocked0

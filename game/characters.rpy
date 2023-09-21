@@ -23,8 +23,100 @@ define ying_speaking = Character("莺莺",what_prefix="“",what_suffix="”")
 define li_speaking = Character("黎沙",what_prefix="“",what_suffix="”")
 
 # place holders
-define place_holder = Character("女人：",what_prefix="“",what_suffix="”")
-define lan_speaking = Character("蓝石：",what_prefix="“",what_suffix="”")
-define coworker_speaking = Character("同事：",what_prefix="“",what_suffix="”")
-define white_speaking = Character("白衣女人：",what_prefix="“",what_suffix="”")
-define doctor_speaking = Character("医生：",what_prefix="“",what_suffix="”")
+define place_holder = Character("女人",what_prefix="“",what_suffix="”")
+define lan_speaking = Character("蓝石",what_prefix="“",what_suffix="”")
+define coworker_speaking = Character("同事",what_prefix="“",what_suffix="”")
+define white_speaking = Character("白衣女人",what_prefix="“",what_suffix="”")
+define doctor_speaking = Character("医生",what_prefix="“",what_suffix="”")
+
+
+
+
+# images for characters
+init:
+    layeredimage qianimg:
+        group body:
+            attribute pajama default:
+                "images/char/qian/pajama.png"
+            attribute pajama_red:
+                "images/char/qian/pajama_red.png"
+            attribute black:
+                "images/char/qian/black.png"
+            attribute shirt:
+                "images/char/qian/shirt.png"
+            attribute coat:
+                "images/char/qian/coat.png" 
+            attribute white:
+                "images/char/qian/white.png" 
+
+        group expressions:
+            attribute neutral default:
+                "images/char/qian/neutual.png"
+            attribute close:
+                "images/char/qian/close.png"
+            attribute shock:
+                "images/char/qian/shock.png"
+            attribute shout:
+                "images/char/qian/shout.png"
+            attribute closecalm:
+                "images/char/qian/closecalm.png"
+            attribute cloasesad:
+                "images/char/qian/cloasesad.png"
+            attribute o:
+                "images/char/qian/o.png"
+            attribute smile:
+                "images/char/qian/smile.png"
+            attribute sad:
+                "images/char/qian/sad.png"
+            attribute still:
+                "images/char/qian/still.png"
+
+
+    layeredimage chiimg:
+        group body:
+            attribute body default:
+                "images/char/chi/body.png"
+
+        group expressions:
+            attribute o default:
+                "images/char/chi/o.png"
+            attribute black:
+                "images/char/chi/black.png"
+            attribute close:
+                "images/char/chi/close.png"
+            attribute closesmile:
+                "images/char/chi/closesmile.png"
+            attribute sad:
+                "images/char/chi/sad.png"
+            attribute sadask:
+                "images/char/chi/sadask.png"
+            attribute warm:
+                "images/char/chi/warm.png"
+            attribute laugh:
+                "images/char/chi/laugh.png"
+
+    
+    layeredimage liimg:
+        group body:
+            attribute coat default:
+                "images/char/li/coat.png"
+            attribute black:
+                "images/char/li/black.png"
+            attribute white:
+                "images/char/li/white.png"
+
+        group expressions:
+            attribute neutral default:
+                "images/char/li/neutual.png"
+            attribute o:
+                "images/char/li/o.png"
+            attribute ask:
+                "images/char/li/ask.png"
+            attribute closeask:
+                "images/char/li/closeask.png"
+            attribute laugh:
+                "images/char/li/laugh.png"
+            attribute smile:
+                "images/char/li/smile.png"
+            attribute laugh:
+                "images/char/li/laugh.png"
