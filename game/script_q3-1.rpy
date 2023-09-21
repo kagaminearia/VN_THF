@@ -51,15 +51,29 @@ label q3_1:
     chi_speaking "门，外面门要开了……"
     qian_speaking "我知道——"
     qian "真的，只能赌一把了……要输入什么呢——"
-    # TODO: qte here
+    # qte here
+    $ time = 4
+    $ timer_range = 4
+    $ timer_jump = 'q3_1_0'
+    show screen countdown
     menu:
         "【蓝石的生日】":
+            "哔——"
+            qian "错误……"
+            hide screen countdown
             jump q3_1_0
         "【迟玉的生日】":
+            "哔——"
+            qian "错误……"
+            hide screen countdown
             jump q3_1_0
         "【“迟玉”的生日】":
+            hide screen countdown
             jump q3_1_1
         "【其他数字】":
+            "哔——"
+            qian "错误……"
+            hide screen countdown
             jump q3_1_0
 
 label q3_1_1: # ending here
@@ -152,8 +166,6 @@ label q3_1_1: # ending here
     return 
 
 label q3_1_0: # ending here
-    "哔——"
-    qian "错误……"
     "砰！"
     qian "没时间了……"
     chi_speaking "时茜……"
