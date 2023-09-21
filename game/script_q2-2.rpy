@@ -116,7 +116,7 @@ label q2_2:
     menu:
         "【去】":
             jump q2_2_1
-        "【不去】" if q1221 == true:
+        "【不去】" if q1221 == True:
             jump q2_2_2
 
 
@@ -255,14 +255,26 @@ label q2_2_2_1:
     qian "突然的枪声穿过我的耳膜，仿佛一道惊雷劈过。\n……怎么会？！怎么有人敢在城内开枪……！"
     qian "我似乎听见莺莺痛苦叫声，而后，踉踉跄跄的脚步声朝我的方向过来。"
     qian "糟糕，现在该怎么办……"
-    # TODO QTE here
+
+    # QTE here
+    $ time = 4
+    $ timer_range = 4
+    $ timer_jump = 'q320_fail'
+    show screen countdown
+    # can add some click sfx here
     menu:
         "【伸手帮忙】":
+            hide screen countdown
             jump q3_2
         "【坐视不理】":
             qian "太危险了，我还是不要插手比较好……"
+            hide screen countdown
             jump q3_2_0
-    
+
+label q320_fail:
+    qian "完了……！"
+    qian "事情发生得太快，我完全没来得及反应……"
+    jump q3_2_0
 
 
 label q3_2_0: # ending here
