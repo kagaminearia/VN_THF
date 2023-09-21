@@ -18,16 +18,23 @@ transform alpha_dissolve:
         linear 0.5 alpha 0
 
 
+# QTE click setting
+
+
+
+# keymap control setting
 init python:
     config.keymap['hide_windows'] = []
     config.keymap['dismiss'].append('mousedown_5')
 
+# save setting
 init python:
     config.has_autosave = False
     config.has_quicksave = False
     config.autosave_on_quit = False
     config.autosave_on_choice = False
 
+# screen punch setting
 init python:
     # change punch variable
     hpunch = Move((15, 0), (-15, 0), .10, bounce=True, repeat=True, delay=.275)
