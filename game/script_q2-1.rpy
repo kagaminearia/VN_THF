@@ -1,6 +1,11 @@
 label q2_1:
+    scene bg_cafe0 with Fade(1,1,1)
+    show chiimg closesmile at char_right with easeinright
     chi_speaking "你好~又见面啦，我说的没错吧！"
+    show qianimg shirt o at char_left with easeinleft
     qian_speaking "……\n是啊。请问这次的故障问题是什么？现在机器不在这边吗？"
+
+    
     chi_speaking "对呀……出了点意外，可能要晚点才能送过来了，不好意思啊。"
     qian_speaking "嗯，这个没事的……不过，如果不着急的话，可以在东西到这里之后再联系公司，这样也不用麻烦你等在这里。"
     chi_speaking "不麻烦啊，我们可以先做点别的。"

@@ -89,17 +89,17 @@ define rightside = MoveTransition(
 
 # character positions
 transform char_mid:
-    zoom 0.2
+    zoom 0.23
     xalign 0.5
     yalign 0.27
 
 transform char_left:
-    zoom 0.2
+    zoom 0.23
     xalign 0.2
     yalign 0.27
 
 transform char_right:
-    zoom 0.2
+    zoom 0.23
     xalign 0.8
     yalign 0.27
 
