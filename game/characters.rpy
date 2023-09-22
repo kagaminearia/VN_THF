@@ -71,6 +71,10 @@ init:
             attribute still:
                 "images/char/qian/still.png"
 
+        group mask:
+            attribute mask:
+                "images/char/qian/mask.png"
+
 
     layeredimage chiimg:
         group body:

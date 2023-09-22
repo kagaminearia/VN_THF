@@ -336,7 +336,7 @@ screen navigation():
                 textbutton _("结束回放") action EndReplay(confirm=True)
 
             textbutton _("关于") action ShowMenu("about")
-            textbutton _("帮助") action ShowMenu("help")
+            # textbutton _("帮助") action ShowMenu("help")
 
             if renpy.variant("pc"):
                 ## 退出按钮在 iOS 上是被禁止使用的，在安卓和网页上也不是必要的。
@@ -594,24 +594,40 @@ style return_button:
 
 screen about():
 
-    tag menu
+    # tag menu
 
     ## 此 use 语句将 game_menu 界面包含到了这个界面内。子级 vbox 将包含在
     ## game_menu 界面的 viewport 内。
-    use game_menu(_("关于"), scroll="viewport"):
+    # use game_menu(_("关于"), scroll="viewport"):
 
-        style_prefix "about"
+    #     style_prefix "about"
 
-        vbox:
+    #     vbox:
 
-            label "[config.name!t]"
-            text _("版本 [config.version!t]\n")
+    #         label "[config.name!t]"
+    #         text _("版本 [config.version!t]\n")
 
-            ## gui.about 通常在 options.rpy 中设置。
-            if gui.about:
-                text "[gui.about!t]\n"
+    #         ## gui.about 通常在 options.rpy 中设置。
+    #         if gui.about:
+    #             text "[gui.about!t]\n"
 
-            text _("引擎：{a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only]\n\n[renpy.license!t]")
+    #         text _("引擎：{a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only]\n\n[renpy.license!t]")
+    tag menu
+    style_prefix "about"
+    vbox:
+        label "[config.name!t]"
+        text _("版本 [config.version!t]\n")
+
+        ## gui.about 通常在 options.rpy 中设置。
+        if gui.about:
+            text "[gui.about!t]\n"
+
+        text _("引擎：{a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only]\n\n[renpy.license!t]")
+    
+    textbutton _("返回"):
+        style "return_button"
+
+        action Return()
 
 
 style about_label is gui_label
