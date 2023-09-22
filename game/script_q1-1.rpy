@@ -11,7 +11,7 @@ label q1_1:
     qian "我顿了顿，仍然不死心地继续说道。"
     off_speaking "D层身份信息的准备已经完成，如果没有其他需求，请及时结束咨询。"
     
-    hide qianming
+    hide qianing
     show qianimg sad at char_left
     qian "——这难道不是需求吗？我想这样冲她大喊，但无论我说什么，对面的人都油盐不进。"
     qian "我和她一墙之隔，透明的坚硬玻璃阻碍所有来自外部的影响。\n同我的恼怒和激动相比，她的表情毫无波澜——就像我刚刚见到的每个管制局的人那样。"
@@ -37,7 +37,7 @@ label q1_1:
     qian "好脏乱……我捏着鼻子走，穿过几条相似的小道，好不容易才看到写着编号的门牌。\n上面的花纹已经掉了一半，只能勉强看出原来的形状。它指着一道狭窄入口，又黑又深。"
     qian "……这真的是人能住的地方吗？我再三确认牌子上的图案，不得不接受现实。"
     scene bg_road05 with Fade(0.1,0.1,0.1)
-    qian "更深处没有灯，我只能靠着终端机上的荧光勉强前进。这片幽幽的光点照亮一小处黑暗，却让人更在意深处没被照亮的东西。\n黏糊，潮湿。"
+    qian "更深处没有路灯，我只能靠着终端机上的荧光勉强前进。这片幽幽的光点照亮一小处黑暗，却让人更在意深处没被照亮的东西。\n黏糊，潮湿。"
     scene bg_road06 with Fade(0.1,0,0.1)
     with vpunch
     qian_speaking "好恶心……呃啊！喂……！"
@@ -65,34 +65,48 @@ label q1_1:
     scene bg_factory with Fade(0.1,0.4,0.3)
     show boss at char_right with easeinright
     unknown "第一天上班就迟到，要不是管制局设置的试用期，你现在就可以直接滚蛋了。\n我知道你之前是A层的人，但这里不是A层，别想那些有的没的，没用，好好工作。"
-    show qian_worry11 at char_left with easeinleft
+    show qianimg shirt sad at char_left with easeinleft
     qian "面前的人据说是这里的老板，她说话又急又快，我根本来不及跟上节奏。\n见我迟迟没有反应，她的声音拔得更高，像尖刺一般扎进我的头皮。"
     boss_speaking "听懂了没？你是废物吗，回答都不会？"
     qian_speaking "呃啊……嗯。"
+
     scene bg_factory with Fade(0.2,0.4,0.3)
     qian "刚才竟然被她吓到，还差点发出哭声……我难堪又气闷，连在角落里也不自在。\n手指用力地揉了把脸，我才重新聚集起精神。"
-    show qian_silent0 at char_left with easeinleft
     qian "这是个很大的房间，许多机器整齐排列，每一台前站着一个穿相同制服的员工。她们手上忙着动作，眼神却明显在我身上飘忽。\n看来刚刚动静不小……我攥紧衣角，有些不适。"
-    show jun at char_right with easeinright
+    show jun at char_left with easeinleft
     unknown "你还好吗？"
+    show qianimg shirt sad at char_right with easeinright
     qian_speaking "啊……你……我……"
     unknown "嘘，别这么大声音。会被骂的。"
+
+    hide qianimg shirt sad
+    show qianimg shirt o at char_right
     qian_speaking "呃，嗯……怎么了？"
     unknown "这个地方，你的机器设置错了。\n对了，你还好吗？"
+
+    hide qianimg shirt o
+    show qianimg shirt still at char_right
     qian "没事了，谢谢……"
     unknown "你没事就好啦，快工作吧。"
     hide jun
 
+    scene bg_factory1 with fade
+    show qianimg shirt still at char_right with easeinright
     qian "半小时的午餐时间。果冻般的压缩食品放在面前，毫无生机，从塑胶袋中被挤进嘴巴。\n浓烈又做作的香精甜味冲上脑门，让我差点直接吐出来。"
     qian "数道视线再次打在我身上——最近，我竟然无比熟悉这种感觉——我不由得掐紧了手指。\n噗嗤，半流质物体溢出塑料袋，糊在桌上。"
-    show jun at char_right with easeinright
+    show jun at char_left with easeinleft
     jun_speaking "别这样，食堂还得自己打扫……"
     qian_speaking "哦，嗯……"
     qian "君和坐在我旁边，和工作时的位置一样——我现在已经知道她的名字。\n她扬起手里的袋子，推了推眼镜，冲我露齿一笑。"
+    
+    hide jun
+    show jun_smile at char_left
     jun_speaking "我这边是A2型香气，味道淡一点，要不要跟你换？"
     qian_speaking "不用了……"
     qian "毕竟都一样难吃——我顿了顿，还是没有说出口。\n君和是最近事故以来对我最好的人，至少对她我不想说难听的话。"
 
+    hide qianimg shirt still
+    show qianimg shirt o at char_right
     qian_speaking "你在干嘛？"
     qian "休息时间很短，我好不容易抑制住吐的欲望，把那几袋“果冻”塞入腹中。正在收拾东西时，发现君和正在对着便携屏幕缓慢打字。她几乎是一帧一帧移动手指，看着让人着急。"
     jun_speaking "啊……我在写日记。很快的，不会赶不上之后的工作。你要等我一会吗？"
@@ -100,6 +114,9 @@ label q1_1:
     jun_speaking "嗯，那个，算是一点点爱好。\n不过，这里也没什么不好的啊，很干净整洁。"
     qian "这也算吗……她显得有些赧然，我却因为想起一些事情而没有继续回应。\n以前，黄女士也很喜欢在家写日记的……\n不，不能再想了。"
     qian_speaking "那你怎么不用终端？那个打字快一点吧。"
+
+    hide jun_smile
+    show jun at char_left
     jun_speaking "诶，那个……"
     qian_speaking "你该不会是忘带了吧？"
     jun_speaking "是，是啊。今天有点忙忘了。"
@@ -108,9 +125,18 @@ label q1_1:
     qian_speaking "好吧，那你下次可别忘了。\n……"
     qian "为了逃避胡思乱想，我转移的话题突兀而生硬。但君和似乎没有在意，仍然不紧不慢地继续手上动作，以及笑着回应我的话。\n我莫名感到一丝羞愧，止住了继续询问的话头。"
 
+    hide jun
+    show jun_smile at char_left
     jun_speaking "那明天见了，拜拜。"
+
+    hide qianimg shirt o
+    show qianimg shirt smile at char_right
     qian_speaking "嗯……好。"
+    hide jun_smile
     qian "君和习以为常，我却没有习惯这样的打招呼……仿佛我彻底属于这里一般。\n过去几天，我像度过一个世纪，糟糕的环境令人焦躁，看不到出口。"
+    
+    hide qianimg shirt smile
+    show qianimg shirt still at char_right
     qian "……\n……那之后呢？我应该……"
 
     menu:
@@ -220,13 +246,25 @@ label q1_1_1:
 
     jump q2_1
 
+image cg_qian1:
+    "images/cg/cg_qian10.jpg"
+    0.1
+    "images/cg/cg_qian11.jpg"
+    0.1
+    repeat
 
 label q1_1_2:
     qian "总之……我并没有认真的打算，我又不是真来这种地方工作的。\n随便应付一下，只要撑到家里有消息的时候就行了。"
     qian "随便混混日子并不难，不过是相似的流程，每一天都一样。"
+
+    scene bg_black with fade
     qian "……\n但事情却没有符合我的期待。\n没有……没有，什么都没有。"
     qian "我没有等来管理局的通知，也没有任何回到原本生活的办法，甚至，连之前有过的，宋女士她们的消息，也再没有收到过了。"
     qian_speaking "……"
+    window hide
+    show cg_qian1 at cg0 with fade
+    pause
+    window show
     qian "我蹲坐在房间的角落，手指重复着“打开终端，划过消息，关闭终端”的动作。"
     qian "所谓的工作没有技术含量，只有繁重和忙碌，塞满我的生活。除了死白色的宽敞工厂，我没有兴致也没有时间再拥有其他。"
     qian "不知道从什么时候开始，我的思维似乎也已经变慢、停滞，完全融入D层的死水。"

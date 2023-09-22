@@ -9,11 +9,17 @@ label start:
     # （命名为 bg room.png 或 bg room.jpg）来显示。
     window hide
 
-
-    na "“愿你我的生命如荆棘般不屈。”"
-    na "——荆棘之城 城市印章"
+    scene bg_badge at cg0 with dissolve
+    show na1 at cg0 with fade
+    pause
+    hide na1
+    show na2 at cg0 with fade
+    pause
+    hide na2
     pause
     window show
+
+    scene bg_black at cg0 with fade
     unknown "……醒醒……起来……注意——"
     
     # TODO: bottomside doesnt work
@@ -185,9 +191,9 @@ label start:
     qian "滴，没设置过的终端机发出默认的响声。颤抖的手指点开终端机——原本空荡荡，只有我的个人信息——此刻收件箱却多了一个数字。我打开后，震惊地发现这是宋女士发来的消息。"
     
     scene bg_black with Fade(0.1,0.1,0.1)
-    red "来信人：T20234"
-    red "宝宝：\n很抱歉因为工作连累了你。我们还需要一段时间，等到所有事情都结束就会没事的。\n只是委屈你了，管制局可能会很忙，但必要的东西会安排好。你多注意一下，不会有问题。"
-    red "我们相信你在D层也能努力过好，等我们回去。\n爱你的 母亲和妈妈】"
+    na1 "来信人：T20234"
+    na1 "宝宝：\n很抱歉因为工作连累了你。我们还需要一段时间，等到所有事情都结束就会没事的。\n只是委屈你了，管制局可能会很忙，但必要的东西会安排好。你多注意一下，不会有问题。"
+    na1 "我们相信你在D层也能努力过好，等我们回去。\n爱你的 母亲和妈妈】"
 
     scene bg_black with Fade(0.1,0.1,0.1)
     show qianimg sad at char_mid with dissolve

@@ -37,8 +37,8 @@ init python:
 # screen punch setting
 init python:
     # change punch variable
-    hpunch = Move((15, 0), (-15, 0), .10, bounce=True, repeat=True, delay=.275)
-    vpunch = Move((0, 30), (0, -30), .50, bounce=True, repeat=True, delay=.275)
+    hpunch = Move((30, 0), (-30, 0), .50, bounce=True, repeat=True, delay=.275)
+    vpunch = Move((0, 30), (0, -30), .70, bounce=True, repeat=True, delay=.275)
 
 
 # basic animations for characters
