@@ -335,12 +335,13 @@ screen navigation():
             if _in_replay:
                 textbutton _("结束回放") action EndReplay(confirm=True)
 
-            textbutton _("关于") action ShowMenu("about")
+            textbutton _("附加") action ShowMenu("gallary")
             # textbutton _("帮助") action ShowMenu("help")
 
             if renpy.variant("pc"):
                 ## 退出按钮在 iOS 上是被禁止使用的，在安卓和网页上也不是必要的。
                 textbutton _("退出") action Quit(confirm=not main_menu)
+
     else:
         hbox:
             style_prefix "navigation"

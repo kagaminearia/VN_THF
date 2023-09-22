@@ -1,3 +1,4 @@
+
 label q1_1:
     scene bg_office_5 with Fade(0.2,0.4,0.1,color="#fff")
     qian "在荆棘之城，城市管制局处理一切和居民有关的问题。"
@@ -234,5 +235,6 @@ label q1_1_2:
     qian "房间里冒出微弱荧光，不断闪烁，忽明忽暗，重复往返。"
 
     # 【Ending：死寂】
-
+    $ persistent.text = 1
+    $ persistent.ending[0] = 1
     return

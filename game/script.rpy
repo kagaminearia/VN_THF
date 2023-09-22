@@ -1,4 +1,9 @@
 ﻿# 游戏在此开始。
+
+# set persistent values
+default persistent.text = 0
+default persistent.ending = [0]*20
+
 label start:
     # 显示一个背景。此处默认显示占位图，但您也可以在图片目录添加一个文件
     # （命名为 bg room.png 或 bg room.jpg）来显示。
@@ -8,7 +13,6 @@ label start:
     na "“愿你我的生命如荆棘般不屈。”"
     na "——荆棘之城 城市印章"
     pause
-
     window show
     unknown "……醒醒……起来……注意——"
     
