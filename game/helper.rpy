@@ -27,6 +27,9 @@ init python:
     config.keymap['hide_windows'] = []
     config.keymap['dismiss'].append('mousedown_5')
 
+define config.mouse = { }
+define config.mouse['default'] = [ ( "gui/cursur.png", 0, 0) ]
+
 # save setting
 init python:
     config.has_autosave = False
