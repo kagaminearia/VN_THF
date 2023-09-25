@@ -78,7 +78,7 @@ label q2_1:
     chi_msg "待会我还有事"
     chi_msg "那，之后我再找机会让你过来哦"
     qian_msg "嗯嗯^_^"
-
+    nvl clear
     hide qianimg still
     show qianimg o at char_mid
     qian "不过……为什么是找机会？我没有去深究，眼下更重要的是……我似乎已经取得了不错的进展——在和迟玉的接触上。"
@@ -345,12 +345,12 @@ label q2_1_1:
     show qianimg shirt shock at char_mid with easeinbottom
     qian "那是什么情况？蓝石的动作超出我的预料，我不明白，亲人之间，或者家人之间，应该是那样的吗？……我不懂，甚至，我现在连我自己都不太懂了……为什么我要那么着急跑开？为什么我会难受？"
     
-    show cg_chi60 at cg0 with Fade(0.3,0.6,0.3)
-    show cg_chi61 at cg0 with Fade(0.3,0.6,0.3)
-    show cg_chi62 at cg0 with Fade(0.3,0.6,0.3)
-    show cg_chi63 at cg0 with Fade(0.3,0.6,0.3)
-    show cg_chi64 at cg0 with Fade(0.3,0.6,0.3)
-    show cg_chi65 at cg0 with Fade(0.3,0.6,0.3)
+    show cg_chi60 at cg0 with Fade(0.2,0.9,0.2)
+    show cg_chi61 at cg0 with Fade(0.2,0.9,0.2)
+    show cg_chi62 at cg0 with Fade(0.2,0.9,0.2)
+    show cg_chi63 at cg0 with Fade(0.2,0.9,0.2)
+    show cg_chi64 at cg0 with Fade(0.2,0.9,0.2)
+    show cg_chi65 at cg0 with Fade(0.2,0.9,0.2)
     pause(1)
 
     scene bg_city0 with Fade(0.3,0.5,0.3)
@@ -532,7 +532,7 @@ label q2_1_1_1:
     scene bg_darkroom with Fade(0.2,0,0.2)
     show chiimg afraid at char_right with easeinright
     chi_speaking "……那个，这边……"
-    show qianimg sad at char_left with easeinleft
+    show qianimg shirt sad at char_left with easeinleft
     qian_speaking "啊，这是什么东西，文件吗……人类，定制计划？等等，你还好吗？"
     qian "迟玉从进门就开始颤抖，一系列的反常让我连这庞大的信息量也顾不上，生怕她出什么事。"
     
@@ -570,18 +570,33 @@ label q2_1_1_1:
     qian_speaking "我，好，你……你别着急…… "
     qian "迟玉显然有些受到刺激，我只好先让她自己缓一缓，而我拉过台灯照明，继续刚才没读完的文档。\n人类定制……不知为何，这个组合起来的名词让我感到难受。"
     
+    nvl_mode "人类定制。目标：迟玉"
+    nvl_mode "现存实验：外表略有差距，已有进步，性格差距过大。可用，仍是失败品"
+    nvl_mode "外表：将已有基因插入受精卵，控制遗传\n将于……提供怀孕条件"
+    nvl_mode "记忆：对大脑进行改造，需要提取/注入记忆\n可利用D层……装置实验……"
+    nvl_mode "……"
+    nvl_mode "重大失误，黄……需提取她们曾经……以及实验记录，继续研究……"
     
-    "人类杂交计划……实验室……蓝石科技……"
 
-    
-    qian "快速扫过文档，大量的信息让我有些怔愣。\n所以，从照片来看……蓝石是老板，迟玉是实验品……？然后，我家里人参加了这个项目，之后就没有消息……"
+
+    qian "快速扫过文档，杂乱的手稿和大量的信息让我有些怔愣。\n所以，从照片来看……蓝石是老板，迟玉是实验品……？然后，我家里人参加了这个项目，之后就没有消息……"
+    hide qianimg
+    show qianimg shirt still at char_left
     qian_speaking "这都什么跟什么啊……蓝石到底做了什么，她为什么要这么做……"
     unknown "要不要试着猜一下？"
+    hide qianimg
+    show qianimg shirt shock at char_left
     qian_speaking "什么都不知道怎么猜……\n！！！"
+    show lan0 at large2 with easeinbottom
     qian "我猛地转过头，只见不知道什么时候，蓝石正站在房间的门口，微笑看着我和角落里的迟玉。"
-    #TODO: 花屏
+    
+    scene bg_darkroom with Fade(0.1,0,0.1)
+    show qianimg shirt shock at char_left with dissolve
     qian "什么时候来的……我毛骨悚然，放在台灯把上的一只手开始颤抖，灯光也跟着摇曳。\n没人说话，房间里安静得像一具棺材，我吞口水的声音也变得突出。"
+    show lan1 at char_mid with easeinright
     lan_speaking "怎么了？不是还有话要说吗？"
+    hide qianimg
+    show qianimg shirt still at char_left
     qian "难以想象，仅仅是短短几分钟，我对蓝石的印象已经发生巨大改变。此时此刻，没有先前的激动，只有恐惧。"
     qian "也许这就是所谓的气势，只有面对面才能感受到……她的语气像开玩笑，我却几乎喘不过气。\n怎么办……怎么办，现在应该——"
     menu:
@@ -592,34 +607,63 @@ label q2_1_1_1:
 
 
 label q2_1_1_1_1:
+    scene bg_darkroom with Fade(0.1,0,0.1)
+    show lan0 at char_right with easeinright
+    show qianimg shirt still at char_left with easeinleft
     qian "我还是不知道到底是什么情况，但不管怎么样……先尽可能拖延时间。\n我侧过身半挡在迟玉身前——就算要做什么，也是两个人胜算更大。"
     qian "除了没意识到蓝石的动静，事实上，我也没有听到迟玉的动静……她还好吗？那个角落，就如死一般寂静……只好见招拆招了。"
+    hide qianimg
+    show qianimg shirt shout at char_left
     qian_speaking "……真的可以让我猜吗？那，从哪件事开始猜比较好？"
     lan_speaking "随你吧。我还是有时间听你讲点废话的。"
+    hide qianimg
+    show qianimg shirt still at char_left
     qian_speaking "……好。\n迟玉，和你是什么关系？家人吧，母女？……这些照片是谁？不是迟玉吧……为什么，是一样的？另一个又是谁？"
     qian "我努力搜刮词汇，试图吸引她的注意，希望她不要注意我轻推迟玉的动作……\n直到靠近，我才发现这具身体正在剧烈颤抖。"
     lan_speaking "猜得不好，只有基础知识。\n对了，你找迟玉帮忙？她可不会听你的。"
+
+    hide qianimg
+    show qianimg shirt shock at char_left
     qian_speaking "怎么，会……所以你对她做了什么？和墙上的照片有关？"
+    hide lan0
+    show lan1 at char_right
     lan_speaking "说什么呢。迟玉是个听话的孩子啊，在这里当然只听我的话了。"
+    hide qianimg
+    show qianimg shirt still at char_left
     qian "嘶……我的想法被轻易看透，她似乎只是像看戏一样等我进行下一步。\n但到底怎么回事……迟玉，蓝石，到底我应该……"
     qian_speaking "……"
     lan_speaking "不然你问问她？\n迟玉，抓住你前面的那个人。"
+    show chiimg black at char_mid with easeinbottom
+    hide qianimg
+    show qianimg shirt shock at char_left
     qian_speaking "什——呜！"
-    qian "糟……！\n——！\n她声音骤然放低，我就知道事情不对，但还是来不及……一双手臂从后面伸出来，用力箍住我的胸口。"
+    qian "糟……！\n——！\n迟玉的声音骤然放低，我就知道事情不对，但还是来不及……一双手臂从后面伸出来，用力箍住我的胸口。"
+    
+    show cg_chi80 at cg0 with dissolve
+    window hide
+    pause(2.3)
+    window show
     chi_speaking "对不起，我必须……\n我必须听蓝石的话，不然，不然……"
-    qian_speaking "……你为什么非要这么做？！"
+    qian_speaking "……你为什么非要这么做？！喂……！迟玉！蓝石！"
     lan_speaking "我只是可以做，就做了而已。她是我的东西，轮不到你说。"
     lan_speaking "也该差不多了吧，嗯，让我看看，怎么还没人来解决你们。"
     qian "不行，不知道她要做什么，但是马上就要没时间了……必须要做点什么，打乱她的节奏……"
     menu:
         "【劝说迟玉】": # ending here
+            scene bg_darkroom with Fade(0.1,0,0.1)
+            show qianimg shirt shock at char_left with dissolve
+            show chiimg black at char_mid with dissolve
             qian_speaking "迟玉……迟玉……！放开我！"
             chi_speaking "……"
+            show lan1 at char_right with easeinright
             lan_speaking "别挣扎了，乖乖等着。"
             qian_speaking "……迟玉……求求你，别抓着我了……你不是说要一起逃跑的吗……"
+            hide lan1 with moveoutright
             qian "蓝石似乎出去接人了，只留下我和死死抓住我的迟玉。以前看不出来，她的力气竟然这么大，我除了能转头，其他完全动不了。"
             chi_speaking "对不起，对不起……我是失败品，我必须要听蓝石的话……不能反抗，会被惩罚的……对不起，对不起……"
             qian_speaking "迟玉……"
+            scene bg_black with Fade(0.1,0,0.1)
+            with vpunch
             qian "颤抖，剧烈的颤抖。被她用力挟着，那仿佛刻骨的压抑情感也排山倒海般席卷而来。\n被这样的气势压制，我竟一时忘了做出反应。"
             qian "以至于直到脚步声近在身后，我才察觉。"
             qian "这样啊……我到底还是太弱小了。"
@@ -630,14 +674,22 @@ label q2_1_1_1_1:
             return 
 
         "【劝说蓝石】": # ending here
+            scene bg_darkroom with Fade(0.1,0,0.1)
+            show qianimg shirt shock at char_left with dissolve
+            show chiimg black at char_mid with dissolve
             qian_speaking "……对了，我们本来是要做什么事？"
-            lan_speaking "难为你还记得啊，可你这样不守规矩，还想着别人原谅吗？"
+            show lan1 at char_right with easeinright
+            lan_speaking "难为你还记得，可你这样不守规矩，还想着别人原谅吗？"
+            hide qianimg
+            show qianimg shirt shout at char_left
             qian_speaking "那个……你还和我家里人有联系的吧……你想要什么的话，让我们联系上，我们都可以尝试给你的……"
             lan_speaking "别想了，我不需要你想的那些东西。"
             qian_speaking "不需要你也不用再继续找她们了啊！为什么非要现在这样，我什么都不会说出去的……"
             lan_speaking "是吗？的确很可惜。"
             qian_speaking "可惜什么啊……"
             lan_speaking "她们已经死了，虽然不是我杀的。"
+            hide qianimg
+            show qianimg shirt shock at char_left
             qian_speaking "……\n你说什么？"
             qian "……\n……\n……"
             qian "我从未想过，这个时候会突然出现这样一句话，就像葬礼上突然出现小丑一样荒诞而不合时宜。\n我无法理解，拒绝理解这句话。"
@@ -648,6 +700,8 @@ label q2_1_1_1_1:
             lan_speaking "可惜了。"
             qian_speaking "可惜什么……"
             qian "有些嘈杂的声音从门外传来，一晃眼的时间里，几个高大的女人围住了我们。"
+            scene bg_black with Fade(0.1,0,0.1)
+            with vpunch
             qian "这样啊……原来是在可惜我来不及了。"
             qian "……"
             qian "……"
@@ -660,13 +714,17 @@ label q2_1_1_1_1:
 
 
 label q2_1_1_1_2: # ending here
+    scene bg_darkroom with Fade(0.1,0,0.1)
     qian "她在等我回答，现在直接冲出去或许能达到出其不意的效果……至少先离开这个地方——"
     qian "我咬咬牙……走——！"
     lan_speaking "——嗯？"
-    #TODO: 快速闪cg？
+    show bg_black with shake
     qian_speaking "哈……呃——！！！"
+    show bg_black with shake
     "砰！"
+    scene bg_darkroom with Fade(0.1,0,0.1)
     qian "发生了什么……好痛……\n我的大脑无法处理过量讯息，只剩下铺天盖地的疼痛。"
+    show lan1 at large2 with easeinbottom
     lan_speaking "没死吧？年轻人身体有点差啊。"
     qian_speaking "喂，你……咳……这是违规的吧？！"
     lan_speaking "自然不是，电流值在安全范围内。"
@@ -676,50 +734,104 @@ label q2_1_1_1_2: # ending here
     lan_speaking "……\n谁知道呢？跟你没关系。"
     lan_speaking "别害怕成这样，我可不会亲自杀人。\n只需要你先睡一觉，之后就好了。"
     qian_speaking "不，别，不要……别这样……呜……啊啊啊啊——"
+    show bg_black with shake
     "……\n……"
+    scene bg_black with Fade(0.1,0,0.1)
     qian "……\n又一次全身的疼痛让我眼前一黑，然后，我什么都感觉不到了。"
 
     return
 
 
 label q2_1_1_2: # ending here
+    show cg_chi65 at cg0 with dissolve
+    pause(2)
+    hide cg_chi65
+
     qian "脑海里忽然又蹦出之前的画面……我不由得在心里质问自己，我真的可以吗？真的可以……就这样相信她吗？"
+    scene bg_lanroom with Fade(0.1,0,0.1)
+    show qianimg shirt sad at char_left with dissolve
+    show chiimg sadask at char_right with dissolve
     qian_speaking "那个，我……"
+    hide chiimg 
+    show chiimg sad at char_right
     chi_speaking "……\n我知道了……抱歉，我这个要求果然很不合理吧……"
-    qian "我的话没能说说完，但显然她已经明白答案。"
+    qian "我的话没能说完，但显然她已经明白答案。"
+    hide qianimg 
+    show qianimg shirt still at char_left
     qian_speaking "对不起……"
+    hide chiimg 
+    show chiimg sadask at char_right
     chi_speaking "没，没事……那个……啊。"
+    show lan1 at char_mid with easeinbottom
     qian "开门声打断了迟玉。\n门口站着的是蓝石，她挑了挑眉，似乎心情很好地开了个玩笑。"
     lan_speaking "哎呀，我来得不是时候，打扰到你们说话了吗？"
+    hide chiimg 
+    show chiimg afraid at char_right
     chi_speaking "没！没有……"
+    hide qianimg 
+    show qianimg shirt smile at char_left
     qian_speaking "您好，我们正在等您呢。"
     lan_speaking "让你久等了，不过，迟玉好像今天还有别的事情吧，怎么也过来了？"
+
+    hide chiimg 
+    show chiimg sad at char_right
     chi_speaking "那个……"
     lan_speaking "我知道你关心朋友，但也不用急这一会是不是？我们聊一些她家里的事，也不好让迟玉一起听吧？"
+    hide chiimg 
+    show chiimg sadask at char_right
     chi_speaking "我……"
+
+    hide qianimg 
+    show qianimg shirt o at char_left
     qian_speaking "对呀，你要是有事，还是先去做你的事情吧。"
     qian "听到蓝石的话，我印证了猜测，顿时有些坐不住——果然，能接触到蓝石对自己是有帮助的，说不定，很快就能有她们的消息……"
-    chi_speaking "……\n好。\n时茜……谢谢你。"
+    
+    hide chiimg 
+    show chiimg sad at char_right
+    chi_speaking "……\n好。"
+    chi_speaking "时茜……谢谢你。"
+    hide qianimg 
+    show qianimg shirt still at char_left
+    hide chiimg with moveoutright
     qian "嗯……？为什么，突然……\n但迟玉没有再说什么，只是深深地看了我一眼，而后从房间里离开了。"
     qian "她……没事吧？希望没事吧……\n我很快把这件事暂时抛在脑后，因为别的事让我更加在意。"
+    
+    scene bg_lanroom with Fade(0.1,0,0.1)
+    show lan0 at char_right with dissolve
+    show qianimg shirt o at char_left with dissolve
     lan_speaking "时茜是吧？我之前问过迟玉，就觉得有些熟悉，关于你家里的事情……你自己有什么想法吗？"
-    #TODO: 转场
     qian_speaking "那个，我也不知道，但是……"
     lan_speaking "唉，说来你也真是不容易，还年轻呢，就遇上这些麻烦事。你之前是不是还找过别人？有没有人跟你说过什么？"
     qian_speaking "我之前……"
     qian "没有比这更合适的机会了。蓝石是A层的，又是这么厉害的人，说不定在管制局那里也会有办法……我一五一十地把事情的过程告诉她，这才发现喉咙已经僵硬到干哑。"
+    
+    hide lan0
+    show lan1 at char_right
     lan_speaking "别紧张，喝点水，休息会吧。"
+
+    hide qianimg 
+    show qianimg shirt smile at char_left
     qian_speaking "谢谢您……"
     qian "我仍然有些紧张，手指摩挲着杯檐，心脏仿佛快要跳出。"
     qian "不，不对，不只是心脏，我整个人都绷紧了，连嗓子也收紧得几乎要喘不过气……真的是因为紧张吗，这……啊啊……"
+    
+    show bg_lanroom with shake
     qian "视线忽然有些涣散，我抓着杯子的手一松，掉在桌上发出哐当的巨响，在封闭的房间里格外刺耳。"
+    
+    hide qianimg 
+    show qianimg shirt sad at char_left
     qian_speaking "对，对不起……"
     lan_speaking "不必在意。"
     qian "蓝石仍然是笑着，丝毫没有被我的失态所影响。不知为何，她那毫无破绽的微笑此时此刻却让我有些发凉。"
     qian_speaking "啊，嗯……"
+    hide qianimg 
+    show qianimg shirt close at char_left
     qian "我几乎已经发不出声音，呼吸也变得无比困难。"
     lan_speaking "好好休息吧。"
+    hide qianimg 
+    show qianimg shirt shock at char_left
     qian "什么……\n……\n……"
+    scene bg_black with fade
     qian "眼前一黑，我失去了意识。"
     
     
@@ -727,43 +839,64 @@ label q2_1_1_2: # ending here
 
 
 label q2_1_2:
+    scene bg_room0 with fade
     qian "这么说来，正好可以问问家里人的情况，不知道黄女士和钟女士怎么样了……\n我稍微思虑一下，便下定决心，打开和迟玉的对话框。"
-    qian_speaking "如果方便的话，能向你打听个人吗"
-    #TODO: screen mode
-    qian_speaking "也是A区的，我想你可能会熟悉"
-    chi_speaking "没问题，你告诉我吧"
-    chi_speaking "其实我也不认识什么人，不过我会帮你问到的^ ^"
-    qian_speaking "谢谢你！"
+    
+    qian_msg "如果方便的话，能向你打听个人吗"
+    qian_msg "也是A区的，我想你可能会熟悉"
+    chi_msg "没问题，你告诉我吧"
+    chi_msg "其实我也不认识什么人，不过我会帮你问到的^ ^"
+    qian_msg "谢谢你！"
     qian "无论如何，至少这句话我是发自真心……我还真是卑鄙。"
+
+    scene bg_room0 with fade
     qian "没有新的消息。"
-    #TODO: 转场
     qian "自从那天过后，迟玉就没有再回复过我，我心里焦虑，却没法跟别人说，更没办法直接催她，只好每天数着数过日子。"
     qian "但我没想到，在她之前，有其他人先行找上门。"
-    #TODO: 转场
+
+    scene bg_factory with fade
+    show stf at char_right with moveinright
     stf_speaking "时茜小姐，有人找你。"
+    show qianimg shirt o at char_left with moveinleft
     qian_speaking "什么？"
     qian "我惊讶于别人礼貌的口气，也不认为到了D层之后，会有什么人特意来这里找我。\n那人的表情变得有些微妙，罕见地沉默一会，才继续说。"
     stf_speaking "蓝石找你，你怎么会认识那样的人？"
+    hide qianimg 
+    show qianimg shirt sad at char_left
     qian "蓝石？\n是“那个”蓝石。我当然知道是哪个蓝石。\n荆棘之城最出名的人物之一，名下有多个科技产业和慈善基金，创造了无数工作岗位，是备受喜爱的成功人士。"
     qian "竟然是她？她怎么会来找我？难道说……我蓦地想起那个轻盈的身影。\n迟玉最近没有回复，是真的去帮我联系人了吗？"
     qian "我虽然报着不纯的心思，但完全没想过她真的会帮我……那可是蓝石啊，她一定有办法。"
+    hide qianimg 
+    show qianimg shirt still at char_left
     qian "激动？害怕？欢喜？感激？我说不清是什么心情，只剩下混乱。"
-    qian "黑色头发像丝绸垂于身侧，岁月在她身上留下美妙的痕迹，举手投足皆是气韵，绘成美丽的画卷。\n第一次亲眼看到，这是，蓝石……"
-    #TODO: 转场
+
+    scene bg_factory with fade
+    show lan0 at char_right with dissolve
+    show qianimg shirt smile at char_left with dissolve
+    qian "头发像丝绸垂于身侧，岁月在她身上留下美妙的痕迹，举手投足皆是气韵，绘成美丽的画卷。\n我第一次亲眼看到，这是，蓝石……"
     qian_speaking "您好。"
     qian "我拘谨地捏了捏手指，难以想象自己会感到“窘迫”。但在她这样的人面前，即使我现在还在A区也许也会做出相同的反应。"
     lan_speaking "你好。\n年轻人真有精气神啊，你就是时茜吗？"
     qian_speaking "是的，那个，请问您是认识……"
     qian "我有些失态，完全不等铺垫就已经下意识急忙开口。但即使我有些失礼，她还是笑眯眯地看着我。"
     lan_speaking "我都听说了，是家里人的事吧？难为你这么操心了。我还算是有点人脉，要不然还真不知道怎么办。她们的事情你还有找别人问过吗？有没有试过其他方法？"
+    hide qianimg 
+    show qianimg shirt sad at char_left
     qian_speaking "没有，我一直不知道该怎么办，现在找人也是想着撞运气……"
     lan_speaking "这样啊，真是辛苦你了。不过你也不用太担心，我们一起去她们工作的地方看看吧，说不定就能有线索呢。"
+    hide qianimg 
+    show qianimg shirt shock at char_left
     qian_speaking "啊，真，真的可以吗？！"
     lan_speaking "毕竟我有一点人脉嘛。"
+    hide qianimg 
+    show qianimg shirt close at char_left
     qian_speaking "谢谢，谢谢您……"
-    qian "我几乎有些语无伦次了，但她只是温和地对我笑，就像……在看家里的晚辈一样。"
+    qian "我几乎有些语无伦次了，但她只是温和地对我笑，简直就像……在看家里的晚辈一样。"
+
+    scene bg_lanroom with fade
     qian "蓝石的交通工具是特别定制，样式简约，细看却全是设计。我几乎是怀着忐忑的情绪跟在她的身后。"
-    #TODO: 转场
+    show lan0 at char_right with dissolve
+    show qianimg shirt still at char_left with dissolve
     lan_speaking "怎么了，紧张？是有什么想说的吗？"
     qian_speaking "嗯，那个……"
 
@@ -772,23 +905,35 @@ label q2_1_2:
             $ q2121 = True
             qian_speaking "那个，您觉得我什么时候能见到我家人呢？"
             lan_speaking "这个啊……没事，你们很快就会团聚了。"
+            hide qianimg 
+            show qianimg shirt o at char_left
             qian_speaking "真的吗？那太好了！谢——诶？"
         "【问迟玉】":
             $ q2121 = False
             qian_speaking "您知道……迟玉怎么样了吗？那个，应该是她帮我联系您的吧，所以……"
             lan_speaking "……\n她很好。"
+            hide qianimg 
+            show qianimg shirt o at char_left
             qian_speaking "这样啊，那太好了，她一直没找我，我还有点担心呢。"
             lan_speaking "没事，你以后就不用担心了。"
             qian_speaking "诶，好，真是麻烦您了……那——啊？"
 
+    hide qianimg 
+    show qianimg shirt shock at char_left
     qian "我剩下的话没能说出口——剧烈的疼痛占据了一切注意力。"
     qian_speaking "怎，回事……啊啊……"
+    scene bg_lanroom
+    show blur with shake
     qian "疼痛……我颤抖地捂住痛感的来源，湿漉黏糊的触感尽数从心口涌出，向外蔓延。\n到底，怎么回事……"
-    "剧烈的疼痛让我眼前发黑，我感到无法呼吸，每个动作都在刺激更多的疼痛。飞溅的血液和漫溢的泪水混合，让一切变得一团糟。"
+    show blur with shake
+    qian "剧烈的疼痛让我眼前发黑，我感到无法呼吸，每个动作都在刺激更多的疼痛。飞溅的血液和漫溢的泪水混合，让一切变得一团糟。"
     qian "视线抽动，我用尽力气调动脖颈的肌肉，看向身侧——这个空间里除了我的唯一存在，蓝石站在那里。"
+    show lan0 at large2 with moveinbottom
     qian_speaking "您……"
     lan_speaking "怎么了？"
     qian_speaking "为，什么……"
+    hide lan0
+    show lan1 at large2
     qian "液体模糊了眼睛，我只能看到蓝石那一如既往的，温和的笑容。"
     if q2121:
         lan_speaking "我不是说过了吗……你们很快就会团聚了。"

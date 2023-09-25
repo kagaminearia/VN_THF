@@ -42,6 +42,7 @@ init python:
     # change punch variable
     hpunch = Move((30, 0), (-30, 0), .50, bounce=True, repeat=True, delay=.275)
     vpunch = Move((0, 30), (0, -30), .70, bounce=True, repeat=True, delay=.275)
+    shake = Move((70, 70), (-70, -70), 3, bounce=True, repeat=True, delay=.275)
 
 
 # basic animations for characters
@@ -109,6 +110,13 @@ transform char_right:
 transform large:
     xalign 0.5
     yalign 0.85
+
+
+transform large2:
+    zoom 0.9
+    xalign 0.5
+    yalign 1
+    yoffset -850
 
 transform cg0:
     zoom 0.5
