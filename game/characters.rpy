@@ -129,3 +129,29 @@ init:
                 "images/char/li/smile.png"
             attribute laugh:
                 "images/char/li/laugh.png"
+
+
+    layeredimage yingimg:
+        group body:
+            attribute coat default:
+                "images/char/ying/coat.png"
+            attribute shirt:
+                "images/char/ying/shirt.png"
+
+        group expressions:
+            attribute neutral default:
+                "images/char/ying/calm.png"
+            attribute o:
+                "images/char/ying/o.png"
+            attribute close:
+                "images/char/ying/close.png"
+            attribute closeo:
+                "images/char/ying/closeo.png"
+            attribute still:
+                "images/char/ying/still.png"
+            attribute stillo:
+                "images/char/ying/stillo.png"
+            attribute smile:
+                "images/char/ying/smile.png"
+            attribute shock:
+                "images/char/ying/shock.png"
