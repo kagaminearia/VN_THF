@@ -55,6 +55,15 @@ transform offscreenleft:
 transform offscreenright:
     xpos 1.0 xanchor 1.0 ypos 0.5 yanchor 0.5
 
+transform my_shake:
+    linear 0.1 xoffset -2 yoffset 2 
+    linear 0.1 xoffset 3 yoffset -3 
+    linear 0.1 xoffset 2 yoffset -2
+    linear 0.1 xoffset -3 yoffset 3
+    linear 0.1 xoffset 0 yoffset 0
+    repeat
+
+
 define bottomside = MoveTransition(
                     delay=0.5,
                     enter=offscreenbottom,

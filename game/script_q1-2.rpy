@@ -175,23 +175,44 @@ label q1_2_2:
     unknown "等等。"
 
     scene bg_yingroom0 with Fade(0.2,0.4,0.2) 
+    show yingimg shirt at char_right with dissolve
+    show qianimg still at char_left with easeinleft
     qian_speaking "谢谢你让我留下来休息……我会尽快找到住的地方的。"
+    hide yingimg
+    show yingimg shirt stillo at char_right
     unknown "不用。\n你像一个我认识的人，我并不是……为你。"
+    hide yingimg
+    show yingimg shirt o at char_right
     unknown "我叫莺莺。"
+    hide yingimg
+    show yingimg shirt at char_right
+    hide qianimg
+    show qianimg at char_left
     qian "原来如此。我看着莺莺没有表情的侧脸，忽然想起她刚才的微妙表情，也许就是她说的这个原因吧。这算……爱屋及乌？"
     qian "不管怎么样，至少我可以稍微喘口气了……这间房子简陋得过分——黑白灰构成它的全部底色，金属板材拼装成简单的家具——但容纳我和她大概没问题。"
+    hide qianimg
+    show qianimg o at char_left
     qian_speaking "那个，我现在还需要做什么吗？"
     ying_speaking "睡觉。"
     qian_speaking "诶？不是刚刚才睡醒……"
     ying_speaking "我要睡。"
     qian_speaking "哦，哦，对不起……谢谢……"
+    hide yingimg with easeoutright
+    hide qianimg
+    show qianimg at char_left
     qian "我后知后觉地意识到，她不仅在我睡着的时候等着我，还把自己的卧室让出来——唯一的床正被我坐着——而自己关上门离开了。"
     qian "所以，她这样对我，也是因为那个“认识的人”吗……我有些羞愧，却又可耻地感到庆幸。"
 
+    scene bg_yingroom0 with fade
+    show yingimg o at char_right with easeinright
     ying_speaking "钥匙。"
     ying_speaking "别乱动东西，其他随你。\n我在吃饭的时候回来。"
+    show qianimg at char_left with easeinleft
     qian_speaking "呃，好的，你要——"
+    hide yingimg with easeoutright
     qian "去哪……这两个字还没说出来，她就出门了。\n总觉得……她好像很不待见我，只是把我放在这里。\n不，不应该这么想，我已经很幸运了……"
+    hide qianimg
+    show qianimg still at char_left
     qian "那我现在，应该……"
     menu:
         "【什么都不做】":
@@ -201,32 +222,51 @@ label q1_2_2:
             $ q1221 = True
             qian "虽然莺莺说别乱动，但只是看看不算乱动吧……咳咳……"
             qian "我当然知道自己在强词夺理，可就算感谢她，我总得给自己留点退路：我不会伤害别人，但也最好能够自保……"
-            #TODO: 转场
+            scene bg_yingroom0 with Fade(0.1,0.1,0.1)
             qian "屋子很小，还没我以前的卧室大，被分成外间和里间，干净得几乎一尘不染，简直无法想象有人类在此长期居住。里间只有一张床，而外间除了桌椅，堆在角落的几个大箱子格外显眼。"
+            show qianimg shock at char_mid with dissolve
             qian "这是……\n我惊异地看着眼前的那个东西——\n藏在堆叠的箱子的最深处，与黑暗简单的房间格格不入的，闪闪发光的——"
             qian "……莺莺究竟是什么人？"
     
-    ying_speaking "……啧。"
-    #TODO: 转场
+    scene bg_yingroom0 with fade
+    show yingimg at char_right with easeinright
+    ying_speaking "……"
+    show qianimg at char_left with easeinleft
     qian_speaking "啊……！莺莺，你回来了。"
+    hide yingimg
+    show yingimg o at char_right
     ying_speaking "……\n动了吗？"
+    hide qianimg
+    show qianimg o at char_left 
     qian_speaking "啊？"
     ying_speaking "房间里，动过了吗？"
+    hide qianimg
+    show qianimg at char_left 
     qian_speaking "……"
     menu:
         "【承认】":
+            hide qianimg
+            show qianimg sad at char_left 
             qian_speaking "没，我只是……看了一下，没动东西。"
-            ying_speaking "……你很诚实。"
+            ying_speaking "……知道了。"
             qian_speaking "啊，呃，但我确实只是看了看，没做别的……"
             
         "【不承认】":
+            hide qianimg
+            show qianimg sad at char_left 
             qian_speaking "当然没有了……"
+            hide yingimg
+            show yingimg still at char_right
             ying_speaking "嗯。"
             qian "她没说信不信，只是深深地看了我一眼。看起来，似乎是没有相信我的话。"
             qian_speaking "那个，我——"
 
+    hide yingimg
+    show yingimg closeo at char_right
     ying_speaking "……\n是我自己没收好。"
-    ying_speaking "不用解释了。"
+    ying_speaking "不用解释。"
+    hide qianimg
+    show qianimg still at char_left 
     qian_speaking "……"
     qian "我感到有些愧疚，再怎么说，也是偷偷翻了别人的东西。但她完全没有要继续对话的意思，我也只好作罢。"
 
