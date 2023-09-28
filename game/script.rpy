@@ -53,19 +53,22 @@ label start:
     bfem_speaking "时茜小姐，你被逮捕了。"
     qian "我刚刚才建立起的心理防线马上破碎。"
     qian_speaking "……什么？你们弄错了吧！\n别开玩笑了！"
+    hide qianimg 
+    show qianimg shock at char_mid
     qian_speaking "别过来！喂，肯定是有什么误会的地方！怎么可能！等——"
     na "——！"
     show bfem_0l at char_left with easeinleft
     qian "两个人靠近，我剧烈挣扎起来，却没有用，在用力的拉扯中从床上摔倒在地。\n好痛……我几乎瞬间就冒出了眼泪，在挺直的身板前显得狼狈又讽刺。"
     qian "没有人理会这点，我被拖住，床边的东西因为磕绊而掉在地上，我却没办法把它们拿起来，只能踉跄着往外走。"
     
+    hide qianimg 
+    show qianimg shout at char_mid
     qian_speaking "喂，等等……等等啊！"
     hide bfem_0l with easeoutleft 
     pause(0.1)
     hide bfem_0r with easeoutright 
     pause(0.1)
     hide qian_shocked0 with fade 
-    pause(2.0)
 
     scene bg_office_0 with fade
     show qianimg sad at char_left with dissolve

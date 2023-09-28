@@ -324,19 +324,25 @@ label q222success:
     scene bg_yingroom0 with Fade(0.1,0.1,0.1)
     ying_speaking "唔……"
     qian "趁她受到冲击，没反应过来的时候，我赶紧连滚带爬地下床，踉跄着跑出了房间。"
-    
+    scene bg_corridor with vpunch
     qian_speaking "……可恶，那家伙，哈……到底，要干嘛……"
     qian "我躲在楼层的角落，却并没有看到她出门的动静。她似乎没有要把我赶尽杀绝的意思，可那又为什么……"
     qian "……是因为被我发现了秘密吗？"
+
+    scene bg_yingroom0 with fade
+    show bg_mem
     qian "这是……\n我惊异地看着眼前的那个东西——"
-    #TODO: 回忆
+    hide bg_mem
+    show cg_stone at cg0 with fade
+    show bg_mem
     qian "闪闪发光的晶矿石，现今最重要的能源，可维持整个城市的运转，也可用作私人财产交换，价值千金。"
     qian "D层这么穷，她怎么会有这个？"
     qian "……"
-    #TODO: 回忆结束
+    
+    scene bg_corridor with fade
     qian "如果是这样，那就能说得通了……可就算知道了这个，我现在该怎么做……"
+    scene bg_office_5 with Fade(0.1,0.2,0.1)
     qian "反应过来的时候，我已经下意识地走到管制局附近，和D层格格不入的明亮光线从街的另一侧照进来。\n有问题的话，就要找管制局，一直以来的认知就是如此……"
-    #TODO: 转场
     qian "然而，我现在却莫名地有些犹豫……要进去吗？"
     menu:
         "【不进去】":
@@ -355,35 +361,55 @@ label q222fail: # ending here
 
 
 label q2_2_2_1:
+    show qianimg still at char_mid with dissolve
     qian "不，不对……再仔细想想。\n莺莺拥有晶矿石确实很奇怪，但也不是什么特别的秘密，甚至需要杀人灭口。\n"
     qian "也许重点并不在晶矿石，而在于是“我”看到了晶矿石……她害怕我，或者说害怕某些跟我有关的事情。"
     qian "而我现在身上的事……本就和管制局有密切的关系。在这样的情况下，我怎么可能再去找她们……"
+    show bfem_0r at char_right with easeinright
     bfem "你来这里有什么事情？"
+    hide qianimg
+    show qianimg o at char_mid
     qian_speaking "嗯……啊？没事，我走错了……"
     qian "没想到我还没思考完，就被人拦住了话头。而她正是那天把我押送至D层的人中的一个——执行队的人——我不由有些紧张。"
-    bfem "之前怎么没来过？你在D层有认识的人吗？"
+    bfem "之前怎么没来这里？你在D层有认识的人吗？"
+    hide qianimg
+    show qianimg still at char_mid
     qian_speaking "是啊，不行吗？"
-    qian "我没什么好语气，而她只是点点头就离开了。"
+    qian "我没什么好语气，而她只是又看我一眼，而后点点头就离开了。"
     qian "总感觉有些奇怪……不过，这不是我现在需要关注的事。\n想清楚后，我决定还是自己再去调查莺莺，也许就和我家人的事有关系。"
-    qian "我和莺莺争执在凌晨，现在回去的时间，正好是她平时会出门的时间。\n正好，看看她到底在干什么……"
-    qian "相似的光景不断从视野两边掠过，垂直拥挤的建筑，崎岖不平的路面，以及阴影缝隙里的人流。"
-    #TODO: 转场
+    hide qianimg
+    show qianimg at char_mid
+    qian "我和莺莺争执在凌晨，现在回去的时间，是她平时会出门的时间。\n正好，可以看看她到底在干什么……"
+    
+    scene bg_edge with fade
+    qian "相似的光景不断从视野两边掠过，垂直拥挤的建筑，崎岖不平的路面，以及阴影缝隙里的人流。\n我在，跟踪莺莺……"
     qian "不知道走了多久，人群密度稀释，空间愈发无序，远处隐约能看到透明的淡蓝色覆盖住所有能看到的区域——那是保护罩，这座城市存活的基础。"
     qian "怎么会跑到这里……我止住向前的脚步，更多的疑惑涌上心头。\n好在莺莺也恰好在前方停下，没有让我丢失她的行踪。"
+    qian_speaking "这是……"
+    show cg_ying50 at cg0 with dissolve
+    window hide
+    pause(1.5)
+    window show
+    show cg_ying51 at cg0 with dissolve
     qian "另一个女人出现在莺莺面前，我连忙躲进集装箱的缝隙里。如果我没看错……那人身穿管制局的衣服。\n她怎么会和管制局有私下联系……"
     ying_speaking "给你晶矿石，让我进去，对吧？"
     place_holder "别废话，难道还骗你不成？"
     ying_speaking "……"
-    qian "莺莺伸出手，晶矿石的光芒如同它的价值一般熠熠生辉，甚至能说动管制局的人。\n但是，她到底要去哪……？"
+    qian "莺莺伸出手，晶矿石的光芒如同它的价值一般熠熠生辉，甚至能打动管制局的人。\n但是，她到底要去哪……？"
+    scene bg_edge with vpunch
     qian "？！"
     qian "我的问题还没得到解决，突如其来的风声打破了平静的场景。"
+    show grey_fem at char_left with easeinleft
     place_holder "谁在那里？"
+    show bfem_0r at char_right with easeinright
     unknown "是该我问你们，在这里做什么？"
     place_holder "执，执行队……您好。"
     unknown "解释一下？"
     place_holder "这，这是……那个……"
     unknown "……"
+    hide grey_fem with easeoutleft
     unknown "——不许跑！"
+    scene bg_edge with vpunch
     "砰！"
     ying_speaking "……呜……！"
     qian "突然的枪声穿过我的耳膜，仿佛一道惊雷劈过。\n……怎么会？！怎么有人敢在城内开枪……！"
@@ -401,26 +427,42 @@ label q2_2_2_1:
             hide screen countdown
             jump q3_2
         "【坐视不理】":
+            show qianimg still at char_mid with dissolve
             qian "太危险了，我还是不要插手比较好……"
             hide screen countdown
             jump q3_2_0
 
+
 label q320_fail:
+    show qianimg shock at char_mid with dissolve
     qian "完了……！"
     qian "事情发生得太快，我完全没来得及反应……"
     jump q3_2_0
 
 
 label q3_2_0: # ending here
+    scene bg_edge with vpunch
     "砰！砰！"
     qian "又是几声枪响，开枪的人毫不留情。很快，这一片的纷乱褪去，只剩下开枪者那缓慢沉稳的脚步声。"
+    show qianimg shock at char_mid with dissolve
     qian_speaking "呜……\n怎么会……"
     qian "我原以为她们会交涉什么，或许能说出我不知道的情报。\n可我没想到，那个执行队的人竟然会如此轻易而果断地杀死对方，甚至没有犹豫……"
+    scene cg_ying60 at cg0 with fade
+    window hide
+    pause(1.5)
+    window show
     qian "怎么会这样……"
-    qian "说起来，这大概是我第一次见到她脸上出现这么生动的表情……哈……这一点也不好笑。"
+    qian "说起来，这大概是我第一次见到她脸上出现这么生动的表情……\n哈……这一点也不好笑。"
     qian "我颓丧地坐在地上，注视着那正在消散的瞳孔。"
     qian "你身上究竟发生了什么事……我不知道，也再也没有机会知道了。"
     qian "我隐隐有一种预感，这也许是我能找到线索的最后机会。而现在，它也随着她一起消逝在无尽的黑暗中。"
+    show cg_ying61 at cg0 with dissolve
+    window hide
+    pause(1.5)
+    show cg_ying62 at cg0 with dissolve
+    pause(2)
+    scene bg_black with fade
+    window show
     qian "之后，我又该怎么办呢……"
 
     return
@@ -428,30 +470,46 @@ label q3_2_0: # ending here
 
 
 label q2_2_2_2: # ending here
-    qian "像这样的问题，交给专业的人来处理也许更合适……事不宜迟，我平静好自己的气息，快步赶到管制局。"
+    qian "像这样的问题，交给专业的人来处理也许更合适……事不宜迟，我平静好自己的气息，快步进入管制局。"
     qian "就在不久前，我的日常从这里开始破灭……管制局，说不定能顺便了解些家里人的事。"
+    scene bg_office_6 with fade
+    show grey_fem at char_left with easeinleft
     stf_speaking "好的，我们会尽快处理。"
+    show qianimg still at char_mid with easeinright
     qian_speaking "尽快是什么时候？"
     stf_speaking "我们会安排。"
+    hide qianimg
+    show qianimg shout at char_mid
     qian_speaking "不能现在吗？她可是威胁到我的生命安全！"
     stf_speaking "工作繁忙，需要安排。"
+    hide qianimg
+    show qianimg still at char_mid
     qian_speaking "……"
     qian "明明看到里面的人都在打牌，说什么繁忙……我咬紧牙关，拼命不发出失控的声音。"
+    show bfem_0r at char_right with easeinright
     unknown "怎么回事？是你？"
     qian "我转过头，发现是先前闯入我家的黑衣女人。她深深地看了我一眼，而后用没有起伏的语气问道。"
     stf_speaking "啊，您怎么来了……这女的让我们查人，我跟她说别急她还不接受……"
     bfem_speaking "我知道了，查谁？知道终端号码吗？"
+    hide qianimg
+    show qianimg o at char_mid
     qian_speaking "啊……？知，知道……"
     qian "也许是我的质问态度起了效果，她的态度似乎积极了一些。我之前特地记了终端号，想不到会有用。"
     bfem_speaking "……"
     bfem_speaking "你进来一下。"
     qian_speaking "啊？"
     bfem_speaking "这个人有危险吧？你先在这里休息吧。"
+    hide qianimg
+    show qianimg sad at char_mid
     qian_speaking "啊？好，好的……"
     qian "我甚至有些受宠若惊，不知道为什么她突然又变得好说话。\n……难道是和我家人有关系了？"
+
+    scene bg_office_1
     qian "我跟着她走进玻璃的另一侧，转过弯，进入房间的里间。"
     qian_speaking "那个，请问是——唔——？！"
+    show blood0 at cg0 with dissolve
     qian "声音被硬生生地截断。我难以置信地盯着靠近的有力手臂。"
+    scene bg_black with fade
     qian "下一秒，我失去了意识。"
 
     return 

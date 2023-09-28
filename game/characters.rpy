@@ -26,7 +26,7 @@ define jun_speaking = Character("君和",what_prefix="“",what_suffix="”")
 define stf_speaking = Character("工作人员",what_prefix="“",what_suffix="”")
 
 # place holders
-define place_holder = Character("女人",what_prefix="“",what_suffix="”")
+define place_holder = Character("制服女人",what_prefix="“",what_suffix="”")
 define lan_speaking = Character("蓝石",what_prefix="“",what_suffix="”")
 define coworker_speaking = Character("同事",what_prefix="“",what_suffix="”")
 define white_speaking = Character("白衣女人",what_prefix="“",what_suffix="”")

@@ -55,7 +55,7 @@ define gui.interface_text_color = '#ffffff'
 ## 字体和字体大小 #####################################################################
 
 ## 游戏内文本使用的字体。
-define gui.text_font = "fonts/HanaMinA.ttf"
+define gui.text_font = "fonts/ChillJinshuSongGBKBold.otf"
 
 ## 角色名称使用的字体。
 define gui.name_text_font = "fonts/江城正君体_600W.ttf"
@@ -66,10 +66,10 @@ define gui.interface_text_font = "fonts/江城正君体_400W.ttf"
 define gui.main_theme_font = "fonts/鸿雷拙书简体.ttf"
 
 ## 普通对话文本的大小。
-define gui.text_size = 37
+define gui.text_size = 40
 
 ## 角色名称的大小。
-define gui.name_text_size = 38
+define gui.name_text_size = 43
 
 ## 游戏用户界面中文本的大小。
 define gui.interface_text_size = 38
