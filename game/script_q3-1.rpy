@@ -167,10 +167,10 @@ label q3_1_1: # ending here
     scene cg_hand10 with vpunch
     qian "两只手掌硬生生卡住了门缝，阻止我将它合拢。"
     qian_speaking "你竟然，自己……"
-    lan_speaking "呵呵，呵呵呵……别走，我们还没聊完吧？"
+    horr "呵呵，呵呵呵……别走，我们还没聊完吧？"
     qian_speaking "你，你这人……"
     show cg_hand11 with shake
-    "咯吱，咯吱咯吱……\n咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱"
+    horr "咯吱，咯吱咯吱……\n咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱"
     qian "哈，哈啊……我抵住门，剧烈的挤压声让我的手掌也剧烈颤抖起来，我们僵持在这个位置，达到一种恶心的高度平衡。"
     chi_speaking "时茜……这，这是……？！"
     qian_speaking "你别看了……你，你先走吧。"
@@ -186,7 +186,7 @@ label q3_1_1: # ending here
     lan_speaking "我想要的东西，必须属于我。"
     show blur with dissolve
     qian_speaking "你这……疯子啊啊啊啊啊！"
-    "咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯\n啪！"
+    horr "咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯\n啪！"
     scene bg_black with shake
     "砰！"
     show qianimg shout at char_left with dissolve

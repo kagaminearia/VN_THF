@@ -12,9 +12,6 @@ define chi_speaking = Character("迟玉",what_prefix="“",what_suffix="”")
 define ying_speaking = Character("莺莺",what_prefix="“",what_suffix="”")
 define li_speaking = Character("黎沙",what_prefix="“",what_suffix="”")
 
-define qian_msg = Character("时茜：",color="#fff",kind=nvl,what_prefix="【",what_suffix="】")
-define chi_msg = Character("迟玉：",color="#fff",kind=nvl,what_prefix="【",what_suffix="】")
-
 define bfem = Character("黑衣女人")
 define bfem_speaking = Character("黑衣女人",what_prefix="“",what_suffix="”")
 define off_speaking = Character("工作人员",what_prefix="“",what_suffix="”")
@@ -33,7 +30,8 @@ define white_speaking = Character("白衣女人",what_prefix="“",what_suffix="
 define doctor_speaking = Character("医生",what_prefix="“",what_suffix="”")
 
 define nvl_mode = Character('', kind=nvl)
-
+define qian_msg = Character("时茜：",color="#fff",kind=nvl,what_prefix="【",what_suffix="】")
+define chi_msg = Character("迟玉：",color="#fff",kind=nvl,what_prefix="【",what_suffix="】")
 
 
 # images for characters
