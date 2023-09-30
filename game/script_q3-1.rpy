@@ -83,20 +83,20 @@ label q3_1:
     chi_speaking "不行，那之后……我的终端就被关掉了。\n不过，这个房间也有逃生通道，抓紧时间的话……"
     
     hide qianimg
-    show qianimg still at char_left
+    show qianimg shirt still at char_left
     qian_speaking "只能这样了……你可以带路吗？"
     chi_speaking "当然。\n对了……那个……"
     hide qianimg
-    show qianimg o at char_left
+    show qianimg shirt o at char_left
     qian_speaking "啊？"
     chi_speaking "谢谢你，对我说那些话……还有，那个，你对我……"
     hide qianimg
-    show qianimg sad at char_left
+    show qianimg shirt sad at char_left
     qian_speaking "呃，那个……我们还是先出去吧。"
     qian "迟玉的脸颊肉眼可见地泛起红色，我大概知道她下一句要说什么，于是也有些不自然，只好生硬地跳转话题。"
     
     # can be replaced
-    scene lanroom with fade
+    scene bg_lanroom with fade
     qian "说话几句的时间，我们已经走到另一扇暗门附近，迟玉操作几下，便浮出来一块屏幕。"
     show qianimg shirt still at char_left with dissolve
     qian_speaking "这房间真是够大的……这是什么？身份验证吗？"
@@ -106,16 +106,16 @@ label q3_1:
     chi_speaking "至少……还有输密码的机会。"
     qian_speaking "也是，现在只能赌一把了……但我什么都不清楚，你……你和蓝石熟悉，有什么猜测吗？"
     chi_speaking "我也不是很清楚……但要猜数字密码的话，常见的就是那些吧……生日，纪念日，之类的……啊——"
-    show lanroom with vpunch
+    show bg_lanroom with vpunch
     "砰！"
     hide chiimg
     show chiimg sadask at char_right
     chi_speaking "门，外面门要开了……"
     hide qianimg
-    show qianimg shout at char_left
+    show qianimg shirt shout at char_left
     qian_speaking "我知道——"
 
-    scene lanroom with fade
+    scene bg_lanroom with fade
     qian "真的，只能赌一把了……要输入什么呢——"
     # qte here
     $ time = 3
@@ -150,14 +150,14 @@ image cg_hand1:
     repeat
 
 label q3_1_1: # ending here
-    scene lanroom with fade
+    scene bg_lanroom with fade
     "叮——"
     qian_speaking "对了……！"
-    show lanroom with vpunch
+    show bg_lanroom with vpunch
     "砰！"
     show chiimg sadask at char_right with dissolve
     chi_speaking "快，快跑！"
-    show qianimg shout at char_right
+    show qianimg shirt shout at char_right
     qian_speaking "嗯……！"
     lan_speaking "喂——"
     hide chiimg with easeoutleft
@@ -189,7 +189,7 @@ label q3_1_1: # ending here
     horr "咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯\n啪！"
     scene bg_black with shake
     "砰！"
-    show qianimg shout at char_left with dissolve
+    show qianimg shirt shout at char_left with dissolve
     qian_speaking "啊啊……呜……呃啊……"
     show chiimg sadask at char_right with dissolve
     chi_speaking "没，没事吧……时茜……对不起，都怪我……"
