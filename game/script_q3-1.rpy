@@ -21,7 +21,7 @@ label q3_1:
     qian_speaking "对不起，迟玉……现在听得见我说话吗？"
     show chiimg black at char_left with dissolve
     chi_speaking "哈，啊……"
-    show lan2 at large2 with bottomside
+    show lan2 at large2 with easeinbottom
     lan_speaking "你怎么敢？"
     show qianimg shirt shout at large2 with dissolve
     qian_speaking "听我说……她，蓝石有这样做过吗？"
@@ -31,7 +31,7 @@ label q3_1:
     hide chiimg 
     hide lan2
 
-    show lan2 at large2 with bottomside
+    show lan2 at large2 with dissolve
     lan_speaking "不过是个失败品。"
     show qianimg shirt close at large2 with dissolve
     qian_speaking "我做了。所以别听她的，振作起来……你不用听她的！"
@@ -42,11 +42,11 @@ label q3_1:
     hide chiimg 
     hide lan2
 
-    show lan1 at large2 with bottomside
+    show lan1 at large2 
     lan_speaking "我都没有动过的东西。"
     show qianimg shirt shout at large2 with dissolve
     qian_speaking "迟玉放开我！"
-    show lan2 at large2 with bottomside
+    show lan2 at large2 
     lan_speaking "你凭什么动我的东西？"
 
     hide qianimg

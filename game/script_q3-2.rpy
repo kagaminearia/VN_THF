@@ -307,7 +307,7 @@ label q3_2_2: # ending here
     show qianimg shout at char_left with dissolve
     qian_speaking "我们在这！但是麻烦你们先看完这些！"
     unknown "住嘴！"
-    show blood0 at cg0 with shake
+    show blood0 with shake
     "砰！"
     qian_speaking "哈，啊……！看——这个——！"
     qian "我捂住被血浸透的胳膊，让明亮的投影在头顶上展开，照亮我失去血色的表情。"

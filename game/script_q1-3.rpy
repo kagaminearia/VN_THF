@@ -1,5 +1,5 @@
 label q1_3:
-    scene bg_building with Fade(0.3,0.2,0.4)
+    scene bg_road05 with Fade(0.3,0.2,0.4)
     qian "沿路牌往前，道路逐渐出现不同的分岔，而后，最近的路口挂着巨大的显示屏：D-230，居民区。"
     qian "不太信任管制局，可其他地方又好到哪里去。\n昏暗的环境仿佛滋生鬼魅，时不时的窸窣声从角落传来，让我心生退意，胸口也憋闷得要窒息。"
     qian "好，难受……不安和疲惫越发堆积，直到眼皮越来越重，腿也抬不起来，不得不停靠在布满灰尘的墙角。\n为什么，会这样……"
@@ -8,7 +8,7 @@ label q1_3:
     unknown "怎么又到清理垃圾的时候了啊，真麻烦。"
     unknown "就是啊，那些垃圾不能自行滚出去吗，浪费我们城市宝贵的资源啊。"
     unknown "啊你这人真够恶劣的，想什么呢，哈哈哈哈……"
-    scene bg_chaos0 with hpunch
+    scene bg_chaos0 with vpunch
     qian "……好像，有什么……声音……好吵……\n可是，动不了，连眼睛都睁不开……"
     unknown "喂，这还有一个！拿袋子来！"
     scene bg_chaos1 with hpunch
@@ -17,8 +17,9 @@ label q1_3:
     unknown "好好，别叫了来了——"
 
     scene bg_black with hpunch
-    qian "臭，好臭……"
+    qian "臭，好臭……\n……啊……！"
     scene bg_pit0 with hpunch
+    show liquid0 with dissolve
     qian "我猛地睁开眼睛，有什么液体从睫毛上落下来，黏腻、湿热、恶臭，让我差点再度晕过去。\n这是哪……"
     qian "像是陷入沼泽，泥泞脏污，只是其中的“淤泥”是更加复杂的东西：黑灰色的大塑胶袋，扯烂的金属和电线，辨认不出形状的固态物。杂乱无章地堆叠积压在一起，渗出腐烂的气息。"
     qian "我的眼皮开始疯狂打架，身体也不受控制地颤抖起来。"
@@ -26,17 +27,17 @@ label q1_3:
     scene bg_pit1 with hpunch
     na "轰隆——"
     qian "巨大的声响打断了我的思考。\n而后，头顶的黑色天花板快速降落，随着砰的一声，剥夺了我视野里的一切光线。"
-
+    qian "“地面”开始剧烈晃动，周围的垃圾一股脑地摔下来，将我挤得喘不过气，而后又因摇晃在我身上碾压。"
+    scene bg_black with my_shake
+    horr "痛，好痛……\n好痛好痛好痛好痛……"
+    # scene bg_black with hpunch
+    horr "每一块可能的皮肤和肌肉都在拉伸，向不同方向撕扯，每一寸神经都在啸叫，发出震耳欲聋的冲击声。"
+    # scene bg_black with hpunch
+    horr "我控制不了身体，睁不开眼，找不到合适的姿势，无论怎么做都痛得流泪，像整个人被扔进高速旋转的洗衣机，撞得头破血流。"
+    # scene bg_black with hpunch
+    horr "直到时间都失去意义，疼痛和耳边的轰鸣都没有停止，我的精神像在荆棘刺中打滚，变成千疮百孔的破烂。"
     scene bg_black with hpunch
-    qian "痛，好痛……\n好痛好痛好痛好痛……"
-    scene bg_black with hpunch
-    qian "每一块可能的皮肤和肌肉都在拉伸，向不同方向撕扯，每一寸神经都在啸叫，发出震耳欲聋的冲击声。"
-    scene bg_black with hpunch
-    qian "我控制不了身体，睁不开眼，找不到合适的姿势，无论怎么做都痛得流泪，像整个人被扔进高速旋转的洗衣机，撞得头破血流。"
-    scene bg_black with hpunch
-    qian "直到时间都失去意义，疼痛和耳边的轰鸣都没有停止，我的精神像在荆棘刺中打滚，变成千疮百孔的破烂。"
-    scene bg_black with hpunch
-    qian "疼痛……"
+    qian "疼，疼痛……"
 
     scene bg_black with Fade(1,0,1)
     unknown "你也来捡垃圾啊？"
@@ -56,18 +57,30 @@ label q1_3:
     qian "我悬着心仔细观察房间：一眼望去，地面和墙壁光秃秃的，室内没有窗户，一扇小门关得严实，低矮的天花板挂着两点摇晃的火光——少见的明火。至于其他……"
     na "吱呀——"
     qian "……谁？"
-
+    window hide
+    show cg_li00 at cg0 with dissolve
+    pause(1.5)
+    window show
     unknown "醒了？"
-    qian_speaking "啊，嗯……"
+    qian_speaking "啊，呃，嗯……"
     unknown "……"
     qian "……\n不认识的女人站在面前，身着长到脚踝的黑色披风。她一动不动，只是默默地看着，视线仿佛要看穿我。"
     qian_speaking "……这是哪里？你是谁？是，是你救了我吗？"
     qian "终于，我忍受不了这样的气氛和沉默，努力让自己的喉咙发出声音。刚开始有些困难，但说到后面，却几乎有些逼问的急迫。"
-    unknown "你对救你的人就是这个态度啊。"
-    qian_speaking "啊，呃，对不起，所以真的是你救了我……但是，到底发生了什么……那个，你需要我做什么吗？"
+    scene bg_liroom0 with Fade(0.4，0.5,0.3)
+    show liimg at char_right with easeinright
+    unknown "你对救你的人是这个态度吗。"
+    show qianimg sad at char_left with easeinleft
+    qian_speaking "啊，呃，对不起，所以，真的是你救了我……但是，到底发生了什么……那个，你需要我做什么吗？"
+    hide qianimg
+    show qianimg at char_left 
     qian "事到如今，发生那么多事情之后……我总不会还在天真地相信她只是因为善良才救我。"
     unknown "是想，可是你看起来没什么用。"
+    hide qianimg
+    show qianimg still at char_left 
     qian_speaking "什……！"
+    hide liimg
+    show liimg o at char_right
     unknown "说说你吧。你叫什么，怎么会出现在那里的？"
     qian "为什么反倒先问我……\n说到先前的事情，我下意识绷紧了身体，那刺骨的疼痛仍然让我心有余悸。"
 
@@ -79,16 +92,27 @@ label q1_3:
 
 
 label q1_3_1:
+    scene bg_liroom0 with fade
     qian "现在的情况我是完全的劣势，哪怕一时说谎也不会有太大改变，万一被看穿可能更加危险……"
-    #TODO: 接1.3
-    qian "能从那里救下我的人，说不定很厉害，还是全部告诉她吧……"
-    qian_speaking "我是时茜，从A层来到D层，因为……"
-    #TODO: 转场，cg？
+    qian "能救下我的人，说不定很厉害，还是全部告诉她吧……"
+    show qianimg still at char_left with dissolve
+    qian_speaking "我叫时茜，从A层来到D层，因为……"
+    scene bg_liroom0 with fade
+    show qianimg o at char_left  
     qian_speaking "之后……就是这样。对了，可以看终……我的终端呢？"
+    show liimg o at char_right with dissolve
     unknown "你是说这个吗？"
+    hide qianimg
+    show qianimg shout at char_left  
     qian_speaking "怎么在你那里！"
+    hide liimg
+    show liimg smile at char_right
     unknown "不清楚底细的人，当然要好好检查一遍啊，不然怎么知道要不要救你？"
+    hide qianimg
+    show qianimg at char_left 
     qian_speaking "你……那你看都看过了，为什么还要问我……"
+    hide liimg
+    show liimg laugh at char_right
     unknown "看你会不会说出点新东西啊，总要多点信息来源吧。"
     qian "是为了看我有没有说谎吧……真够狡猾。但，至少这说明我实话实说是正确的……也许。"
     qian_speaking "我知道的就这些了……"
