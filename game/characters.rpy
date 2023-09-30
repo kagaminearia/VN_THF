@@ -126,8 +126,8 @@ init:
                 "images/char/li/laugh.png"
             attribute smile:
                 "images/char/li/smile.png"
-            attribute laugh:
-                "images/char/li/laugh.png"
+            attribute close:
+                "images/char/li/close.png"
 
 
     layeredimage yingimg:

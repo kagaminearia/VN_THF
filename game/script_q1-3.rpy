@@ -114,56 +114,99 @@ label q1_3_1:
     hide liimg
     show liimg laugh at char_right
     unknown "看你会不会说出点新东西啊，总要多点信息来源吧。"
+    hide qianimg
+    show qianimg still at char_left 
     qian "是为了看我有没有说谎吧……真够狡猾。但，至少这说明我实话实说是正确的……也许。"
     qian_speaking "我知道的就这些了……"
     unknown "这样啊，你也不容易嘛。"
     qian_speaking "是，是啊……"
     unknown "他们做这么恶劣的事情，就没想过偷偷回去？"
+    hide qianimg
+    show qianimg at char_left 
     qian_speaking "怎么可能啊，管制局的人难道是白拿钱的吗。"
+    hide liimg
+    show liimg smile at char_right
     unknown "你都没试过，就觉得不可能了？"
+    hide qianimg
+    show qianimg shock at char_left 
     qian_speaking "哪有你说的那么容易！"
+    hide qianimg
+    show qianimg still at char_left 
     qian "……\n我大吼出声后才惊觉自己的失态，急急地扼住胸口将要迸发的郁气。"
     unknown "……"
+    scene bg_liroom0 with fade
+    show liimg ask at char_right with dissolve
     unknown "所以，管……那些人真的很厉害，完全没有漏洞？你们那个所谓的系统真的很可靠吗，到处都是？从人下手呢，没有偷懒的人吗？"
+    show qianimg sad at char_right with dissolve
     qian_speaking "不，不知道……其实我没有在D层待过很久，但也有听说好像现在管理很混乱……但是，但是要回A层绝对不可能的，上层的管理很严格的。"
+    hide liimg
+    show liimg o at char_right
     unknown "这样啊，你怎么一副要死不活的样子？"
     qian_speaking "有吗……"
+    hide liimg
+    show liimg close at char_right
     unknown "算了，你再休息会，待会把你知道的所有关于D层的消息都跟我讲讲。"
     qian_speaking "哦，好……"
+
+    scene cg_soup at cg0 with fade
     qian_speaking "这是什么……？"
-    #TODO: 转场
     unknown "吃的，怕你说得太累把自己累死了，补充点体力。"
-    qian_speaking "哦……"
+    qian_speaking "……哦……"
     unknown "不吃拉倒，别浪费粮食。"
     qian "总感觉吃了之后才会死……我硬生生憋住了这句话。\n不过，这发出奇怪气味的东西真的能吃吗……我一狠心，屏住呼吸将碗里的东西倒进喉咙。"
+    show blur with vpunch
     qian_speaking "呕……咳，咳咳……"
     unknown "行了，不爱吃别吃。"
     qian_speaking "咳，呃，好……谢谢……"
+
+    scene bg_liroom0 with fade
+    show liimg o at char_right with dissolve
     unknown "继续说吧，你知道的事。"
-    #TODO: 转场
+    show qianimg o at char_left with dissolve
     qian_speaking "……你到底是做什么的？"
+    hide liimg
+    show liimg ask at char_right 
     unknown "这重要吗？对你来说，我是救了你的命的人，你只需要知道这个就够了。"
+    hide qianimg
+    show qianimg at char_left
     qian_speaking "……\n你不是D层人吧。你都已经知道我是刚来D层没多久的，却还是追着我问各种基础问题。"
+    hide liimg
+    show liimg at char_right 
     unknown "……"
-    #TODO: 闭嘴立绘
     qian_speaking "说到D层的时候你总会有奇怪的卡顿，虽然这在自然对话中很常见，却很不像你的说话方式。"
     qian_speaking "但你又尤其在意和上层之间的通道，而且仅仅是A层，为什么？如果你不是D层人，为什么需要这么费尽心思？"
+    hide qianimg
+    show qianimg still at char_left
     qian_speaking "难道你……"
+    hide qianimg
+    show qianimg shock at char_left
     qian "！"
-    #TODO: 震惊帧
+    hide qianimg
+    hide liimg
+    window hide
+    show cg_li10 at cg0 with dissolve
+    pause(1.5)
+    window show
     qian "和我一样？\n这句话我没能说出来，因为面前的人突然毫无预兆地凑近，带起的疾风和危险感让我浑身发毛。"
-    #TODO: cg
     qian_speaking "……"
+    show cg_li11 at cg0 with dissolve
     unknown "感觉你知道的有点多，是不是该把你杀了？"
     qian_speaking "喂……！"
     unknown "嗯……"
+    show cg_li11 at cg0 with dissolve
     unknown "行了，开玩笑的。"
+    scene bg_liroom0 with fade
+    show liimg smile at char_right with dissolve
+    show qianimg still at char_left with dissolve
     qian_speaking "……你到底什么意思？"
-    #TODO: 转场回立绘
     unknown "夸你聪明啊，对了，那就认识一下吧，我叫黎沙。"
     qian "我不聪明就不跟我说了吗……好恶劣的人。"
+    hide liimg
+    show liimg laugh at char_right
     li_speaking "至于我是哪里人……嗯，这个可能有点难回答。"
-    qian_speaking "你直接说不就完了？"
+    hide qianimg
+    show qianimg at char_left with dissolve
+    qian_speaking "直接说不就完了？"
     li_speaking "我说了，你信吗？"
     menu:
         "【信】":
@@ -175,52 +218,84 @@ label q1_3_1:
             qian_speaking "……谁知道呢……我现在也没办法下结论啊。"
             qian "我的手指用力到有些发白。这样对她说话，实在显得有些不识抬举，可也确实是因为我真心想相信她，而不只是随口说说。"
             qian "然而黎沙完全没有要生气的样子，只是有些揶揄地笑了笑。"
-            li_speaking "嗯，挺诚实。"
+            li_speaking "嗯，挺好。"
             qian_speaking "喂……"
 
+    hide liimg
+    show liimg smile at char_mid
     li_speaking "我还是直接带你去看吧，带你看一下我是哪里人。"
     qian "……什么意思？\n我无法理解，在巨大的困惑中被她手臂抓着向外走。"
-    #TODO: 转场
+    hide qianimg with easeoutleft
+    hide liimg with easeoutleft
+    
+    scene bg_black with fade
     qian_speaking "咳咳！"
     qian "一股有些呛人的味道弥漫鼻尖，我忍不住剧烈咳嗽起来。好一会后，我才睁开眼睛，看见打开的门后向外的地方，黎沙所说的场景。"
-    #TODO: 转场
+    
+    scene bg_sand3 with fade
     qian "视野里是粗糙的暗黄色，像有一层浓烟盖在画面上，看不真切。"
     qian "远处有淡淡微光，但整体基调仍然阴沉。近处的地面并不平坦，三三两两的房屋散落在各处，隆起的小丘上有轻卷起的浅层尘土。大大小小的裂缝漫布，凹凸不平。"
     qian "沙，还是沙。\n满目皆是一片黄沙。\n这样的景象，我只在书中见过对应的描述。"
+    show qianimg shock at char_left with dissolve
     qian_speaking "这是……"
     qian "我的牙齿不受控制地用力，把空气咬碎。\n无法理解，无法想象，也不敢深入思考。"
     qian "荆棘之城里没有这样的地方，没有这样的天气，所有的东西都是静止的，平和的，不变的。\n但，那，现在这是……"
+    show liimg ask at char_right with dissolve
     li_speaking "吓到了？"
-    #TODO: 转场
     qian_speaking "不，不是……但，这是哪……"
+    hide liimg
+    show liimg at char_right
     li_speaking "城外啊。"
-    qian_speaking "……什么？"
+    qian_speaking "……啊？"
+    scene bg_sand3 with fade
     qian "她轻松吐出的几个字如同惊雷炸在我的头顶，一时间连视线都有些恍惚。\n是我想的那个“城外”吗？"
+    show liimg o at char_right with dissolve
     li_speaking "是啊，就是被你们城市遗弃的地方。"
+    show qianimg shout at char_left with dissolve
     qian_speaking "什，什么……这到底是什么意思？"
+    hide liimg
+    show liimg laugh at char_right
     li_speaking "就是你想的那个城外啊，你们城里人不是总说想见识的吗。"
+    hide qianimg
+    show qianimg shock at char_left
     qian_speaking "但，但是……城外不是这样的……城外怎么会是这样……"
     qian "从开门后，我的大脑就有些混乱，面对突如其来的庞大信息，简直快要过载了。这和我一直以来对“城外”的认知完全不一样，完全，不一样啊……"
+    hide liimg
+    show liimg smile at char_right
     li_speaking "是不是觉得很奇怪？"
     qian_speaking "啊，啊啊……"
     li_speaking "城外怎么不是美好的地方？城外的人怎么没有害死你们，把你们逼在荆棘之城那个保护罩里？"
-    li_speaking "你们可怜，你们被剥夺，你们受尽苦难，只能在笼子里度过一生……是这样吗？"
+    hide liimg
+    show liimg laugh at char_right
+    li_speaking "你们可怜，你们悲惨。你们被剥夺，你们受尽苦难，只能在笼子里度过一生……是这样吗？"
     qian_speaking "……难道不是吗……"
     qian "事到如今，我的话毫无说服力，连我自己也感到迷茫。可是……我一直以来学到的知识，都是这么告诉我的。"
+    scene bg_black with fade
     qian "因为曾经的战争，战败的一方被迫圈地，不知道真实世界的模样，不知道真正的日夜与四季。\n应该，就是这样的……眼前的景象，却完全超出我的认知。"
     qian_speaking "……我……咳，咳咳咳……"
     qian "喉咙烧得灼痛，我止不住地咳嗽，被黎沙拽着往里走。她重新关上门之后，才感觉呼吸道没那么难受了。"
+    scene bg_liroom0 with fade
+    show liimg o at char_right with easeinright
     li_speaking "好点了没，再喝点水？"
-    #TODO: 转场
+    show qianimg sad at char_left with dissolve
     qian_speaking "不用了，咳……谢谢你……"
+    hide liimg
+    show liimg at char_right
     li_speaking "嗯。"
     qian_speaking "……\n那个……"
     li_speaking "怎么了？"
+    hide qianimg
+    show qianimg still at char_left
     qian "我有点受不了这仿佛要下葬的尴尬气氛，可我也有急切想要知道的事，因而也只好硬着头皮开口了……"
     qian_speaking "所以……到底发生了什么事？我是怎么到城外的，还有城外……"
-    li_speaking "啧……真麻烦。\n那时的战争，你们城里人才是打赢的，不，应该说，是打赢的那些人自己建了城，把其他人挡在外边。然后，一直都是这样啰。"
+    hide liimg
+    show liimg close at char_right
+    li_speaking "啧……真麻烦。"
+    hide liimg
+    show liimg o at char_right
+    li_speaking "那时的战争，你们城里人才是打赢的，不，应该说，是打赢的那些人自己建了城，把其他人挡在外边。然后，一直都是这样啰。"
     qian_speaking "……不……为什么啊？……非得这样吗？……"
-    li_speaking "资源啊资源……你看这外面的环境都什么样了，以前就因为这样才有战争的，现在外面更严重了。\n"
+    li_speaking "资源啊资源……你看这外面的环境是什么样，以前就因为这样才有战争的，现在外面更严重了。\n"
     li_speaking "哎，那帮人自己圈了块地，在里面过得爽快，最后还非说自己是受害者，这真是比不了。"
     qian_speaking "……"
     li_speaking "对了，你说被扔到什么垃圾堆，那估计是真的。这里也有几个垃圾坑，城里人把所有生产垃圾和脏东西扔下来……全让城外解决。"
