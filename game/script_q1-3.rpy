@@ -460,6 +460,7 @@ label q1_3_2: #ending here
     qian "视野里什么也不剩了，然后，一切都被吞噬。"
     scene bg_black with fade
 
-
+    # 【Ending：风沙】
+    $ persistent.ending[14] = 1
     
     return

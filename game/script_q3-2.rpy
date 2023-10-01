@@ -285,7 +285,8 @@ label q3_2_1: # ending here
     qian "最后，我只来得及听清……"
     ying_speaking "到一个很糟糕，但我怀念的地方。"
     
-    
+    # 【Ending：逃离】
+    $ persistent.ending[12] = 1
     return 
 
 
@@ -316,5 +317,6 @@ label q3_2_2: # ending here
     qian "但这是……我自己选择的道路。"
     scene bg_white with Fade(1,1,1,color="#ffffff")
 
-
+    # 【Ending：荆棘】
+    $ persistent.ending[13] = 1
     return 

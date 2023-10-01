@@ -672,6 +672,9 @@ label q2_1_1_1_1:
             qian_speaking "……迟玉，还是谢谢你。"
             qian "……"
 
+            # 【Ending：可惜】
+            $ persistent.ending[4] = 1
+
             return 
 
         "【劝说蓝石】": # ending here
@@ -706,6 +709,9 @@ label q2_1_1_1_1:
             qian "这样啊……原来是在可惜我来不及了。"
             qian "……"
             qian "……"
+
+            # 【Ending：可惜】
+            $ persistent.ending[4] = 1
             
             return
 
@@ -740,6 +746,9 @@ label q2_1_1_1_2: # ending here
     scene bg_black with Fade(0.1,0,0.1)
     qian "……\n又一次全身的疼痛让我眼前一黑，然后，我什么都感觉不到了。"
 
+
+    # 【Ending：麻痹】
+    $ persistent.ending[3] = 1
     return
 
 
@@ -835,11 +844,12 @@ label q2_1_1_2: # ending here
     scene bg_black with fade
     qian "眼前一黑，我失去了意识。"
     
-    
+    # 【Ending：突刺】
+    $ persistent.ending[2] = 1
     return
 
 
-label q2_1_2:
+label q2_1_2: # ending here
     scene bg_room0 with fade
     qian "这么说来，正好可以问问家里人的情况，不知道黄女士和钟女士怎么样了……\n我稍微思虑一下，便下定决心，打开和迟玉的对话框。"
     
@@ -942,5 +952,7 @@ label q2_1_2:
         lan_speaking "我不是说过了吗……以后就不用你担心了。"
     
 
+    # 【Ending：安心】
+    $ persistent.ending[1] = 1
     return
     

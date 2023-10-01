@@ -11,7 +11,7 @@ define ending_9 = "ENDING: 美梦"
 define ending_10 = "ENDING: 窒息"
 define ending_11= "ENDING: 惊疑"
 define ending_12 = "ENDING: 秘密"
-define ending_13 = "ENDING: 逃亡"
+define ending_13 = "ENDING: 逃离"
 define ending_14 = "ENDING: 荆棘"
 define ending_15 = "ENDING: 风沙"
 define ending_16 = "ENDING: 空荡"
@@ -59,7 +59,12 @@ screen ending():
         grid 5 4:
             for i in range(20): 
                 if persistent.ending[i] == 1:
-                    add im.Scale(f"gui/ending/ending{i+1}.jpg",180,180)
+                    # add im.Scale(f"gui/ending/ending{i+1}.jpg",180,180)
+                    imagebutton:
+                        idle im.Scale(f"gui/ending/ending{i+1}.jpg",180,180)
+                        hover im.Scale(f"gui/ending/ending{i+1}.jpg",180,180)
+                        action NullAction()
+                        tooltip ending_1
                 else:
                     add im.Scale("gui/ending/locked_end.jpg",180,180)
 

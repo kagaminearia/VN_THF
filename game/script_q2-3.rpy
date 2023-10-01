@@ -146,6 +146,9 @@ label q2_3_2: # ending here
     qian "……"
 
 
+    # 【Ending：噩梦】
+    $ persistent.ending[16] = 1
+
     return
 
 
@@ -215,7 +218,8 @@ label q2_3_02: # ending here
     show dark with dissolve
     qian "从今以后……我的生活将会在这个地方……在这里活下去。"
     
-    
+    # 【Ending：空荡】
+    $ persistent.ending[15] = 1
     return 
 
 
@@ -363,6 +367,8 @@ label q2_3_1_1: # ending here
     qian "从未想过自己会沦落如此境地，这双眼睛是否也是一种报应呢。"
     qian "未来，我将会在这里活下去吗……"
 
+    # 【Ending：沉默】
+    $ persistent.ending[17] = 1
     return
 
 
@@ -773,5 +779,7 @@ label q2_3_1_1_1: # ending here
     unknown_inn "我迷茫地看着眼前的景象，只觉得一切都是那么虚假。"
     unknown_inn "我……究竟是谁？又为什么存在于此呢？"
 
+    # 【Ending：陌生】
+    $ persistent.ending[18] = 1
     return
     

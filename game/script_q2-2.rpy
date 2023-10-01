@@ -256,6 +256,8 @@ label q2_2_1: # ending here
     scene bg_black with Fade(0.1,0.2,0.2)
     ying_speaking "时茜。"
 
+    # 【Ending：美梦】
+    $ persistent.ending[8] = 1
     return
 
 
@@ -357,6 +359,8 @@ label q222fail: # ending here
     scene bg_black with vpunch
     qian "啊，啊啊……"
 
+    # 【Ending：窒息】
+    $ persistent.ending[9] = 1
     return
 
 
@@ -465,6 +469,9 @@ label q3_2_0: # ending here
     window show
     qian "之后，我又该怎么办呢……"
 
+
+    # 【Ending：秘密】
+    $ persistent.ending[11] = 1
     return
 
 
@@ -511,6 +518,9 @@ label q2_2_2_2: # ending here
     qian "声音被硬生生地截断。我难以置信地盯着靠近的有力手臂。"
     scene bg_black with fade
     qian "下一秒，我失去了意识。"
+
+    # 【Ending：惊疑】
+    $ persistent.ending[10] = 1
 
     return 
 

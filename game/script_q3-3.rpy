@@ -363,6 +363,7 @@ label q3_3_0_1:
     scene bg_white with Fade(1,2,1,color="#fff")
     
 
-
+    # 【Ending：尘埃】
+    $ persistent.ending[19] = 1
     return 
 

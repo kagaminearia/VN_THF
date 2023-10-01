@@ -61,7 +61,8 @@ label q1_2_1: # ending here
     unknown "不错啊，终于熬到药效开始了。"
     qian "失去意识前，这是我听到的最后一句话，隐隐约约的，如鬼魅般飘进我的耳朵。"
 
-    # ending
+    # 【Ending：晕眩】
+    $ persistent.ending[7] = 1
     return
 
 

@@ -260,6 +260,8 @@ label q3_1_1: # ending here
     chi_speaking "我，我会的！！"
     qian_speaking "好啊。"
 
+    # 【Ending：绽放】
+    $ persistent.ending[6] = 1
     return 
 
 label q3_1_0: # ending here
@@ -271,4 +273,6 @@ label q3_1_0: # ending here
     qian "我无言地看向迟玉，她和她眼里的我在这一刻的时间被无限拉长。意识到这一刻到来时，我的内心竟然惊人的平静。"
     qian_speaking "抱歉啊，迟玉……"
 
+    # 【Ending：紧急】
+    $ persistent.ending[5] = 1
     return 

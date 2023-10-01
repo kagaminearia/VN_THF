@@ -353,7 +353,7 @@ image cg_qian1:
     repeat
 
 
-label q1_1_2:
+label q1_1_2: # ending here
     qian "总之……我并没有认真的打算，我又不是真来这种地方工作的。\n随便应付一下，只要撑到家里有消息的时候就行了。"
     qian "随便混混日子并不难，不过是相似的流程，每一天都一样。"
 
@@ -373,6 +373,5 @@ label q1_1_2:
     qian "房间里冒出微弱荧光，不断闪烁，忽明忽暗，重复往返。"
 
     # 【Ending：死寂】
-    $ persistent.text = 1
     $ persistent.ending[0] = 1
     return
