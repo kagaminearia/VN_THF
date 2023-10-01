@@ -292,28 +292,48 @@ label q1_3_1:
     show liimg close at char_right
     li_speaking "啧……真麻烦。"
     hide liimg
-    show liimg o at char_right
-    li_speaking "那时的战争，你们城里人才是打赢的，不，应该说，是打赢的那些人自己建了城，把其他人挡在外边。然后，一直都是这样啰。"
-    qian_speaking "……不……为什么啊？……非得这样吗？……"
+    show liimg at char_right
+    li_speaking "那时的战争，你们城里人才是打赢的一方，不，应该说，是打赢的那些人自己建了城，把其他人挡在外边。然后，一直都是这样啰。"
+    hide qianimg
+    show qianimg sad at char_left
+    qian_speaking "……啊？怎么……为什么啊？……非得这样吗？……"
     li_speaking "资源啊资源……你看这外面的环境是什么样，以前就因为这样才有战争的，现在外面更严重了。\n"
     li_speaking "哎，那帮人自己圈了块地，在里面过得爽快，最后还非说自己是受害者，这真是比不了。"
+    hide qianimg
+    show qianimg still at char_left
     qian_speaking "……"
+    hide liimg
+    show liimg ask at char_right
     li_speaking "对了，你说被扔到什么垃圾堆，那估计是真的。这里也有几个垃圾坑，城里人把所有生产垃圾和脏东西扔下来……全让城外解决。"
-    "呼——呼——"
+    horr "呼——呼——"
     li_speaking "这么说来，你能在死人堆里活下来，还真是……"
-    "呼——呼——呼——"
-    li_speaking "——我看一下。"
+    horr "呼——呼——呼——"
+    hide liimg
+    show liimg still at char_right
+    li_speaking "等等——我看一下。"
     qian_speaking "……啊。"
     qian "我有些呆愣，好一会才反应过来她在跟我说话，以及，逐渐靠近的，轰鸣般的呼啸声。"
     li_speaking "先不说了快过来。"
     qian_speaking "……啊？啊，诶——\n啊啊——！"
-    #TODO: 摇晃，转场
+    hide liimg with easeoutright
+    hide qianimg with easeoutright
+    window hide
+    show bg_white with Dissolve(0.1) 
+    pause(0.1)
+    show bg_storm with Dissolve(0.1)
+    pause(0.5)
+
+    scene bg_black with Fade(0.5,0.5,0.5,color="#fff")
+    show qianimg still at char_left with dissolve
     qian "好吵……"
+    show liimg still at char_right with dissolve
     li_speaking "最近天气变化越来越快了，真够烦的……不知道这次又要死多少人。"
     qian "出口关闭得严严实实，但还是能听见那仿佛要把地上一切卷走的呼啸声音。以及碰撞声，挤压声，还有夹杂在风中的呼喊声。"
+    hide liimg
+    show liimg o at char_right 
     li_speaking "哦，你不知道这是什么是吧。以后听到这个声音记得跑，不要待在地面上，沙暴很危险。"
     qian_speaking "以后……"
-    #TODO: 模糊
+    show blur with hpunch
     li_speaking "你说什么？我听不清——喂，你这是哭了吗？没事吧？是不是污染物进眼睛了？"
     qian_speaking "没，没有……"
     qian "……我哭了吗？我不知道。\n但她看过来时，我条件反射地偏移视线，低下头，而后，面前的地上出现了一滴滴水渍。"
@@ -328,34 +348,58 @@ label q1_3_1:
     qian "好在，她现在看不到我的表情。\n声音止不住，我自暴自弃地不再控制。"
     qian_speaking "呜，呜啊……呜呜……"
     qian "过多的信息让我的认知完全崩塌，颠覆的故事，对现状的不忿不安，对城外的恐惧夹着愧疚，头顶的风暴声与无数矛盾的思绪挟住我，令我无法呼吸。"
+    hide blur with dissolve
     qian_speaking "……呜……"
+
+    scene bg_black with fade
     li_speaking "醒醒，醒醒！"
-    qian_speaking "嗯……啊？"
+    scene bg_black with fade
+    show qianimg shock at char_left with easeinbottom
+    qian_speaking "啊……啊？！"
+    show liimg o at char_right with easeinright
     li_speaking "我说你啊，自己哭到睡着就算了，能不能别妨碍别人啊。"
+    hide qianimg
+    show qianimg sad at char_left
     qian_speaking "什么……啊，那个！对，对不起！\n——哇啊！"
     qian "我急忙和黎沙拉开距离，而后——头顶撞到了天花板。\n好矮啊……哦，对，这里是地下室……"
+    hide liimg
+    show liimg close at char_right 
     li_speaking "……\n走吧，出去了。"
     qian_speaking "嗯，嗯……"
     qian "总觉得她似乎欲言又止……唉，我都做了些什么事啊……"
+    scene bg_sand0 with fade
     qian_speaking "……\n……"
     qian "这就是，沙暴吗……"
+    show liimg o at char_right with easeinright
     li_speaking "你站着干嘛呢？把披风穿好，过来搭把手。"
+    show qianimg o at char_left with easeinleft
     qian_speaking "好的……！"
+    scene bg_sand0 with fade
     qian "阴冷的风带着尘土吹过脸颊，引发淡淡的刺痛。我接过黎沙从地下搬出来的工具箱，把它们搬到墙根旁边。"
     qian "……对，是墙根，因为四周的墙壁都已经不成形状，只剩挤压的材料和巨大的空洞。放眼望去，四处皆是倒塌的东西，包括人。"
+    show qianimg sad at char_left with dissolve
+    show liimg at char_right with dissolve
+    show sand0 with dissolve
     qian_speaking "那些人……不去帮忙吗？"
     li_speaking "怎么帮？你去帮吗？"
     qian_speaking "呃，我……"
     li_speaking "哪里帮得过来。\n还不如先帮帮我自己。"
     qian_speaking "……"
     qian "怎么会这样……\n我呆站在原地，只有风声在胸口回荡。"
+    hide liimg with dissolve
+
+    scene bg_liroom0 with fade
+    show dark with dissolve
     li_speaking "还没睡？你不累吗。"
-    #TODO: 转场
     qian_speaking "呃，累……但是睡不着。"
     li_speaking "不舒服还是吓到了？不管怎么样，你还是快习惯了吧，这儿可没你们那过得舒坦。"
     qian_speaking "……我知道。"
     qian "我吐出一口气，望向低矮的天花板——多亏科技发展，建一个简单的平板房子不需要多久。"
     qian "然而我又很快想到，说不定也正因为科技，我才会沦落于此吧……\n我有些不自然地挪动身子，效果甚微。床不大，只能和黎沙挤在一起。"
+    window hide
+    show cg_li20 with dissolve
+    pause(1.5)
+    window show
     qian_speaking "你们……一直都是这样吗？"
     li_speaking "哪样？"
     qian_speaking "就是，像这样的事情，天气……"
@@ -370,35 +414,52 @@ label q1_3_1:
     li_speaking "想不通就算了。你也不过是个被欺骗的蠢货罢了。"
     qian_speaking "……\n好吧。\n你这算在安慰人吗？"
     li_speaking "你觉得像吗？"
-    qian_speaking "我觉得不像。"
-    li_speaking "……你还真回答了，我服了你。\n像不像都无所谓啦，睡吧。"
+    qian_speaking "不太像。"
+    li_speaking "……你还真回答……我服了。\n像不像都无所谓啦，睡吧。"
     qian_speaking "嗯。"
     qian "我的情绪竟然惊人地平静下来。\n虽然还有太多我搞不明白的事……就算知道是在逃避……但现在，还是先睡觉吧。"
     jump q2_3
 
 
 label q1_3_2: #ending here
+    scene bg_liroom0 with fade
     qian "现在的情况对我来说太过危险，如果全部如实告诉她，说不定会更危险……"
     qian "虽然这么想，短时间内我也想不出什么好的说辞，只好含糊其辞，快速带过。"
+    show qianimg still at char_left with dissolve
     qian_speaking "就是这样……我只是到D层后迷路了，后来不知道发生了什么。"
+    show liimg o at char_right with dissolve
     unknown "只是这样？你确定吗？"
     qian_speaking "是，是啊……"
     unknown "……"
     qian "她紧紧盯着我，似乎已经看穿我的想法。\n但我还是屏住呼吸，坚持我那摇摇欲坠的谎言。"
+    hide liimg
+    show liimg close at char_right
     unknown "……知道了。"
+    hide qianimg
+    show qianimg o at char_left 
+    hide liimg with easeoutright
     qian_speaking "我……诶？\n你不问……等等，你就走了吗？！"
     qian "砰。回答我的只有无情的关门声音。\n……又被留下了。"
     
-    qian_speaking "到底是怎么回事……说起来，好吵……啊……？！"
+
+    qian_speaking "到底是怎么回事……说起来，好吵……"
+    hide qianimg
+    show qianimg shock at char_left with hpunch
+    qian_speaking "啊……？！"
+    scene bg_liroom0 with vpunch
     qian "床似乎在摇晃，我吓了一跳，这才从纷乱的思绪中醒过来，意识到周身巨大的轰鸣声响。"
+    show sand0 with my_shake
     qian_speaking "什么情况……呜——"
     qian "我慢吞吞地下床，正要看个究竟，却被扑面而来的风浪掀翻在地。"
+    show blur with dissolve
     qian_speaking "那……咳……那是，什么……"
     qian "沙，还是沙。\n狂乱摇曳的尘沙占据了我的全部视线。它席卷所有东西，不留任何逃脱的余地。"
     qian "我拼命地撑起身体，试图在粗粝的地上找到一个安定点。"
     qian "但是没有。"
     qian "逃不掉……"
     qian "视野里什么也不剩了，然后，一切都被吞噬。"
-    
+    scene bg_black with fade
+
+
     
     return

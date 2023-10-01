@@ -76,6 +76,8 @@ init:
         group mask:
             attribute mask:
                 "images/char/qian/mask.png"
+            attribute blind:
+                "images/char/qian/blind.png"
 
 
     layeredimage chiimg:
@@ -128,6 +130,8 @@ init:
                 "images/char/li/smile.png"
             attribute close:
                 "images/char/li/close.png"
+            attribute still:
+                "images/char/li/still.png"
 
 
     layeredimage yingimg:
