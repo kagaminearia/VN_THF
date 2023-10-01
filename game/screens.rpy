@@ -335,7 +335,7 @@ screen navigation():
             if _in_replay:
                 textbutton _("结束回放") action EndReplay(confirm=True)
 
-            textbutton _("附加") action ShowMenu("gallary")
+            textbutton _("附加") action ShowMenu("outline")
             # textbutton _("帮助") action ShowMenu("help")
 
             if renpy.variant("pc"):

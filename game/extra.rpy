@@ -1,7 +1,6 @@
-# ending lists
-define ending_1 = "ENDING: 死寂" # python index starts at 0
-define ending_2 = "ENDING: 安心"
-define ending_3 = "ENDING: 突刺"
+define ending_1 = "ENDING: 死寂" # ending lists
+define ending_2 = "ENDING: 安心" 
+define ending_3 = "ENDING: 突刺" # python index starts at 0
 define ending_4 = "ENDING: 麻痹"
 define ending_5 = "ENDING: 可惜"
 define ending_6 = "ENDING: 紧急"
@@ -32,10 +31,10 @@ screen extra_navi():
         yalign 0.95
         spacing 60
         textbutton _("返回") action Return()
-        textbutton _("画廊") action ShowMenu("gallary")
-        textbutton _("结局") action ShowMenu("ending")
-        textbutton _("概览") action ShowMenu("outline")
-        textbutton _("制作") action ShowMenu("credits")
+        # textbutton _("画廊") action ShowMenu("gallary")
+        textbutton _("结局列表") action ShowMenu("ending")
+        textbutton _("概览路线") action ShowMenu("outline")
+        textbutton _("制作名单") action ShowMenu("credits")
 
 
 screen gallary():
@@ -54,7 +53,7 @@ screen ending():
 
     hbox:
         xalign 0.5
-        yalign 0.5
+        yalign 0.4
 
         grid 5 4:
             for i in range(20): 
@@ -77,6 +76,10 @@ screen outline():
     add "gui/extra_menu.png"
     add "gui/overlay/bg_transparent.png"
     use extra_navi
+    add im.Scale("gui/routes/routeimg.png",1920,1080)
+    for i in range(20): 
+        if persistent.ending[i] == 1:
+            add im.Scale(f"gui/routes/routeimg{i+1}.png",1920,1080)
 
 
 screen credits():
@@ -84,3 +87,7 @@ screen credits():
     add "gui/extra_menu.png"
     add "gui/overlay/bg_transparent.png"
     use extra_navi
+    vbox:
+        xalign 0.4
+        yalign 0.4
+        text _("作者：")
