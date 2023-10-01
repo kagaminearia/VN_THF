@@ -292,9 +292,9 @@ screen quick_menu():
                 focus "tooltip"
                 prefer_top True
 
-                frame:
+                hbox:
                     xalign 0.5
-                    text tooltip
+                    text tooltip size 20
 
 
 ## 此代码确保只要用户没有主动隐藏界面，就会在游戏中显示 quick_menu 界面。
