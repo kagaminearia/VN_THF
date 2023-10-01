@@ -19,7 +19,27 @@ define ending_18 = "ENDING: 沉默"
 define ending_19 = "ENDING: 陌生"
 define ending_20 = "ENDING: 尘埃"
 
-
+define endings = \
+["ENDING: 死寂",
+"ENDING: 安心",
+"ENDING: 突刺",
+"ENDING: 麻痹",
+"ENDING: 可惜",
+"ENDING: 紧急",
+"ENDING: 绽放",
+"ENDING: 晕眩",
+"ENDING: 美梦",
+"ENDING: 窒息",
+"ENDING: 惊疑",
+"ENDING: 秘密",
+"ENDING: 逃离",
+"ENDING: 荆棘",
+"ENDING: 风沙",
+"ENDING: 空荡",
+"ENDING: 噩梦",
+"ENDING: 沉默",
+"ENDING: 陌生",
+"ENDING: 尘埃",]
 
 
 
@@ -63,12 +83,24 @@ screen ending():
                         idle im.Scale(f"gui/ending/ending{i+1}.jpg",180,180)
                         hover im.Scale(f"gui/ending/ending{i+1}.jpg",180,180)
                         action NullAction()
-                        tooltip ending_1
+                        tooltip endings[i]
                 else:
                     add im.Scale("gui/ending/locked_end.jpg",180,180)
 
             spacing 15
-            
+        
+    
+    $ tooltip = GetTooltip()
+
+    if tooltip:
+
+        nearrect:
+            focus "tooltip"
+            prefer_top True
+
+            hbox:
+                xalign 0.5
+                text tooltip size 25            
 
 
 screen outline():
