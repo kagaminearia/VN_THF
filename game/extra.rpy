@@ -19,8 +19,8 @@ define ending_18 = "ENDING: 沉默"
 define ending_19 = "ENDING: 陌生"
 define ending_20 = "ENDING: 尘埃"
 
-define endings = \
-["ENDING: 死寂",
+define endings = [
+"ENDING: 死寂",
 "ENDING: 安心",
 "ENDING: 突刺",
 "ENDING: 麻痹",
