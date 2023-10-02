@@ -257,6 +257,9 @@ label q2_2_1: # ending here
     ying_speaking "时茜。"
 
     # 【Ending：美梦】
+    window hide
+    show screen ending_title(number=8) with Fade(0.5,0.5,0.5)
+    pause
     $ persistent.ending[8] = 1
     return
 
@@ -360,6 +363,9 @@ label q222fail: # ending here
     qian "啊，啊啊……"
 
     # 【Ending：窒息】
+    window hide
+    show screen ending_title(number=9) with Fade(0.5,0.5,0.5)
+    pause
     $ persistent.ending[9] = 1
     return
 
@@ -476,6 +482,9 @@ label q3_2_0: # ending here
 
     
     # 【Ending：秘密】
+    window hide
+    show screen ending_title(number=11) with Fade(0.5,0.5,0.5)
+    pause
     $ persistent.ending[11] = 1
     return
 
@@ -525,6 +534,9 @@ label q2_2_2_2: # ending here
     qian "下一秒，我失去了意识。"
 
     # 【Ending：惊疑】
+    window hide
+    show screen ending_title(number=10) with Fade(0.5,0.5,0.5)
+    pause
     $ persistent.ending[10] = 1
 
     return 

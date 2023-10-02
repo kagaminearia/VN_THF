@@ -1,5 +1,9 @@
 label q2_3:
+    window hide
+    scene bg_cut3 at cg0 with Dissolve(3)
+    pause
     scene bg_liroom0 with fade
+    window show
     show qianimg black close at char_left with dissolve
     qian_speaking "啊……啊嚏！"
     hide qianimg
@@ -147,6 +151,9 @@ label q2_3_2: # ending here
 
 
     # 【Ending：噩梦】
+    window hide
+    show screen ending_title(number=16) with Fade(0.5,0.5,0.5)
+    pause
     $ persistent.ending[16] = 1
 
     return
@@ -219,6 +226,9 @@ label q2_3_02: # ending here
     qian "从今以后……我的生活将会在这个地方……在这里活下去。"
     
     # 【Ending：空荡】
+    window hide
+    show screen ending_title(number=15) with Fade(0.5,0.5,0.5)
+    pause
     $ persistent.ending[15] = 1
     return 
 
@@ -284,7 +294,7 @@ label q2_3_1:
     li_speaking "喂……你还好吗？喂！"
     show blur with vpunch
     qian_speaking "呃……呜……"
-    show bg_transparent with my_shake
+    show bg_transparent with shake
     qian "眼前是剧烈摇晃的黎沙，身影逐渐越来越远……"
 
     scene bg_liroom0 with fade
@@ -368,6 +378,9 @@ label q2_3_1_1: # ending here
     qian "未来，我将会在这里活下去吗……"
 
     # 【Ending：沉默】
+    window hide
+    show screen ending_title(number=17) with Fade(0.5,0.5,0.5)
+    pause
     $ persistent.ending[17] = 1
     return
 
@@ -464,7 +477,7 @@ label q2_3_1_2:
     qian "黎沙有其他事出去后，我躺在床上，总觉得有些憋闷。"
     qian_speaking "……真的可行吗……我……"
 
-    show cg_qian20 with Fade(0.2,0.2,0,color="#fff")
+    show cg_qian20 at cg0 with Fade(0.2,0.2,0,color="#fff")
     pause(0.2)
     qian "焦虑和迷茫让我无法继续待在房间，只好带上披风走到室外。"
 
@@ -473,12 +486,12 @@ label q2_3_1_2:
     qian_speaking "……嗯？"
     qian "脚下突然有阻力传来，我低头一看，是一团深黑色的纠缠脉络。"
     window hide
-    show cg_flower0 with dissolve
+    show cg_flower0 at cg0 with dissolve
     pause(1.5)
-    show cg_flower1 with dissolve
+    show cg_flower1 at cg0 with dissolve
     window show
     qian "我蹲下用手拨开，不出意外地被扎得一痛：黑色脉络上生满棘刺，拨开后能看到白色小花。"
-    show cg_flower2 with dissolve
+    show cg_flower2 at cg0 with dissolve
     qian "果然是，荆棘花……在布满灰尘的视野里，这片白色格外显眼。那是只要有一点机会就能够肆意生长的植物，即使在自然环境贫瘠的荆棘之城也能盛开——也是城市名字的起源。"
     qian "一直以来，我认为那是城市的独有品种，象征着荆棘之城的坚韧、不屈，被印刻在城市印章上，同样是我的信念。"
     qian "但……现在看来，那也是虚假的。和城市无关，它在哪里都一样自由生长。"
@@ -595,13 +608,15 @@ label q2_3_1_2:
     qian "飞行器平稳地降落。\n我们都沉默下来，无言等待即将到来的，不知道是什么的东西。"
     hide liimg with easeoutright
     hide qianimg with easeoutright
-
-
+    window hide
+    scene bg_cut30 at cg0 with Dissolve(3)
+    pause
     scene bg_labfloor with Fade(0.5,0.5,0.5,color="#fff")
+    window show
     qian "一层，两层，三层……我跟着长长的队伍走上楼梯。而后，洁白冰冷的走廊在眼前展开。\n不是室外……从风格来看，更像是某个大型研究基地。"
     qian "研究基地……我突然想到所有事情的开端，惊得差点忘记了呼吸。"
     qian "……她们不就是在研究所工作的吗？A层不小，但这种面积的大型研究所，我想不会有太多。况且……我的直觉告诉我，绝对是同一个地方。"
-    show blur with my_shake
+    show blur with shake
     qian "这么多异常的巧合聚集在一起，就绝对不是巧合。"
     li_speaking "你怎么了？"
     hide blur with dissolve
@@ -723,7 +738,7 @@ label q2_3_1_2:
     qian "所有灯光都暗下来后，整个房间像一个大型的停尸房。今天把晚饭塞到其他人那里之后，果然晚上不会那么困了。"
     qian "我小心翼翼地移动身体，才没有在这拥挤的床铺间碰到别人。"
     window hide
-    show cg_li50 with dissolve
+    show cg_li50 at cg0 with dissolve
     pause(1.5)
     window show
     li_speaking "我感觉像在做梦。"
@@ -739,7 +754,7 @@ label q2_3_1_2:
     qian "我的豪言壮志让我自己也被欺骗得忘记了危险性，只有切身体会到这件事即将到来时才能意识到。\n我真的要去做一件出格的事，甚至会威胁到生命。"
     li_speaking "抱歉……让你看笑话了。"
     qian_speaking "不，怎么会……"
-    show cg_li51 with dissolve
+    show cg_li51 at cg0 with dissolve
     li_speaking "没有太多时间了……我听你的。"
     qian_speaking "……！"
     qian "她的双眸直直地看向我，那是摇晃、孤注一掷、混合着坚定的眼神。\n我——"
@@ -780,6 +795,9 @@ label q2_3_1_1_1: # ending here
     unknown_inn "我……究竟是谁？又为什么存在于此呢？"
 
     # 【Ending：陌生】
+    window hide
+    show screen ending_title(number=18) with Fade(0.5,0.5,0.5)
+    pause
     $ persistent.ending[18] = 1
     return
     

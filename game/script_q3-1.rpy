@@ -170,14 +170,14 @@ label q3_1_1: # ending here
     qian_speaking "你竟然，自己……"
     horr "呵呵，呵呵呵……别走，我们还没聊完吧？"
     qian_speaking "你，你这人……"
-    show cg_hand11 with shake
+    show cg_hand11 at cg0 with shake
     horr "咯吱，咯吱咯吱……\n咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱"
     qian "哈，哈啊……我抵住门，剧烈的挤压声让我的手掌也剧烈颤抖起来，我们僵持在这个位置，达到一种恶心的高度平衡。"
     chi_speaking "时茜……这，这是……？！"
     qian_speaking "你别看了……你，你先走吧。"
     lan_speaking "别想多……"
     chi_speaking "那怎么行，啊，怎么办……"
-    show cg_hand1 with shake
+    show cg_hand1 at cg0 with shake
     lan_speaking "你们都别跑。"
     qian_speaking "喂……你放开吧！很痛吧！"
     lan_speaking "谁允许你反抗的？"
@@ -262,6 +262,9 @@ label q3_1_1: # ending here
     qian_speaking "好啊。"
 
     # 【Ending：绽放】
+    window hide
+    show screen ending_title(number=6) with Fade(0.5,0.5,0.5)
+    pause
     $ persistent.ending[6] = 1
     return 
 
@@ -275,5 +278,8 @@ label q3_1_0: # ending here
     qian_speaking "抱歉啊，迟玉……"
 
     # 【Ending：紧急】
+    window hide
+    show screen ending_title(number=5) with Fade(0.5,0.5,0.5)
+    pause
     $ persistent.ending[5] = 1
     return 

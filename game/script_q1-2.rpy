@@ -62,6 +62,9 @@ label q1_2_1: # ending here
     qian "失去意识前，这是我听到的最后一句话，隐隐约约的，如鬼魅般飘进我的耳朵。"
 
     # 【Ending：晕眩】
+    window hide
+    show screen ending_title(number=7) with Fade(0.5,0.5,0.5)
+    pause
     $ persistent.ending[7] = 1
     return
 

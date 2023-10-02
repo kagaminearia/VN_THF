@@ -3,7 +3,7 @@ label q3_2:
     window hide
     scene cg_ying70 with vpunch
     pause(1.5)
-    show cg_ying71 with dissolve
+    show cg_ying71 at cg0 with dissolve
     pause(1.5)
     window show
     ying_speaking "唔——？！"
@@ -286,6 +286,9 @@ label q3_2_1: # ending here
     ying_speaking "到一个很糟糕，但我怀念的地方。"
     
     # 【Ending：逃离】
+    window hide
+    show screen ending_title(number=12) with Fade(0.5,0.5,0.5)
+    pause
     $ persistent.ending[12] = 1
     return 
 
@@ -318,5 +321,8 @@ label q3_2_2: # ending here
     scene bg_white with Fade(1,1,1,color="#ffffff")
 
     # 【Ending：荆棘】
+    window hide
+    show screen ending_title(number=13) with Fade(0.5,0.5,0.5)
+    pause
     $ persistent.ending[13] = 1
     return 

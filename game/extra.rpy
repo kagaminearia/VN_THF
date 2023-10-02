@@ -123,3 +123,25 @@ screen credits():
         xalign 0.4
         yalign 0.4
         text _("作者：")
+
+
+
+screen ending_title(number):
+    if 0 <= number <= 6:
+        add "gui/ending/ending_chi.jpg"
+    elif 7 <= number <= 14:
+        add "gui/ending/ending_ying.jpg"
+    elif 15 <= number <= 19:
+        add "gui/ending/ending_li.jpg"
+
+    if number == 6 or number == 13 or number == 19:
+        hbox:
+            xalign 0.5
+            yalign 0.5
+            text endings[number] size 100 color "#780707"
+            
+    else:
+        hbox:
+            xalign 0.5
+            yalign 0.5
+            text endings[number] size 100

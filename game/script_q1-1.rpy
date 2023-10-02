@@ -373,5 +373,9 @@ label q1_1_2: # ending here
     qian "房间里冒出微弱荧光，不断闪烁，忽明忽暗，重复往返。"
 
     # 【Ending：死寂】
+    window hide
+    show screen ending_title(number=0) with Fade(0.5,0.5,0.5)
+    pause
     $ persistent.ending[0] = 1
+    
     return

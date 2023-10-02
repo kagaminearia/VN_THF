@@ -28,7 +28,7 @@ label q1_3:
     na "轰隆——"
     qian "巨大的声响打断了我的思考。\n而后，头顶的黑色天花板快速降落，随着砰的一声，剥夺了我视野里的一切光线。"
     qian "“地面”开始剧烈晃动，周围的垃圾一股脑地摔下来，将我挤得喘不过气，而后又因摇晃在我身上碾压。"
-    scene bg_black with my_shake
+    scene bg_black with shake
     horr "痛，好痛……\n好痛好痛好痛好痛……"
     # scene bg_black with hpunch
     horr "每一块可能的皮肤和肌肉都在拉伸，向不同方向撕扯，每一寸神经都在啸叫，发出震耳欲聋的冲击声。"
@@ -448,7 +448,7 @@ label q1_3_2: #ending here
     qian_speaking "啊……？！"
     scene bg_liroom0 with vpunch
     qian "床似乎在摇晃，我吓了一跳，这才从纷乱的思绪中醒过来，意识到周身巨大的轰鸣声响。"
-    show sand0 with my_shake
+    show sand0 with shake
     qian_speaking "什么情况……呜——"
     qian "我慢吞吞地下床，正要看个究竟，却被扑面而来的风浪掀翻在地。"
     show blur with dissolve
@@ -461,6 +461,9 @@ label q1_3_2: #ending here
     scene bg_black with fade
 
     # 【Ending：风沙】
+    window hide
+    show screen ending_title(number=14) with Fade(0.5,0.5,0.5)
+    pause
     $ persistent.ending[14] = 1
     
     return

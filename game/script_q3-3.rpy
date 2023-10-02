@@ -142,7 +142,7 @@ label q3_3_0: # ending here
     window show
     qian "黎沙忽然凑近，对着我狡黠一笑，让我摸不着头绪。而后，我整个人愣住了。"
     window hide
-    show cg_li70 at cg1 with dissolve
+    show cg_li71 at cg0 with dissolve
     pause(1.5)
     window show
     qian_speaking "……\n……"
@@ -204,7 +204,7 @@ label q3_3_0: # ending here
     show liimg white still at char_right
     li_speaking "……我知道了。\n你……我们外面见。"
     hide qianimg
-    show qianimg white smile mask at char_left
+    show qianimg white smile blind at char_left
     qian_speaking "好啊。"
     hide liimg with easeoutright
     hide qianimg with easeoutleft
@@ -296,7 +296,7 @@ label q3_3_0: # ending here
     scene cg_brain0 at cg0 with shake
     qian "一声巨响，面前的玻璃柜开始下降，地板，墙壁和天花板都有红光闪烁。"
     li_speaking "什么啊……这是说待会这个房间会炸吗？然后，这个实验装置会被保护好……"
-    show blur with my_shake
+    show blur with shake
     qian_speaking "怎么办，怎么办……我，必须……啊……我必须做点……怎么办……"
     horr "怎么办，怎么办……"
     hide blur with dissolve
@@ -310,7 +310,7 @@ label q3_3_0: # ending here
     horr "我……"
     "哔——哔——"
     hide blur 
-    show cg_shoot at cg0 with my_shake
+    show cg_shoot at cg0 with shake
     qian "只能这样了吗……"
     "哔——哔——"
     qian "真没用，我……"
@@ -347,23 +347,26 @@ label q3_3_0_1:
     window hide
     show bg_white with dissolve
     pause(0.5)
-    show bg_brain1 with dissolve
+    show cg_brain1 at cg0 with dissolve
+    pause(0.3)
+    show cg_brain2 at cg0 with dissolve
+    pause(0.3)
+    show cg_brain3 at cg0 with dissolve
+    pause(0.3)
+    show cg_brain4 at cg0 with dissolve
+    pause(0.3)
+    show cg_brain5 at cg0 with dissolve
     pause(1)
-    show bg_brain2 with dissolve
-    pause(1)
-    show bg_brain3 with dissolve
-    pause(1)
-    show bg_brain4 with dissolve
-    pause(1)
-    show bg_brain5 with dissolve
-    pause(2)
     scene bg_black with Fade(0.5,0.5,0.5)
     "……"
-    horr "砰！！"
-    scene bg_white with Fade(1,2,1,color="#fff")
+    "砰！！"
+    scene bg_white with Fade(1,1,1,color="#fff")
     
 
     # 【Ending：尘埃】
+    window hide
+    show screen ending_title(number=19) with Fade(0.5,0.5,0.5)
+    pause
     $ persistent.ending[19] = 1
     return 
 

@@ -673,6 +673,9 @@ label q2_1_1_1_1:
             qian "……"
 
             # 【Ending：可惜】
+            window hide
+            show screen ending_title(number=4) with Fade(0.5,0.5,0.5)
+            pause
             $ persistent.ending[4] = 1
 
             return 
@@ -711,6 +714,9 @@ label q2_1_1_1_1:
             qian "……"
 
             # 【Ending：可惜】
+            window hide
+            show screen ending_title(number=4) with Fade(0.5,0.5,0.5)
+            pause
             $ persistent.ending[4] = 1
             
             return
@@ -748,6 +754,9 @@ label q2_1_1_1_2: # ending here
 
 
     # 【Ending：麻痹】
+    window hide
+    show screen ending_title(number=3) with Fade(0.5,0.5,0.5)
+    pause
     $ persistent.ending[3] = 1
     return
 
@@ -845,6 +854,9 @@ label q2_1_1_2: # ending here
     qian "眼前一黑，我失去了意识。"
     
     # 【Ending：突刺】
+    window hide
+    show screen ending_title(number=2) with Fade(0.5,0.5,0.5)
+    pause
     $ persistent.ending[2] = 1
     return
 
@@ -953,6 +965,9 @@ label q2_1_2: # ending here
     
 
     # 【Ending：安心】
+    window hide
+    show screen ending_title(number=1) with Fade(0.5,0.5,0.5)
+    pause
     $ persistent.ending[1] = 1
     return
     
