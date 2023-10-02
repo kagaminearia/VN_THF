@@ -25,6 +25,7 @@ label q3_1:
     lan_speaking "你怎么敢？"
     show qianimg shirt shout at large2 with dissolve
     qian_speaking "听我说……她，蓝石有这样做过吗？"
+    hide chiimg
     show chiimg afraid at large2 with dissolve
     chi_speaking "……她，我……"
     hide qianimg 

@@ -91,7 +91,7 @@ label q1_2_2:
     qian "令人不安的沉默后，面前的长发少女终于开口——却不是对我。"
     qian_speaking "诶，怎么……啊诶？"
     qian "她却没多解释，只是用力攥住我的手腕往外走。"
-    scene bg_bar1 with fade(0.1,0.1,0.1)
+    scene bg_bar1 with Fade(0.1,0.1,0.1)
     show crowd with Dissolve(0.5)
     qian "而直到这时，我才注意到周围的人不知道什么时候都围了上来，直直地望着我们。"
 

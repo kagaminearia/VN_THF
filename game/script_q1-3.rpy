@@ -67,7 +67,7 @@ label q1_3:
     qian "……\n不认识的女人站在面前，身着长到脚踝的黑色披风。她一动不动，只是默默地看着，视线仿佛要看穿我。"
     qian_speaking "……这是哪里？你是谁？是，是你救了我吗？"
     qian "终于，我忍受不了这样的气氛和沉默，努力让自己的喉咙发出声音。刚开始有些困难，但说到后面，却几乎有些逼问的急迫。"
-    scene bg_liroom0 with Fade(0.4，0.5,0.3)
+    scene bg_liroom0 with Fade(0.4,0.5,0.3)
     show liimg at char_right with easeinright
     unknown "你对救你的人是这个态度吗。"
     show qianimg sad at char_left with easeinleft
@@ -397,7 +397,7 @@ label q1_3_1:
     qian "我吐出一口气，望向低矮的天花板——多亏科技发展，建一个简单的平板房子不需要多久。"
     qian "然而我又很快想到，说不定也正因为科技，我才会沦落于此吧……\n我有些不自然地挪动身子，效果甚微。床不大，只能和黎沙挤在一起。"
     window hide
-    show cg_li20 with dissolve
+    show cg_li20 at cg0 with dissolve
     pause(1.5)
     window show
     qian_speaking "你们……一直都是这样吗？"

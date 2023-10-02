@@ -459,7 +459,7 @@ label q3_2_0: # ending here
     qian "说起来，这大概是我第一次见到她脸上出现这么生动的表情……\n哈……这一点也不好笑。"
     qian "我颓丧地坐在地上，注视着那正在消散的瞳孔。"
     qian "你身上究竟发生了什么事……我不知道，也再也没有机会知道了。"
-    qian "我隐隐有一种预感，这也许是我能找到线索的最后机会。而现在，它也随着她一起消逝在无尽的黑暗中。"
+    qian "这也许是我能找到线索的最后机会，而现在，它也随着她一起消逝在无尽的黑暗中。"
     show cg_ying61 at cg0 with dissolve
     window hide
     pause(1.5)
@@ -467,9 +467,14 @@ label q3_2_0: # ending here
     pause(2)
     scene bg_black with fade
     window show
-    qian "之后，我又该怎么办呢……"
+    qian "不行了……"
+    qian "无论如何，我都无法再鼓起勇气，只好在逃避中不断麻木自己。\n怎么会，一个人的生命怎么能如此轻易地就被抹除……"
+    show cg_ying60 at cg0 with Fade(0.1,0.1,0.1,color="#fff")
+    pause(0.5)
+    hide cg_ying60
+    qian "也许……\n我隐隐有一种预感，我也许再也忘不了她，直到永远。"
 
-
+    
     # 【Ending：秘密】
     $ persistent.ending[11] = 1
     return

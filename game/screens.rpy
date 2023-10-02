@@ -258,7 +258,7 @@ screen quick_menu():
 
             # textbutton _("回退") action Rollback()
             # ?: should this be history or log for the hovered text?
-            imagebutton auto "gui/button/history_%s.png" action ShowMenu('history') tooltip 'history'
+            imagebutton auto "gui/button/history_%s.png" action ShowMenu('history') tooltip 'backlog'
             # imagebutton auto "gui/button/skip_%s.png" action Skip() alternate Skip(fast=True, confirm=True)
             
             imagebutton:
