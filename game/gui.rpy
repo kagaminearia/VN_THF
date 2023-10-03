@@ -32,7 +32,7 @@ define gui.idle_color = '#888888'
 define gui.idle_small_color = '#aaaaaa'
 
 ## 当按钮和滑条被悬停时使用的颜色。
-define gui.hover_color = '#c1e0ff'
+define gui.hover_color = '#e2e2e2'
 
 ## 当文本按钮被选中但非焦点时使用的颜色。当一个按钮为当前屏幕或设置选项值时，会
 ## 处于选中状态。
@@ -44,8 +44,8 @@ define gui.insensitive_color = '#8888887f'
 
 ## 滑条未填充的部分使用的颜色。这些颜色不直接使用，但在重新生成条形图像文件时使
 ## 用。
-define gui.muted_color = '#3d5166'
-define gui.hover_muted_color = '#5b7a99'
+define gui.muted_color = '#5f5f5f'
+define gui.hover_muted_color = '#9a9a9a'
 
 ## 对话和菜单选择文本使用的颜色。
 define gui.text_color = '#ffffff'

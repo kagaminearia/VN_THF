@@ -54,7 +54,7 @@ screen extra_navi():
         textbutton _("返回") action Return()
         # textbutton _("画廊") action ShowMenu("gallary")
         textbutton _("结局列表") action ShowMenu("ending")
-        textbutton _("概览路线") action ShowMenu("outline")
+        textbutton _("路线概览") action ShowMenu("outline")
         textbutton _("制作名单") action ShowMenu("credits")
 
 
@@ -155,3 +155,16 @@ screen ending_title(number):
             xalign 0.5
             yalign 0.5
             text endings[number] size 100
+
+
+
+# add splashscreen before main menu
+label splashscreen:
+    scene bg_black
+    show text _p("""
+                    本故事纯属虚构\n
+                    与真实世界的一切无关
+                    """)
+    pause 3
+    hide text with dissolve
+return
