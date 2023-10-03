@@ -102,8 +102,8 @@ define config.window = "show"
 
 ## 用于显示和隐藏对话框窗口的转场
 
-define config.window_show_transition = Dissolve()
-define config.window_hide_transition = Dissolve()
+define config.window_show_transition = Dissolve(0.05)
+define config.window_hide_transition = Dissolve(0.05)
 
 
 ## 默认设置 ########################################################################

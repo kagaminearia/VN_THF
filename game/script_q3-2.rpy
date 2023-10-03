@@ -174,7 +174,7 @@ label q3_2:
     ying_speaking "那个实验事故，就是因为我。她们说生的孩子有问题，要检查。刚好那时候你，你家人大概发现了什么。"
     ying_speaking "她们起了很大的争执，机器也出了问题，我就趁乱逃跑了。那时候，她们帮了我一把……"
 
-    scene lab3 with fade
+    scene bg_lab3 with fade
     show bg_mem
     ying_speaking "是死路，走不了……"
     unknown "可以用我的卡。"
@@ -311,6 +311,7 @@ label q3_2_2: # ending here
     show qianimg shout at char_left with dissolve
     qian_speaking "我们在这！但是麻烦你们先看完这些！"
     unknown "住嘴！"
+    scene bg_edge with vpunch
     show blood0 with shake
     "砰！"
     qian_speaking "哈，啊……！看——这个——！"
@@ -318,10 +319,10 @@ label q3_2_2: # ending here
     scene bg_white with Fade(0.2,0.2,0.2,color="#ffffff")
     qian "……之后，注定是布满荆棘和质疑的一条道路。"
     qian "但这是……我自己选择的道路。"
+    window hide
     scene bg_white with Fade(1,1,1,color="#ffffff")
 
     # 【Ending：荆棘】
-    window hide
     show screen ending_title(number=13) with Fade(0.5,0.5,0.5)
     pause
     $ persistent.ending[13] = 1

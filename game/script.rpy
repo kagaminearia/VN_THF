@@ -217,6 +217,6 @@ label start:
             jump q1_1
         "【黑街】":
             jump q1_2
-        "【230居民区】":
+        "【230居民区】" if persistent.ending[6] == 1 and persistent.ending[13] == 1:
             jump q1_3
     

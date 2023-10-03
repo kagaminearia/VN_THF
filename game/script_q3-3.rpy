@@ -301,17 +301,24 @@ label q3_3_0: # ending here
     horr "怎么办，怎么办……"
     hide blur with dissolve
     li_speaking "喂！醒醒！时茜！！"
-    qian_speaking "啊，我……对不起……我，该怎么办……？"
-    li_speaking "……对不起。\n用这个吧。"
-    qian_speaking "这，是……"
-    qian "我的手腕被人捧起，掌心放入了一个沉甸甸的物品。\n是黎沙说她刚刚抢来的枪。"
+    qian_speaking "啊，我……对不起……我，该怎么办……？我……"
+    li_speaking "……对不起。\n但是，我们要出去了……"
+    qian_speaking "我知道，我知道的……！我……"
+    qian "理智告诉我，被保护起来的玻璃柜，也许会在以后成为重要的证据。"
+    qian "可是，可是……这么大的一个实验基地，肯定不缺证据吧……找到有力的证据是那些管制局的人该做的事情吧……！"
+    
+    qian_speaking "至少在最后，让我保留一些私心吧……只是我作为家人……怎么能，怎么能让她们在死后也得不到安宁呢……！"
+    li_speaking "你这，是……"
+    qian "我向面前的人伸出手，而后手腕被人捧起，掌心放入了一个沉甸甸的物品。\n是黎沙说她刚刚抢来的枪。"
+    
+    
     qian "我……"
     show blur with hpunch
     horr "我……"
     "哔——哔——"
     hide blur 
     show cg_shoot at cg0 with shake
-    qian "只能这样了吗……"
+    qian "只能这样了……"
     "哔——哔——"
     qian "真没用，我……"
     hide cg_shoot
@@ -320,7 +327,7 @@ label q3_3_0: # ending here
     li_speaking "时茜，快点……！"
     hide cg_shoot with hpunch
     qian_speaking "啊……"
-    li_speaking "我不想强迫你，但是这件事只能你来做！"
+    li_speaking "我不想强迫你，但是你已经下定决心了吧！这件事只能你来做！"
     "哔——哔——"
     show cg_shoot at cg0 with vpunch
     qian_speaking "我知道，我……"
@@ -343,8 +350,10 @@ label q3_3_0: # ending here
 
 
 label q3_3_0_1:
-    horr "……再见……"
+    horr "……再見……" 
     window hide
+
+    "砰！！"
     show bg_white with dissolve
     pause(0.5)
     show cg_brain1 at cg0 with dissolve
@@ -359,7 +368,6 @@ label q3_3_0_1:
     pause(1)
     scene bg_black with Fade(0.5,0.5,0.5)
     "……"
-    "砰！！"
     scene bg_white with Fade(1,1,1,color="#fff")
     
 

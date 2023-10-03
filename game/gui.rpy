@@ -331,7 +331,7 @@ define gui.history_height = 200
 ## 所指定叙述角色的标签的坐标、宽度和对齐方式。
 define gui.history_name_xpos = 150
 define gui.history_name_ypos = 0
-define gui.history_name_width = 150
+define gui.history_name_width = 200
 define gui.history_name_xalign = 0.0
 
 ## 对话文本的坐标、宽度和对齐方式。

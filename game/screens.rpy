@@ -94,6 +94,7 @@ style frame:
 
 screen say(who, what):
     style_prefix "say"
+    key "mousedown_4" action ShowMenu("history")
 
     window:
         id "window"
@@ -581,7 +582,7 @@ style game_menu_label_text:
     yalign 0.5
 
 style return_button:
-    xpos gui.navigation_xpos
+    xpos 1800
     yalign 1.0
     yoffset -45
 
@@ -982,6 +983,7 @@ screen history():
     tag menu
     ## 避免预缓存此界面，因为它可能非常大。
     predict False
+    key "mousedown_5" action Return()
 
     use game_menu(_("历史"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0):
 
@@ -1040,13 +1042,14 @@ style history_name:
 
 style history_name_text:
     font "fonts/江城正君体_400W.ttf"
+    size 43
     color "#000000"
     min_width gui.history_name_width
     text_align gui.history_name_xalign
 
 style history_text:
     color "#000000"
-    font "fonts/HanaMinA.ttf"
+    font "fonts/ChillJinshuSongGBKBold.otf"
     xpos gui.history_text_xpos
     ypos gui.history_text_ypos
     xanchor gui.history_text_xalign

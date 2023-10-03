@@ -45,6 +45,7 @@ define endings = [
 
 ## extra screens
 screen extra_navi():
+    key "mouseup_3" action Return()
     hbox:
         style_prefix "navigation"
         xalign 0.5
