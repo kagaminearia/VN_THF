@@ -328,10 +328,26 @@ label q1_3_1:
     qian "好吵……"
     show liimg still at char_right with dissolve
     li_speaking "最近天气变化越来越快了，真够烦的……不知道这次又要死多少人。"
-    qian "出口关闭得严严实实，但还是能听见那仿佛要把地上一切卷走的呼啸声音。以及碰撞声，挤压声，还有夹杂在风中的呼喊声。"
+    hide qianimg
+    show qianimg shock at char_left
+    qian_speaking "会，会死人吗……"
     hide liimg
+    show liimg ask at char_right
+    hide qianimg
+    show qianimg sad at char_left
+    li_speaking "是啊，本身长期暴露在含有污染物的空气中就会对身体器官造成不同的损伤，没死只是运气好而已。"
+    hide liimg
+    show liimg closeask at char_right
+    li_speaking "如果是像这样激烈的污染风暴碰上了，那就……"
+    hide qianimg
+    show qianimg still at char_left
+    qian_speaking "……"
+    qian "我说不出话了。"
+
+    scene bg_black with Fade(0.5,0.5,0.5)
+    qian "出口关闭得严严实实，但还是能听见那仿佛要把地上一切卷走的呼啸声音。以及碰撞声，挤压声，还有夹杂在风中的呼喊声。"
     show liimg o at char_right 
-    li_speaking "哦，你不知道这是什么是吧。以后听到这个声音记得跑，不要待在地面上，沙暴很危险。"
+    li_speaking "以后听到这个声音记得跑，不要待在地面上，带污染的沙暴真的很危险，一定会死的。"
     qian_speaking "以后……"
     show blur with hpunch
     li_speaking "你说什么？我听不清——喂，你这是哭了吗？没事吧？是不是污染物进眼睛了？"
