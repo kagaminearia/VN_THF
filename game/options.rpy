@@ -102,8 +102,8 @@ define config.window = "show"
 
 ## 用于显示和隐藏对话框窗口的转场
 
-define config.window_show_transition = Dissolve(.2)
-define config.window_hide_transition = Dissolve(.2)
+define config.window_show_transition = Dissolve()
+define config.window_hide_transition = Dissolve()
 
 
 ## 默认设置 ########################################################################
@@ -172,6 +172,7 @@ init python:
     build.classify('**.save', None)
     build.classify('persistent', None)
     build.classify('game/cache/**~', None)
+    build.classify('**.md', None)
 
     ## 若要封装文件，需将其列为“archive”。
     # build.classify('game/**.png', 'archive')

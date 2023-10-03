@@ -84,7 +84,7 @@ label q2_2:
     show yingimg at large2 with easeinbottom
     ying_speaking "你还是要去看吗？"
     hide yingimg
-    show qianimg shock at char_mid with my_shake
+    show qianimg shock at char_left with shake
     qian_speaking "……哇啊！你，你吓死我了……"
     hide qianimg
     qian "幽幽的女声从背后传来，在黑暗里差点把我吓得心跳骤停。等我意识到是莺莺的声音，才缓缓吐出一口气。"
@@ -301,7 +301,7 @@ label q2_2_2:
     
     scene bg_black with fade
     qian "黑暗。\n无边的黑暗笼罩着我。"
-    show blur with my_shake
+    show blur with shake
     qian "深处似乎有什么东西……白色的，跳跃的线条。\n被我看到的时候，它们突然膨胀，扩散，挤压——"
     qian "好难受……！要，喘不上气了……啊——"
     qian_speaking "呜……！"

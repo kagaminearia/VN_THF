@@ -525,7 +525,7 @@ label q2_3_1_2:
     qian "它是如此宏伟，壮观……如果是以前的我，一定会如此感慨吧。"
     qian "然而现在……我已经不知如何面对。"
 
-    scene bg_ele with fade
+    scene bg_ele1 with fade
     show liimg black at char_right with dissolve
     li_speaking "有发现什么吗？"
     show qianimg black o mask at char_left with dissolve
