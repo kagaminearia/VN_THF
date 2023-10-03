@@ -121,9 +121,18 @@ screen credits():
     add "gui/overlay/bg_transparent.png"
     use extra_navi
     vbox:
-        xalign 0.4
-        yalign 0.4
-        text _("作者：")
+        xalign 0.1
+        yalign 0.1
+        spacing 18
+        vbox:
+            text _("剧本·美术·程序") size 40
+            text _("可食用蓝墨水") size 25
+        vbox:
+            text _("技术帮助") size 40
+            text _("akagi") size 25
+        vbox:
+            text _("测试") size 40
+            text _("akagi · HydrogenRb · 可食用蓝墨水") size 25
 
 
 

@@ -17,12 +17,12 @@ label start:
     pause
     hide na2
     pause
-    window show
 
     scene bg_black at cg0 with fade
+    window show
     unknown "……醒醒……起来……注意——"
     
-    # TODO: bottomside doesnt work
+    
     show qianimg closecalm at char_mid with easeinbottom
     qian "有什么东西，好吵……\n无边的黑暗似乎在震动，扰得人不清净。是因为最近总觉得有人在盯着我吗？连梦里也不安生……"
     

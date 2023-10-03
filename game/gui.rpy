@@ -58,7 +58,7 @@ define gui.interface_text_color = '#ffffff'
 define gui.text_font = "fonts/ChillJinshuSongGBKBold.otf"
 
 ## 角色名称使用的字体。
-define gui.name_text_font = "fonts/江城正君体_600W.ttf"
+define gui.name_text_font = "fonts/ChillJinshuSongGBKHeavy.otf"
 
 ## 游戏外文本使用的字体。
 define gui.interface_text_font = "fonts/江城正君体_400W.ttf"
@@ -72,7 +72,7 @@ define gui.text_size = 40
 define gui.name_text_size = 43
 
 ## 游戏用户界面中文本的大小。
-define gui.interface_text_size = 38
+define gui.interface_text_size = 35
 
 ## 游戏用户界面中标签的大小。
 define gui.label_text_size = 36
@@ -104,7 +104,7 @@ define gui.textbox_yalign = 1.0
 
 ## 叙述角色名字相对于文本框的位置。可以是从左侧或顶部起的整数像素，或设为 0.5 来
 ## 居中。
-define gui.name_xpos = 450
+define gui.name_xpos = 430
 define gui.name_ypos = -60
 
 ## 角色名字的水平对齐方式。0.0 为左侧对齐，0.5 为居中显示，而 1.0 为右侧对齐。

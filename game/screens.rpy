@@ -1041,15 +1041,15 @@ style history_name:
     xsize gui.history_name_width
 
 style history_name_text:
-    font "fonts/江城正君体_400W.ttf"
-    size 43
+    font gui.name_text_font
+    size 41
     color "#000000"
     min_width gui.history_name_width
     text_align gui.history_name_xalign
 
 style history_text:
     color "#000000"
-    font "fonts/ChillJinshuSongGBKBold.otf"
+    font gui.text_font
     xpos gui.history_text_xpos
     ypos gui.history_text_ypos
     xanchor gui.history_text_xalign
