@@ -135,10 +135,7 @@ screen credits():
             vbox:
                 text _("测试") size 40
                 text _("akagi · HydrogenRb · 可食用蓝墨水") size 25
-            vbox:
-                text _("特别感谢") size 40
-                text _("akagi · HydrogenRb · 越提 · 南风") size 25
-    
+
         vbox:
             text _("Reference") size 40
             text _("音乐：") size 25

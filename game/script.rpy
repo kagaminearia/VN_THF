@@ -7,19 +7,21 @@ default persistent.ending = [0]*20
 label start:
     # 显示一个背景。此处默认显示占位图，但您也可以在图片目录添加一个文件
     # （命名为 bg room.png 或 bg room.jpg）来显示。
-    window hide
+    # window hide
+    $ quick_menu = False
 
     scene bg_badge at cg0 with dissolve
-    show na1 at cg0 with fade
+    show na1 at cg0 with dissolve
     pause
-    hide na1
-    show na2 at cg0 with fade
+    hide na1 with dissolve
+    show na2 at cg0 with dissolve
     pause
-    hide na2
+    hide na2 with dissolve
     pause
 
     scene bg_black at cg0 with fade
     window show
+    $ quick_menu = True
     unknown "……醒醒……起来……注意——"
     
     
@@ -87,7 +89,7 @@ label start:
     bfem_speaking "我问你答，懂吗？"
     qian_speaking "……为什么？你们还没回答我的问题。"
     bfem_speaking "我问，你答。"
-    qian "她加重语气，令我下意识缩了缩肩膀。威压……那种令人不舒服的感觉清晰地裹在我身上。\n于是我顿了顿，还是绷紧声音说，好的。"
+    qian "她加重语气，令我下意识缩了缩肩膀。压迫……那种令人不舒服的感觉清晰地裹在我身上。\n于是我顿了顿，还是绷紧声音说，好的。"
     
     scene bg_office_1 with fade
     show qianimg still at char_left

@@ -337,7 +337,7 @@ define gui.history_name_xalign = 0.0
 ## 对话文本的坐标、宽度和对齐方式。
 define gui.history_text_xpos = 400
 define gui.history_text_ypos = 0
-define gui.history_text_width = 1110
+define gui.history_text_width = 1300
 define gui.history_text_xalign = 0.0
 
 

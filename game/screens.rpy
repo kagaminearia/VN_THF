@@ -524,10 +524,10 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     use navigation
 
-    textbutton _("返回"):
-        style "return_button"
+    # textbutton _("返回"):
+    #     style "return_button"
 
-        action Return()
+    #     action Return()
 
     # label title
 
@@ -582,7 +582,7 @@ style game_menu_label_text:
     yalign 0.5
 
 style return_button:
-    xpos 1800
+    xpos 200
     yalign 1.0
     yoffset -45
 
@@ -1059,7 +1059,7 @@ style history_text:
     layout ("subtitle" if gui.history_text_xalign else "tex")
 
 style history_label:
-    xfill True
+    xfill False
 
 style history_label_text:
     xalign 0.0

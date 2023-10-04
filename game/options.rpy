@@ -97,7 +97,7 @@ define config.end_game_transition = None
 ## 在游戏开始后，可以用 window show、window hide 和 window auto 语句来改变其状
 ## 态。
 
-define config.window = "show"
+define config.window = "auto"
 
 
 ## 用于显示和隐藏对话框窗口的转场
