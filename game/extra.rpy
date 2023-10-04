@@ -123,17 +123,30 @@ screen credits():
     vbox:
         xalign 0.1
         yalign 0.1
-        spacing 18
+        spacing 35
         vbox:
-            text _("剧本·美术·程序") size 40
-            text _("可食用蓝墨水") size 25
+            spacing 18
+            vbox:
+                text _("剧本·美术·程序") size 40
+                text _("可食用蓝墨水") size 25
+            vbox:
+                text _("技术帮助") size 40
+                text _("akagi") size 25
+            vbox:
+                text _("测试") size 40
+                text _("akagi · HydrogenRb · 可食用蓝墨水") size 25
+            vbox:
+                text _("特别感谢") size 40
+                text _("akagi · HydrogenRb · 越提 · 南风") size 25
+    
         vbox:
-            text _("技术帮助") size 40
-            text _("akagi") size 25
-        vbox:
-            text _("测试") size 40
-            text _("akagi · HydrogenRb · 可食用蓝墨水") size 25
-
+            text _("Reference") size 40
+            text _("音乐：") size 25
+            text _("音效：") size 25
+            # text _("场景图片：Yolanda Djajakesukma, Matthew Ansley, Marten Bjork,kevin laminto, Levon Vardanyan, cheng feng on Unsplash") size 25
+            text _("场景图片：unsplash.com") size 25
+            text _("图形设计：gstudioimagen1, Sketchepedia on Freepik") size 25
+            
 
 
 screen ending_title(number):
