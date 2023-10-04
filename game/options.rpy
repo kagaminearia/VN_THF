@@ -32,7 +32,7 @@ define gui.about = _p("""
 ## 在构建的发布版中，可执行文件和目录所使用的短名称。此处仅限使用 ASCII 字符，并
 ## 且不能包含空格、冒号或分号。
 
-define build.name = "thorn_test"
+define build.name = "DustOnThorn"
 
 
 ## 音效和音乐 #######################################################################
@@ -137,7 +137,7 @@ define config.save_directory = "thorn_test-1684901032"
 ##
 ## 在任务栏或 Dock 上显示的图标。
 
-define config.window_icon = "gui/window_icon.png"
+define config.window_icon = "gui/window_icon.jpg"
 
 
 ## 构建配置 ########################################################################
