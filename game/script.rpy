@@ -3,6 +3,8 @@
 # set persistent values
 default persistent.text = 0
 default persistent.ending = [0]*20
+define audio.vibrations_1 = "audio/sound_effect/vibrations_1.wav"
+define audio.vibrations_2 = "audio/sound_effect/vibrations_2.wav"
 
 label start:
     # 显示一个背景。此处默认显示占位图，但您也可以在图片目录添加一个文件
@@ -20,14 +22,22 @@ label start:
     pause
 
     scene bg_black at cg0 with fade
+    $ renpy.sound.play(audio.vibrations_1, channel = "sound", loop = True)
+    pause 2.0
     window show
     $ quick_menu = True
     unknown "……醒醒……起来……注意——"
+    stop sound fadeout 1.0
+
+    scene bg_black at cg0 with fade
+    $ renpy.sound.play(audio.vibrations_2, channel = "sound", loop = True)
+    pause 2.0
     
-    
-    show qianimg closecalm at char_mid with easeinbottom
+    # TODO: bottomside doesnt work
+    show qianimg closecalm at ease(center, offscreenbottom, 2)
     qian "有什么东西，好吵……\n无边的黑暗似乎在震动，扰得人不清净。是因为最近总觉得有人在盯着我吗？连梦里也不安生……"
-    
+    stop sound fadeout 1.0
+
     hide qianimg closecalm
     show qianimg shock at char_mid
     qian "——啊！"
