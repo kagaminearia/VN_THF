@@ -3,8 +3,17 @@
 # set persistent values
 default persistent.text = 0
 default persistent.ending = [0]*20
+
+# define fade behaviors
+define fadehold = Fade(0.5, 1.0, 0.5)
+define flash = Fade(0.1, 0.0, 0.5, color="#fff")
+
+# define sound effects
 define audio.vibrations_1 = "audio/sound_effect/vibrations_1.wav"
 define audio.vibrations_2 = "audio/sound_effect/vibrations_2.wav"
+define audio.click = "audio/sound_effect/click.mp3"
+
+# define backgroun music
 
 label start:
     # 显示一个背景。此处默认显示占位图，但您也可以在图片目录添加一个文件
@@ -226,9 +235,12 @@ label start:
 
     menu:
         "【管制局】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q1_1
         "【黑街】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q1_2
         "【230居民区】" if persistent.ending[6] == 1 and persistent.ending[13] == 1:
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q1_3
     
