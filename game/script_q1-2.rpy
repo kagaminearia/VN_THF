@@ -1,5 +1,6 @@
 label q1_2:
-    scene bg_street with fade
+    scene black with fadehold
+    $ renpy.music.play(music.darkcity, channel = "music", loop = True, relative_volume = 0.3, fadeout = 0.6)
     qian "不规则的建筑物互相挤压，只在少数地方留下狭小空隙。\n缝隙冰冷阴森，又黑又脏，除了终端上的荧光，什么也看不见。"
     qian "实在不相信这是城市的一部分……我暗自憋闷，随着路牌穿过一道尤其狭长的窄道。"
     scene bg_road02 with fade
@@ -8,8 +9,10 @@ label q1_2:
     qian "……好热闹。\n我再次确认时间，现在是凌晨两点。好热闹，和A层的安宁一点也不一样。"
     qian "我却更加茫然——没有认识的人，没有认识的路，连墙面上乱七八糟的涂鸦都像是什么咒语暗号，我也看不懂。"
     qian "终于，我的视线扫到一块亮闪闪的招牌，写着熟悉的文字：\n“酒吧”。"
-
+    stop music
+    
     scene bg_bar0 with fade
+    $ renpy.sound.play(audio.talking_people, channel = "sound", loop = True, relative_volume = 0.8, fadeout = 1)
     show bar_fem at char_right with dissolve
     show qianimg o at char_left with dissolve
     short_speaking "怎么了，不再说说你的事情吗？还很难过吧？"
@@ -54,6 +57,8 @@ label q1_2_1: # ending here
     qian_speaking "呃，好，好……"
     qian "一杯，又一杯，还有……\n脑袋更加昏沉了，已经分不清上下左右……嗯嗯，不对，我好像是在趴着……"
     show blur with dissolve
+    $ renpy.music.play(audio.dizzy, channel = "music", loop = True, relative_volume = 0.5, fadein = 1)
+    stop sound
     qian "耳边变得朦胧起来，眼前好像也出现幻觉，出现那两个人的身影，成为模糊的景象。原来过度思念，真的会让人产生疾病……"
     qian "……不，不对，太晕了，几乎要对身体失去控制……虽然想到这里，我却完全动不了……！"
     qian "怎么回事……"
