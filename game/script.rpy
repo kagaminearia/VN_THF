@@ -4,6 +4,32 @@
 default persistent.text = 0
 default persistent.ending = [0]*20
 
+# define fade behaviors
+define fadehold = Fade(0.5, 1.0, 0.5)
+define flash = Fade(0.1, 0.0, 0.5, color="#fff")
+
+# define sound effects
+define audio.vibrations_1 = "audio/sound_effect/vibrations_1.wav"
+define audio.vibrations_2 = "audio/sound_effect/vibrations_2.wav"
+define audio.click = "audio/sound_effect/click.mp3"
+define audio.ring = "<from 0 to 3.5>audio/sound_effect/phone_ring.mp3"
+define audio.talking_people = "audio/sound_effect/talking_people.mp3"
+define audio.owl = "audio/sound_effect/owl.mp3"
+define audio.night_walk = "audio/sound_effect/night_walk.mp3"
+define audio.dizzy = "<from 0 to 20>audio/sound_effect/dizzy.mp3"
+define audio.heartbeat = "audio/sound_effect/heartbeat.mp3"
+define audio.glass = "audio/sound_effect/glass.mp3"
+define audio.current = "<from 0 to 36>audio/sound_effect/current.mp3"
+define audio.elevator = "audio/sound_effect/elevator.mp3"
+
+# define backgroun music
+define music.orange_memory = "audio/bgm/orange_memory.mp3"
+define music.dream = "audio/bgm/qimei.mp3"
+define music.darkcity = "<from 0 to 100>audio/bgm/darkcity.mp3"
+define music.horror = "audio/bgm/horror.mp3"
+define music.interrogate = "<from 0.1 to 21>audio/bgm/interrogate.mp3"
+define music.area_d = "audio/bgm/area_d.mp3"
+
 label start:
     # 显示一个背景。此处默认显示占位图，但您也可以在图片目录添加一个文件
     # （命名为 bg room.png 或 bg room.jpg）来显示。
@@ -18,16 +44,25 @@ label start:
     pause
     hide na2 with dissolve
     pause
+    stop music fadeout 1.0
 
     scene bg_black at cg0 with fade
+    $ renpy.sound.play(audio.vibrations_1, channel = "sound", loop = True, relative_volume = 1.5)
+    pause 2.0
     window show
     $ quick_menu = True
     unknown "……醒醒……起来……注意——"
+    stop sound fadeout 1.0
+
+    scene bg_black at cg0 with fade
+    $ renpy.sound.play(audio.vibrations_2, channel = "sound", loop = True, relative_volume = 1.5)
+    pause 2.0
     
-    
-    show qianimg closecalm at char_mid with easeinbottom
+    # TODO: bottomside doesnt work
+    show qianimg closecalm at ease(center, offscreenbottom, 2)
     qian "有什么东西，好吵……\n无边的黑暗似乎在震动，扰得人不清净。是因为最近总觉得有人在盯着我吗？连梦里也不安生……"
-    
+    stop sound fadeout 1.0
+
     hide qianimg closecalm
     show qianimg shock at char_mid
     qian "——啊！"
@@ -35,11 +70,13 @@ label start:
     hide qianimg shock
     show qianimg pajama_red shock at large with dissolve
     qian "我倏地睁开眼睛，视线还很朦胧，于是一道鲜红色的光线格外显眼，带领我走到它的终点，指着我的心脏。"
+    $ renpy.music.play(music.horror, channel = "music", loop = True, relative_volume = 0.6)
     
     show qianimg pajama_red shock at char_mid 
     qian "……\n那不是梦……。"
 
     scene bg_prolo_01 with fade
+    $ renpy.sound.play(audio.heartbeat, channel = "sound", loop = True)
     hide qianimg pajama_red shock
     show qianimg sad at char_mid
     qian "我混沌的脑海顿时清醒，眼睛也适应了微弱的光线。\n几个装束严实的人站在床边，我的四周，把我紧紧围住。"
@@ -53,6 +90,8 @@ label start:
     qian "我想让自己的语气显得冷静，但嘴唇却不受控地颤抖。\n不行，冷静……她们是根据规定，不会乱来的。"
     show bfem_0r at char_right with easeinright
     bfem_speaking "时茜小姐，你被逮捕了。"
+    stop sound
+    stop music
     qian "我刚刚才建立起的心理防线马上破碎。"
     qian_speaking "……什么？你们弄错了吧！\n别开玩笑了！"
     hide qianimg 
@@ -74,6 +113,7 @@ label start:
 
     scene bg_office_0 with fade
     show qianimg sad at char_left with dissolve
+    $ renpy.sound.play(audio.current, channel = "sound", loop = True, relative_volume = 0.4, fadeout = 1.0)
     qian "这里是管制局。\n巨大的顶灯不知疲倦地射出明亮的白色光线，刺眼到让人眼睛生疼。我穿着睡衣站在角落的一间房间中央，有一种无所适从的局促。"
     qian "……为什么……我无声地吸了一口气，压抑着翻涌的情绪，看向离我最近的人。"
     hide qianimg sad
@@ -82,10 +122,13 @@ label start:
     qian_speaking "到底发生了什么？没有说明吗？"
     qian "等待的十几个小时过去，我无比疲惫，声音发紧，从嗓子里挤出来，听着有些尖锐。她却毫无所觉，只是瞥过来一眼，而后像习以为常地转过头，无视。"
     qian "我呆呆地站在原地，像个傻子。\n……感觉，糟透了。"
+    stop sound
 
+    scene black with fadehold
     scene bg_office_1 with fade
     show qianimg sad at char_left
     show bfem_0r at char_right with dissolve
+    $ renpy.music.play(music.interrogate, channel = "music", loop = True, fadein = 2.0, fadeout = 1.0)
     bfem_speaking "我问你答，懂吗？"
     qian_speaking "……为什么？你们还没回答我的问题。"
     bfem_speaking "我问，你答。"
@@ -131,6 +174,7 @@ label start:
     hide qianimg shout
     show qianimg close at char_mid
     qian_speaking "……唔！好痛，痛……啊啊！"
+    stop music
 
     scene bg_office_1
     scene bg_office_2 with fade
@@ -141,14 +185,20 @@ label start:
     scene bg_office_4 with Fade(0.1,0.3,0.1)
     qian "四周皆是单色墙壁，泛着淡淡的金属冷光。被一身黑的人包围的我，显得格外刺眼。\n空间里弥漫着窒息的沉默，我尽力习惯，可不安和恐慌仍然无法消除。"
     qian "究竟发生了什么……我应该怎么办？\n信息太少，我甚至不知道所谓的禁令到底是什么，但……就算知道了也无能为力。"
+    
+    scene black with fadehold
+    $ renpy.sound.play(audio.elevator, channel = "sound")
     scene bg_office_4 with Fade(0.1,0.3,0.1)
     with vpunch
     "————"
+    pause
     qian "突然的失重感席卷全身，地面晃动，它正在下降。\n这不是普通的房间，而是——"
     
     show qianimg sad at char_mid with dissolve
     qian "速度，时间，我回忆起相似的数据。\n城市里的“竖直电梯”连接不同的区域，而现在，自然是从A区下行。\n……我到底要被带去哪里？"
     qian "……\n……"
+    stop sound
+
     scene bg_road02 with Fade(0.5,0.5,0.5)
     qian "……\n……"
     qian "头顶的光线微弱，只有时时闪烁的凌乱灯牌。"
@@ -167,6 +217,7 @@ label start:
     "荆棘之城的最底端\nD层"
     
     scene bg_black with Fade(0.5,0.5,0.5,color="#fff")
+    $ renpy.music.play(music.area_d, channel = "music", loop = True, fadein = 1.0, fadeout = 1.0)
     qian "荆棘之城是一座竖直发展的城市，自上而下分为A，B，C，D层。在这其中，D层位于城市最底部，被那些游手好闲、不学无术的人占据着，藏匿着许多肮脏与恶意。"
     qian "荆棘之城是这座城市的名字，它于数百年前建成，是我们最后的城市。那时候，战争失败的人们——我们的祖先——被迫失去原来的土地，只能在有限的空间里苟且偷生。"
     qian "防护罩切断了整个城市与外界的联系，将我们困在牢笼之中，没有丰富的资源，只有匮乏的生活。"
@@ -193,13 +244,17 @@ label start:
     qian "……\n刚才的动静不小，但不知道是不是管制局太显眼，并没有人靠近。现在也是，我能感受到有些陌生的目光扫过，又很快离开。"
     qian "……\n……"
     qian "肌肉还在隐隐作痛，脚下的地板变得又硬又硌，刺得我皮肤生疼。\n我轻轻吸了一口气，毫无防备被扔到完全陌生的环境，茫然和恐慌逐渐爬上我的身体，完全覆盖住我的神经。"
+    $ renpy.music.set_pause(True, channel = "music")
+    $ renpy.sound.queue([audio.ring,], channel = "sound")
     qian "滴，没设置过的终端机发出默认的响声。颤抖的手指点开终端机——原本空荡荡，只有我的个人信息——此刻收件箱却多了一个数字。我打开后，震惊地发现这是钟女士发来的消息。"
     
     scene bg_black with Fade(0.1,0.1,0.1)
     na1 "来信人：T20234"
     na1 "宝宝：\n很抱歉因为工作连累了你。我们还需要一段时间，等到所有事情都结束就会没事的。\n只是委屈你了，管制局可能会很忙，但必要的东西会安排好。你多注意一下，不会有问题。"
     na1 "我们相信你在D层也能努力过好，等我们回去。\n钟 & 黄】"
+    stop sound
 
+    $ renpy.music.set_pause(False, channel = "music")
     scene bg_black with Fade(0.1,0.1,0.1)
     show qianimg sad at char_mid with dissolve
     qian "……\n……"
@@ -216,9 +271,12 @@ label start:
 
     menu:
         "【管制局】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q1_1
         "【黑街】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q1_2
         "【230居民区】" if persistent.ending[6] == 1 and persistent.ending[13] == 1:
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q1_3
     

@@ -8,3 +8,4 @@ errors.txt
 
 # Ignore cache
 game/cache/*
+*.rpyc

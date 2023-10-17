@@ -196,6 +196,8 @@ label q2_2:
 
 
 label q2_2_1: # ending here
+    scene black with fadehold
+    $ renpy.music.play(music.dream, channel = "music", loop = True, fadein = 2.0)
     qian "迷茫和困惑充斥我的内心，可在其中，我还是能听到那不甘心的声音。"
     qian "说到底……为什么偏偏是我呢，凭什么我就要遇到这种事情呢……在这种地方，在这种条件的地方……\n我已经，没有什么好在乎的了……"
     qian "都已经这样了，至少让我做一会梦吧……也许只要把自己沉浸于美好当中，我就不会因为痛苦而崩溃……"
@@ -253,7 +255,7 @@ label q2_2_1: # ending here
     qian "就这样也很好……只要我能够找到支柱，哪怕是幻觉……我也要利用幻觉活下去。"
     ying_speaking "嗯……都可以。"
 
-    scene bg_black with Fade(0.1,0.2,0.2)
+    scene black with Fade(0.1,2.0,0.2)
     ying_speaking "时茜。"
 
     # 【Ending：美梦】
