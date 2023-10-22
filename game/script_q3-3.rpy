@@ -226,6 +226,8 @@ label q3_3_0: # ending here
     qian "负责人是不认识的名字，除了我看不懂的仪器和图表，什么都没有。不，等等……内侧还有一扇门，标着“记忆实验室”。"
     qian_speaking "……\n这是……！"
     scene bg_lab0 with Fade(0.2,0.2,0.2,color="#fff")
+    stop music fadeout 0.5
+    $ renpy.music.play(music.dust, channel = "music", loop = True, fadein = 0.5)
     show sand0 with dissolve
     qian "我无法用言语形容看到的场景，因为是现实，比任何奇幻小说都来得诡异。"
     qian "无数个玻璃容器中放着漂浮的大脑，每个大脑……每个培养皿上都贴有标签，分别是编号，实验失败和成功次数，以及器官损耗度。"
@@ -286,14 +288,17 @@ label q3_3_0: # ending here
     qian_speaking "对，对，不能一直留在这……我，我得……我要……"
     qian_speaking "我要救她们，我……啊……不，不行……这也不行……我，那……怎么办……！"
     unknown "哔——"
+    $ renpy.sound.play(audio.buzz, channel = "sound", relative_volume = 0.25)
     qian "我的手胡乱地在控制台和屏幕上触碰按键，却只有持续的密码错误警告。"
     unknown "哔——\n系统将在90秒内启动外部销毁程序，输入正确密码即可取消。"
 
     hide qianimg
     show qianimg white shock blind at char_left with hpunch
     qian_speaking "怎，怎么办……不，不行……"
+    stop sound
 
     scene cg_brain0 at cg0 with shake
+    $ renpy.sound.play(audio.loud_sound, channel = "sound", relative_volume = 1.25)
     qian "一声巨响，面前的玻璃柜开始下降，地板，墙壁和天花板都有红光闪烁。"
     li_speaking "什么啊……这是说待会这个房间会炸吗？然后，这个实验装置会被保护好……"
     show blur with shake
@@ -315,6 +320,7 @@ label q3_3_0: # ending here
     qian "我……"
     show blur with hpunch
     horr "我……"
+    $ renpy.sound.play(audio.buzz, channel = "sound", loop = True)
     "哔——哔——"
     hide blur 
     show cg_shoot at cg0 with shake
@@ -350,12 +356,17 @@ label q3_3_0: # ending here
 
 
 label q3_3_0_1:
-    horr "……再見……" 
+    stop music
+    horr "……再見……"
     window hide
-
+    $ renpy.sound.play(audio.gun_shot, channel = "sound")
+    #$ renpy.sound.play(audio.glass, channel = "sound", relative_volume = 0.5)
     "砰！！"
+    stop sound
     show bg_white with dissolve
     pause(0.5)
+    $ renpy.music.play(audio.glass, channel = "music", loop = False, fadein = 0.1)
+    $ renpy.sound.play(audio.glass_crack, channel = "sound")
     show cg_brain1 at cg0 with dissolve
     pause(0.3)
     show cg_brain2 at cg0 with dissolve
@@ -367,14 +378,16 @@ label q3_3_0_1:
     show cg_brain5 at cg0 with dissolve
     pause(1)
     scene bg_black with Fade(0.5,0.5,0.5)
+    $ renpy.sound.play(audio.buzz, channel = "sound", fadeout = 0.5, relative_volume = 0.25)
     "……"
     scene bg_white with Fade(1,1,1,color="#fff")
     
 
     # 【Ending：尘埃】
     window hide
+    stop sound
     show screen ending_title(number=19) with Fade(0.5,0.5,0.5)
     pause
     $ persistent.ending[19] = 1
-    return 
+    return
 

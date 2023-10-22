@@ -21,6 +21,10 @@ define audio.heartbeat = "audio/sound_effect/heartbeat.mp3"
 define audio.glass = "audio/sound_effect/glass.mp3"
 define audio.current = "<from 0 to 36>audio/sound_effect/current.mp3"
 define audio.elevator = "audio/sound_effect/elevator.mp3"
+define audio.gun_shot = "<from 0 to 1>audio/sound_effect/gun_shot.mp3"
+define audio.buzz = "audio/sound_effect/buzz.mp3"
+define audio.loud_sound = "audio/sound_effect/loud_sound.mp3"
+define audio.glass_crack = "audio/sound_effect/glass_cracking.mp3"
 
 # define backgroun music
 define music.orange_memory = "audio/bgm/orange_memory.mp3"
@@ -29,6 +33,7 @@ define music.darkcity = "<from 0 to 100>audio/bgm/darkcity.mp3"
 define music.horror = "audio/bgm/horror.mp3"
 define music.interrogate = "<from 0.1 to 21>audio/bgm/interrogate.mp3"
 define music.area_d = "audio/bgm/area_d.mp3"
+define music.dust = "audio/bgm/dust.mp3"
 
 label start:
     # 显示一个背景。此处默认显示占位图，但您也可以在图片目录添加一个文件
