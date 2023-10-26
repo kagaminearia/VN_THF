@@ -2,6 +2,7 @@
 label q1_1:
     scene black with fadehold
     scene bg_office_5 with Fade(0.2,0.4,0.1,color="#fff")
+    $ renpy.music.play(music.guanzhiju, channel = "music", loop = True, fadein = 0.5)
     qian "在荆棘之城，城市管制局处理一切和居民有关的问题。"
     qian "我对管制局的行为感到困惑和愤怒，却不得不承认，也许现在去管制局才是最好的选择。"
     scene bg_office_1 with fade
@@ -32,8 +33,10 @@ label q1_1:
     qian_speaking "不是，我没……\n呃，抱歉\n那个我走了再见"
     qian "我实在跟不上她的思路，几乎是逃一般搪塞了对话。等回过神，管理局已经有一定距离。\n它的确是最亮的地方，在整个D层都显得突出而耀眼，像光源吸引昆虫一样聚集大片的人。"
     qian "……"
+    stop music
     
     scene bg_road04 with fade
+    $ renpy.music.play(music.area_d, channel = "music", loop = True, fadein = 1.0, fadeout = 1.0)
     qian "这里的建筑又老又旧，又细又长，相互之间挤得很近。不知道是不是我已经产生错觉，我甚至感觉它们不断散发出奇怪的气味。"
     qian "好脏乱……我捏着鼻子走，穿过几条相似的小道，好不容易才看到写着编号的门牌。\n上面的花纹已经掉了一半，只能勉强看出原来的形状。它指着一道狭窄入口，又黑又深。"
     qian "……这真的是人能住的地方吗？我再三确认牌子上的图案，不得不接受现实。"
@@ -41,10 +44,14 @@ label q1_1:
     qian "更深处没有路灯，我只能靠着终端机上的荧光勉强前进。这片幽幽的光点照亮一小处黑暗，却让人更在意深处没被照亮的东西。\n黏糊，潮湿。"
     scene bg_road06 with Fade(0.1,0,0.1)
     with vpunch
+    stop music
+    $ renpy.sound.play(audio.squeezing_lemon, channel = "sound", relative_volume = 1.2)
     qian_speaking "好恶心……呃啊！喂……！"
     qian "脚踝被绊倒，腿一软，似乎磕到了很硬的尖角，痛得我甚至站不起来，只好扒着墙一瘸一拐地前进。\n……感觉，我从来没有过这么狼狈的时候。"
     qian "……"
+    stop sound
     scene bg_room0 with Fade(0.1,0.4,0.2)
+    $ renpy.music.play(music.no_choice_sad, channel = "music", fadein = 0.5)
     qian "身前空间不过几米就见底，一块板子横在墙边——如果说那可以被称作是床架的话——被固定住。旁边是矮小的桌子，墙上是一排贴得整齐的小灯，而这就是全部。"
     qian "一切都布满灰尘，带着淡淡的腐烂气息。我难以置信地在门口盯了好一会，才确定这个地方的确就这么大，大约是半个洗手间，曾经的。"
     qian "以前……我赶紧止住思绪，摒弃掉那些会让我动摇的东西，至少现在不应该去想。"
@@ -62,6 +69,7 @@ label q1_1:
     qian "不知道，无能为力，毫无头绪。\n我明明什么都没做，这种离谱的事情，为什么是我……\n我还，回得去吗……"
     show cg_qian01 at cg0 with dissolve
     qian "我……"
+    stop music fadeout 1.0
     
     scene bg_factory with Fade(0.1,0.4,0.3)
     show boss at char_right with easeinright

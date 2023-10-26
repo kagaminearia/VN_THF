@@ -34,6 +34,14 @@ define music.horror = "audio/bgm/horror.mp3"
 define music.interrogate = "<from 0.1 to 21>audio/bgm/interrogate.mp3"
 define music.area_d = "audio/bgm/area_d.mp3"
 define music.dust = "audio/bgm/dust.mp3"
+define music.no_choice_sad = 'audio/bgm/no_choice_sad.mp3'
+define music.fallen_leaves = 'audio/bgm/fallen_leaves.mp3'
+define audio.what_if = 'audio/what_if/hisame.mp3'
+define music.guanzhiju = "audio/bgm/guanzhiju.mp3"
+define audio.squeezing_lemon = 'audio/sound_effect/squeezing_lemon.mp3'
+define audio.hurricane = 'audio/sound_effect/hurricane.mp3'
+define music.starlight = 'audio/bgm/starlight.mp3'
+define audio.calm = 'audio/sound_effect/calm.mp3'
 
 label start:
     # 显示一个背景。此处默认显示占位图，但您也可以在图片目录添加一个文件
@@ -179,7 +187,6 @@ label start:
     hide qianimg shout
     show qianimg close at char_mid
     qian_speaking "……唔！好痛，痛……啊啊！"
-    stop music
 
     scene bg_office_1
     scene bg_office_2 with fade
@@ -190,6 +197,7 @@ label start:
     scene bg_office_4 with Fade(0.1,0.3,0.1)
     qian "四周皆是单色墙壁，泛着淡淡的金属冷光。被一身黑的人包围的我，显得格外刺眼。\n空间里弥漫着窒息的沉默，我尽力习惯，可不安和恐慌仍然无法消除。"
     qian "究竟发生了什么……我应该怎么办？\n信息太少，我甚至不知道所谓的禁令到底是什么，但……就算知道了也无能为力。"
+    stop music fadeout 1.0
     
     scene black with fadehold
     $ renpy.sound.play(audio.elevator, channel = "sound")
@@ -205,6 +213,7 @@ label start:
     stop sound
 
     scene bg_road02 with Fade(0.5,0.5,0.5)
+    $ renpy.music.play(music.area_d, channel = "music", loop = True, fadein = 1.0, fadeout = 1.0)
     qian "……\n……"
     qian "头顶的光线微弱，只有时时闪烁的凌乱灯牌。"
     scene bg_road01 with Fade(0.1,0.2,0.1)
@@ -222,7 +231,6 @@ label start:
     "荆棘之城的最底端\nD层"
     
     scene bg_black with Fade(0.5,0.5,0.5,color="#fff")
-    $ renpy.music.play(music.area_d, channel = "music", loop = True, fadein = 1.0, fadeout = 1.0)
     qian "荆棘之城是一座竖直发展的城市，自上而下分为A，B，C，D层。在这其中，D层位于城市最底部，被那些游手好闲、不学无术的人占据着，藏匿着许多肮脏与恶意。"
     qian "荆棘之城是这座城市的名字，它于数百年前建成，是我们最后的城市。那时候，战争失败的人们——我们的祖先——被迫失去原来的土地，只能在有限的空间里苟且偷生。"
     qian "防护罩切断了整个城市与外界的联系，将我们困在牢笼之中，没有丰富的资源，只有匮乏的生活。"
@@ -277,6 +285,7 @@ label start:
     menu:
         "【管制局】":
             $ renpy.sound.play(audio.click, channel = "sound", loop = False)
+            stop music fadeout 0.5
             jump q1_1
         "【黑街】":
             $ renpy.sound.play(audio.click, channel = "sound", loop = False)
