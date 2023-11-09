@@ -27,7 +27,7 @@ define audio.loud_sound = "audio/sound_effect/loud_sound.mp3"
 define audio.glass_crack = "audio/sound_effect/glass_cracking.mp3"
 
 # define backgroun music
-define music.orange_memory = "audio/bgm/orange_memory.mp3"
+define music.orange_memory = "audio/bgm/organe_memory.mp3"
 define music.dream = "audio/bgm/qimei.mp3"
 define music.darkcity = "<from 0 to 100>audio/bgm/darkcity.mp3"
 define music.horror = "audio/bgm/horror.mp3"

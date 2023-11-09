@@ -102,6 +102,7 @@ label q1_2_2:
     scene bg_bar1 with Fade(0.1,0.1,0.1)
     show crowd with Dissolve(0.5)
     qian "而直到这时，我才注意到周围的人不知道什么时候都围了上来，直直地望着我们。"
+    stop sound fadeout 0.5
 
     scene bg_road01 with vpunch
     qian "哈啊，哈……差不多了吧。"

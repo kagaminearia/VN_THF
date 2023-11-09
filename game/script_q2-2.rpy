@@ -123,6 +123,7 @@ label q2_2:
     "……\n……"
 
     scene bg_prolo_01 with fade
+    $ renpy.music.play(music.orange_memory, channel = "music", loop = True, fadeout = 1.0)
     unknown "时茜，又在看什么呢？"
     qian_speaking "啊，黄女士！回来好晚！"
     qian "微风拂面，温暖的阳光透过落地窗，照进宽敞的室内，把家具们和书架上的书都染上一层金黄。\n我把手中的柔软抱枕扔出去，一下从沙发上跳下来。"
@@ -141,7 +142,8 @@ label q2_2:
     "赶紧收完过来吃东西，我们刚做好的待会凉了。"
     qian_speaking "知道啦！"
 
-    scene bg_black with fade
+    scene bg_black with Fade(0.1, 1.0, 1.0)
+    stop music
     "……\n……"
     unknown "时茜……时茜？"
 
@@ -197,7 +199,7 @@ label q2_2:
 
 label q2_2_1: # ending here
     scene black with fadehold
-    $ renpy.music.play(music.dream, channel = "music", loop = True, fadein = 2.0)
+    $ renpy.music.play(music.dream, channel = "music", loop = True, fadein = 0.5)
     qian "迷茫和困惑充斥我的内心，可在其中，我还是能听到那不甘心的声音。"
     qian "说到底……为什么偏偏是我呢，凭什么我就要遇到这种事情呢……在这种地方，在这种条件的地方……\n我已经，没有什么好在乎的了……"
     qian "都已经这样了，至少让我做一会梦吧……也许只要把自己沉浸于美好当中，我就不会因为痛苦而崩溃……"
