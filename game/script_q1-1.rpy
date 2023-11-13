@@ -73,6 +73,7 @@ label q1_1:
     
     scene bg_factory with Fade(0.1,0.4,0.3)
     show boss at char_right with easeinright
+    $ renpy.sound.play(audio.mechanical, channel = "sound", loop = True, relative_volume = 0.3)
     unknown "第一天上班就迟到，要不是管制局设置的试用期，你现在就可以直接滚蛋了。\n我知道你之前是A层的人，但这里不是A层，别想那些有的没的，没用，好好工作。"
     show qianimg shirt sad at char_left with easeinleft
     qian "面前的人据说是这里的老板，她说话又急又快，我根本来不及跟上节奏。\n见我迟迟没有反应，她的声音拔得更高，像尖刺一般扎进我的头皮。"
@@ -98,12 +99,14 @@ label q1_1:
     qian "没事了，谢谢……"
     unknown "你没事就好啦，快工作吧。"
     hide jun
+    stop sound fadeout 0.5
 
     scene bg_factory1 with fade
     show qianimg shirt still at char_right with easeinright
     qian "半小时的午餐时间。果冻般的压缩食品放在面前，毫无生机，从塑胶袋中被挤进嘴巴。\n浓烈又做作的香精甜味冲上脑门，让我差点直接吐出来。"
     qian "数道视线再次打在我身上——最近，我竟然无比熟悉这种感觉——我不由得掐紧了手指。\n噗嗤，半流质物体溢出塑料袋，糊在桌上。"
     show jun at char_left with easeinleft
+    $ renpy.music.play(music.simple_piano, channel = "music", loop = True)
     jun_speaking "别这样，食堂还得自己打扫……"
     qian_speaking "哦，嗯……"
     qian "君和坐在我旁边，和工作时的位置一样——我现在已经知道她的名字。\n她扬起手里的袋子，推了推眼镜，冲我露齿一笑。"
@@ -159,9 +162,11 @@ label q1_1:
 
 
 label q1_1_1:
+    stop music
     qian "不行……就算这地方是这样，我必须认真起来。这不是真的为了工作，只是为了不让我被这个地方完全腐蚀。\n我要保持冷静，保持清醒……"
 
     scene bg_road02 with fade
+    $ renpy.sound.play(audio.market, channel = "sound", loop = True, relative_volume = 0.8)
     unknown "你有没有想过如何快速赚钱？"
     unknown "最新出的特效药，特别好用！"
     unknown "喂！需不需要借钱啊？这里有很方便的途径哦！"
@@ -177,6 +182,7 @@ label q1_1_1:
     scene bg_road02 with fade
     show qianimg shirt still at char_mid
     qian "……\n……只是这样而已。"
+    stop sound fadeout 0.5
 
 
     scene bg_ele with Fade(1,1,1,color="#ffffff")
@@ -187,6 +193,7 @@ label q1_1_1:
     scene bg_factory with fade
     show bg_mem
     show boss at char_mid with dissolve
+    $ renpy.sound.play(audio.mechanical, channel = "sound", loop = True, relative_volume = 0.3)
     boss_speaking "这儿的负责人呢？不在工作岗位上是都死了吗？"
     unknown "您昨天刚开除……"
     boss_speaking "……\n都是没用的东西，走了就走了吧。\n那边的过来。"
@@ -195,6 +202,7 @@ label q1_1_1:
     qian "我被指着鼻子，只好停下手中的工作。"
     boss_speaking "你去负责这件事，做不好也一起走人。\n记清楚订单信息，这是A层的事情，一定要尽快把问题解决，不能出差错。"
     qian_speaking "……嗯。"
+    stop sound fadeout 0.5
 
     scene bg_office_6 with fade
     show bg_mem
@@ -204,9 +212,11 @@ label q1_1_1:
     scene bg_ele with fade
     qian "但的确久违了，广阔的天顶，轻巧的空气，以及如画一般明亮活力的颜色。\n荆棘之城的A层。"
     show qianimg shirt still at char_mid with dissolve
+    $ renpy.sound.play(audio.elevator_ding, channel = "sound")
     qian "……"
 
     scene bg_city0 with Fade(0.5,0.5,0,color="#747474")
+    $ renpy.sound.play(audio.bird_sing, channel = "sound", loop = True, fadein = 0.5)
     qian "A层禁止居民以外的人使用个人大型机器，我从公共交通上下来，跟着电子光屏上的路线往前走，平坦而坚实的道路让我一时有些难以习惯。"
     qian "和D层不同，这一路上几乎没有遇到任何人，人口密度低得像我空空荡荡的胃部。\n但事实并非如此，A层人虽少，但在寸土寸金的荆棘之城远远不可能是这种程度。"
     qian "大概是因为信号标记。\n我曾经的终端机上——有A层特殊标识的终端机上——会显示进入A层的外来人的位置。而居民十分自然地，充满默契地远离那些人。"
@@ -215,8 +225,10 @@ label q1_1_1:
     qian "也就是现在的我。"
     qian "微疼的触感让我回过神，是手指不自觉地用力按在终端的背面，刻着城市印章的地方。\n坚韧，勇敢，一直以来，那是这座城市带给我们的信念，如它的历史一般熠熠生辉。"
     qian "但与此同时，我第一次意识到，它也为每个人种下标签，就像城市印章一样，根深蒂固，如影随形。"
+    stop sound fadeout 0.5
     
     scene bg_cafe0 with fade
+    $ renpy.sound.play(audio.door_open, channel = "sound")
     unknown "你好，现在不是营业时间~咦？\n嗯……你好？"
     qian_speaking "……你好。"
     
@@ -225,6 +237,7 @@ label q1_1_1:
     window hide
     pause(1)
     window show
+    $ renpy.music.play(music.cafe, channel = "music", loop = True, relative_volume = 0.5)
     qian "纯黑色、精心整理的头发垂在额角和颈后，身上柔软细腻的布料分为一层层，点缀有精致蝴蝶结，并不是现在的流行，却无比精致。"
     show cg_chi01 at cg0 
     qian "一双水蓝色的明亮眼睛看着我，乍一眼让我看得失了神，直到对方再次出声。"
@@ -232,6 +245,7 @@ label q1_1_1:
     scene bg_cafe0 with fade
     show qianimg shirt o at char_left with easeinleft
     show chiimg at char_right with easeinright
+    $ renpy.music.set_volume(1.0, 1.0, "music")
     qian_speaking "抱歉，关于您提交的订单，这边有……"
     qian "我把核对的信息报出来，并提出相应的解释。\n对方似乎还没理解，只是十分专注地看着我，好像这就是此刻世界上最重要的事情。"
     unknown "噢，原来是这个问题。你好厉害啊，这么快就知道了，谢谢你！"
@@ -321,9 +335,11 @@ label q1_1_1:
     window show
     chi_speaking "拜拜~"
     qian_speaking "……\n……"
+    stop music fadeout 1.0
 
 
     scene bg_factory1 with Fade(1,1,0.3)
+    $ renpy.sound.play(audio.mechanical, channel = "sound", loop = True, relative_volume = 0.3)
     na "……"
     qian "君和消失了。"
     qian "在一成不变的日程里，这件事显得尤其突兀。\n说消失不太准确，只是她突然停止了工作，没有通知，而我也再没有收到她的任何消息。"
@@ -341,7 +357,9 @@ label q1_1_1:
     
     qian "……"
     qian "……\n不过，无论我在意与否，似乎都没有什么区别。现在的我如此无能，只是被困在这个混乱而陌生的地方罢了。"
+    stop sound fadeout 0.5
     scene bg_black with fade
+    $ renpy.music.play(music.no_choice_sad, channel = "music", fadein = 0.5)
     qian "人的适应性——或者说求生欲——真是极强，我无比真切地体会到这一点。\n刚到D层的时候，我以为我根本没法在这种地方活下去，但现在看来也不过如此。"
     qian "简陋狭窄的房间只有摇曳的暗光，我出神地抬起头，正好看到挂在门口的衣服。\n沾过各种脏污，睡衣进行过粗暴的清洗后仍然坚挺着浅层的柔软绒毛。\n我唯一从过去留下来的东西。"
     
@@ -351,6 +369,7 @@ label q1_1_1:
     window show
     qian "垂得齐整的布料像风干的实体，埋葬不为人知的事。\n每每看到它，我的心脏都会停跳一拍，而现在，好像连这样的感觉都要趋于麻木了。"
     qian "荆棘之城……我似乎头一回认识这座城市。\n并不是那样完美，明朗，温暖。"
+    stop music fadeout 0.5
 
     jump q2_1
 
@@ -363,6 +382,7 @@ image cg_qian1:
 
 
 label q1_1_2: # ending here
+    $ renpy.music.set_volume(0.50, 1.0, "music")
     qian "总之……我并没有认真的打算，我又不是真来这种地方工作的。\n随便应付一下，只要撑到家里有消息的时候就行了。"
     qian "随便混混日子并不难，不过是相似的流程，每一天都一样。"
 
@@ -374,12 +394,15 @@ label q1_1_2: # ending here
     show cg_qian1 at cg0 with fade
     pause
     window show
+    $ renpy.music.set_volume(0.25, 1.0, "music")
     qian "我蹲坐在房间的角落，手指重复着“打开终端，划过消息，关闭终端”的动作。"
     qian "所谓的工作没有技术含量，只有繁重和忙碌，塞满我的生活。除了死白色的宽敞工厂，我没有兴致也没有时间再拥有其他。"
     qian "不知道从什么时候开始，我的思维似乎也已经变慢、停滞，完全融入D层的死水。"
     qian "……她们怎么样了？我没有多余的精力去思考，但还有什么比在这里要更差的？\n嗯，只要如果过得比我好就够了……"
+    $ renpy.music.set_volume(0.10, 1.0, "music")
     qian "我再次下意识地活动手指：打开终端，划过寥寥无几的每条消息，关闭终端，打开终端，划过……"
     qian "房间里冒出微弱荧光，不断闪烁，忽明忽暗，重复往返。"
+    stop music
 
     # 【Ending：死寂】
     window hide

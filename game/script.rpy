@@ -29,11 +29,25 @@ define audio.glass_crack = "audio/sound_effect/glass_cracking.mp3"
 # define backgroun music
 define music.orange_memory = "audio/bgm/organe_memory.mp3"
 define music.dream = "audio/bgm/qimei.mp3"
+define music.cafe = "audio/bgm/cafe.mp3"
 define music.darkcity = "<from 0 to 100>audio/bgm/darkcity.mp3"
 define music.horror = "audio/bgm/horror.mp3"
 define music.interrogate = "<from 0.1 to 21>audio/bgm/interrogate.mp3"
 define music.area_d = "audio/bgm/area_d.mp3"
+define music.be = 'audio/bgm/be.mp3'
+define music.before_be = 'audio/bgm/before_be.mp3'
+define music.peng = 'audio/bgm/peng.mp3'
+define music.hero = 'audio/bgm/hero.mp3'
+define music.chi = 'audio/bgm/chi.mp3'
+define audio.shutter = 'audio/sound_effect/shutter.mp3'
+define music.danger_is_coming = 'audio/bgm/danger_is_coming.mp3'
+define audio.doorbell = 'audio/sound_effect/doorbell.mp3'
+define audio.bird_sing = 'audio/sound_effect/bird_sing.mp3'
+define audio.elevator_ding = 'audio/sound_effect/elevator_ding.mp3'
+define audio.market = 'audio/sound_effect/market.mp3'
 define music.dust = "audio/bgm/dust.mp3"
+define audio.door_open = 'audio/sound_effect/door_open.mp3'
+define audio.mechanical = 'audio/sound_effect/mechanical.mp3'
 define music.no_choice_sad = 'audio/bgm/no_choice_sad.mp3'
 define music.fallen_leaves = 'audio/bgm/fallen_leaves.mp3'
 define audio.what_if = 'audio/what_if/hisame.mp3'
@@ -42,6 +56,8 @@ define audio.squeezing_lemon = 'audio/sound_effect/squeezing_lemon.mp3'
 define audio.hurricane = 'audio/sound_effect/hurricane.mp3'
 define music.starlight = 'audio/bgm/starlight.mp3'
 define audio.calm = 'audio/sound_effect/calm.mp3'
+define music.simple_piano = "audio/bgm/simple_piano.mp3"
+define audio.breath = 'audio/sound_effect/breath.mp3'
 
 label start:
     # 显示一个背景。此处默认显示占位图，但您也可以在图片目录添加一个文件
