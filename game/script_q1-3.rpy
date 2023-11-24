@@ -1,5 +1,6 @@
 label q1_3:
     scene bg_road05 with Fade(0.3,0.2,0.4)
+    $ renpy.music.play(music.outside, channel = "music", loop = True, fadein = 1.0)
     qian "沿路牌往前，道路逐渐出现不同的分岔，而后，最近的路口挂着巨大的显示屏：D-230，居民区。"
     qian "不太信任管制局，可其他地方又好到哪里去。\n昏暗的环境仿佛滋生鬼魅，时不时的窸窣声从角落传来，让我心生退意，胸口也憋闷得要窒息。"
     qian "好，难受……不安和疲惫越发堆积，直到眼皮越来越重，腿也抬不起来，不得不停靠在布满灰尘的墙角。\n为什么，会这样……"
@@ -25,8 +26,11 @@ label q1_3:
     qian "我的眼皮开始疯狂打架，身体也不受控制地颤抖起来。"
     qian "怎么，这里到底是……啊……！"
     scene bg_pit1 with hpunch
+    $ renpy.music.set_volume(0.25, 0, channel = "music")
+    $ renpy.sound.queue([audio.crash, audio.earthquake, audio.earthquake_2], channel = "sound")
     na "轰隆——"
     qian "巨大的声响打断了我的思考。\n而后，头顶的黑色天花板快速降落，随着砰的一声，剥夺了我视野里的一切光线。"
+    #$ renpy.sound.play(audio.earthquake, channel = "sound", fadeout = 1.0)
     qian "“地面”开始剧烈晃动，周围的垃圾一股脑地摔下来，将我挤得喘不过气，而后又因摇晃在我身上碾压。"
     scene bg_black with shake
     horr "痛，好痛……\n好痛好痛好痛好痛……"
@@ -38,6 +42,7 @@ label q1_3:
     horr "直到時間都失去意義，疼痛和耳邊的轟鳴都沒有停止，我的精神像在荊棘刺中打滾，變成千瘡百孔的破爛。"
     scene bg_black with hpunch
     qian "疼，疼痛……"
+    stop sound fadeout 1.0
 
     scene bg_black with Fade(1,0,1)
     unknown "你也来捡垃圾啊？"
@@ -47,6 +52,7 @@ label q1_3:
     qian_speaking "救，呕……救我……"
     show liquid0 with dissolve
     qian "刚一开口，腹部就一阵痉挛，而后只有混合的胆汁和粘液从嘴角溢出，发出和周围一样的酸臭味。"
+    stop music fadeout 1.0
 
     scene bg_black with Fade(1,0,1)
     qian_speaking "救，救我……啊……！\n……嗯？……"

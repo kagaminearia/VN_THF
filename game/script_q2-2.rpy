@@ -544,5 +544,3 @@ label q2_2_2_2: # ending here
     $ persistent.ending[10] = 1
 
     return 
-
-

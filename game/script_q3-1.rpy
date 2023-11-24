@@ -5,6 +5,7 @@ label q3_1:
     qian "迟玉，蓝石……不知为何，这两人的那个场景再度在我脑海里闪回。\n别再给我想那个了……！不，等等……说不定……"
     scene bg_lanroom with Fade(0.1,0,0.1)
     qian "一种莫名的情绪突如其来，我的视线来回滚动，不由得深深吸了一口气，然后……"
+    stop music
 
     show cg_chi90 at cg0 with dissolve
     window hide
@@ -15,7 +16,8 @@ label q3_1:
     lan_speaking "……"
     qian_speaking "唔……"
     chi_speaking "？！"
-
+    
+    $ renpy.music.play(music.kiss_kiss, channel = "music", loop = True, fadein = 0.5)
     scene bg_lanroom with Fade(0.1,0,0.1)
     show qianimg shirt sad at char_right with dissolve
     qian_speaking "对不起，迟玉……现在听得见我说话吗？"
@@ -23,6 +25,7 @@ label q3_1:
     chi_speaking "哈，啊……"
     show lan2 at large2 with easeinbottom
     lan_speaking "你怎么敢？"
+    hide lan2
     show qianimg shirt shout at large2 with dissolve
     qian_speaking "听我说……她，蓝石有这样做过吗？"
     hide chiimg
@@ -59,9 +62,11 @@ label q3_1:
     lan_speaking "别妄想了！"
     show chiimg afraid at large2 with shake
     chi_speaking "啊……！"
+    stop music
     
     scene bg_black with Fade(1,1,1)
     with vpunch
+    $ renpy.music.play(audio.hero, channel = "music", loop = True, fadein = 0.5)
     "呲——\n砰——\n咚——"
     qian_speaking "呜……！哈啊……"
     qian "只不过是一瞬间的事。我成功推开迟玉，拽着台灯往前一扑。"
@@ -72,6 +77,7 @@ label q3_1:
     qian_speaking "别管了，走！"
     show chiimg afraid at large2 with shake
     chi_speaking "啊……好！"
+    stop music
 
     scene bg_lanroom with Fade(1,1,1)
     show qianimg shirt sad at char_left with dissolve
@@ -117,6 +123,7 @@ label q3_1:
     qian_speaking "我知道——"
 
     scene bg_lanroom with fade
+    $ renpy.music.play(music.delimma, channel = "music")
     qian "真的，只能赌一把了……要输入什么呢——"
     # qte here
     $ time = 3
@@ -151,10 +158,12 @@ image cg_hand1:
     repeat
 
 label q3_1_1: # ending here
+    stop music
     scene bg_lanroom with fade
     "叮——"
     qian_speaking "对了……！"
     show bg_lanroom with vpunch
+    $ renpy.sound.play(audio.peng, channel = "sound")
     "砰！"
     show chiimg sadask at char_right with dissolve
     chi_speaking "快，快跑！"
@@ -166,6 +175,8 @@ label q3_1_1: # ending here
     qian_speaking "！！！"
     
     scene cg_hand10 with vpunch
+    $ renpy.music.play(music.horror_bgm, channel = "music", loop = True)
+    $ renpy.sound.play(audio.horn, channel = "sound", loop = True)
     qian "两只手掌硬生生卡住了门缝，阻止我将它合拢。"
     qian_speaking "你竟然，自己……"
     horr "呵呵，呵呵呵……别走，我们还没聊完吧？"
@@ -189,12 +200,16 @@ label q3_1_1: # ending here
     qian_speaking "你这……疯子啊啊啊啊啊！"
     horr "咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯吱咯\n啪！"
     scene bg_black with shake
+    stop music
+    stop sound
+    $ renpy.sound.play(audio.peng, channel = "sound")
     "砰！"
     show qianimg shirt shout at char_left with dissolve
     qian_speaking "啊啊……呜……呃啊……"
     show chiimg sadask at char_right with dissolve
     chi_speaking "没，没事吧……时茜……对不起，都怪我……"
     qian_speaking "没，门，我关上了……快，快走……"
+    $ renpy.sound.play(audio.buzz, channel = "sound", relative_volume = 0.3)
     "嗡——"
     chi_speaking "糟了，她要启动穿梭机……"
     qian_speaking "快走！"
@@ -208,7 +223,9 @@ label q3_1_1: # ending here
     chi_speaking "好……很快……就出去——"
 
     scene bg_white with fade
+    $ renpy.sound.play(audio.crash, channel = "sound")
     "轰！！！"
+    pause
 
     # insert ending pv?
 
@@ -218,11 +235,13 @@ label q3_1_1: # ending here
     "……"
 
     scene bg_hospital with Fade(1,1,1)
+    with vpunch
     qian_speaking "迟玉……！！\n……啊？"
     doctor_speaking "不要大声喧哗。"
     qian_speaking "这，这里是……"
     doctor_speaking "感觉好点的话，晚上来做个检查。"
     qian_speaking "诶等等别走——\n啊……"
+    $ renpy.music.play(music.stardust, channel = "music", loop = True)
     chi_speaking "时茜……"
     qian_speaking "啊！\n你没事……太好了……不过，这是……"
     qian "我瞬间转过头，看到那熟悉的脸庞和蓝色眼眸才猛地松了口气，这才有精力观察四周。\n这里是医院……刚才的医生出去后只剩我和迟玉两个人。"
@@ -269,13 +288,16 @@ label q3_1_1: # ending here
     return 
 
 label q3_1_0: # ending here
+    stop music
     scene lanroom with vpunch
+    $ renpy.sound.play(audio.peng, channel = "sound")
     "砰！"
     qian "没时间了……"
     chi_speaking "时茜……"
     qian_speaking "……"
     qian "我无言地看向迟玉，她和她眼里的我在这一刻的时间被无限拉长。意识到这一刻到来时，我的内心竟然惊人的平静。"
     qian_speaking "抱歉啊，迟玉……"
+    "……"
 
     # 【Ending：紧急】
     window hide
