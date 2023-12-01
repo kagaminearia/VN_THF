@@ -34,6 +34,42 @@ define music.darkcity = "<from 0 to 100>audio/bgm/darkcity.mp3"
 define music.horror = "audio/bgm/horror.mp3"
 define music.interrogate = "<from 0.1 to 21>audio/bgm/interrogate.mp3"
 define music.area_d = "audio/bgm/area_d.mp3"
+define audio.li_water = 'audio/sound_effect/li_water.mp3'
+define audio.steps = 'audio/sound_effect/steps.mp3'
+define music.li_help = 'audio/bgm/li_help.mp3'
+define audio.toiminatonoyakei = 'audio/throns.mp3/toiminatonoyakei.mp3'
+define music.li_last_night = 'audio/bgm/li_last_night.mp3'
+define music.li_kiss = 'audio/bgm/li_kiss.mp3'
+define music.li_first_exp = 'audio/bgm/li_first_exp.mp3'
+define music.li_inside = 'audio/bgm/li_inside.mp3'
+define music.throns = 'audio/bgm/throns.mp3'
+define audio.li_strong_wind = 'audio/sound_effect/li_strong_wind.mp3'
+define audio.helicopter = 'audio/sound_effect/helicopter.mp3'
+define audio.crowd = 'audio/sound_effect/crowd.mp3'
+define music.li_nightmare = 'audio/bgm/li_nightmare.mp3'
+define music.li_lost = 'audio/bgm/li_lost.mp3'
+define music.li_easy = 'audio/bgm/li_easy.mp3'
+define music.li_mirror = 'audio/bgm/li_mirror.mp3'
+define audio.small_wind = 'audio/sound_effect/small_wind.mp3'
+define music.outside = 'audio/bgm/outside.mp3'
+define music.li_li = 'audio/bgm/li_li.mp3'
+define music.li_sweet = 'audio/bgm/li_sweet.mp3'
+define audio.sandstorm = 'audio/sound_effect/sandstorm.mp3'
+define music.li_clues = 'audio/bgm/li_clues.mp3'
+define music.li_spy = 'audio/bgm/li_spy.mp3'
+define music.sad_ending = 'audio/bgm/sad_ending.mp3'
+define music.ying_end = 'audio/bgm/ying_end.mp3'
+define music.ying_dark = 'audio/bgm/ying_dark.mp3'
+define audio.ying_alarm = 'audio/sound_effect/alarm.wav'
+define music.sus_ying = 'audio/bgm/sus_ying.mp3'
+define music.save_ying = 'audio/bgm/save_ying.mp3'
+define audio.shocked_ending = 'audio/sound_effect/shocked_ending.mp3'
+define audio.click_countdown = 'audio/sound_effect/click_countdown.mp3'
+define audio.windy_ying = 'audio/sound_effect/windy_ying.mp3'
+define audio.fast_heartbeat = 'audio/sound_effect/fast_heartbeat.mp3'
+define audio.headache = 'audio/sound_effect/headache.mp3'
+define music.lanshi = 'audio/bgm/lanshi.mp3'
+define music.yingying = 'audio/bgm/yingying.mp3'
 define audio.buzz = 'audio/sound_effect/buzz.mp3'
 define audio.horn = 'audio/sound_effect/horn.mp3'
 define music.horror_bgm = 'audio/bgm/horror_bgm.mp3'
@@ -75,6 +111,20 @@ define music.starlight = 'audio/bgm/starlight.mp3'
 define audio.calm = 'audio/sound_effect/calm.mp3'
 define music.simple_piano = "audio/bgm/simple_piano.mp3"
 define audio.breath = 'audio/sound_effect/breath.mp3'
+define music.theme = 'music/bgm/theme.mp3'
+
+init python:
+    judge = True
+    for i in range(14, 20):
+        if persistent.ending[i] == 1:
+            judge = False
+            break
+    if persistent.ending[19] == 1:
+        config.main_menu_music = music.sad_ending
+    elif persistent.ending[13] == 1 and judge:
+        config.main_menu_music = music.ying_end
+    else:
+        config.main_menu_music = music.theme
 
 label start:
     # 显示一个背景。此处默认显示占位图，但您也可以在图片目录添加一个文件

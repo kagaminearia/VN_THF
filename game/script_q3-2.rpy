@@ -1,5 +1,6 @@
 label q3_2:
     qian "电光石火间，我来不及考虑太多，只是，至少先把她救下来……！"
+    $ renpy.music.play(music.save_ying, channel = "music", loop = True, fadeout = 1.0)
     window hide
     scene cg_ying70 with vpunch
     pause(1.5)
@@ -15,6 +16,7 @@ label q3_2:
     scene bg_edge with vpunch
     qian "莺莺只一瞬的怔愣，而后马上反应过来抓回我，动作甚至比我更快。"
     qian "这里的杂乱无章大大方便了我们这样的体型，我被莺莺拖着挤过窄道，身后的枪声和碰撞声越来越小。"
+    stop music
     scene bg_pit0 with fade
     show qianimg shout at char_left with easeinbottom
     qian_speaking "哈……哈啊……差不，多……了吧……"
@@ -31,6 +33,7 @@ label q3_2:
     show qianimg o at char_left
     qian_speaking "……好敷衍……"
     ying_speaking "……"
+    $ renpy.music.play(music.yingying, channel = "music", loop = True, fadein = 0.5)
     qian "我们默契地不谈之前的争吵，只是坐在高高耸立的垃圾堆上缓解呼吸。讽刺又滑稽的是，这一刻我竟然感到堪称诡异的平静.连四周的难闻气味也没那么突出了。"
     hide yingimg
     show yingimg still at char_right
@@ -64,6 +67,7 @@ label q3_2:
     hide yingimg
     show yingimg stillo at char_right
     ying_speaking "已经死了。"
+    $ renpy.music.set_pause(True, channel = "music")
     scene bg_black with fade
     qian_speaking "……"
     qian_speaking "什么？"
@@ -86,9 +90,9 @@ label q3_2:
     hide qianimg
     show qianimg still at char_left
     qian "她沉默地看着我，我也知道自己的话多么可笑。我只是不想承认罢了，如果家里人还在，她们不会让我一直陷在这里的。况且，莺莺还带着那个戒指……"
-    
     hide qianimg
     show qianimg shout at char_left
+    $ renpy.music.set_pause(False, channel = "music")
     qian_speaking "这个，为什么会在你那里？呜……"
     qian "发生的事情太多，我连崩溃的力气也没有了。只是，再次开口时，我意识到有什么咸涩的味道在嘴里化开。"
     hide yingimg
@@ -110,7 +114,10 @@ label q3_2:
     ying_speaking "差不多。\n没有和中央系统的连接。"
     qian_speaking "怎么可能……"
     scene bg_pit0 with vpunch
+    stop music
+    # TODO: add ying_alarm here and figure out why its not working
     "滴滴——"
+    $ renpy.music.play(music.sus_ying, channel = "music", loop = True, fadein = 1.0)
     qian "仿佛在印证什么，我的终端突然响起重大事件的警报声，然而，也只有我的终端发出声音。"
     show qianimg shock at char_left with dissolve
     qian_speaking "通，通缉？！对你和我？！"
@@ -141,7 +148,9 @@ label q3_2:
     qian_speaking "怎么可能……这……"
     qian "文字，还有图像，触目惊心的照片刺痛我的眼睛。"
     qian "我完全不懂发生了什么，但她们不是直接相关人士，也许只能知道这些——也足以震惊所有人了。可……"
+    stop music
     show qianimg shout at char_left with dissolve
+    $ renpy.music.play(music.ying_dark, channel = "music", loop = True, fadein = 0.5, relative_volume = 1.5)
     qian_speaking "这算什么理由……我才，不接受呢……"
     qian "就因为这些人……她们……我的生活……"
     show yingimg at char_right with dissolve
@@ -205,9 +214,12 @@ label q3_2:
     show yingimg at char_right 
     ying_speaking "……"
     qian "莺莺没有说话，所以我猜，也许是有什么不好的事情吧。也许，那些人做实验，就是专门找这些没有社会关系的人……"
+    stop music fadeout 0.5
+
     qian_speaking "我……"
     ying_speaking "有人来了。"
     qian_speaking "什么？！"
+    $ renpy.music.play(music.delimma, channel = "music", loop = True, fadein = 0.5)
     qian "我的精神再次绷紧。敛住声音，果然听到有急匆匆的脚步声由远及近。"
     scene bg_pit0 with fade
     qian_speaking "怎么办，现在……"
@@ -294,14 +306,19 @@ label q3_2_1: # ending here
 
 
 label q3_2_2: # ending here
+    stop music fadeout 0.5
     show qianimg still at char_left with dissolve
     qian_speaking "我还是觉得……应该把知道的事情都说出来。\n虽然，不知道结果会变得怎样……"
     show yingimg at char_right with dissolve
     ying_speaking "嗯。"
     qian_speaking "……走吧。"
+    
+    
     show yingimg at char_mid with easeinright
+    $ renpy.music.play(music.ying_end, channel = "music", fadein = 2.0)
     qian "我抓起她的手，心脏在高速跳动。"
     scene bg_edge with vpunch
+    $ renpy.sound.play(audio.peng, channel = "sound")
     "砰！"
     qian "堆积成山的垃圾被人粗暴地扫开，一层又一层。"
     show yingimg still at char_right with dissolve
@@ -313,8 +330,10 @@ label q3_2_2: # ending here
     unknown "住嘴！"
     scene bg_edge with vpunch
     show blood0 with shake
+    $ renpy.sound.play(audio.peng, channel = "sound")
     "砰！"
     qian_speaking "哈，啊……！看——这个——！"
+    $ renpy.sound.play(audio.peng, channel = "sound")
     qian "我捂住被血浸透的胳膊，让明亮的投影在头顶上展开，照亮我失去血色的表情。"
     scene bg_white with Fade(0.2,0.2,0.2,color="#ffffff")
     qian "……之后，注定是布满荆棘和质疑的一条道路。"
@@ -324,6 +343,6 @@ label q3_2_2: # ending here
 
     # 【Ending：荆棘】
     show screen ending_title(number=13) with Fade(0.5,0.5,0.5)
-    pause
     $ persistent.ending[13] = 1
+    pause
     return 

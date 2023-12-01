@@ -1,6 +1,7 @@
 label q2_2:
     scene bg_street with fade
     show qianimg at char_left with easeinleft
+    $ renpy.music.play(music.area_d, channel = "music", loop = True)
     qian_speaking "好黑啊……你怎么能走那么快。"
     show yingimg at char_right with easeinright
     ying_speaking "……"
@@ -64,6 +65,7 @@ label q2_2:
     qian "就在我们拉扯的时候，又有几个人从旁边来回经过，让我更加好奇。"
     ying_speaking "走了。"
     qian_speaking "唉……等等！"
+    stop music fadeout 0.5
 
     scene bg_yingroom0 with fade
     show qianimg at char_left with dissolve
@@ -87,6 +89,7 @@ label q2_2:
     show qianimg shock at char_left with shake
     qian_speaking "……哇啊！你，你吓死我了……"
     hide qianimg
+    $ renpy.music.play(music.yingying, channel = "music", loop = True, fadein = 0.5)
     qian "幽幽的女声从背后传来，在黑暗里差点把我吓得心跳骤停。等我意识到是莺莺的声音，才缓缓吐出一口气。"
     show qianimg o at char_left with dissolve
     qian_speaking "你怎么醒了……"
@@ -113,17 +116,21 @@ label q2_2:
     qian_speaking "呃，你呢？"
     ying_speaking "等你。"
     qian_speaking "好，好的，谢谢……"
+    stop music fadeout 0.5
 
     scene bg_device
+    $ renpy.music.play(music.lanshi, channel = "music", loop = True, fadein = 0.5)
     qian "简约的房间里只有一张看起来设计很复杂的椅子，旁边贴着各种告示和指南——价格不算太贵，但也不便宜，是一个刚好狠下心就能尝试一次的价格。"
     qian_speaking "又让她帮了我一次啊……"
     qian "“蓝石科技出品”，“梦境机器”，“将为你定制只属于你的电影，实现你心里的愿望”……这说明写得好玄乎，但如果是蓝石科技，却意外地有可信度……"
     qian "都到这里来了，我实在按捺不住自己的好奇心。我坐上椅子，立马被旁边的卡扣控制住，一个巨大的防护罩从椅子上展开，罩住我的整个身体。"
     qian "光屏在视野中亮起：“使用声明：1.……”\n谁会真的一条条看过去……我很快按下“同意”，随即眼前一黑。"
     "……\n……"
+    pause
+    stop music fadeout 0.5
 
     scene bg_prolo_01 with fade
-    $ renpy.music.play(music.orange_memory, channel = "music", loop = True, fadeout = 1.0)
+    $ renpy.music.play(music.orange_memory, channel = "music", loop = True, fadein = 1.0, fadeout = 1.0)
     unknown "时茜，又在看什么呢？"
     qian_speaking "啊，黄女士！回来好晚！"
     qian "微风拂面，温暖的阳光透过落地窗，照进宽敞的室内，把家具们和书架上的书都染上一层金黄。\n我把手中的柔软抱枕扔出去，一下从沙发上跳下来。"
@@ -143,11 +150,13 @@ label q2_2:
     qian_speaking "知道啦！"
 
     scene bg_black with Fade(0.1, 1.0, 1.0)
-    stop music
+    pause
     "……\n……"
+    stop music
     unknown "时茜……时茜？"
 
     scene bg_road06 with vpunch
+    $ renpy.music.play(music.yingying, channel = "music", loop = True, fadein = 0.5)
     qian_speaking "啊……啊！嗯……"
     show yingimg o at char_mid with dissolve
     ying_speaking "醒醒。"
@@ -157,9 +166,13 @@ label q2_2:
     ying_speaking "……\n已经到了。"
     qian_speaking "啊，啊，嗯……"
     qian "……"
+    $ renpy.music.set_volume(0.5, 0.5, "music")
+
+    $ renpy.sound.play(audio.headache, channel = "sound", loop = True)
     qian "头痛欲裂……总觉得像有人用针扎进了我的大脑……也许是因为看到那些场景让我难受吧……可说到底，那个机器是怎么做到的……"
     qian "我的脚步一浅一深地跟在莺莺身后，缓慢地往来时的路走。转过弯，我忍不住最后一瞥那个方向。"
     qian "远处的庞大招牌像漆黑森林中的唯一灯塔，吸引无数迷路的人。\n难怪叫做“梦境”，难怪昂贵，难怪总是看到有人……"
+    stop sound fadeout 0.5
     
     scene bg_yingroom0 with fade
     show yingimg shirt at char_right with easeinright
@@ -181,15 +194,20 @@ label q2_2:
 
     scene bg_black with Fade(0.1,0.1,0.1)
     "……"
+    stop music fadeout 0.5
 
     scene bg_yingroom0 with Fade(0.1,0.3,0.2)
     show qianimg shock at char_mid with dissolve
     qian_speaking "……哈啊！"
+    $ renpy.sound.play(audio.fast_heartbeat, channel = "sound", loop = True, relative_volume = 1.5)
     hide qianimg with dissolve
     qian "好黑……还是不习惯这个地方……\n从梦中惊醒，心脏还在狂跳不止，我捂住胸口，忍不住大口喘息着，而衣领已经潮湿一片。"
     qian "又做梦了……梦境是假的，可角色和内容太过真实。我最怀念的，家人在的时光……\n蓦地，我回想起从蓝石科技的机器前离开的人，脸上那晦暗不明的表情。"
+    stop sound
     qian "我怔怔地望着床边，仿佛能透过墙壁看到很远的地方，远得从未到过D层的地方。"
     qian "家喻户晓的标志再次划过我的脑海，现在却对我有了不同的意义。\n……我还要再去，那个机器吗？"
+    # TODO: DEBUG
+    $ q1221 = True
     menu:
         "【去】":
             jump q2_2_1
@@ -284,6 +302,7 @@ label q2_2_2:
 
     scene bg_yingroom0 with fade
     show yingimg shirt o at char_right with easeinright
+    $ renpy.music.play(music.yingying, channel = "music", loop = True, fadein = 0.5)
     ying_speaking "什么？"
     show qianimg at char_left with dissolve
     qian_speaking "就是……之前真的谢谢你。不过，你是知道什么吗？"
@@ -302,6 +321,7 @@ label q2_2_2:
     qian_speaking "好吧……我想太多了。"
     ying_speaking "不，没什么。"
     qian "所以说，那是什么意思啊……总觉得，她身上带着不小的矛盾和谜团。也许她认识我？那说不定能找出什么线索……"
+    stop music
     
     scene bg_black with fade
     qian "黑暗。\n无边的黑暗笼罩着我。"
@@ -309,7 +329,8 @@ label q2_2_2:
     qian "深处似乎有什么东西……白色的，跳跃的线条。\n被我看到的时候，它们突然膨胀，扩散，挤压——"
     qian "好难受……！要，喘不上气了……啊——"
     qian_speaking "呜……！"
-    show cg_ying40 at cg0 with vpunch 
+    show cg_ying40 at cg0 with vpunch
+    $ renpy.music.play(music.delimma, channel = "music", loop = True) 
     qian "什，什么——！\n我倏地睁开眼，却是莺莺那冰冷的眼神，以及，掐住我脖子的双手。"
     show cg_ying4 at cg0 with vpunch
     qian_speaking "为……什……你……啊啊……"
@@ -330,10 +351,12 @@ label q222success:
     qian_speaking "哈……啊！！！！"
     scene bg_white with vpunch
     qian "我爆发出惊人的求生意志，一把推开了压在身上的莺莺。"
+    stop music fadeout 0.5
     scene bg_yingroom0 with Fade(0.1,0.1,0.1)
     ying_speaking "唔……"
     qian "趁她受到冲击，没反应过来的时候，我赶紧连滚带爬地下床，踉跄着跑出了房间。"
     scene bg_corridor with vpunch
+    $ renpy.music.play(music.nervous, channel = "music", loop = True, relative_volume = 1.5)
     qian_speaking "……可恶，那家伙，哈……到底，要干嘛……"
     qian "我躲在楼层的角落，却并没有看到她出门的动静。她似乎没有要把我赶尽杀绝的意思，可那又为什么……"
     qian "……是因为被我发现了秘密吗？"
@@ -361,6 +384,7 @@ label q222success:
 
 
 label q222fail: # ending here
+    stop music
     qian "可，可恶……到底……为什么，会这样……"
     qian_speaking "你不是……之前还……帮我，的吗……"
     scene bg_black with vpunch
@@ -394,8 +418,10 @@ label q2_2_2_1:
     hide qianimg
     show qianimg at char_mid
     qian "我和莺莺争执在凌晨，现在回去的时间，是她平时会出门的时间。\n正好，可以看看她到底在干什么……"
+    stop music fadeout 0.5
     
     scene bg_edge with fade
+    $ renpy.sound.play(audio.windy_ying, channel = "sound", loop = False, fadein = 1.0)
     qian "相似的光景不断从视野两边掠过，垂直拥挤的建筑，崎岖不平的路面，以及阴影缝隙里的人流。\n我在，跟踪莺莺……"
     qian "不知道走了多久，人群密度稀释，空间愈发无序，远处隐约能看到透明的淡蓝色覆盖住所有能看到的区域——那是保护罩，这座城市存活的基础。"
     qian "怎么会跑到这里……我止住向前的脚步，更多的疑惑涌上心头。\n好在莺莺也恰好在前方停下，没有让我丢失她的行踪。"
@@ -424,6 +450,7 @@ label q2_2_2_1:
     hide grey_fem with easeoutleft
     unknown "——不许跑！"
     scene bg_edge with vpunch
+    $ renpy.sound.play(audio.peng, channel = "sound", loop = False, relative_volume = 1.5)
     "砰！"
     ying_speaking "……呜……！"
     qian "突然的枪声穿过我的耳膜，仿佛一道惊雷劈过。\n……怎么会？！怎么有人敢在城内开枪……！"
@@ -436,12 +463,15 @@ label q2_2_2_1:
     $ timer_jump = 'q320_fail'
     show screen countdown
     # can add some click sfx here
+    $ renpy.sound.play(audio.click_countdown, channel = "sound")
     menu:
         "【伸手帮忙】":
             hide screen countdown
+            stop sound
             jump q3_2
         "【坐视不理】":
             show qianimg still at char_mid with dissolve
+            stop sound
             qian "太危险了，我还是不要插手比较好……"
             hide screen countdown
             jump q3_2_0
@@ -456,9 +486,12 @@ label q320_fail:
 
 label q3_2_0: # ending here
     scene bg_edge with vpunch
+    $ renpy.sound.play(audio.peng, channel = "sound", loop = False, relative_volume = 1.5)
     "砰！砰！"
+    $ renpy.sound.play(audio.peng, channel = "sound", loop = False, relative_volume = 1.5)
     qian "又是几声枪响，开枪的人毫不留情。很快，这一片的纷乱褪去，只剩下开枪者那缓慢沉稳的脚步声。"
     show qianimg shock at char_mid with dissolve
+    $ renpy.music.play(music.be, channel = "music", loop = True, fadein = 0.5)
     qian_speaking "呜……\n怎么会……"
     qian "我原以为她们会交涉什么，或许能说出我不知道的情报。\n可我没想到，那个执行队的人竟然会如此轻易而果断地杀死对方，甚至没有犹豫……"
     scene cg_ying60 at cg0 with fade
@@ -497,8 +530,10 @@ label q3_2_0: # ending here
 label q2_2_2_2: # ending here
     qian "像这样的问题，交给专业的人来处理也许更合适……事不宜迟，我平静好自己的气息，快步进入管制局。"
     qian "就在不久前，我的日常从这里开始破灭……管制局，说不定能顺便了解些家里人的事。"
+    stop music fadeout 0.5
     scene bg_office_6 with fade
     show grey_fem at char_left with easeinleft
+    $ renpy.music.play(music.guanzhiju, channel = "music", loop = True)
     stf_speaking "好的，我们会尽快处理。"
     show qianimg still at char_mid with easeinright
     qian_speaking "尽快是什么时候？"
@@ -528,10 +563,12 @@ label q2_2_2_2: # ending here
     show qianimg sad at char_mid
     qian_speaking "啊？好，好的……"
     qian "我甚至有些受宠若惊，不知道为什么她突然又变得好说话。\n……难道是和我家人有关系了？"
+    stop music fadeout 0.5
 
     scene bg_office_1
     qian "我跟着她走进玻璃的另一侧，转过弯，进入房间的里间。"
     qian_speaking "那个，请问是——唔——？！"
+    $ renpy.sound.play(audio.shocked_ending, channel = "sound")
     show blood0 at cg0 with dissolve
     qian "声音被硬生生地截断。我难以置信地盯着靠近的有力手臂。"
     scene bg_black with fade

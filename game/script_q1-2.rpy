@@ -91,6 +91,7 @@ label q1_2_2:
     window show
     unknown "嗯。"
     qian_speaking "你，你还好吗……啊我的意思是你想待在这吗，啊不是……"
+    stop sound
     qian "我说出口才想起自己并没有什么理由搭话，于是有些语无伦次。而在我出声后，周围的人瞬间安静，让我更加紧张。"
     unknown "……"
     qian_speaking "啊，抱歉……我打扰了吗……"
@@ -108,9 +109,11 @@ label q1_2_2:
     qian "哈啊，哈……差不多了吧。"
     unknown "嗯。"
     qian_speaking "你，他们，你们到底怎么回事啊……嗯，诶……"
+    $ renpy.music.play(audio.dizzy, channel = "music", loop = True, relative_volume = 0.5, fadein = 1)
     show blur with dissolve
     qian "我被她拉着跑出一段距离才停下来，困惑不已。然而不知是因为太过突然，还是别的什么，我的眼前竟然逐渐变得模糊，摇摇晃晃，身体也快要软下去。"
     qian_speaking "怎么，回事……你……"
+    stop music fadeout 0.5
 
     scene bg_black with Fade(0.1,0.1,0.1)
     qian_speaking "嗯……疼……这是哪？"
@@ -120,6 +123,7 @@ label q1_2_2:
     unknown "醒了？"
     qian_speaking "嗯？"
     show cg_ying10 at cg0 with dissolve
+    $ renpy.music.play(music.yingying, channel = "music", loop = True, fadein = 0.5)
     window hide
     pause(1.5)
     window show
@@ -280,5 +284,6 @@ label q1_2_2:
     show qianimg still at char_left 
     qian_speaking "……"
     qian "我感到有些愧疚，再怎么说，也是偷偷翻了别人的东西。但她完全没有要继续对话的意思，我也只好作罢。"
+    stop music fadeout 1.0
 
     jump q2_2
