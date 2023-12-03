@@ -1,6 +1,7 @@
 label q2_3:
     window hide
     scene bg_cut3 at cg0 with Dissolve(3)
+    stop music fadeout 1.0
     pause
     scene bg_liroom0 with fade
     window show
@@ -13,11 +14,14 @@ label q2_3:
     li_speaking "你啊，没感觉不舒服吗？头不疼不晕？"
     hide qianimg
     show qianimg black shock at char_left
+    $ renpy.music.play(music.li_mirror, channel = "music")
     qian_speaking "什么意思？怎么了……啊？？！！"
     qian "我震惊地看着镜子前倒映出来的景象——我的脸——连我自己都几乎认不出来了。\n这些瘢痕和肿胀是怎么回事啊……好恶心……"
     li_speaking "没事，你这是被污染了，前几天估计还没习惯，过段时间习惯了就好。"
+    stop music fadeout 0.5
     qian_speaking "……\n为什么你这么平常地说这个？这不是很危险吗？我会不会生病啊？我是不是要死了？我——"
     li_speaking "停停停，你差不多了啊。\n这就是很平常，只是你没经历过这里的环境而已。我看你也不痛，别去在意就行了。"
+    $ renpy.music.play(music.li_easy, channel = "music", loop = True, fadein = 0.5)
     qian_speaking "……被你说完，突然觉得有点痛了。"
     li_speaking "忍着，过几天就好了。"
     hide qianimg
@@ -70,8 +74,11 @@ label q2_3_01:
     show qianimg black still at char_left
     qian_speaking "嗯……"
     qian "她理所当然的语气让我感到酸涩，因为我无法反驳——我将会留在这个地方，再也无法回去了。\n我明明，只是想过普通平常的生活，和家人一起……仅此而已。"
+    stop music fadeout 0.5
+
     scene bg_workplace with fade
     show qianimg coat close at char_mid with dissolve
+    $ renpy.sound.play(audio.small_wind, channel = "sound", loop = True, fadein = 0.5)
     qian_speaking "咳，咳咳咳……咳啊——谢谢……"
     qian "我伏在墙边，仿佛要把肺都咳出来，仍然聊胜于无。四肢已经累得发软，这几下剧烈的咳嗽差点让我直接跪在地上，好在黎沙勉强扶住了我。"
     show liimg at char_right with dissolve
@@ -82,6 +89,7 @@ label q2_3_01:
     li_speaking "也是，感觉怎么样？是你们特别想过的那种城外生活吗？"
     
     scene bg_workplace with Fade(0.1,0.1,0.1)
+    $ renpy.music.play(audio.mechanical, channel = "music", loop = True, relative_volume = 0.3)
     qian_speaking "我……咳，咳咳……\n……"
     show blur with vpunch
     qian "难以控制，我咳出的眼泪顺着脸颊落到地上，把视野染得模糊一片，只剩虚晃的黎沙和她那毫无温度的笑脸，也在此刻随着尘土一层一层地落下来。"
@@ -123,6 +131,7 @@ label q2_3_01:
         "【留在原地】":
             jump q2_3_2
 
+
 label q2_3_2: # ending here
     qian "想到她刚才的表情，我突然有点不敢跟过去。说到底，她一直也不待见我，现在也许没有继续跟着的必要吧……"
     hide qianimg
@@ -132,9 +141,12 @@ label q2_3_2: # ending here
     hide qianimg
     show qianimg black closecalm at char_left
     qian "就休息一下吧……"
+    stop music fadeout 0.5
+    stop sound fadeout 0.5
 
     scene bg_workplace with fade
     show dark with dissolve
+    $ renpy.music.play(music.li_nightmare, channel = "music", loop = True, fadein = 1.0)
     unknown "……喂！……你……听得到吗！！……这里……！"
     qian_speaking "呃……"
     qian "发生什么了……头好晕……睁不开眼睛……"
@@ -168,10 +180,12 @@ label q2_3_02: # ending here
     hide qianimg
     show qianimg black at char_left 
     qian_speaking "嗯。"
+    stop music fadeout 1.0
 
     scene bg_liroom0 with fade
     show qianimg black at char_mid with fade
     qian "我有些百无聊赖地坐在地上，习惯性地伸向手腕的地方，但那里已经没有终端的存在。\n对哦，之前被黎沙拿走了……"
+    $ renpy.music.play(music.li_lost, channel = "music", loop = True, fadein = 0.5)
     hide qianimg
     show qianimg black closecalm at char_mid
     qian "不过，就算现在拿回来也没什么用……毕竟我已经，不在荆棘之城了。"
@@ -179,14 +193,20 @@ label q2_3_02: # ending here
     show qianimg black at char_mid
     qian "我有些茫然地看向远处，笼罩在漂浮颗粒中的一切都让我感到无比陌生。"
     qian "但从此之后，我就要在这里生活了是吗……\n回不去了……是吗？"
+    stop music fadeout 1.0
 
     scene bg_black with fade
+    $ renpy.music.play(music.orange_memory, channel = "music", fadein = 0.5)
+    pause
     unknown "时茜？怎么了？时茜？快过来……\n时茜，小心——！"
+    pause
+    stop music fadeout 0.5
     
     scene bg_liroom0 with fade
     show dark 
     qian_speaking "啊……！！"
     qian_speaking "……\n……原来是梦啊。"
+    $ renpy.music.play(music.li_lost, channel = "music", loop = True, fadein = 1.0)
     qian "气势汹涌的尘沙太过真实，我几乎以为自己下一秒就要被淹没……原来我还是没能摆脱当时的恐惧。\n那时候，近在咫尺的风暴就盘旋在头顶，离接触只有一墙之隔……"
     show liimg black still at char_right with easeinright
     li_speaking "吵什么？"
@@ -233,8 +253,6 @@ label q2_3_02: # ending here
     return 
 
 
-
-
 label q2_3_1:
     hide qianimg
     show qianimg coat shock at char_left
@@ -242,12 +260,16 @@ label q2_3_1:
     hide qianimg with easeoutright
     qian "我思考一瞬，还是拖着沉重的身体——衣服太重，我一度想要脱掉披风——只能努力跟上黎沙的脚步"
     qian "就算她很讨厌我也好，她已经帮了我这么多，我更应该主动去适应这里。毕竟……现在我也只能这样了。"
+    stop music fadeout 0.5
+    stop sound fadeout 0.5
     
     scene bg_sand2 with fade
+    $ renpy.sound.play(audio.crowd, channel = "sound", loop = True, fadein = 1.0, relative_volume = 0.5)
     qian "人声鼎沸，掀起大量尘土，即使捂着嘴也差点让我再次咳嗽起来。我艰难地在睁开的小缝隙中捕捉周围的景象，好在有斗篷遮掩，没人注意到我动作扭曲。"
     qian_speaking "喂，怎么……这么……多人……啊……"
     li_speaking "小点声……看着就好……"
     qian "那是什么意思？\n我努力仰起头，什么都看不见，但耳畔仿佛捕捉到熟悉的声音，在人群的嘈杂中格外显眼。"
+    $ renpy.music.play(audio.helicopter, channel = "music")
     qian "是荆棘之城飞行器的声音……！"
 
     scene bg_tall1 with fade
@@ -275,6 +297,9 @@ label q2_3_1:
     qian_speaking "嗯……这是……"
     li_speaking "去另一边说。"
     window hide
+    $ renpy.sound.set_volume(0.5, 1.0, channel = "sound")
+    stop music fadeout 1.0
+
     show cg_li30 at cg0 with dissolve
     pause(1.5)
     window show
@@ -290,12 +315,14 @@ label q2_3_1:
     qian_speaking "好，晕……痛……"
     show blur with vpunch
     qian "不知道是不是刚才情绪激烈，我的脑袋突然一阵眩晕。紧接着，淡淡的刺痛传来，疲惫的身体更加沉重。要站不稳了……"
+    $ renpy.sound.set_volume(0.1, 1.0, channel = "sound")
     show liimg ask at char_mid with hpunch
     li_speaking "喂……你还好吗？喂！"
     show blur with vpunch
     qian_speaking "呃……呜……"
     show bg_transparent with shake
     qian "眼前是剧烈摇晃的黎沙，身影逐渐越来越远……"
+    stop sound fadeout 0.5
 
     scene bg_liroom0 with fade
     show bg_transparent with dissolve
@@ -305,6 +332,7 @@ label q2_3_1:
     qian_speaking "什么？还好……啊，黎沙……！我之前怎么了？你又帮了我吗……谢谢你……"
     li_speaking "……"
     li_speaking "给你。"
+    $ renpy.music.play(music.li_mirror, channel = "music", loop = True)
     qian_speaking "啊？这……这是……！！"
     qian "我震惊地看着面前有些颤抖的镜子，好一会才重新聚焦。上面映着我的脸，没错……但为什么是这样……"
     window hide
@@ -319,9 +347,12 @@ label q2_3_1:
     li_speaking "抱歉。"
     qian_speaking "不你怎么需要道歉！\n……是我……想得太简单了，也没有注意这些。"
     li_speaking "……"
+    stop music fadeout 0.5
+
     qian "气氛一时有些凝滞和尴尬，我得想个话题出来打破这个状态……对了……"
     scene bg_liroom0 with fade
     show qianimg black still mask at char_left with easeinleft
+    $ renpy.music.play(music.li_li, channel = "music", loop = True, fadein = 0.5)
     qian_speaking "那个……我晕倒之前我们说的，你还记得吗？"
     show liimg black at char_right with easeinright
     li_speaking "你的大声质疑？"
@@ -376,6 +407,8 @@ label q2_3_1_1: # ending here
     qian "只是，那时候我并不知道自己的人生会发生如此改变……"
     qian "从未想过自己会沦落如此境地，这双眼睛是否也是一种报应呢。"
     qian "未来，我将会在这里活下去吗……"
+    stop music fadeout 2.0
+    pause
 
     # 【Ending：沉默】
     window hide
@@ -389,6 +422,7 @@ label q2_3_1_2:
     scene bg_liroom0 with Fade(0.2,0.2,0.2,color="#fff")
     show qianimg black shout mask at char_left with dissolve
     qian_speaking "……那，\n去阻拦吧。"
+    $ renpy.music.set_pause(True, channel = "music")
     show liimg black ask at char_right with dissolve
     li_speaking "什么？"
     hide qianimg
@@ -396,6 +430,7 @@ label q2_3_1_2:
     qian_speaking "我是说……就是，那些事情，去阻拦它们啊。"
     hide liimg
     show liimg black laugh at char_right 
+    $ renpy.music.set_pause(False, channel = "music")
     li_speaking "……噗，哈哈。"
     li_speaking "要不是知道你就这么天真，我真的会以为你是故意气我的。"
     hide qianimg
@@ -476,12 +511,14 @@ label q2_3_1_2:
     scene bg_liroom0 with fade
     qian "黎沙有其他事出去后，我躺在床上，总觉得有些憋闷。"
     qian_speaking "……真的可行吗……我……"
+    stop music fadeout 1.0
 
     show cg_qian20 at cg0 with Fade(0.2,0.2,0,color="#fff")
     pause(0.2)
     qian "焦虑和迷茫让我无法继续待在房间，只好带上披风走到室外。"
 
     scene bg_sand1 with fade
+    $ renpy.music.play(music.throns, channel = "music", loop = True, fadein = 0.5)
     qian "难闻的尘土气息扑面而来，我紧了紧领口，第一次以平静的心情看着这个地方。"
     qian_speaking "……嗯？"
     qian "脚下突然有阻力传来，我低头一看，是一团深黑色的纠缠脉络。"
@@ -496,8 +533,7 @@ label q2_3_1_2:
     qian "一直以来，我认为那是城市的独有品种，象征着荆棘之城的坚韧、不屈，被印刻在城市印章上，同样是我的信念。"
     qian "但……现在看来，那也是虚假的。和城市无关，它在哪里都一样自由生长。"
     qian "……"
-
-
+    stop music fadeout 1.0
 
     scene bg_tall1 with fade
     "滴——"
@@ -513,6 +549,7 @@ label q2_3_1_2:
     scene bg_tall0 with Fade(0.2,0.2,0.2)
     qian "在遍布疮痍的黄沙之上，这座高高拔起的城市格外显眼。"
     show liimg coat o at char_right with easeinright
+    $ renpy.music.play(music.li_li, channel = "music", loop = True, fadein = 0.5)
     li_speaking "还真是壮观啊。"
     show qianimg coat mask at char_left with easeinleft
     qian_speaking "嗯……"
@@ -554,8 +591,11 @@ label q2_3_1_2:
     "如果要去的地方并不是想象的那样，而只是另一个火坑呢？"
     qian "黎沙的话语蓦地在我脑海里跳出，我捏紧手掌心——此时此刻，才发现它已经浸满汗水——无法辨认出周围的表情是真心实意，还是无法选择。"
     qian "但是就算能辨认出又怎么样。"
+    stop music fadeout 0.5
+    pause
 
     scene chaos0 with dissolve
+    $ renpy.music.play(music.li_inside, channel = "music", loop = True, fadein = 1.0)
     unknown "新一批的来了。"
     unknown "是吗？好……\n那边的，过来排队。"
     qian "不知什么时候，上升停止了，刺眼的光亮从打开的门缝里传来。"
@@ -579,6 +619,7 @@ label q2_3_1_2:
     qian_speaking "……知道了。"
 
     scene bg_ele with Fade(0.2,0.2,0.2)
+    $ renpy.sound.play(audio.elevator, channel = "sound")
     horr "咚……咚……"
     qian "脚下的地板在微微震颤，是不断上行的中枢直行电梯。"
     horr "咚……咚……"
@@ -606,13 +647,17 @@ label q2_3_1_2:
     qian_speaking "……"
     "哧——"
     qian "飞行器平稳地降落。\n我们都沉默下来，无言等待即将到来的，不知道是什么的东西。"
+    stop music 
+
     hide liimg with easeoutright
     hide qianimg with easeoutright
     window hide
-    scene bg_cut30 at cg0 with Dissolve(3)
-    pause
+    # TODO: modify this cut scene
+    # scene bg_cut30 at cg0 with Dissolve(3)
+    # pause
     scene bg_labfloor with Fade(0.5,0.5,0.5,color="#fff")
     window show
+    $ renpy.music.play(music.li_first_exp, channel = "music", loop = True)
     qian "一层，两层，三层……我跟着长长的队伍走上楼梯。而后，洁白冰冷的走廊在眼前展开。\n不是室外……从风格来看，更像是某个大型研究基地。"
     qian "研究基地……我突然想到所有事情的开端，惊得差点忘记了呼吸。"
     qian "……她们不就是在研究所工作的吗？A层不小，但这种面积的大型研究所，我想不会有太多。况且……我的直觉告诉我，绝对是同一个地方。"
@@ -622,6 +667,8 @@ label q2_3_1_2:
     hide blur with dissolve
     qian_speaking "嗯？啊……我没事。"
     qian "被黎沙提醒，我才发现自己全身都在颤抖。没关系……还好人很多，即使我的反应如此明显也没有被注意到。"
+    stop music
+
     show liimg black laugh at char_right with dissolve
     li_speaking "真是好奇，你们到底烧了城外多少资源？这么豪华……肯定不止这一个地方吧。"
     show qianimg black still mask at char_left with dissolve
@@ -653,6 +700,7 @@ label q2_3_1_2:
 
     scene bg_bigroom with fade
     show liimg white at char_right with dissolve
+    $ renpy.music.play(music.li_li, channel = "music", loop = True, fadein = 0.5)
     li_speaking "你吃了吗？"
     show qianimg white closecalm mask at char_left with dissolve
     qian_speaking "还能怎么办？不都有人盯着吗。"
@@ -700,9 +748,11 @@ label q2_3_1_2:
     hide liimg
     show liimg white o at char_right
     li_speaking "多提防不是什么坏事，虽然暂时没办法，总之留个心眼吧。"
+    stop music fadeout 0.5
 
     scene bg_bigroom with Fade(0.2,0.2,0.2)
     qian "我的预感很快得到了证实。"
+    $ renpy.music.play(music.li_first_exp, channel = "music", loop = True)
     qian "分发的日程表上多了几行字。\n进行性交，直到受孕为止。\n抽血，加药，检测。"
     show qianimg white shock mask at char_mid with dissolve
     qian_speaking "……"
@@ -733,6 +783,8 @@ label q2_3_1_2:
     show qianimg white still mask at char_left
     qian_speaking "嗯……谁知道她们之后还会让人做什么。"
     li_speaking "也对……就这样吧。"
+    stop music fadeout 1.0
+
     scene bg_bigroom with Fade(0.2,0.2,0.2)
     show dark with dissolve
     qian "所有灯光都暗下来后，整个房间像一个大型的停尸房。今天把晚饭塞到其他人那里之后，果然晚上不会那么困了。"
@@ -741,6 +793,7 @@ label q2_3_1_2:
     show cg_li50 at cg0 with dissolve
     pause(1.5)
     window show
+    $ renpy.music.play(music.li_last_night, channel = "music", loop = True, fadein = 1.0)
     li_speaking "我感觉像在做梦。"
     qian_speaking "……为什么？"
     li_speaking "没想到我真的到城里来了。也没想过，你们的生活原来真的这么平静……哪怕是在这种地方……"
@@ -778,8 +831,10 @@ label q2_3_1_1_1: # ending here
     qian "……啊……"
     scene bg_black with Fade(0.2,0.2,0.2)
     qian "我还是，逃避了……"
+    stop music fadeout 1.0
 
     scene bg_lab1 with Fade(0.5,0.5,0.5,color="#fff")
+    $ renpy.sound.play(audio.buzz, channel = "sound", loop = True)
     unknown_inn "头好痛……"
     unknown_inn "这是哪……我是谁……？"
     show white_fem at char_mid with easeinbottom

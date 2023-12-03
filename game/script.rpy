@@ -4,6 +4,128 @@
 default persistent.text = 0
 default persistent.ending = [0]*20
 
+# define fade behaviors
+define fadehold = Fade(0.5, 1.0, 0.5)
+define flash = Fade(0.1, 0.0, 0.5, color="#fff")
+
+# define sound effects
+define audio.vibrations_1 = "audio/sound_effect/vibrations_1.wav"
+define audio.vibrations_2 = "audio/sound_effect/vibrations_2.wav"
+define audio.click = "audio/sound_effect/click.mp3"
+define audio.ring = "<from 0 to 3.5>audio/sound_effect/phone_ring.mp3"
+define audio.talking_people = "audio/sound_effect/talking_people.mp3"
+define audio.owl = "audio/sound_effect/owl.mp3"
+define audio.night_walk = "audio/sound_effect/night_walk.mp3"
+define audio.dizzy = "<from 0 to 20>audio/sound_effect/dizzy.mp3"
+define audio.heartbeat = "audio/sound_effect/heartbeat.mp3"
+define audio.glass = "audio/sound_effect/glass.mp3"
+define audio.current = "<from 0 to 36>audio/sound_effect/current.mp3"
+define audio.elevator = "audio/sound_effect/elevator.mp3"
+define audio.gun_shot = "<from 0 to 1>audio/sound_effect/gun_shot.mp3"
+define audio.buzz = "audio/sound_effect/buzz.mp3"
+define audio.loud_sound = "audio/sound_effect/loud_sound.mp3"
+define audio.glass_crack = "audio/sound_effect/glass_cracking.mp3"
+
+# define backgroun music
+define music.orange_memory = "audio/bgm/organe_memory.mp3"
+define music.dream = "audio/bgm/qimei.mp3"
+define music.cafe = "audio/bgm/cafe.mp3"
+define music.darkcity = "<from 0 to 100>audio/bgm/darkcity.mp3"
+define music.horror = "audio/bgm/horror.mp3"
+define music.interrogate = "<from 0.1 to 21>audio/bgm/interrogate.mp3"
+define music.area_d = "audio/bgm/area_d.mp3"
+define audio.li_water = 'audio/sound_effect/li_water.mp3'
+define audio.steps = 'audio/sound_effect/steps.mp3'
+define music.li_help = 'audio/bgm/li_help.mp3'
+define audio.toiminatonoyakei = 'audio/throns.mp3/toiminatonoyakei.mp3'
+define music.li_last_night = 'audio/bgm/li_last_night.mp3'
+define music.li_kiss = 'audio/bgm/li_kiss.mp3'
+define music.li_first_exp = 'audio/bgm/li_first_exp.mp3'
+define music.li_inside = 'audio/bgm/li_inside.mp3'
+define music.throns = 'audio/bgm/throns.mp3'
+define audio.li_strong_wind = 'audio/sound_effect/li_strong_wind.mp3'
+define audio.helicopter = 'audio/sound_effect/helicopter.mp3'
+define audio.crowd = 'audio/sound_effect/crowd.mp3'
+define music.li_nightmare = 'audio/bgm/li_nightmare.mp3'
+define music.li_lost = 'audio/bgm/li_lost.mp3'
+define music.li_easy = 'audio/bgm/li_easy.mp3'
+define music.li_mirror = 'audio/bgm/li_mirror.mp3'
+define audio.small_wind = 'audio/sound_effect/small_wind.mp3'
+define music.outside = 'audio/bgm/outside.mp3'
+define music.li_li = 'audio/bgm/li_li.mp3'
+define music.li_sweet = 'audio/bgm/li_sweet.mp3'
+define audio.sandstorm = 'audio/sound_effect/sandstorm.mp3'
+define music.li_clues = 'audio/bgm/li_clues.mp3'
+define music.li_spy = 'audio/bgm/li_spy.mp3'
+define music.sad_ending = 'audio/bgm/sad_ending.mp3'
+define music.ying_end = 'audio/bgm/ying_end.mp3'
+define music.ying_dark = 'audio/bgm/ying_dark.mp3'
+define audio.ying_alarm = 'audio/sound_effect/alarm.wav'
+define music.sus_ying = 'audio/bgm/sus_ying.mp3'
+define music.save_ying = 'audio/bgm/save_ying.mp3'
+define audio.shocked_ending = 'audio/sound_effect/shocked_ending.mp3'
+define audio.click_countdown = 'audio/sound_effect/click_countdown.mp3'
+define audio.windy_ying = 'audio/sound_effect/windy_ying.mp3'
+define audio.fast_heartbeat = 'audio/sound_effect/fast_heartbeat.mp3'
+define audio.headache = 'audio/sound_effect/headache.mp3'
+define music.lanshi = 'audio/bgm/lanshi.mp3'
+define music.yingying = 'audio/bgm/yingying.mp3'
+define audio.buzz = 'audio/sound_effect/buzz.mp3'
+define audio.horn = 'audio/sound_effect/horn.mp3'
+define music.horror_bgm = 'audio/bgm/horror_bgm.mp3'
+define music.stardust = 'audio/bgm/stardust.mp3'
+define music.delimma = 'audio/bgm/delimma.mp3'
+define music.kiss_kiss = 'audio/bgm/kiss_kiss.mp3'
+define music.dramatic = 'audio/bgm/dramatic.mp3'
+define music.pity = 'audio/bgm/pity.mp3'
+define audio.brain_damage = 'audio/sound_effect/brain_damage.mp3'
+define audio.glass_drop = 'audio/sound_effect/glass_drop.mp3'
+define music.nervous = 'audio/bgm/nervous.mp3'
+define music.trust_me = 'audio/bgm/trust_me.mp3'
+define music.dream = 'audio/bgm/dream.mp3'
+define audio.earthquake_2 = 'audio/sound_effect/earthquake_2.mp3'
+define audio.earthquake = 'audio/sound_effect/earthquake.mp3'
+define audio.crash = 'audio/sound_effect/crash.mp3'
+define music.outside = 'audio/bgm/outside.mp3'
+define music.be = 'audio/bgm/be.mp3'
+define music.before_be = 'audio/bgm/before_be.mp3'
+define audio.peng = 'audio/sound_effect/peng.mp3'
+define music.hero = 'audio/bgm/hero.mp3'
+define music.chi = 'audio/bgm/chi.mp3'
+define audio.shutter = 'audio/sound_effect/shutter.mp3'
+define music.danger_is_coming = 'audio/bgm/danger_is_coming.mp3'
+define audio.doorbell = 'audio/sound_effect/doorbell.mp3'
+define audio.bird_sing = 'audio/sound_effect/bird_sing.mp3'
+define audio.elevator_ding = 'audio/sound_effect/elevator_ding.mp3'
+define audio.market = 'audio/sound_effect/market.mp3'
+define music.dust = "audio/bgm/dust.mp3"
+define audio.door_open = 'audio/sound_effect/door_open.mp3'
+define audio.mechanical = 'audio/sound_effect/mechanical.mp3'
+define music.no_choice_sad = 'audio/bgm/no_choice_sad.mp3'
+define music.fallen_leaves = 'audio/bgm/fallen_leaves.mp3'
+define audio.what_if = 'audio/what_if/hisame.mp3'
+define music.guanzhiju = "audio/bgm/guanzhiju.mp3"
+define audio.squeezing_lemon = 'audio/sound_effect/squeezing_lemon.mp3'
+define audio.hurricane = 'audio/sound_effect/hurricane.mp3'
+define music.starlight = 'audio/bgm/starlight.mp3'
+define audio.calm = 'audio/sound_effect/calm.mp3'
+define music.simple_piano = "audio/bgm/simple_piano.mp3"
+define audio.breath = 'audio/sound_effect/breath.mp3'
+define music.theme = 'music/bgm/theme.mp3'
+
+init python:
+    judge = True
+    for i in range(14, 20):
+        if persistent.ending[i] == 1:
+            judge = False
+            break
+    if persistent.ending[19] == 1:
+        config.main_menu_music = music.sad_ending
+    elif persistent.ending[13] == 1 and judge:
+        config.main_menu_music = music.ying_end
+    else:
+        config.main_menu_music = music.theme
+
 label start:
     # 显示一个背景。此处默认显示占位图，但您也可以在图片目录添加一个文件
     # （命名为 bg room.png 或 bg room.jpg）来显示。
@@ -18,16 +140,25 @@ label start:
     pause
     hide na2 with dissolve
     pause
+    stop music fadeout 1.0
 
     scene bg_black at cg0 with fade
+    $ renpy.sound.play(audio.vibrations_1, channel = "sound", loop = True, relative_volume = 1.5)
+    pause 2.0
     window show
     $ quick_menu = True
     unknown "……醒醒……起来……注意——"
+    stop sound fadeout 1.0
+
+    scene bg_black at cg0 with fade
+    $ renpy.sound.play(audio.vibrations_2, channel = "sound", loop = True, relative_volume = 1.5)
+    pause 2.0
     
-    
-    show qianimg closecalm at char_mid with easeinbottom
+    # TODO: bottomside doesnt work
+    show qianimg closecalm at ease(center, offscreenbottom, 2)
     qian "有什么东西，好吵……\n无边的黑暗似乎在震动，扰得人不清净。是因为最近总觉得有人在盯着我吗？连梦里也不安生……"
-    
+    stop sound fadeout 1.0
+
     hide qianimg closecalm
     show qianimg shock at char_mid
     qian "——啊！"
@@ -35,11 +166,13 @@ label start:
     hide qianimg shock
     show qianimg pajama_red shock at large with dissolve
     qian "我倏地睁开眼睛，视线还很朦胧，于是一道鲜红色的光线格外显眼，带领我走到它的终点，指着我的心脏。"
+    $ renpy.music.play(music.horror, channel = "music", loop = True, relative_volume = 0.6)
     
     show qianimg pajama_red shock at char_mid 
     qian "……\n那不是梦……。"
 
     scene bg_prolo_01 with fade
+    $ renpy.sound.play(audio.heartbeat, channel = "sound", loop = True)
     hide qianimg pajama_red shock
     show qianimg sad at char_mid
     qian "我混沌的脑海顿时清醒，眼睛也适应了微弱的光线。\n几个装束严实的人站在床边，我的四周，把我紧紧围住。"
@@ -53,6 +186,8 @@ label start:
     qian "我想让自己的语气显得冷静，但嘴唇却不受控地颤抖。\n不行，冷静……她们是根据规定，不会乱来的。"
     show bfem_0r at char_right with easeinright
     bfem_speaking "时茜小姐，你被逮捕了。"
+    stop sound
+    stop music
     qian "我刚刚才建立起的心理防线马上破碎。"
     qian_speaking "……什么？你们弄错了吧！\n别开玩笑了！"
     hide qianimg 
@@ -74,6 +209,7 @@ label start:
 
     scene bg_office_0 with fade
     show qianimg sad at char_left with dissolve
+    $ renpy.sound.play(audio.current, channel = "sound", loop = True, relative_volume = 0.4, fadeout = 1.0)
     qian "这里是管制局。\n巨大的顶灯不知疲倦地射出明亮的白色光线，刺眼到让人眼睛生疼。我穿着睡衣站在角落的一间房间中央，有一种无所适从的局促。"
     qian "……为什么……我无声地吸了一口气，压抑着翻涌的情绪，看向离我最近的人。"
     hide qianimg sad
@@ -82,10 +218,13 @@ label start:
     qian_speaking "到底发生了什么？没有说明吗？"
     qian "等待的十几个小时过去，我无比疲惫，声音发紧，从嗓子里挤出来，听着有些尖锐。她却毫无所觉，只是瞥过来一眼，而后像习以为常地转过头，无视。"
     qian "我呆呆地站在原地，像个傻子。\n……感觉，糟透了。"
+    stop sound
 
+    scene black with fadehold
     scene bg_office_1 with fade
     show qianimg sad at char_left
     show bfem_0r at char_right with dissolve
+    $ renpy.music.play(music.interrogate, channel = "music", loop = True, fadein = 2.0, fadeout = 1.0)
     bfem_speaking "我问你答，懂吗？"
     qian_speaking "……为什么？你们还没回答我的问题。"
     bfem_speaking "我问，你答。"
@@ -141,15 +280,23 @@ label start:
     scene bg_office_4 with Fade(0.1,0.3,0.1)
     qian "四周皆是单色墙壁，泛着淡淡的金属冷光。被一身黑的人包围的我，显得格外刺眼。\n空间里弥漫着窒息的沉默，我尽力习惯，可不安和恐慌仍然无法消除。"
     qian "究竟发生了什么……我应该怎么办？\n信息太少，我甚至不知道所谓的禁令到底是什么，但……就算知道了也无能为力。"
+    stop music fadeout 1.0
+    
+    scene black with fadehold
+    $ renpy.sound.play(audio.elevator, channel = "sound")
     scene bg_office_4 with Fade(0.1,0.3,0.1)
     with vpunch
     "————"
+    pause
     qian "突然的失重感席卷全身，地面晃动，它正在下降。\n这不是普通的房间，而是——"
     
     show qianimg sad at char_mid with dissolve
     qian "速度，时间，我回忆起相似的数据。\n城市里的“竖直电梯”连接不同的区域，而现在，自然是从A区下行。\n……我到底要被带去哪里？"
     qian "……\n……"
+    stop sound
+
     scene bg_road02 with Fade(0.5,0.5,0.5)
+    $ renpy.music.play(music.area_d, channel = "music", loop = True, fadein = 1.0, fadeout = 1.0)
     qian "……\n……"
     qian "头顶的光线微弱，只有时时闪烁的凌乱灯牌。"
     scene bg_road01 with Fade(0.1,0.2,0.1)
@@ -193,13 +340,17 @@ label start:
     qian "……\n刚才的动静不小，但不知道是不是管制局太显眼，并没有人靠近。现在也是，我能感受到有些陌生的目光扫过，又很快离开。"
     qian "……\n……"
     qian "肌肉还在隐隐作痛，脚下的地板变得又硬又硌，刺得我皮肤生疼。\n我轻轻吸了一口气，毫无防备被扔到完全陌生的环境，茫然和恐慌逐渐爬上我的身体，完全覆盖住我的神经。"
+    $ renpy.music.set_pause(True, channel = "music")
+    $ renpy.sound.queue([audio.ring,], channel = "sound")
     qian "滴，没设置过的终端机发出默认的响声。颤抖的手指点开终端机——原本空荡荡，只有我的个人信息——此刻收件箱却多了一个数字。我打开后，震惊地发现这是钟女士发来的消息。"
     
     scene bg_black with Fade(0.1,0.1,0.1)
     na1 "来信人：T20234"
     na1 "宝宝：\n很抱歉因为工作连累了你。我们还需要一段时间，等到所有事情都结束就会没事的。\n只是委屈你了，管制局可能会很忙，但必要的东西会安排好。你多注意一下，不会有问题。"
     na1 "我们相信你在D层也能努力过好，等我们回去。\n钟 & 黄】"
+    stop sound
 
+    $ renpy.music.set_pause(False, channel = "music")
     scene bg_black with Fade(0.1,0.1,0.1)
     show qianimg sad at char_mid with dissolve
     qian "……\n……"
@@ -216,9 +367,13 @@ label start:
 
     menu:
         "【管制局】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
+            stop music fadeout 0.5
             jump q1_1
         "【黑街】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q1_2
         "【230居民区】" if persistent.ending[6] == 1 and persistent.ending[13] == 1:
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q1_3
     

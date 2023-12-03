@@ -1,5 +1,6 @@
 label q2_1:
     scene bg_cafe0 with Fade(1,1,1)
+    $ renpy.music.play(music.cafe, channel = "music", loop = True, relative_volume = 0.5)
     show chiimg closesmile at char_right with easeinright
     chi_speaking "你好~又见面啦，我说的没错吧！"
     show qianimg shirt o at char_left with easeinleft
@@ -96,9 +97,11 @@ label q2_1_1:
     show qianimg shirt still at char_mid
     qian "不，现在就直接说可能还是太激进了……A层的人不管是谁，在身份上都会对现在的我带来危险。"
     qian "还是先和她保持联系，多接触一段时间，从别的地方观察一下吧……"
+    stop music fadeout 1.0
     
     scene bg_factory1 with fade
     show qianimg shirt still at char_right with easeinright
+    $ renpy.sound.play(audio.mechanical, channel = "sound", loop = True, relative_volume = 0.3)
     qian_speaking "迟玉……"
     show grey_fem at char_left with easeinleft
     unknown "你啊，在说迟玉嘛？"
@@ -134,8 +137,10 @@ label q2_1_1:
     qian "二十多年前，那肯定不是现在的迟玉……她看起来最多也就十八岁吧，和我一样大……可是同样的名字，同样和蓝石有关，怎么看都觉得很奇怪……"
     qian "奇怪了，这似乎和我也没什么关系，为什么想到那张笑脸和那双水蓝色的眼睛，心里还是生出难以言喻的难过。"
     qian "这样的事情，还是不跟她讨论了……\n我本能地，想要隐瞒这件事。"
+    stop sound fadeout 1.0
 
     scene bg_cafe0 with fade
+    $ renpy.music.play(music.cafe, channel = "music", loop = True, relative_volume = 0.5)
     qian "阳光明媚，今天荆棘之城的天气设定是晴天。满是落地窗的一层小楼被打理得精致有序，人造光线透过雕花玻璃映出好看的形状，在迟玉的额角留下一抹光晕。"
     qian "我怀念这样久违的，温暖平和的环境，一瞬间竟然看得有些痴迷了。"
 
@@ -279,13 +284,16 @@ label q2_1_1:
     show chiimg warm at char_right 
     chi_speaking "第一次尝试啦，因为我很喜欢这朵花嘛。"
     qian_speaking "是哦，听说以前在大家快饿死的时候就是吃荆棘花活下来的，因为有荆棘花和那时候坚持的人才有现在的城市，真的很……"
+    stop music
     
+    $ renpy.sound.play(audio.doorbell, channel = "sound")
     "叮，叮——"
     hide chiimg 
     show chiimg o at char_right
     chi_speaking "咦，怎么会有人来？啊……"
     hide qianimg
     show qianimg shirt still at char_left
+    $ renpy.music.play(music.danger_is_coming, channel = "music", loop = True, fadein = 1.0)
     qian "我的话被突兀的门铃声打断，而迟玉的惊呼让我也不由得开始紧张。余光里的影子在靠近，逐渐和迟玉的影子融为一体。我把脊背用力绷直，假装在认真工作对谈。"
     
     scene bg_cafe0 with Fade(0.1,0.1,0.1)
@@ -331,6 +339,7 @@ label q2_1_1:
     show chiimg sad at char_right
     chi_speaking "不……那，拜拜。"
     qian_speaking "……\n感谢您配合我们的工作，如果有问题随时联系公司。…"
+    stop music fadeout 0.5
 
     scene bg_city0 with Fade(0.2,0.2,0.2)
     qian "蓝石是生气了吗？会影响到迟玉吗？我还能……见到她吗？\n我的内心突然十分紧张，为什么……一定是因为害怕影响到我之后的工作和计划……"
@@ -339,25 +348,36 @@ label q2_1_1:
     qian "想到这里，我的脚步顿了顿，才发现自己走得很慢，现在刚离开院子的门口而已。既然这样，那就刚好再看一眼……\n……嗯……？这是……"
     
     scene bg_city0 with Fade(1,1,1)
+    $ renpy.music.play(audio.breath, channel = "sound", loop = True)
     with vpunch
 
     qian "呼……哈啊……因为剧烈跑步，我停下来之后还止不住喘息。血液在血管里高速流动，让我的思绪更加活跃。先前看到的画面在大脑里不断闪回，我无法理解，又忍不住来回回想。"
     show qianimg shirt shock at char_mid with easeinbottom
     qian "那是什么情况？蓝石的动作超出我的预料，我不明白，亲人之间，或者家人之间，应该是那样的吗？……我不懂，甚至，我现在连我自己都不太懂了……为什么我要那么着急跑开？为什么我会难受？"
+    $ renpy.music.set_volume(0.2, 1.0, "music")
     
+    $ renpy.sound.play(audio.shutter, channel = "sound", relative_volume = 1.25)
     show cg_chi60 at cg0 with Fade(0.2,0.9,0.2)
+    $ renpy.sound.play(audio.shutter, channel = "sound", relative_volume = 1.25)
     show cg_chi61 at cg0 with Fade(0.2,0.9,0.2)
+    $ renpy.sound.play(audio.shutter, channel = "sound", relative_volume = 1.25)
     show cg_chi62 at cg0 with Fade(0.2,0.9,0.2)
+    $ renpy.sound.play(audio.shutter, channel = "sound", relative_volume = 1.25)
     show cg_chi63 at cg0 with Fade(0.2,0.9,0.2)
+    $ renpy.sound.play(audio.shutter, channel = "sound", relative_volume = 1.25)
     show cg_chi64 at cg0 with Fade(0.2,0.9,0.2)
+    $ renpy.sound.play(audio.shutter, channel = "sound", relative_volume = 1.25)
     show cg_chi65 at cg0 with Fade(0.2,0.9,0.2)
     pause(1)
-
+    
+    $ renpy.sound.play(audio.squeezing_lemon, channel = "sound")
     scene bg_city0 with Fade(0.3,0.5,0.3)
     with vpunch
     qian "胃部感到难受，像是什么东西搅在一起，有些酸，有些痛……\n到最后，所有的思绪融化成下意识的自言自语。"
     qian "……\n迟玉……"
+    stop sound
 
+    $ renpy.sound.play(audio.mechanical, channel = "sound", loop = True, relative_volume = 0.3, fadein = 0.5)
     scene bg_factory1 with fade
     show stf at char_left with easeinleft
     unknown "时茜小姐，有人找你。"
@@ -382,6 +402,7 @@ label q2_1_1:
     hide qianimg
     show qianimg shirt still at char_right
     qian_speaking "好的……"
+    stop sound fadeout 0.5
 
     scene bg_lanroom with Fade(0.3,0.3,0.3,color="#fff")
     qian "这是个宽敞整洁的封闭房间，家具是统一的银白色，摆放得整整齐齐。我有些局促地站在门口，和周围格格不入。\n私人载具竟然能有这么大位置，不愧是蓝石科技……"
@@ -404,6 +425,7 @@ label q2_1_1:
     window hide
     pause(1.5)
     window show
+    $ renpy.music.play(music.trust_me, channel = "music", loop = True, fadein = 0.5, relative_volume = 0.5)
     chi_speaking "小声点……你果然在里面啊。"
     qian_speaking "你怎么来了？！怎，怎么了吗？"
     chi_speaking "我——我想见你。"
@@ -464,10 +486,12 @@ label q2_1_1_1:
 
     hide chiimg
     show chiimg sadask at char_right
+    stop music
     chi_speaking "啊……\n那个，那个啊……\n……现在，从这里逃跑吧？"
     
     hide qianimg
     show qianimg shirt sad at char_left
+    $ renpy.music.play(music.nervous, channel = "music", loop = True, relative_volume = 1.5)
     qian_speaking "……什么？"
     chi_speaking "你说了你会信我的！"
     qian_speaking "我，我是相信你但是……为什么啊？"
@@ -569,7 +593,9 @@ label q2_1_1_1:
     chi_speaking "果然我不像吗……？因为我不好看吗？我要怎么才……不，不对……\n对不起，我有些乱了，你不要管我……我先，关掉通知系统，至少能多点时间……"
     qian_speaking "我，好，你……你别着急…… "
     qian "迟玉显然有些受到刺激，我只好先让她自己缓一缓，而我拉过台灯照明，继续刚才没读完的文档。\n人类定制……不知为何，这个组合起来的名词让我感到难受。"
+    stop music fadeout 0.5
     
+    $ renpy.music.play(music.chi, channel = "music", loop = True)
     nvl_mode "人类定制。目标：迟玉"
     nvl_mode "现存实验：外表略有差距，已有进步，性格差距过大。可用，仍是失败品"
     nvl_mode "外表：将已有基因插入受精卵，控制遗传\n将于……提供怀孕条件"
@@ -578,8 +604,6 @@ label q2_1_1_1:
     nvl_mode "……"
     nvl_mode "重大失误，黄……需提取她们曾经……以及实验记录，继续研究……"
     
-
-
     qian "快速扫过文档，杂乱的手稿和大量的信息让我有些怔愣。\n所以，从照片来看……蓝石是老板，迟玉是实验品……？然后，我家里人参加了这个项目，之后就没有消息……"
     hide qianimg
     show qianimg shirt still at char_left
@@ -589,9 +613,11 @@ label q2_1_1_1:
     show qianimg shirt shock at char_left
     qian_speaking "什么都不知道怎么猜……\n！！！"
     show lan0 at large2 with easeinbottom
+    stop music
     qian "我猛地转过头，只见不知道什么时候，蓝石正站在房间的门口，微笑看着我和角落里的迟玉。"
     
     scene bg_darkroom with Fade(0.1,0,0.1)
+    $ renpy.music.play(music.danger_is_coming, channel = "music", loop = True)
     show qianimg shirt shock at char_left with dissolve
     qian "什么时候来的……我毛骨悚然，放在台灯把上的一只手开始颤抖，灯光也跟着摇曳。\n没人说话，房间里安静得像一具棺材，我吞口水的声音也变得突出。"
     show lan1 at char_mid with easeinright
@@ -660,7 +686,10 @@ label q2_1_1_1_1:
             lan_speaking "别挣扎了，乖乖等着。"
             qian_speaking "……迟玉……求求你，别抓着我了……你不是说要一起逃跑的吗……"
             hide lan1 with moveoutright
+            stop music
             qian "蓝石似乎出去接人了，只留下我和死死抓住我的迟玉。以前看不出来，她的力气竟然这么大，我除了能转头，其他完全动不了。"
+            scene bg_black with Fade(0.5,1.0,0.5)
+            $ renpy.music.play(music.pity, channel = "music", loop = True, relative_volume = 1.5)
             chi_speaking "对不起，对不起……我是失败品，我必须要听蓝石的话……不能反抗，会被惩罚的……对不起，对不起……"
             qian_speaking "迟玉……"
             scene bg_black with Fade(0.1,0,0.1)
@@ -676,6 +705,7 @@ label q2_1_1_1_1:
             window hide
             show screen ending_title(number=4) with Fade(0.5,0.5,0.5)
             pause
+            stop music
             $ persistent.ending[4] = 1
 
             return 
@@ -695,6 +725,7 @@ label q2_1_1_1_1:
             lan_speaking "是吗？的确很可惜。"
             qian_speaking "可惜什么啊……"
             lan_speaking "她们已经死了，虽然不是我杀的。"
+            stop music
             hide qianimg
             show qianimg shirt shock at char_left
             qian_speaking "……\n你说什么？"
@@ -708,6 +739,7 @@ label q2_1_1_1_1:
             qian_speaking "可惜什么……"
             qian "有些嘈杂的声音从门外传来，一晃眼的时间里，几个高大的女人围住了我们。"
             scene bg_black with Fade(0.1,0,0.1)
+            $ renpy.music.play(music.pity, channel = "music", loop = True, relative_volume = 1.5)
             with vpunch
             qian "这样啊……原来是在可惜我来不及了。"
             qian "……"
@@ -728,14 +760,18 @@ label q2_1_1_1_1:
 
 label q2_1_1_1_2: # ending here
     scene bg_darkroom with Fade(0.1,0,0.1)
+    $ renpy.music.play(music.hero, channel = "music", loop = True, fadein = 0.25)
     qian "她在等我回答，现在直接冲出去或许能达到出其不意的效果……至少先离开这个地方——"
     qian "我咬咬牙……走——！"
     lan_speaking "——嗯？"
+    stop music
     show bg_black with shake
     qian_speaking "哈……呃——！！！"
     show bg_black with shake
+    $ renpy.sound.play(audio.peng, channel = "sound", relative_volume = 1.5)
     "砰！"
     scene bg_darkroom with Fade(0.1,0,0.1)
+    $ renpy.music.play(music.be, channel = "music", loop = True)
     qian "发生了什么……好痛……\n我的大脑无法处理过量讯息，只剩下铺天盖地的疼痛。"
     show lan1 at large2 with easeinbottom
     lan_speaking "没死吧？年轻人身体有点差啊。"
@@ -752,11 +788,11 @@ label q2_1_1_1_2: # ending here
     scene bg_black with Fade(0.1,0,0.1)
     qian "……\n又一次全身的疼痛让我眼前一黑，然后，我什么都感觉不到了。"
 
-
     # 【Ending：麻痹】
     window hide
     show screen ending_title(number=3) with Fade(0.5,0.5,0.5)
     pause
+    stop music
     $ persistent.ending[3] = 1
     return
 
@@ -782,6 +818,9 @@ label q2_1_1_2: # ending here
     show chiimg sadask at char_right
     chi_speaking "没，没事……那个……啊。"
     show lan1 at char_mid with easeinbottom
+    stop music
+
+    $ renpy.music.play(music.danger_is_coming, channel = "music", loop = True)
     qian "开门声打断了迟玉。\n门口站着的是蓝石，她挑了挑眉，似乎心情很好地开了个玩笑。"
     lan_speaking "哎呀，我来得不是时候，打扰到你们说话了吗？"
     hide chiimg 
@@ -835,6 +874,8 @@ label q2_1_1_2: # ending here
     qian "不，不对，不只是心脏，我整个人都绷紧了，连嗓子也收紧得几乎要喘不过气……真的是因为紧张吗，这……啊啊……"
     
     show bg_lanroom with shake
+    stop music
+    $ renpy.sound.play(audio.glass_drop, channel = "sound")
     qian "视线忽然有些涣散，我抓着杯子的手一松，掉在桌上发出哐当的巨响，在封闭的房间里格外刺耳。"
     
     hide qianimg 
@@ -842,6 +883,7 @@ label q2_1_1_2: # ending here
     qian_speaking "对，对不起……"
     lan_speaking "不必在意。"
     qian "蓝石仍然是笑着，丝毫没有被我的失态所影响。不知为何，她那毫无破绽的微笑此时此刻却让我有些发凉。"
+    $ renpy.sound.play(audio.brain_damage, channel = "sound", relative_volume = 0.5, fadein = 1.0)
     qian_speaking "啊，嗯……"
     hide qianimg 
     show qianimg shirt close at char_left
@@ -871,13 +913,15 @@ label q2_1_2: # ending here
     chi_msg "其实我也不认识什么人，不过我会帮你问到的^ ^"
     qian_msg "谢谢你！"
     qian "无论如何，至少这句话我是发自真心……我还真是卑鄙。"
-
+    
+    stop music
     scene bg_room0 with fade
     qian "没有新的消息。"
     qian "自从那天过后，迟玉就没有再回复过我，我心里焦虑，却没法跟别人说，更没办法直接催她，只好每天数着数过日子。"
     qian "但我没想到，在她之前，有其他人先行找上门。"
 
     scene bg_factory with fade
+    $ renpy.sound.play(audio.mechanical, channel = "sound", loop = True, relative_volume = 0.3)
     show stf at char_right with moveinright
     stf_speaking "时茜小姐，有人找你。"
     show qianimg shirt o at char_left with moveinleft
@@ -892,10 +936,12 @@ label q2_1_2: # ending here
     hide qianimg 
     show qianimg shirt still at char_left
     qian "激动？害怕？欢喜？感激？我说不清是什么心情，只剩下混乱。"
+    stop sound fadeout 0.5
 
     scene bg_factory with fade
     show lan0 at char_right with dissolve
     show qianimg shirt smile at char_left with dissolve
+    $ renpy.music.play(music.dramatic, channel = "music", loop = True, fadein = 0.5)
     qian "头发像丝绸垂于身侧，岁月在她身上留下美妙的痕迹，举手投足皆是气韵，绘成美丽的画卷。\n我第一次亲眼看到，这是，蓝石……"
     qian_speaking "您好。"
     qian "我拘谨地捏了捏手指，难以想象自己会感到“窘迫”。但在她这样的人面前，即使我现在还在A区也许也会做出相同的反应。"
@@ -943,6 +989,7 @@ label q2_1_2: # ending here
 
     hide qianimg 
     show qianimg shirt shock at char_left
+    $ renpy.music.play(music.be, channel = "music", loop = True, fadein = 0.5)
     qian "我剩下的话没能说出口——剧烈的疼痛占据了一切注意力。"
     qian_speaking "怎，回事……啊啊……"
     scene bg_lanroom

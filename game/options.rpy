@@ -51,6 +51,7 @@ define config.has_voice = True
 # define config.sample_sound = "sample-sound.ogg"
 # define config.sample_voice = "sample-voice.ogg"
 
+define config.main_menu_music = None
 
 ## 将以下语句取消注释就可以设置标题界面播放的背景音乐文件。此文件将在整个游戏中
 ## 持续播放，直至音乐停止或其他文件开始播放。
@@ -81,7 +82,7 @@ define config.after_load_transition = dissolve
 
 ## 在游戏结束之后进入主菜单时使用的转场。
 
-define config.end_game_transition = None
+define config.main_menu_music = None
 
 
 ## 用于控制在游戏开始标签不存在时转场的变量。作为替代，在显示初始化场景后使用

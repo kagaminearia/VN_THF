@@ -9,9 +9,11 @@ label q3_3:
     hide qianimg
     show qianimg white still mask at char_left
     qian "第一步是先把值班的人引到房间里。深夜人少，我们完全能够制服。然后，等到清晨……"
+    stop music fadeout 1.0
     
     scene bg_bigroom with Fade(0.2,0.2,0.2)
     show liimg white ask at char_left with easeinright
+    $ renpy.music.play(music.li_spy, channel = "music", loop = True, fadein = 0.5)
     li_speaking "有人在吗？喂？"
     qian "黎沙轻轻拍着大门，好一会后，不耐烦的声音传进来。"
     place_holder "怎么不睡？干什么？"
@@ -58,11 +60,13 @@ label q3_3_0: # ending here
     qian "艰难地调整角度后，我留出一个空挡，黎沙就在这时一记手刀。\n啪，怀里的人软了下来。我轻轻关上门，把她放在地上。"
     li_speaking "没别的东西，就这张卡，应该是用来识别的，给你。"
     qian_speaking "行。她……把她放角落那边吧，到时候不容易被踩到。\n……唉，这真是。"
+    stop music fadeout 0.5
 
     scene bg_bigroom with fade
     show dark with dissolve
     show liimg white o at char_right with dissolve
     show qianimg white mask at char_left with dissolve
+    $ renpy.music.play(music.li_help, channel = "music", loop = True, fadein = 0.5)
     li_speaking "害怕吗？"
     qian_speaking "是啊，我以前可是很遵纪守法的。"
     hide liimg
@@ -130,6 +134,7 @@ label q3_3_0: # ending here
     scene bg_bigroom with fade
     show dark with dissolve
     unknown "……还有……房间……那……"
+    $ renpy.sound.play(audio.steps, channel = "sound", relative_volume = 1.5)
     qian "我贴在靠门的墙壁上，终于捕捉到由远及近的声音，断断续续。"
     qian_speaking "……快来了。"
     li_speaking "嗯。\n你的手在发抖，停不下来，没问题？"
@@ -141,6 +146,7 @@ label q3_3_0: # ending here
     pause(1.5)
     window show
     qian "黎沙忽然凑近，对着我狡黠一笑，让我摸不着头绪。而后，我整个人愣住了。"
+    $ renpy.music.set_pause(True, channel = "music")
     window hide
     show cg_li71 at cg0 with dissolve
     pause(1.5)
@@ -149,18 +155,26 @@ label q3_3_0: # ending here
     li_speaking "……\n……"
     scene bg_bigroom with fade
     show dark with dissolve
+    $ renpy.music.set_pause(False, channel = "music")
     qian_speaking "这算哪门子的办法！"
     li_speaking "嘘……好了，快点准备好。"
     qian "……"
     qian "……我瞪了她一眼，用生硬的语气掩盖心跳的声音。而后，我好不容易才重新收拢精神，贴紧墙壁。"
+    stop music fadeout 1.0
+
     unknown "这边……没人……怎么……问题……"
+    $ renpy.sound.play(audio.steps, channel = "sound", relative_volume = 1.5)
     qian "脚步声越来越近，已经到了门口。——要过来了。"
+    $ renpy.music.play(audio.door_open, channel = "music", loop = False)
     "吱呀——"
     unknown "喂，人呢？怎么没人叫这个房间？"
     unknown "什么？怎么了？"
     unknown "喂，过来搭把手，开个灯。"
     qian "好几个人凑到门口，准备进来……就现在！"
+    stop sound
+    stop music
     show sand0 with vpunch
+    $ renpy.sound.play(audio.earthquake, channel = "sound", relative_volume = 1.2)
     "嘭！！！"
     unknown "这什么！喂！！"
     unknown "啊——咳，咳咳！！叫，其他人，来！"
@@ -169,9 +183,11 @@ label q3_3_0: # ending here
     qian "巨大的声响把房间里的其他人都吵醒了，我看不清，但这里一时间陷入大量的混乱。"
     qian_speaking "喂，用水试试！"
     unknown "对，对！把应急开关打开！"
+    $ renpy.sound.play(audio.li_water, channel = "sound")
     "呲——噗——嘭——！"
     unknown "喂，喂！咳咳……！"
     qian "我夹着声音在吵闹中吼了一嘴，在嘈杂中没有被其他人识破。而后无数的小水珠落下，与尘土结合反应，迸发出更大的爆炸。"
+    $ renpy.sound.play(audio.earthquake, channel = "sound", loop = False, relative_volume = 1.2)
     window hide
     show cg_li80 at cg0 with dissolve
     pause(1.5)
@@ -185,10 +201,13 @@ label q3_3_0: # ending here
     scene bg_bigroom with fade
     show sand0 with dissolve
     li_speaking "快过来，这边——"
+    stop music
+    stop sound
     
     scene bg_labfloor with fade
     show sand0 with dissolve
     show liimg white ask at char_right with dissolve
+    $ renpy.music.play(music.li_li, channel = "music", loop = True)
     li_speaking "小心……你怎么了？"
     show qianimg white o mask at char_left with dissolve
     qian_speaking "……我要去楼上。"
@@ -206,26 +225,38 @@ label q3_3_0: # ending here
     hide qianimg
     show qianimg white smile blind at char_left
     qian_speaking "好啊。"
+    stop music fadeout 0.5
+
     hide liimg with easeoutright
     hide qianimg with easeoutleft
+    $ renpy.sound.play(audio.crowd, channel = "sound", loop = True)
     qian "整栋楼都陷入了慌乱，到处是吵架和闹腾的声音。我依照脑海里的记忆，朝着地图上的方位快速移动。"
+    $ renpy.sound.set_volume(0.8, 0, channel = "sound")
     
     scene bg_labfloor with Fade(0.2,0.2,0.2,color="#fff")
     show sand0 with dissolve
+    $ renpy.sound.set_volume(0.6, 0, channel = "sound")
     qian_speaking "没有。"
     
     scene bg_lab1 with Fade(0.2,0.2,0.2,color="#fff")
     show sand0 with dissolve
+    $ renpy.sound.set_volume(0.4, 0, channel = "sound")
     qian_speaking "没有。"
     scene bg_lab2 with Fade(0.2,0.2,0.2,color="#fff")
     show sand0 with dissolve
+    $ renpy.sound.set_volume(0.2, 0, channel = "sound")
     qian_speaking "没有……"
     scene bg_lab3 with Fade(0.2,0.2,0.2,color="#fff")
+    stop sound
     show sand0 with dissolve
+    $ renpy.sound.set_volume(0.1, 0, channel = "sound")
     qian "该说运气好还是坏呢……门口大开，不需要刷卡，里面的人也跑空了。但即使这里是最高级的实验室，也没有留下任何家人的痕迹。"
     qian "负责人是不认识的名字，除了我看不懂的仪器和图表，什么都没有。不，等等……内侧还有一扇门，标着“记忆实验室”。"
     qian_speaking "……\n这是……！"
+    stop sound
     scene bg_lab0 with Fade(0.2,0.2,0.2,color="#fff")
+    stop music fadeout 0.5
+    $ renpy.music.play(music.dust, channel = "music", loop = True, fadein = 0.5, relative_volume = 0.6)
     show sand0 with dissolve
     qian "我无法用言语形容看到的场景，因为是现实，比任何奇幻小说都来得诡异。"
     qian "无数个玻璃容器中放着漂浮的大脑，每个大脑……每个培养皿上都贴有标签，分别是编号，实验失败和成功次数，以及器官损耗度。"
@@ -286,14 +317,17 @@ label q3_3_0: # ending here
     qian_speaking "对，对，不能一直留在这……我，我得……我要……"
     qian_speaking "我要救她们，我……啊……不，不行……这也不行……我，那……怎么办……！"
     unknown "哔——"
+    $ renpy.sound.play(audio.buzz, channel = "sound", relative_volume = 0.25)
     qian "我的手胡乱地在控制台和屏幕上触碰按键，却只有持续的密码错误警告。"
     unknown "哔——\n系统将在90秒内启动外部销毁程序，输入正确密码即可取消。"
 
     hide qianimg
     show qianimg white shock blind at char_left with hpunch
     qian_speaking "怎，怎么办……不，不行……"
+    stop sound
 
     scene cg_brain0 at cg0 with shake
+    $ renpy.sound.play(audio.loud_sound, channel = "sound", relative_volume = 1.25)
     qian "一声巨响，面前的玻璃柜开始下降，地板，墙壁和天花板都有红光闪烁。"
     li_speaking "什么啊……这是说待会这个房间会炸吗？然后，这个实验装置会被保护好……"
     show blur with shake
@@ -315,6 +349,7 @@ label q3_3_0: # ending here
     qian "我……"
     show blur with hpunch
     horr "我……"
+    $ renpy.sound.play(audio.buzz, channel = "sound", loop = True)
     "哔——哔——"
     hide blur 
     show cg_shoot at cg0 with shake
@@ -350,12 +385,19 @@ label q3_3_0: # ending here
 
 
 label q3_3_0_1:
-    horr "……再見……" 
+    stop music
+    stop sound
+    horr "……再見……"
+    $ renpy.music.play(music.sad_ending, channel = "music", fadein = 1.5, relative_volume = 0.5)
     window hide
-
+    $ renpy.sound.play(audio.gun_shot, channel = "sound")
+    #$ renpy.sound.play(audio.glass, channel = "sound", relative_volume = 0.5)
     "砰！！"
+    stop sound
     show bg_white with dissolve
     pause(0.5)
+    $ renpy.sound.play(audio.glass, channel = "sound", loop = False, fadein = 0.1)
+    $ renpy.sound.play(audio.glass_crack, channel = "sound")
     show cg_brain1 at cg0 with dissolve
     pause(0.3)
     show cg_brain2 at cg0 with dissolve
@@ -367,14 +409,16 @@ label q3_3_0_1:
     show cg_brain5 at cg0 with dissolve
     pause(1)
     scene bg_black with Fade(0.5,0.5,0.5)
+    $ renpy.sound.play(audio.buzz, channel = "sound", fadeout = 0.5, relative_volume = 0.25)
     "……"
     scene bg_white with Fade(1,1,1,color="#fff")
     
 
     # 【Ending：尘埃】
     window hide
+    stop sound
     show screen ending_title(number=19) with Fade(0.5,0.5,0.5)
     pause
     $ persistent.ending[19] = 1
-    return 
+    return
 

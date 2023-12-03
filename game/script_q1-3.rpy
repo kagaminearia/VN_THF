@@ -1,5 +1,6 @@
 label q1_3:
     scene bg_road05 with Fade(0.3,0.2,0.4)
+    $ renpy.music.play(music.outside, channel = "music", loop = True, fadein = 1.0)
     qian "沿路牌往前，道路逐渐出现不同的分岔，而后，最近的路口挂着巨大的显示屏：D-230，居民区。"
     qian "不太信任管制局，可其他地方又好到哪里去。\n昏暗的环境仿佛滋生鬼魅，时不时的窸窣声从角落传来，让我心生退意，胸口也憋闷得要窒息。"
     qian "好，难受……不安和疲惫越发堆积，直到眼皮越来越重，腿也抬不起来，不得不停靠在布满灰尘的墙角。\n为什么，会这样……"
@@ -25,8 +26,11 @@ label q1_3:
     qian "我的眼皮开始疯狂打架，身体也不受控制地颤抖起来。"
     qian "怎么，这里到底是……啊……！"
     scene bg_pit1 with hpunch
+    $ renpy.music.set_volume(0.25, 0, channel = "music")
+    $ renpy.sound.queue([audio.crash, audio.earthquake, audio.earthquake_2], channel = "sound")
     na "轰隆——"
     qian "巨大的声响打断了我的思考。\n而后，头顶的黑色天花板快速降落，随着砰的一声，剥夺了我视野里的一切光线。"
+    #$ renpy.sound.play(audio.earthquake, channel = "sound", fadeout = 1.0)
     qian "“地面”开始剧烈晃动，周围的垃圾一股脑地摔下来，将我挤得喘不过气，而后又因摇晃在我身上碾压。"
     scene bg_black with shake
     horr "痛，好痛……\n好痛好痛好痛好痛……"
@@ -38,6 +42,7 @@ label q1_3:
     horr "直到時間都失去意義，疼痛和耳邊的轟鳴都沒有停止，我的精神像在荊棘刺中打滾，變成千瘡百孔的破爛。"
     scene bg_black with hpunch
     qian "疼，疼痛……"
+    stop sound fadeout 1.0
 
     scene bg_black with Fade(1,0,1)
     unknown "你也来捡垃圾啊？"
@@ -47,12 +52,14 @@ label q1_3:
     qian_speaking "救，呕……救我……"
     show liquid0 with dissolve
     qian "刚一开口，腹部就一阵痉挛，而后只有混合的胆汁和粘液从嘴角溢出，发出和周围一样的酸臭味。"
+    stop music fadeout 1.0
 
     scene bg_black with Fade(1,0,1)
     qian_speaking "救，救我……啊……！\n……嗯？……"
     qian "我的身体条件反射地剧烈打颤，但并没有迎来熟悉的撕裂感，只剩淡淡的疼痛，在身体里轻柔地融化。"
     qian "啊……"
     scene bg_liroom0 with Fade(1,0.5,1,color="#fff")
+    $ renpy.music.play(music.li_clues, channel = "music", loop = True, fadein = 0.5)
     qian "我这才敢睁开眼睛。四周并不是臭气熏天的垃圾堆，只是一个无人的房间。\n这算……得救了吗？"
     qian "我悬着心仔细观察房间：一眼望去，地面和墙壁光秃秃的，室内没有窗户，一扇小门关得严实，低矮的天花板挂着两点摇晃的火光——少见的明火。至于其他……"
     na "吱呀——"
@@ -147,6 +154,7 @@ label q1_3_1:
     show liimg close at char_right
     unknown "算了，你再休息会，待会把你知道的所有关于D层的消息都跟我讲讲。"
     qian_speaking "哦，好……"
+    stop music fadeout 1.0
 
     scene cg_soup at cg0 with fade
     qian_speaking "这是什么……？"
@@ -187,6 +195,7 @@ label q1_3_1:
     show cg_li10 at cg0 with dissolve
     pause(1.5)
     window show
+    $ renpy.music.play(music.horror, channel = "music", loop = True)
     qian "和我一样？\n这句话我没能说出来，因为面前的人突然毫无预兆地凑近，带起的疾风和危险感让我浑身发毛。"
     qian_speaking "……"
     show cg_li11 at cg0 with dissolve
@@ -195,9 +204,11 @@ label q1_3_1:
     unknown "嗯……"
     show cg_li11 at cg0 with dissolve
     unknown "行了，开玩笑的。"
+    stop music fadeout 0.5
     scene bg_liroom0 with fade
     show liimg smile at char_right with dissolve
     show qianimg still at char_left with dissolve
+    $ renpy.music.play(music.li_li, channel = "music", loop = True)
     qian_speaking "……你到底什么意思？"
     unknown "夸你聪明啊，对了，那就认识一下吧，我叫黎沙。"
     qian "我不聪明就不跟我说了吗……好恶劣的人。"
@@ -227,12 +238,15 @@ label q1_3_1:
     qian "……什么意思？\n我无法理解，在巨大的困惑中被她手臂抓着向外走。"
     hide qianimg with easeoutleft
     hide liimg with easeoutleft
+    stop music fadeout 1.0
     
     scene bg_black with fade
+    $ renpy.sound.play(audio.small_wind, channel = "sound", loop = True)
     qian_speaking "咳咳！"
     qian "一股有些呛人的味道弥漫鼻尖，我忍不住剧烈咳嗽起来。好一会后，我才睁开眼睛，看见打开的门后向外的地方，黎沙所说的场景。"
     
     scene bg_sand3 with fade
+    $ renpy.music.play(music.outside, channel = "music", loop = True, relative_volume = 0.8)
     qian "视野里是粗糙的暗黄色，像有一层浓烟盖在画面上，看不真切。"
     qian "远处有淡淡微光，但整体基调仍然阴沉。近处的地面并不平坦，三三两两的房屋散落在各处，隆起的小丘上有轻卷起的浅层尘土。大大小小的裂缝漫布，凹凸不平。"
     qian "沙，还是沙。\n满目皆是一片黄沙。\n这样的景象，我只在书中见过对应的描述。"
@@ -305,11 +319,13 @@ label q1_3_1:
     hide liimg
     show liimg ask at char_right
     li_speaking "对了，你说被扔到什么垃圾堆，那估计是真的。这里也有几个垃圾坑，城里人把所有生产垃圾和脏东西扔下来……全让城外解决。"
+    $ renpy.sound.play(audio.li_strong_wind, channel = "sound", loop = True, relative_volume = 1.5)
     horr "呼——呼——"
     li_speaking "这么说来，你能在死人堆里活下来，还真是……"
     horr "呼——呼——呼——"
     hide liimg
     show liimg still at char_right
+    #$ renpy.music.set_volume(2.0, 0, channel = "sound")
     li_speaking "等等——我看一下。"
     qian_speaking "……啊。"
     qian "我有些呆愣，好一会才反应过来她在跟我说话，以及，逐渐靠近的，轰鸣般的呼啸声。"
@@ -322,6 +338,7 @@ label q1_3_1:
     pause(0.1)
     show bg_storm with Dissolve(0.1)
     pause(0.5)
+    stop music fadeout 0.5
 
     scene bg_black with Fade(0.5,0.5,0.5,color="#fff")
     show qianimg still at char_left with dissolve
@@ -347,6 +364,8 @@ label q1_3_1:
     scene bg_black with Fade(0.5,0.5,0.5)
     qian "出口关闭得严严实实，但还是能听见那仿佛要把地上一切卷走的呼啸声音。以及碰撞声，挤压声，还有夹杂在风中的呼喊声。"
     show liimg o at char_right 
+    $ renpy.music.set_volume(0.5, 0, channel = "sound")
+    $ renpy.music.play(music.li_li, channel = "music", loop = True)
     li_speaking "以后听到这个声音记得跑，不要待在地面上，带污染的沙暴真的很危险，一定会死的。"
     qian_speaking "以后……"
     show blur with hpunch
@@ -366,6 +385,8 @@ label q1_3_1:
     qian "过多的信息让我的认知完全崩塌，颠覆的故事，对现状的不忿不安，对城外的恐惧夹着愧疚，头顶的风暴声与无数矛盾的思绪挟住我，令我无法呼吸。"
     hide blur with dissolve
     qian_speaking "……呜……"
+    stop music fadeout 1.0
+    stop sound fadeout 1.0
 
     scene bg_black with fade
     li_speaking "醒醒，醒醒！"
@@ -384,6 +405,7 @@ label q1_3_1:
     qian_speaking "嗯，嗯……"
     qian "总觉得她似乎欲言又止……唉，我都做了些什么事啊……"
     scene bg_sand0 with fade
+    $ renpy.sound.play(audio.sandstorm, channel = "sound", loop = True)
     qian_speaking "……\n……"
     qian "这就是，沙暴吗……"
     show liimg o at char_right with easeinright
@@ -403,9 +425,11 @@ label q1_3_1:
     qian_speaking "……"
     qian "怎么会这样……\n我呆站在原地，只有风声在胸口回荡。"
     hide liimg with dissolve
+    stop sound
 
     scene bg_liroom0 with fade
     show dark with dissolve
+    $ renpy.music.play(music.li_li, channel = "music", loop = True)
     li_speaking "还没睡？你不累吗。"
     qian_speaking "呃，累……但是睡不着。"
     li_speaking "不舒服还是吓到了？不管怎么样，你还是快习惯了吧，这儿可没你们那过得舒坦。"
@@ -435,6 +459,7 @@ label q1_3_1:
     qian_speaking "嗯。"
     qian "我的情绪竟然惊人地平静下来。\n虽然还有太多我搞不明白的事……就算知道是在逃避……但现在，还是先睡觉吧。"
     jump q2_3
+    stop music fadeout 1.0
 
 
 label q1_3_2: #ending here
@@ -456,8 +481,9 @@ label q1_3_2: #ending here
     hide liimg with easeoutright
     qian_speaking "我……诶？\n你不问……等等，你就走了吗？！"
     qian "砰。回答我的只有无情的关门声音。\n……又被留下了。"
+    stop music fadeout 1.0
     
-
+    $ renpy.sound.play(audio.sandstorm, channel = "sound", loop = True, relative_volume = 0.8)
     qian_speaking "到底是怎么回事……说起来，好吵……"
     hide qianimg
     show qianimg shock at char_left with hpunch

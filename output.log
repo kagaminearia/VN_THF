@@ -1,0 +1,551 @@
+commit dcbe169880b4c93a83db1b8fc2296a96478b3254
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Sun Oct 1 09:20:45 2023 -0700
+
+    add building settings
+
+commit b96e7db27850cadd962378170f037955557ab2d9
+Merge: 781bd56 21916c7
+Author: ST <41772956+kagaminearia@users.noreply.github.com>
+Date:   Sun Oct 1 02:05:54 2023 -0700
+
+    Merge pull request #8 from caffreyu/main
+    
+    feat: add hovered text in extra page
+
+commit 21916c7df425cccc38ecdc3952145c1768abac3f
+Author: caffreyu <caffreyu@gmail.com>
+Date:   Sun Oct 1 01:59:35 2023 -0700
+
+    feat: add hovered text
+
+commit 781bd56ef615b0cdc0a90c04d22dcc409d45d75a
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Sun Oct 1 01:23:34 2023 -0700
+
+    add extra pages
+
+commit 8d6d2a9c18e3811fb3a6d7901f2ae197e690a55c
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Sun Oct 1 00:08:16 2023 -0700
+
+    add ending list, need tooltip
+
+commit 542df2f80dd53458f338e26324fd8843edbfc1c2
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Sat Sep 30 23:42:34 2023 -0700
+
+    complete scripts
+
+commit d34a74df2ec3e8e57140891f1ad1aa3fdafa96d4
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Fri Sep 29 23:55:21 2023 -0700
+
+    add route 3 script
+
+commit 540ead25086c58f3d593c7bb140d6b7118ceb9e3
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Fri Sep 29 22:43:39 2023 -0700
+
+    fix bugs(maybe?)
+
+commit dafe164a084f30040dda97312c725707267c2af9
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Fri Sep 29 22:39:42 2023 -0700
+
+    fix bugs
+
+commit e6d5a3877a865242e35f1e806b58da5fd1df2f07
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Fri Sep 29 20:14:05 2023 -0700
+
+    complete route 2
+
+commit 669f77cadbcc1019783bb6df9b0a80f920fb63c8
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Thu Sep 28 05:53:19 2023 -0700
+
+    complete route 2 chapter 2
+
+commit 21ea03d3206342879de2818c0b820bc16e62f866
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Wed Sep 27 23:34:35 2023 -0700
+
+    add script and cut scene
+
+commit dfedac7767fa9846d8128e66d20e647514e4ad07
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Wed Sep 27 16:16:53 2023 -0700
+
+    add script for route 2
+
+commit ef118692a515499aab3baed9c50f18b214614129
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Wed Sep 27 15:28:59 2023 -0700
+
+    complete route 1, waiting for ending pv
+
+commit ef5acc8f7c8963b8b6cb9dd7d6277031041eba95
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Mon Sep 25 02:08:17 2023 -0700
+
+    complete route 1 chapter 2
+
+commit 015ca12f1865e2794485eb20e73d6ccd5622b114
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Sun Sep 24 23:29:29 2023 -0700
+
+    add to route1 script
+
+commit 28e5fd3caa211e84117a9d29d8d8e307f1413abe
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Sat Sep 23 23:19:45 2023 -0700
+
+    change default cursor
+
+commit da4e65df477228d2fd46128078b665f343804f69
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Fri Sep 22 05:09:15 2023 -0700
+
+    complete route 1 chapter 1
+
+commit d705a631437df7bcd355a61f4420d1ec6b65db91
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Fri Sep 22 03:00:34 2023 -0700
+
+    complete ending1
+
+commit 6b2592a9d32a39279da978486ea47d10fe0418cb
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Fri Sep 22 00:29:01 2023 -0700
+
+    add ending list
+
+commit 43caf72f214482b7f32c132bb78abc683af07b67
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Thu Sep 21 21:23:38 2023 -0700
+
+    change gui
+
+commit b9ba61cba47c9e3d059120c468ed3610c38f1a1d
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Thu Sep 21 05:49:29 2023 -0700
+
+    add cg resources
+
+commit bfd9285f0566bfe6ba071ac8daf1f1e6ca737044
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Thu Sep 21 03:09:45 2023 -0700
+
+    modify script prologue
+
+commit d86cb5cf1b58f8c4baea032d0d3e201f174da8e7
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Thu Sep 21 02:48:10 2023 -0700
+
+    add characters layer images
+
+commit ccff2aa528bb4b9928cb6566988490028d6893bc
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Wed Sep 20 22:37:10 2023 -0700
+
+    update char image
+
+commit 91dbf009b3a02f66b9a97338baf9d3685b62c46d
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Wed Sep 20 17:59:32 2023 -0700
+
+    re organize
+
+commit fd4c48a068ce5d79816a2add3ae15d3ee2eb9e47
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Wed Sep 20 17:39:20 2023 -0700
+
+    add timed choice
+
+commit 466cac259de786d60f58e8ba4c1a2c6919d73d5e
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Wed Sep 20 17:32:34 2023 -0700
+
+    add qte
+
+commit c44fddb37ea30a32145a1c60a77f69a64dbc6dbd
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Wed Sep 20 02:34:25 2023 -0700
+
+    complete route 3 script
+
+commit b3b343ee4a51f3b55804e725920d8db6322207a4
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Wed Sep 20 00:02:16 2023 -0700
+
+    complete route 2 script
+
+commit 72a37ce0d8eaf56300259d11f3a12b924832f708
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Tue Sep 19 21:59:14 2023 -0700
+
+    modify scripts
+
+commit ad4b287205e2ee59446e91798ca42ce6cd0cebbb
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Tue Sep 19 21:31:04 2023 -0700
+
+    complete route 1 script
+
+commit cb23323ab5be70126f57deaec478852670e67908
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Tue Sep 19 21:06:10 2023 -0700
+
+    modify script
+
+commit 8da78602ab4239482cb2ad8ab40a9921a6504ae5
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Tue Sep 19 21:05:02 2023 -0700
+
+    add script
+
+commit 29fcdc61c63746b6798c50cccb580c4296ba9697
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Tue Sep 19 20:37:14 2023 -0700
+
+    complete prologue script
+
+commit dd11e6ed80be941bc9ec8371e9aaf7fe6de8d0e7
+Author: ST <41772956+kagaminearia@users.noreply.github.com>
+Date:   Tue Sep 19 19:03:39 2023 -0700
+
+    Update README.md
+
+commit 31ce4038bacadef61351212d4430ab3111cfa6dc
+Merge: bfb810b d59e2b8
+Author: ST <41772956+kagaminearia@users.noreply.github.com>
+Date:   Tue Sep 19 19:02:54 2023 -0700
+
+    Merge pull request #7 from caffreyu/scripts
+    
+    Add scripts
+
+commit bfb810b909edecacec178de974ade61e8dd142f7
+Merge: 7bb757b 5cd3025
+Author: ST <41772956+kagaminearia@users.noreply.github.com>
+Date:   Tue Sep 19 19:02:42 2023 -0700
+
+    Merge pull request #6 from caffreyu/main
+    
+    Add auto indicator
+
+commit d59e2b8794d933fc8825527857920bc792cca681
+Author: caffreyu <caffreyu@gmail.com>
+Date:   Fri Sep 15 23:52:16 2023 -0700
+
+    fix: modified py script to cover more conditions
+
+commit 4d5a9cd9aa90f5c19c8c147cc233ef2bdbda73c6
+Author: caffreyu <caffreyu@gmail.com>
+Date:   Fri Sep 15 23:40:39 2023 -0700
+
+    modified QTE info
+
+commit 97441204db41d15cde7288850760f257c5fdd455
+Author: caffreyu <caffreyu@gmail.com>
+Date:   Fri Sep 15 23:29:02 2023 -0700
+
+    modified python script, and add all scripts in tmp_scripts
+
+commit c4f32cdf3c51d673c4a54ada66ec6adcd4076477
+Author: caffreyu <caffreyu@gmail.com>
+Date:   Fri Sep 15 00:20:29 2023 -0700
+
+    feat: add a py script to auto generate script from csv
+
+commit 7bb757ba824ff2dcc8155e24e919e2e5fcdc0686
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Thu Sep 14 14:01:00 2023 -0700
+
+    change log gui
+
+commit 5cd3025cd9acc23892df9f1cde2e9e5418fbb499
+Author: caffreyu <caffreyu@gmail.com>
+Date:   Sat Sep 9 18:10:30 2023 -0700
+
+    add auto indicator
+
+commit 9162c2ee154ab542ea9c694b158fa07e6a8868c2
+Author: ST <41772956+kagaminearia@users.noreply.github.com>
+Date:   Thu Sep 7 21:59:28 2023 -0700
+
+    Update README.md
+
+commit b02102bc346a904f5017552c50ac9dce827fc5f8
+Merge: 1963410 4a45fd0
+Author: ST <41772956+kagaminearia@users.noreply.github.com>
+Date:   Thu Sep 7 12:19:30 2023 -0700
+
+    Merge pull request #5 from caffreyu/main
+    
+    Add hovered text for the quick menu
+
+commit 4a45fd0886c6d3521f9af999d00e1b39549d81d3
+Author: caffreyu <caffreyu@gmail.com>
+Date:   Thu Sep 7 02:44:55 2023 -0700
+
+    Add hovered text for the quick menu
+
+commit 1963410078c1903d29956d1e400f30a98ec36141
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Fri Sep 1 07:39:19 2023 -0700
+
+    add script
+
+commit 2d98f8264080ef50c9b5d3d6055886a489e5523d
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Tue Aug 15 19:08:12 2023 -0700
+
+    add scripts
+
+commit 1d595a9bc78a95ee3ecf60641329d632b833df93
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Tue Aug 15 04:57:36 2023 -0700
+
+    add scripts
+
+commit fc7659a84411934441528c8cfe07b49fe92fb861
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Tue Aug 15 02:55:42 2023 -0700
+
+    add scene in script
+
+commit 98abe6b5bb6b47d5d68fee923058a73c4c3e6b57
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Tue Aug 15 01:42:41 2023 -0700
+
+    change gui and reorg script
+
+commit f191daddbd715f618e9ffd2788f502879bfcc566
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Mon Aug 14 08:49:34 2023 -0700
+
+    add cg
+
+commit ed85ac6855759889cc13a3660bf156cf6e97719e
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Sun Aug 13 21:20:09 2023 -0700
+
+    add basic animation for characters
+
+commit 9307b81997d157e238a1dee5fc357fa6ceca4325
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Sun Aug 13 16:05:22 2023 -0700
+
+    add script
+
+commit 7d241724bb4cdbb9a419e641d64351dd4fe7bb0f
+Author: ST <41772956+kagaminearia@users.noreply.github.com>
+Date:   Sat Aug 12 20:26:51 2023 -0700
+
+    Create README.md
+
+commit db8e7ec61ca341296348a1553ce7ba02f68de590
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Sat Aug 12 20:03:57 2023 -0700
+
+    add script
+
+commit ef5d0faa85be8aee1d8f0303f6ea4fe9aac196a1
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Sat Aug 12 04:59:30 2023 -0700
+
+    change game menu to identify different pages
+
+commit 3650d532f80f6c21ed9eecbc1f7111015246eec2
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Sat Aug 12 04:44:53 2023 -0700
+
+    change config gui
+
+commit c5fb670d688f34fe9c0fc4b85198e70462fff741
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Sat Aug 12 04:26:58 2023 -0700
+
+    change button gui
+
+commit de84992135c6f37982ddeac68beb336700c10051
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Sat Aug 12 02:20:25 2023 -0700
+
+    change history gui
+
+commit e3964d3d430336ae7126e995c094b9904b4cf9b4
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Fri Aug 11 23:49:43 2023 -0700
+
+    add script
+
+commit fad24110e619cec5d143b2b21e99402ce343fa1c
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Fri Aug 11 19:13:55 2023 -0700
+
+    add script
+
+commit cbedd47d28e35d4d040f47f7c7219c07a05d0601
+Merge: a5fcf4b 2989b92
+Author: ST <41772956+kagaminearia@users.noreply.github.com>
+Date:   Fri Aug 11 03:01:35 2023 -0700
+
+    Merge pull request #3 from caffreyu/main
+    
+    Update navigation screen
+
+commit 2989b92a27d603f279f4760a79e15399aae5170a
+Author: caffreyu <caffreyu@gmail.com>
+Date:   Fri Aug 11 02:03:38 2023 -0700
+
+    modify the navigation menu
+
+commit 0629e8176f957701bd6329a8d9c8c2469d55df9f
+Author: caffreyu <caffreyu@gmail.com>
+Date:   Fri Aug 11 02:00:19 2023 -0700
+
+    update .gitignore
+
+commit a5fcf4b60d1e364cdc75d2016e2d6a27f435b615
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Fri Aug 11 01:26:32 2023 -0700
+
+    reorg the script
+
+commit 6bb4c9e993c8721b87170b0944b41741fda85001
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Fri Aug 11 00:09:31 2023 -0700
+
+    reorg script
+
+commit 2820d32fe9c7b985b704449b271c7fab6fd7a802
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Thu Aug 10 22:33:27 2023 -0700
+
+    change gui
+
+commit a8aa1cd83ee64829521752c176879d48508e4b14
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Thu Aug 10 16:35:46 2023 -0700
+
+    add script and img
+
+commit 3750f20c5089e6ca2758cfb2812a88a269dd554d
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Wed Aug 9 20:26:50 2023 -0700
+
+    add script and gui
+
+commit 17faed42302ee4c1df87ebebfe054d6c938ec0da
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Wed Aug 9 03:59:16 2023 -0700
+
+    edit the gui
+
+commit 29bb459a21c65593b1efc8300ba6827f91d3cc4e
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Mon Aug 7 23:27:00 2023 -0700
+
+    add script
+
+commit a54dc5d39b82e455973fb413805818d994daad04
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Mon Jul 31 23:27:31 2023 -0700
+
+    add scripts
+
+commit d1445e00708b6870581af6248453c233a2de211c
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Thu Jul 6 17:02:39 2023 -0700
+
+    update quick menu ui
+
+commit 56452795edf1811c1d09fbdf35be74e8a09a0558
+Merge: df8666d ad616c8
+Author: ST <41772956+kagaminearia@users.noreply.github.com>
+Date:   Mon Jul 3 01:11:56 2023 -0700
+
+    Merge pull request #2 from caffreyu/feature/refactor-load-and-save
+    
+    feat: refactor load and save screen
+
+commit ad616c8adf4f63a3a04ff888fbb5521e361f6708
+Author: caffreyu <caffreyu@gmail.com>
+Date:   Mon Jul 3 01:02:41 2023 -0700
+
+    removed redundant files
+
+commit 9723db31b59a4e09eb3fe21549b835e10b22cf02
+Author: caffreyu <caffreyu@gmail.com>
+Date:   Mon Jul 3 00:59:33 2023 -0700
+
+    modified the layout of the load and save screen
+
+commit 5436912e8ad0d1ab9a905696671c7d291384098a
+Author: caffreyu <caffreyu@gmail.com>
+Date:   Sun Jul 2 03:20:03 2023 -0700
+
+    refactored save and load menu, needs polishment
+
+commit df8666da2addfdc6e4e9da42023a1e19a542f1c4
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Sat Jun 17 00:44:10 2023 -0700
+
+    add cg and ui
+
+commit 1777ab85fc245ca160c5e465411950cb6da699c8
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Wed Jun 14 23:13:33 2023 -0700
+
+    change gui
+
+commit c2c42984fee76421b3e6883c117f8a5d5833fed2
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Wed Jun 14 02:50:10 2023 -0700
+
+    add script and change gui
+
+commit edfebee5224422b77debf5dc9321bf98eddd8c1d
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Tue Jun 13 18:10:15 2023 -0700
+
+    add new script and change organization
+
+commit c87ae1fff0b61b115b5549d4a9f74652554c3c68
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Wed Jun 7 09:47:11 2023 -0700
+
+    add some script
+
+commit 087f425fd4dcb6fec8146457ca0ab14d777c8ba4
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Mon Jun 5 11:36:08 2023 -0700
+
+    edit navigation and add new chapter start
+
+commit de833418238fd4ab1cad3a6c1a74fec110ce17d0
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Mon Jun 5 09:00:27 2023 -0700
+
+    reorganize navigation
+
+commit 8b782f30b8e0ecedd90fc382f5f9e91e033eab45
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Mon Jun 5 08:43:07 2023 -0700
+
+    resize namebox and finish prologue(?
+
+commit 2944aaf4e6dcfaae9f9d302e86aad026b9d45f58
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Sun Jun 4 02:35:19 2023 -0700
+
+    update the main menu and script
+
+commit b3e9b36672ee840d980c453ce1dfd9fb4289c7db
+Author: kagaminearia <rinkitang@outlook.com>
+Date:   Mon May 29 19:07:38 2023 -0700
+
+     initialize

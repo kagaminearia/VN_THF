@@ -1,5 +1,6 @@
 label q1_2:
-    scene bg_street with fade
+    scene black with fadehold
+    $ renpy.music.play(music.darkcity, channel = "music", loop = True, relative_volume = 0.3, fadeout = 0.6)
     qian "不规则的建筑物互相挤压，只在少数地方留下狭小空隙。\n缝隙冰冷阴森，又黑又脏，除了终端上的荧光，什么也看不见。"
     qian "实在不相信这是城市的一部分……我暗自憋闷，随着路牌穿过一道尤其狭长的窄道。"
     scene bg_road02 with fade
@@ -8,8 +9,10 @@ label q1_2:
     qian "……好热闹。\n我再次确认时间，现在是凌晨两点。好热闹，和A层的安宁一点也不一样。"
     qian "我却更加茫然——没有认识的人，没有认识的路，连墙面上乱七八糟的涂鸦都像是什么咒语暗号，我也看不懂。"
     qian "终于，我的视线扫到一块亮闪闪的招牌，写着熟悉的文字：\n“酒吧”。"
-
+    stop music
+    
     scene bg_bar0 with fade
+    $ renpy.sound.play(audio.talking_people, channel = "sound", loop = True, relative_volume = 0.8, fadeout = 1)
     show bar_fem at char_right with dissolve
     show qianimg o at char_left with dissolve
     short_speaking "怎么了，不再说说你的事情吗？还很难过吧？"
@@ -54,6 +57,8 @@ label q1_2_1: # ending here
     qian_speaking "呃，好，好……"
     qian "一杯，又一杯，还有……\n脑袋更加昏沉了，已经分不清上下左右……嗯嗯，不对，我好像是在趴着……"
     show blur with dissolve
+    $ renpy.music.play(audio.dizzy, channel = "music", loop = True, relative_volume = 0.5, fadein = 1)
+    stop sound
     qian "耳边变得朦胧起来，眼前好像也出现幻觉，出现那两个人的身影，成为模糊的景象。原来过度思念，真的会让人产生疾病……"
     qian "……不，不对，太晕了，几乎要对身体失去控制……虽然想到这里，我却完全动不了……！"
     qian "怎么回事……"
@@ -86,6 +91,7 @@ label q1_2_2:
     window show
     unknown "嗯。"
     qian_speaking "你，你还好吗……啊我的意思是你想待在这吗，啊不是……"
+    stop sound
     qian "我说出口才想起自己并没有什么理由搭话，于是有些语无伦次。而在我出声后，周围的人瞬间安静，让我更加紧张。"
     unknown "……"
     qian_speaking "啊，抱歉……我打扰了吗……"
@@ -97,14 +103,17 @@ label q1_2_2:
     scene bg_bar1 with Fade(0.1,0.1,0.1)
     show crowd with Dissolve(0.5)
     qian "而直到这时，我才注意到周围的人不知道什么时候都围了上来，直直地望着我们。"
+    stop sound fadeout 0.5
 
     scene bg_road01 with vpunch
     qian "哈啊，哈……差不多了吧。"
     unknown "嗯。"
     qian_speaking "你，他们，你们到底怎么回事啊……嗯，诶……"
+    $ renpy.music.play(audio.dizzy, channel = "music", loop = True, relative_volume = 0.5, fadein = 1)
     show blur with dissolve
     qian "我被她拉着跑出一段距离才停下来，困惑不已。然而不知是因为太过突然，还是别的什么，我的眼前竟然逐渐变得模糊，摇摇晃晃，身体也快要软下去。"
     qian_speaking "怎么，回事……你……"
+    stop music fadeout 0.5
 
     scene bg_black with Fade(0.1,0.1,0.1)
     qian_speaking "嗯……疼……这是哪？"
@@ -114,6 +123,7 @@ label q1_2_2:
     unknown "醒了？"
     qian_speaking "嗯？"
     show cg_ying10 at cg0 with dissolve
+    $ renpy.music.play(music.yingying, channel = "music", loop = True, fadein = 0.5)
     window hide
     pause(1.5)
     window show
@@ -274,9 +284,6 @@ label q1_2_2:
     show qianimg still at char_left 
     qian_speaking "……"
     qian "我感到有些愧疚，再怎么说，也是偷偷翻了别人的东西。但她完全没有要继续对话的意思，我也只好作罢。"
+    stop music fadeout 1.0
 
     jump q2_2
-
-
-    
-

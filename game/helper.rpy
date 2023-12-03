@@ -136,3 +136,8 @@ transform cg1:
     zoom 0.8
     xalign 0.4
     yalign 0.53
+
+transform ease(start, end, time):
+    subpixel True
+    start
+    easein time end
