@@ -123,7 +123,7 @@ label q3_1:
     qian_speaking "我知道——"
 
     scene bg_lanroom with fade
-    $ renpy.music.play(music.delimma, channel = "music")
+    $ renpy.music.play(music.delimma, channel = "music", relative_volume = 0.5)
     qian "真的，只能赌一把了……要输入什么呢——"
     # qte here
     $ time = 3

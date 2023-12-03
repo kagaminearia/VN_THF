@@ -330,7 +330,7 @@ label q2_2_2:
     qian "好难受……！要，喘不上气了……啊——"
     qian_speaking "呜……！"
     show cg_ying40 at cg0 with vpunch
-    $ renpy.music.play(music.delimma, channel = "music", loop = True) 
+    $ renpy.music.play(music.delimma, channel = "music", loop = True, relative_volume = 0.5) 
     qian "什，什么——！\n我倏地睁开眼，却是莺莺那冰冷的眼神，以及，掐住我脖子的双手。"
     show cg_ying4 at cg0 with vpunch
     qian_speaking "为……什……你……啊啊……"

@@ -111,7 +111,7 @@ define music.starlight = 'audio/bgm/starlight.mp3'
 define audio.calm = 'audio/sound_effect/calm.mp3'
 define music.simple_piano = "audio/bgm/simple_piano.mp3"
 define audio.breath = 'audio/sound_effect/breath.mp3'
-define music.theme = 'music/bgm/theme.mp3'
+define music.theme = 'audio/bgm/theme.mp3'
 
 init python:
     judge = True
@@ -143,7 +143,7 @@ label start:
     stop music fadeout 1.0
 
     scene bg_black at cg0 with fade
-    $ renpy.sound.play(audio.vibrations_1, channel = "sound", loop = True, relative_volume = 1.5)
+    $ renpy.sound.play(audio.vibrations_1, channel = "sound", loop = True)
     pause 2.0
     window show
     $ quick_menu = True
@@ -151,7 +151,7 @@ label start:
     stop sound fadeout 1.0
 
     scene bg_black at cg0 with fade
-    $ renpy.sound.play(audio.vibrations_2, channel = "sound", loop = True, relative_volume = 1.5)
+    $ renpy.sound.play(audio.vibrations_2, channel = "sound", loop = True)
     pause 2.0
     
     # TODO: bottomside doesnt work
