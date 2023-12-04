@@ -123,7 +123,7 @@ label q3_1:
     qian_speaking "我知道——"
 
     scene bg_lanroom with fade
-    $ renpy.music.play(music.delimma, channel = "music")
+    $ renpy.music.play(music.delimma, channel = "music", relative_volume = 0.5)
     qian "真的，只能赌一把了……要输入什么呢——"
     # qte here
     $ time = 3
@@ -223,7 +223,7 @@ label q3_1_1: # ending here
     chi_speaking "好……很快……就出去——"
 
     scene bg_white with fade
-    $ renpy.sound.play(audio.crash, channel = "sound")
+    $ renpy.sound.play(audio.crash, channel = "sound", relative_volume = 0.5)
     "轰！！！"
     pause
 
@@ -289,7 +289,7 @@ label q3_1_1: # ending here
 
 label q3_1_0: # ending here
     stop music
-    scene lanroom with vpunch
+    scene bg_lanroom with vpunch
     $ renpy.sound.play(audio.peng, channel = "sound")
     "砰！"
     qian "没时间了……"

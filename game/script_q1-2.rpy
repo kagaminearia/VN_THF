@@ -41,8 +41,10 @@ label q1_2:
 
     menu:
         "【无视】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q1_2_1
         "【插手】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q1_2_2
 
 label q1_2_1: # ending here
@@ -123,7 +125,7 @@ label q1_2_2:
     unknown "醒了？"
     qian_speaking "嗯？"
     show cg_ying10 at cg0 with dissolve
-    $ renpy.music.play(music.yingying, channel = "music", loop = True, fadein = 0.5)
+    $ renpy.music.play(music.yingying, channel = "music", loop = True, fadein = 0.5, relative_volume = 0.8)
     window hide
     pause(1.5)
     window show
@@ -230,10 +232,12 @@ label q1_2_2:
     qian "那我现在，应该……"
     menu:
         "【什么都不做】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             $ q1221 = False
             qian "我都已经占用人家的房间了，到处乱走不太合适吧……\n还是等她回来好了……"
             jump q2_2
         "【观察房间】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             $ q1221 = True
             qian "虽然莺莺说别乱动，但只是看看不算乱动吧……咳咳……"
             qian "我当然知道自己在强词夺理，可就算感谢她，我总得给自己留点退路：我不会伤害别人，但也最好能够自保……"
@@ -260,6 +264,7 @@ label q1_2_2:
     qian_speaking "……"
     menu:
         "【承认】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             hide qianimg
             show qianimg sad at char_left 
             qian_speaking "没，我只是……看了一下，没动东西。"
@@ -267,6 +272,7 @@ label q1_2_2:
             qian_speaking "啊，呃，但我确实只是看了看，没做别的……"
             
         "【不承认】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             hide qianimg
             show qianimg sad at char_left 
             qian_speaking "当然没有了……"

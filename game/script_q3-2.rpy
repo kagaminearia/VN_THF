@@ -33,7 +33,7 @@ label q3_2:
     show qianimg o at char_left
     qian_speaking "……好敷衍……"
     ying_speaking "……"
-    $ renpy.music.play(music.yingying, channel = "music", loop = True, fadein = 0.5)
+    $ renpy.music.play(music.yingying, channel = "music", loop = True, fadein = 0.5, relative_volume = 0.8)
     qian "我们默契地不谈之前的争吵，只是坐在高高耸立的垃圾堆上缓解呼吸。讽刺又滑稽的是，这一刻我竟然感到堪称诡异的平静.连四周的难闻气味也没那么突出了。"
     hide yingimg
     show yingimg still at char_right
@@ -116,7 +116,9 @@ label q3_2:
     scene bg_pit0 with vpunch
     stop music
     # TODO: add ying_alarm here and figure out why its not working
+    $ renpy.sound.play(audio.ying_alarm, channel = "sound", loop = False, relative_volume = 0.5)
     "滴滴——"
+    stop sound
     $ renpy.music.play(music.sus_ying, channel = "music", loop = True, fadein = 1.0)
     qian "仿佛在印证什么，我的终端突然响起重大事件的警报声，然而，也只有我的终端发出声音。"
     show qianimg shock at char_left with dissolve
@@ -150,6 +152,7 @@ label q3_2:
     qian "我完全不懂发生了什么，但她们不是直接相关人士，也许只能知道这些——也足以震惊所有人了。可……"
     stop music
     show qianimg shout at char_left with dissolve
+    # TODO: volume up here
     $ renpy.music.play(music.ying_dark, channel = "music", loop = True, fadein = 0.5, relative_volume = 1.5)
     qian_speaking "这算什么理由……我才，不接受呢……"
     qian "就因为这些人……她们……我的生活……"
@@ -219,7 +222,8 @@ label q3_2:
     qian_speaking "我……"
     ying_speaking "有人来了。"
     qian_speaking "什么？！"
-    $ renpy.music.play(music.delimma, channel = "music", loop = True, fadein = 0.5)
+    # TODO: volume down here
+    $ renpy.music.play(music.delimma, channel = "music", loop = True, fadein = 0.5, relative_volume = 0.5)
     qian "我的精神再次绷紧。敛住声音，果然听到有急匆匆的脚步声由远及近。"
     scene bg_pit0 with fade
     qian_speaking "怎么办，现在……"
@@ -258,8 +262,10 @@ label q3_2:
     qian "不行，我得快点……我——"
     menu:
         "【逃跑】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q3_2_1
         "【反抗】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q3_2_2
 
 

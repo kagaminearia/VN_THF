@@ -153,8 +153,10 @@ label q1_1:
 
     menu:
         "【保持专注】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q1_1_1
         "【彻底放松】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q1_1_2
     
 
@@ -348,11 +350,13 @@ label q1_1_1:
 
     menu:
         "【尝试问其他人】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             qian "尽管我认识君和不久，但她最初的和善对我意义很大……无论她如何看待我，我还是希望能够了解到她的情况……"
             qian "我对自己的人际关系有数，大部分人看到我就退避三舍，但只是问问应该没事……"
             qian "然而尝试询问后，除了被拒绝，我只得到“好像去A区工作了”这样似是而非的结论，似乎没人知道具体是什么。"
             qian "……\n可能只是我想太多吧，其实并没有什么特别的。"
         "【算了】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             qian "算了……对方既然没有说，大概是不想让我知道吧，毕竟我之前给她的印象也许不算好。\n我叹了口气，不知为何有些沮丧，希望尽快把这件事抛至脑后。"
     
     qian "……"

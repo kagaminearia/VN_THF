@@ -87,8 +87,10 @@ label q2_1:
 
     menu:
         "【和她继续保持关系】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q2_1_1
         "【找她打听家里人的情况】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q2_1_2
 
 
@@ -220,6 +222,7 @@ label q2_1_1:
     qian "不行，我想要说点什么来转移话题……"
     menu:
         "【衣服好看】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             scene bg_cafe0 with Fade(0.3,0.3,0.3)
             show qianimg shirt o at char_left with easeinleft
             qian "那个，你的衣服很好看啊，感觉很适合你。"
@@ -246,6 +249,7 @@ label q2_1_1:
             qian "不自觉，我的语气也被她所感染，变得轻快起来。"
             
         "【眼睛漂亮】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             scene bg_cafe0 with Fade(0.3,0.3,0.3)
             show qianimg shirt o at char_left with easeinleft
             qian "那个，我一直觉得你的眼睛很漂亮，感觉和这种天气很像，但更好看……啊。"
@@ -425,7 +429,7 @@ label q2_1_1:
     window hide
     pause(1.5)
     window show
-    $ renpy.music.play(music.trust_me, channel = "music", loop = True, fadein = 0.5, relative_volume = 0.5)
+    $ renpy.music.play(music.trust_me, channel = "music", loop = True, fadein = 0.5)
     chi_speaking "小声点……你果然在里面啊。"
     qian_speaking "你怎么来了？！怎，怎么了吗？"
     chi_speaking "我——我想见你。"
@@ -458,8 +462,10 @@ label q2_1_1:
     qian "我……"
     menu:
         "【相信她】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q2_1_1_1
         "【不相信她】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q2_1_1_2
 
 
@@ -628,8 +634,10 @@ label q2_1_1_1:
     qian "也许这就是所谓的气势，只有面对面才能感受到……她的语气像开玩笑，我却几乎喘不过气。\n怎么办……怎么办，现在应该——"
     menu:
         "【拖延时间】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q2_1_1_1_1
         "【趁她不注意冲出去】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q2_1_1_1_2
 
 
@@ -677,6 +685,7 @@ label q2_1_1_1_1:
     qian "不行，不知道她要做什么，但是马上就要没时间了……必须要做点什么，打乱她的节奏……"
     menu:
         "【劝说迟玉】": # ending here
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             scene bg_darkroom with Fade(0.1,0,0.1)
             show qianimg shirt shock at char_left with dissolve
             show chiimg black at char_mid with dissolve
@@ -711,6 +720,7 @@ label q2_1_1_1_1:
             return 
 
         "【劝说蓝石】": # ending here
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             scene bg_darkroom with Fade(0.1,0,0.1)
             show qianimg shirt shock at char_left with dissolve
             show chiimg black at char_mid with dissolve
@@ -875,7 +885,7 @@ label q2_1_1_2: # ending here
     
     show bg_lanroom with shake
     stop music
-    $ renpy.sound.play(audio.glass_drop, channel = "sound")
+    $ renpy.sound.play(audio.glass_drop, channel = "sound", relative_volume = 0.6)
     qian "视线忽然有些涣散，我抓着杯子的手一松，掉在桌上发出哐当的巨响，在封闭的房间里格外刺耳。"
     
     hide qianimg 
@@ -883,7 +893,7 @@ label q2_1_1_2: # ending here
     qian_speaking "对，对不起……"
     lan_speaking "不必在意。"
     qian "蓝石仍然是笑着，丝毫没有被我的失态所影响。不知为何，她那毫无破绽的微笑此时此刻却让我有些发凉。"
-    $ renpy.sound.play(audio.brain_damage, channel = "sound", relative_volume = 0.5, fadein = 1.0)
+    $ renpy.sound.play(audio.brain_damage, channel = "sound", relative_volume = 0.3, fadein = 1.0)
     qian_speaking "啊，嗯……"
     hide qianimg 
     show qianimg shirt close at char_left
@@ -971,6 +981,7 @@ label q2_1_2: # ending here
 
     menu:
         "【问家里人】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             $ q2121 = True
             qian_speaking "那个，您觉得我什么时候能见到我家人呢？"
             lan_speaking "这个啊……没事，你们很快就会团聚了。"
@@ -978,6 +989,7 @@ label q2_1_2: # ending here
             show qianimg shirt o at char_left
             qian_speaking "真的吗？那太好了！谢——诶？"
         "【问迟玉】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             $ q2121 = False
             qian_speaking "您知道……迟玉怎么样了吗？那个，应该是她帮我联系您的吧，所以……"
             lan_speaking "……\n她很好。"
@@ -989,7 +1001,7 @@ label q2_1_2: # ending here
 
     hide qianimg 
     show qianimg shirt shock at char_left
-    $ renpy.music.play(music.be, channel = "music", loop = True, fadein = 0.5)
+    $ renpy.music.play(music.be, channel = "music", loop = True, fadein = 0.5, relative_volume = 0.8)
     qian "我剩下的话没能说出口——剧烈的疼痛占据了一切注意力。"
     qian_speaking "怎，回事……啊啊……"
     scene bg_lanroom
