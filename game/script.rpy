@@ -1,9 +1,5 @@
 ﻿# 游戏在此开始。
 
-# set persistent values
-default persistent.text = 0
-default persistent.ending = [0]*20
-
 # define fade behaviors
 define fadehold = Fade(0.5, 1.0, 0.5)
 define flash = Fade(0.1, 0.0, 0.5, color="#fff")
