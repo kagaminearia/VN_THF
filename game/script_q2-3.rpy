@@ -58,8 +58,10 @@ label q2_3:
     qian "我——"
     menu:
         "【出门】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q2_3_01
         "【不出门】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q2_3_02
 
 
@@ -127,8 +129,10 @@ label q2_3_01:
     qian "她言简意赅，没有多说就转身离开。我……"
     menu:
         "【跟上去】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q2_3_1
         "【留在原地】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q2_3_2
 
 
@@ -381,8 +385,10 @@ label q2_3_1:
     qian "我突然有种强烈的冲动，想要……说些什么的冲动。"
     menu:
         "【对不起】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q2_3_1_1
         "【去阻拦】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q2_3_1_2
 
 
@@ -469,8 +475,10 @@ label q2_3_1_2:
     qian "她如此轻巧地把自己放在命悬一线的天平上，语气像猜测今天的饭好不好吃。\n我……"
     menu:
         "【跟她一起】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             qian "我惊讶于她的回答，因而没有太多犹豫，正好逼迫自己下定决心。"
         "【不跟她一起】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             hide qianimg
             show qianimg black close mask at char_left
             qian "不……都到这个时候了，我怎么可能再次逃避。"
@@ -619,7 +627,6 @@ label q2_3_1_2:
     qian_speaking "……知道了。"
 
     scene bg_ele with Fade(0.2,0.2,0.2)
-    $ renpy.sound.play(audio.elevator, channel = "sound")
     horr "咚……咚……"
     qian "脚下的地板在微微震颤，是不断上行的中枢直行电梯。"
     horr "咚……咚……"
@@ -627,7 +634,6 @@ label q2_3_1_2:
     qian "果然，果然是这样……\n我的心脏正在高速跳动……几乎要震聋我的耳朵。"
     qian "从未想过，我会以这样的方式回到这里。\n工作只是幌子，目的是找关系顺利将人带入A层。\n也许我马上就要接近秘密了……那里会不会……有关于家人的线索。"
 
-    scene bg_scene with fade
     show liimg black o at char_right with dissolve
     show qianimg black mask at char_left with dissolve
     li_speaking "目前为止，似乎还没发生什么。"
@@ -813,8 +819,10 @@ label q2_3_1_2:
     qian "她的双眸直直地看向我，那是摇晃、孤注一掷、混合着坚定的眼神。\n我——"
     menu:
         "【放弃】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q2_3_1_1_1
         "【继续计划】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q3_3
 
 

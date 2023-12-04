@@ -51,7 +51,24 @@ define config.has_voice = True
 # define config.sample_sound = "sample-sound.ogg"
 # define config.sample_voice = "sample-voice.ogg"
 
-define config.main_menu_music = None
+# define config.main_menu_music = None
+
+# set persistent values
+default persistent.text = 0
+default persistent.ending = [0]*20
+
+init python:
+    judge = True
+    for i in range(14, 20):
+        if persistent.ending[i] == 1:
+            judge = False
+            break
+    if persistent.ending[19] == 1:
+        config.main_menu_music = 'audio/bgm/sad_ending.mp3'
+    elif persistent.ending[13] == 1 and judge:
+        config.main_menu_music = 'audio/bgm/ying_end.mp3'
+    else:
+        config.main_menu_music = 'audio/bgm/theme.mp3'
 
 ## 将以下语句取消注释就可以设置标题界面播放的背景音乐文件。此文件将在整个游戏中
 ## 持续播放，直至音乐停止或其他文件开始播放。

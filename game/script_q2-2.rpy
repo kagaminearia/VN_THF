@@ -89,7 +89,7 @@ label q2_2:
     show qianimg shock at char_left with shake
     qian_speaking "……哇啊！你，你吓死我了……"
     hide qianimg
-    $ renpy.music.play(music.yingying, channel = "music", loop = True, fadein = 0.5)
+    $ renpy.music.play(music.yingying, channel = "music", loop = True, fadein = 0.5, relative_volume = 0.8)
     qian "幽幽的女声从背后传来，在黑暗里差点把我吓得心跳骤停。等我意识到是莺莺的声音，才缓缓吐出一口气。"
     show qianimg o at char_left with dissolve
     qian_speaking "你怎么醒了……"
@@ -156,7 +156,7 @@ label q2_2:
     unknown "时茜……时茜？"
 
     scene bg_road06 with vpunch
-    $ renpy.music.play(music.yingying, channel = "music", loop = True, fadein = 0.5)
+    $ renpy.music.play(music.yingying, channel = "music", loop = True, fadein = 0.5, relative_volume = 0.8)
     qian_speaking "啊……啊！嗯……"
     show yingimg o at char_mid with dissolve
     ying_speaking "醒醒。"
@@ -210,8 +210,10 @@ label q2_2:
     $ q1221 = True
     menu:
         "【去】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q2_2_1
         "【不去】" if q1221 == True:
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q2_2_2
 
 
@@ -302,7 +304,7 @@ label q2_2_2:
 
     scene bg_yingroom0 with fade
     show yingimg shirt o at char_right with easeinright
-    $ renpy.music.play(music.yingying, channel = "music", loop = True, fadein = 0.5)
+    $ renpy.music.play(music.yingying, channel = "music", loop = True, fadein = 0.5, relative_volume = 0.8)
     ying_speaking "什么？"
     show qianimg at char_left with dissolve
     qian_speaking "就是……之前真的谢谢你。不过，你是知道什么吗？"
@@ -378,8 +380,10 @@ label q222success:
     qian "然而，我现在却莫名地有些犹豫……要进去吗？"
     menu:
         "【不进去】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q2_2_2_1
         "【进去】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q2_2_2_2
 
 
@@ -466,10 +470,12 @@ label q2_2_2_1:
     $ renpy.sound.play(audio.click_countdown, channel = "sound")
     menu:
         "【伸手帮忙】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             hide screen countdown
             stop sound
             jump q3_2
         "【坐视不理】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             show qianimg still at char_mid with dissolve
             stop sound
             qian "太危险了，我还是不要插手比较好……"

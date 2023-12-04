@@ -27,7 +27,7 @@ label q1_3:
     qian "怎么，这里到底是……啊……！"
     scene bg_pit1 with hpunch
     $ renpy.music.set_volume(0.25, 0, channel = "music")
-    $ renpy.sound.queue([audio.crash, audio.earthquake, audio.earthquake_2], channel = "sound")
+    $ renpy.sound.queue([audio.crash, audio.earthquake, audio.earthquake_2], channel = "sound", relative_volume = 0.5)
     na "轰隆——"
     qian "巨大的声响打断了我的思考。\n而后，头顶的黑色天花板快速降落，随着砰的一声，剥夺了我视野里的一切光线。"
     #$ renpy.sound.play(audio.earthquake, channel = "sound", fadeout = 1.0)
@@ -93,8 +93,10 @@ label q1_3:
 
     menu:
         "【说实话】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q1_3_1
         "【蒙骗过去】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q1_3_2
 
 
@@ -221,11 +223,13 @@ label q1_3_1:
     li_speaking "我说了，你信吗？"
     menu:
         "【信】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             qian_speaking "会……我相信你。"
             qian "我十分确认地给出我的答复。我觉得……她是可信的，毕竟她看上去也没有很坏，似乎……没有什么理由骗我吧？"
             li_speaking "……好吧。"
             qian "见我似乎没有其他反应，黎沙顿了顿，似乎有点惊讶，但随后又叹了口气，恢复原来的笑容。"
         "【不信】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             qian_speaking "……谁知道呢……我现在也没办法下结论啊。"
             qian "我的手指用力到有些发白。这样对她说话，实在显得有些不识抬举，可也确实是因为我真心想相信她，而不只是随口说说。"
             qian "然而黎沙完全没有要生气的样子，只是有些揶揄地笑了笑。"
@@ -319,7 +323,7 @@ label q1_3_1:
     hide liimg
     show liimg ask at char_right
     li_speaking "对了，你说被扔到什么垃圾堆，那估计是真的。这里也有几个垃圾坑，城里人把所有生产垃圾和脏东西扔下来……全让城外解决。"
-    $ renpy.sound.play(audio.li_strong_wind, channel = "sound", loop = True, relative_volume = 1.5)
+    $ renpy.sound.play(audio.li_strong_wind, channel = "sound", loop = True, relative_volume = 0.8)
     horr "呼——呼——"
     li_speaking "这么说来，你能在死人堆里活下来，还真是……"
     horr "呼——呼——呼——"
@@ -405,7 +409,7 @@ label q1_3_1:
     qian_speaking "嗯，嗯……"
     qian "总觉得她似乎欲言又止……唉，我都做了些什么事啊……"
     scene bg_sand0 with fade
-    $ renpy.sound.play(audio.sandstorm, channel = "sound", loop = True)
+    $ renpy.sound.play(audio.sandstorm, channel = "sound", loop = True, relative_volume = 0.7)
     qian_speaking "……\n……"
     qian "这就是，沙暴吗……"
     show liimg o at char_right with easeinright
@@ -483,7 +487,7 @@ label q1_3_2: #ending here
     qian "砰。回答我的只有无情的关门声音。\n……又被留下了。"
     stop music fadeout 1.0
     
-    $ renpy.sound.play(audio.sandstorm, channel = "sound", loop = True, relative_volume = 0.8)
+    $ renpy.sound.play(audio.sandstorm, channel = "sound", loop = True, relative_volume = 0.5)
     qian_speaking "到底是怎么回事……说起来，好吵……"
     hide qianimg
     show qianimg shock at char_left with hpunch

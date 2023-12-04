@@ -143,7 +143,7 @@ label start:
     stop music fadeout 1.0
 
     scene bg_black at cg0 with fade
-    $ renpy.sound.play(audio.vibrations_1, channel = "sound", loop = True)
+    $ renpy.sound.play(audio.vibrations_1, channel = "sound", loop = True, relative_volume = 0.8)
     pause 2.0
     window show
     $ quick_menu = True
@@ -151,7 +151,7 @@ label start:
     stop sound fadeout 1.0
 
     scene bg_black at cg0 with fade
-    $ renpy.sound.play(audio.vibrations_2, channel = "sound", loop = True)
+    $ renpy.sound.play(audio.vibrations_2, channel = "sound", loop = True, relative_volume = 0.8)
     pause 2.0
     
     # TODO: bottomside doesnt work

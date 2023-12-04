@@ -29,6 +29,7 @@ label q3_3:
 label q3_3_temp:
     menu:
         "【影响别人睡觉】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             li_speaking "我这样疼着，也会影响别人睡觉的，这样不好……"
             place_holder "不会影响，回去。"
             li_speaking "……"
@@ -37,6 +38,7 @@ label q3_3_temp:
             qian "……\n看来还是得换个别的说法。"
             jump q3_3_temp
         "【套近乎】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             li_speaking "大家都是城外来的，稍微理解一下嘛……你也知道，有时候真的很疼。"
             place_holder "什么城外？"
             hide qianimg
@@ -46,6 +48,7 @@ label q3_3_temp:
             qian "虽然很在意，但现在这不是重点……还是想办法说服她吧。"
             jump q3_3_temp
         "【影响身体状态】":
+            $ renpy.sound.play(audio.click, channel = "sound", loop = False)
             jump q3_3_0
 
 
@@ -141,6 +144,7 @@ label q3_3_0: # ending here
     qian_speaking "没……没事。"
     li_speaking "对了，我教你一个不会紧张的办法吧。"
     qian_speaking "啊？什么……？"
+    stop sound
     window hide
     show cg_li70 at cg0 with dissolve
     pause(1.5)
@@ -174,7 +178,7 @@ label q3_3_0: # ending here
     stop sound
     stop music
     show sand0 with vpunch
-    $ renpy.sound.play(audio.earthquake, channel = "sound", relative_volume = 1.2)
+    $ renpy.sound.play(audio.earthquake, channel = "sound")
     "嘭！！！"
     unknown "这什么！喂！！"
     unknown "啊——咳，咳咳！！叫，其他人，来！"
@@ -183,11 +187,11 @@ label q3_3_0: # ending here
     qian "巨大的声响把房间里的其他人都吵醒了，我看不清，但这里一时间陷入大量的混乱。"
     qian_speaking "喂，用水试试！"
     unknown "对，对！把应急开关打开！"
-    $ renpy.sound.play(audio.li_water, channel = "sound")
+    $ renpy.sound.play(audio.li_water, channel = "sound", loop = False)
     "呲——噗——嘭——！"
     unknown "喂，喂！咳咳……！"
     qian "我夹着声音在吵闹中吼了一嘴，在嘈杂中没有被其他人识破。而后无数的小水珠落下，与尘土结合反应，迸发出更大的爆炸。"
-    $ renpy.sound.play(audio.earthquake, channel = "sound", loop = False, relative_volume = 1.2)
+    $ renpy.sound.play(audio.earthquake, channel = "sound", loop = False)
     window hide
     show cg_li80 at cg0 with dissolve
     pause(1.5)
@@ -229,27 +233,27 @@ label q3_3_0: # ending here
 
     hide liimg with easeoutright
     hide qianimg with easeoutleft
-    $ renpy.sound.play(audio.crowd, channel = "sound", loop = True)
+    $ renpy.sound.play(audio.crowd, channel = "sound", loop = True, relative_volume = 0.8)
     qian "整栋楼都陷入了慌乱，到处是吵架和闹腾的声音。我依照脑海里的记忆，朝着地图上的方位快速移动。"
-    $ renpy.sound.set_volume(0.8, 0, channel = "sound")
+    $ renpy.sound.set_volume(0.5, 0, channel = "sound")
     
     scene bg_labfloor with Fade(0.2,0.2,0.2,color="#fff")
     show sand0 with dissolve
-    $ renpy.sound.set_volume(0.6, 0, channel = "sound")
+    $ renpy.sound.set_volume(0.4, 0, channel = "sound")
     qian_speaking "没有。"
     
     scene bg_lab1 with Fade(0.2,0.2,0.2,color="#fff")
     show sand0 with dissolve
-    $ renpy.sound.set_volume(0.4, 0, channel = "sound")
+    $ renpy.sound.set_volume(0.3, 0, channel = "sound")
     qian_speaking "没有。"
     scene bg_lab2 with Fade(0.2,0.2,0.2,color="#fff")
     show sand0 with dissolve
-    $ renpy.sound.set_volume(0.2, 0, channel = "sound")
+    $ renpy.sound.set_volume(0.1, 0, channel = "sound")
     qian_speaking "没有……"
     scene bg_lab3 with Fade(0.2,0.2,0.2,color="#fff")
     stop sound
     show sand0 with dissolve
-    $ renpy.sound.set_volume(0.1, 0, channel = "sound")
+    $ renpy.sound.set_volume(0.05, 0, channel = "sound")
     qian "该说运气好还是坏呢……门口大开，不需要刷卡，里面的人也跑空了。但即使这里是最高级的实验室，也没有留下任何家人的痕迹。"
     qian "负责人是不认识的名字，除了我看不懂的仪器和图表，什么都没有。不，等等……内侧还有一扇门，标着“记忆实验室”。"
     qian_speaking "……\n这是……！"
