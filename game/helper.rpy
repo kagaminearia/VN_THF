@@ -123,6 +123,18 @@ transform large:
     yalign 0.85
 
 
+transform mid:
+    zoom 0.33
+    xalign 0.5
+    yalign 0.5
+
+
+transform large1:
+    zoom 0.9
+    xalign 0.5
+    yalign 0.4
+
+
 transform large2:
     zoom 0.9
     xalign 0.5

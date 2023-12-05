@@ -143,6 +143,14 @@ label start:
     pause 2.0
     window show
     $ quick_menu = True
+
+    # # TODO: delete after finished
+    # menu:
+    #     "ad":
+    #         jump material
+    #     "normal":
+    #         "continue"
+
     unknown "……醒醒……起来……注意——"
     stop sound fadeout 1.0
 

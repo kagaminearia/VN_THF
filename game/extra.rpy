@@ -130,11 +130,11 @@ screen credits():
                 text _("剧本·美术·程序") size 40
                 text _("可食用蓝墨水") size 25
             vbox:
-                text _("技术帮助") size 40
+                text _("音乐·技术帮助") size 40
                 text _("akagi") size 25
             vbox:
                 text _("测试") size 40
-                text _("akagi · HydrogenRb · 可食用蓝墨水") size 25
+                text _("akagi · HydrogenRb · 可食用蓝墨水 · makimeo") size 25
 
         vbox:
             text _("Reference") size 40
